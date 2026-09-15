@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <PageBanner 
         title="Hotel & Restaurant" 
-        breadcrumb={[{ label: "Hotel & Restaurant" }]} 
+        breadcrumbs={[{ label: "Hotel & Restaurant" }]} 
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">

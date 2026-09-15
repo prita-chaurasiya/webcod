@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <PageBanner 
         title="Bulk WhatsApp SMS" 
-        breadcrumb={[{ label: "Bulk WhatsApp SMS" }]} 
+        breadcrumbs={[{ label: "Bulk WhatsApp SMS" }]} 
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">

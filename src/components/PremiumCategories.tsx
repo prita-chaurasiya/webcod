@@ -18,7 +18,7 @@ const categories = [
   { title: "Real Estate", icon: "https://webcodian.com/public/web/assets/img/services/deal.png", slug: "real-estate" },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -26,7 +26,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 60 } }
 };

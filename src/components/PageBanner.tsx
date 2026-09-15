@@ -6,7 +6,7 @@ import { ChevronRight, Home } from "lucide-react";
 
 interface Breadcrumb {
   label: string;
-  href: string;
+  href?: string;
 }
 
 interface PageBannerProps {
@@ -79,13 +79,13 @@ export function PageBanner({ title, breadcrumbs = [] }: PageBannerProps) {
                 return (
                   <li key={index} className="flex items-center">
                     {index === 0 ? (
-                      <Link href={crumb.href} className="flex items-center gap-2 text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">
+                      <Link href={crumb.href || "#"} className="flex items-center gap-2 text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">
                         <Home className="w-4 h-4" />
                         {crumb.label}
                       </Link>
                     ) : (
                       <Link 
-                        href={crumb.href} 
+                        href={crumb.href || "#"} 
                         className={`px-4 py-2 rounded-full transition-all ${isLast ? "bg-[#2eb872] text-white shadow-[0_0_15px_rgba(46,184,114,0.4)]" : "text-gray-300 hover:text-white hover:bg-white/10"}`}
                         aria-current={isLast ? "page" : undefined}
                       >

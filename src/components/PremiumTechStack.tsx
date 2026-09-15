@@ -30,7 +30,7 @@ export function PremiumTechStack() {
 
   if (!isClient) return null;
 
-  const rowVariantsLeft = {
+  const rowVariantsLeft: any = {
     animate: {
       x: [0, -1035],
       transition: {
@@ -44,7 +44,7 @@ export function PremiumTechStack() {
     },
   };
 
-  const rowVariantsRight = {
+  const rowVariantsRight: any = {
     animate: {
       x: [-1035, 0],
       transition: {

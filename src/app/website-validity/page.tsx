@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <PageBanner 
         title="Website Validity" 
-        breadcrumb={[{ label: "Website Validity" }]} 
+        breadcrumbs={[{ label: "Website Validity" }]} 
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">

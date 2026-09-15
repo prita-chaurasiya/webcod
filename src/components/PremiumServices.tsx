@@ -23,7 +23,7 @@ const services = [
   { title: "Video Editing", icon: Video, slug: "video-editing" },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -31,7 +31,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 30, scale: 0.9 },
   show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 15 } }
 };
