@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #000000;
+  --foreground: #F8FAFC;
+  
+  --primary: #4F46E5; /* Violet/Indigo accent */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+  
+  --accent: #3B82F6; /* Electric blue */
+  --accent-foreground: #FFFFFF;
+  
+  --muted: #0F172A;
+  --muted-foreground: #94A3B8;
+  
+  --card: rgba(15, 23, 42, 0.6);
+  --card-foreground: #F8FAFC;
+  
+  --border: #1E293B;
+  --ring: #4F46E5;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle gradient background for body or specific sections */
+.bg-gradient-premium {
+  background: radial-gradient(circle at top center, rgba(30, 41, 59, 0.3) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Force input text color to fix dark background inheritance */
+@layer base {
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    color: #111827 !important;
+  }
+}
+
+@layer utilities {
+  .stroke-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
+  }
+  .font-cursive {
+    font-family: 'Caveat', cursive, 'Brush Script MT', 'Comic Sans MS';
+  }
 }
