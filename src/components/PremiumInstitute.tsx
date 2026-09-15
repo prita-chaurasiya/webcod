@@ -6,12 +6,66 @@ import Link from "next/link";
 import Image from "next/image";
 
 const learningPaths = [
-  { id: "beginner", title: "BEGINNER", courses: "Computer Fundamentals, DCA", icon: <Laptop className="w-6 h-6 text-emerald-500" /> },
-  { id: "professional", title: "PROFESSIONAL", courses: "ADCA, Tally Prime, Adv. Excel", icon: <Database className="w-6 h-6 text-blue-500" /> },
-  { id: "developer", title: "DEVELOPER", courses: "Web Dev, React, Full Stack", icon: <Code2 className="w-6 h-6 text-indigo-500" /> },
-  { id: "creative", title: "CREATIVE", courses: "Graphic Design, Video Editing", icon: <PenTool className="w-6 h-6 text-pink-500" /> },
-  { id: "digital", title: "DIGITAL", courses: "Digital Marketing, SEO", icon: <BarChart className="w-6 h-6 text-orange-500" /> },
-  { id: "ai", title: "AI", courses: "Python, AI Tools, Gen AI", icon: <MonitorPlay className="w-6 h-6 text-purple-500" /> },
+  { 
+    id: "beginner", 
+    title: "BEGINNER", 
+    courses: "Computer Fundamentals, DCA", 
+    icon: <Laptop className="w-6 h-6 text-emerald-500" />,
+    gradient: "from-emerald-400 to-teal-500",
+    glow: "bg-emerald-500/15",
+    iconBg: "bg-emerald-50 border-emerald-200",
+    titleColor: "text-emerald-600"
+  },
+  { 
+    id: "professional", 
+    title: "PROFESSIONAL", 
+    courses: "ADCA, Tally Prime, Adv. Excel", 
+    icon: <Database className="w-6 h-6 text-blue-500" />,
+    gradient: "from-blue-400 to-cyan-500",
+    glow: "bg-blue-500/15",
+    iconBg: "bg-blue-50 border-blue-200",
+    titleColor: "text-blue-600"
+  },
+  { 
+    id: "developer", 
+    title: "DEVELOPER", 
+    courses: "Web Dev, React, Full Stack", 
+    icon: <Code2 className="w-6 h-6 text-indigo-500" />,
+    gradient: "from-indigo-400 to-purple-500",
+    glow: "bg-indigo-500/15",
+    iconBg: "bg-indigo-50 border-indigo-200",
+    titleColor: "text-indigo-600"
+  },
+  { 
+    id: "creative", 
+    title: "CREATIVE", 
+    courses: "Graphic Design, Video Editing", 
+    icon: <PenTool className="w-6 h-6 text-pink-500" />,
+    gradient: "from-pink-400 to-rose-500",
+    glow: "bg-pink-500/15",
+    iconBg: "bg-pink-50 border-pink-200",
+    titleColor: "text-pink-600"
+  },
+  { 
+    id: "digital", 
+    title: "DIGITAL", 
+    courses: "Digital Marketing, SEO", 
+    icon: <BarChart className="w-6 h-6 text-orange-500" />,
+    gradient: "from-orange-400 to-amber-500",
+    glow: "bg-orange-500/15",
+    iconBg: "bg-orange-50 border-orange-200",
+    titleColor: "text-orange-600"
+  },
+  { 
+    id: "ai", 
+    title: "AI", 
+    courses: "Python, AI Tools, Gen AI", 
+    icon: <MonitorPlay className="w-6 h-6 text-purple-500" />,
+    gradient: "from-purple-400 to-fuchsia-500",
+    glow: "bg-purple-500/15",
+    iconBg: "bg-purple-50 border-purple-200",
+    titleColor: "text-purple-600"
+  },
 ];
 
 const courses = [
@@ -80,28 +134,41 @@ export function PremiumInstitute() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: idx * 0.1, type: "spring", bounce: 0.4 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="relative bg-white rounded-3xl p-8 shadow-[0_5px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:border-transparent transition-all duration-500 group overflow-hidden z-10"
+                className="relative bg-white rounded-3xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-transparent transition-all duration-500 group overflow-hidden z-10"
               >
-                {/* Animated Gradient Border Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#2eb872] to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl -z-10"></div>
-                {/* Inner white background to maintain text readability while creating a border effect */}
-                <div className="absolute inset-[2px] bg-white rounded-[22px] -z-10"></div>
+                {/* Always-on Animated Gradient Border Overlay */}
+                <motion.div 
+                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                  className={`absolute inset-0 bg-gradient-to-r ${path.gradient} bg-[length:200%_200%] opacity-100 rounded-3xl -z-10`}
+                />
                 
-                {/* Glow Effect */}
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#2eb872]/0 group-hover:bg-[#2eb872]/15 blur-3xl rounded-full transition-all duration-700 pointer-events-none"></div>
+                {/* Inner slightly tinted white background */}
+                <div className="absolute inset-[2px] bg-gradient-to-br from-white to-slate-50/95 rounded-[22px] -z-10"></div>
+                
+                {/* Always-on Glow Effect that pulses */}
+                <motion.div 
+                  animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.2, 1] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: idx * 0.2 }}
+                  className={`absolute -bottom-10 -right-10 w-40 h-40 ${path.glow} blur-3xl rounded-full pointer-events-none`}
+                />
 
                 <div className="relative z-10 flex flex-col items-start">
-                  <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 border border-slate-100 shadow-sm group-hover:shadow-md group-hover:bg-[#2eb872]/10 group-hover:border-[#2eb872]/30 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+                  <div className={`w-16 h-16 rounded-2xl ${path.iconBg} flex items-center justify-center mb-6 border shadow-sm group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500`}>
                     {path.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#2eb872] transition-colors duration-300">{path.title}</h4>
-                  <p className="text-slate-500 font-medium leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{path.courses}</p>
+                  <h4 className={`text-xl font-bold ${path.titleColor} mb-3`}>{path.title}</h4>
+                  <p className="text-slate-700 font-medium leading-relaxed">{path.courses}</p>
                 </div>
                 
-                {/* Arrow indicator on hover */}
-                <div className="absolute top-8 right-8 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <ArrowRight className="w-6 h-6 text-[#2eb872]" />
-                </div>
+                {/* Arrow indicator always visible but animates slightly */}
+                <motion.div 
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-8 right-8 transition-all duration-500"
+                >
+                  <ArrowRight className={`w-6 h-6 ${path.titleColor}`} />
+                </motion.div>
               </motion.div>
             ))}
           </div>

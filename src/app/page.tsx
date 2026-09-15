@@ -9,6 +9,7 @@ import { PremiumWhyChooseUs } from "@/components/PremiumWhyChooseUs";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 import { PremiumTestimonials } from "@/components/PremiumTestimonials";
 import { PremiumBlog } from "@/components/PremiumBlog";
+import { PremiumVision } from "@/components/PremiumVision";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <PremiumStats />
       <PremiumTestimonials />
       <PremiumBlog />
+      <PremiumVision />
       <PremiumProjectCTA />
     </>
   );

@@ -23,6 +23,15 @@ const services = [
   { title: "Video Editing", icon: Video, slug: "video-editing" },
 ];
 
+const colors = [
+  { bg: "bg-blue-50/70", glow: "from-blue-200/40", iconBg: "bg-blue-100", text: "text-blue-600", hoverBorder: "hover:border-blue-300" },
+  { bg: "bg-emerald-50/70", glow: "from-emerald-200/40", iconBg: "bg-emerald-100", text: "text-emerald-600", hoverBorder: "hover:border-emerald-300" },
+  { bg: "bg-purple-50/70", glow: "from-purple-200/40", iconBg: "bg-purple-100", text: "text-purple-600", hoverBorder: "hover:border-purple-300" },
+  { bg: "bg-orange-50/70", glow: "from-orange-200/40", iconBg: "bg-orange-100", text: "text-orange-600", hoverBorder: "hover:border-orange-300" },
+  { bg: "bg-pink-50/70", glow: "from-pink-200/40", iconBg: "bg-pink-100", text: "text-pink-600", hoverBorder: "hover:border-pink-300" },
+  { bg: "bg-cyan-50/70", glow: "from-cyan-200/40", iconBg: "bg-cyan-100", text: "text-cyan-600", hoverBorder: "hover:border-cyan-300" },
+];
+
 const containerVariants: any = {
   hidden: { opacity: 0 },
   show: {
@@ -76,52 +85,59 @@ export function PremiumServices() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
-            <motion.div 
-              key={index} 
-              variants={itemVariants}
-              whileHover={{ 
-                y: -10, 
-                rotateX: 5, 
-                rotateY: -5,
-                scale: 1.02,
-                transition: { type: "spring", stiffness: 300, damping: 20 } 
-              }}
-              className="transform-gpu"
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              <Link href={`/${service.slug}`} className="block h-full outline-none">
-                <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.1)] border border-slate-100 hover:border-[#2eb872]/40 transition-all duration-300 relative overflow-hidden h-full flex flex-col items-center text-center group">
-                  
-                  {/* Glowing Hover Background */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#2eb872]/0 to-[#2eb872]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  
-                  {/* Icon Container (3D pop) */}
-                  <div 
-                    className="w-20 h-20 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br from-[#2eb872] to-[#25995e] transition-colors duration-300 shadow-inner group-hover:shadow-lg border border-slate-100 group-hover:border-transparent"
-                    style={{ transform: "translateZ(30px)" }}
-                  >
-                    <service.icon className="w-10 h-10 text-slate-400 group-hover:text-white transition-colors duration-300" />
+          {services.map((service, index) => {
+            const color = colors[index % colors.length];
+            return (
+              <motion.div 
+                key={index} 
+                variants={itemVariants}
+                whileHover={{ 
+                  y: -10, 
+                  rotateX: 5, 
+                  rotateY: -5,
+                  scale: 1.02,
+                  transition: { type: "spring", stiffness: 300, damping: 20 } 
+                }}
+                className="transform-gpu"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <Link href={`/${service.slug}`} className="block h-full outline-none">
+                  <div className={`${color.bg} rounded-3xl p-8 shadow-[0_5px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-white/60 ${color.hoverBorder} transition-all duration-300 relative overflow-hidden h-full flex flex-col items-center text-center group`}>
+                    
+                    {/* Animated Glow Background (Always On) */}
+                    <motion.div 
+                      animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.2, 1] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
+                      className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${color.glow} to-transparent rounded-full blur-2xl z-0`}
+                    />
+                    
+                    {/* Icon Container (3D pop) */}
+                    <div 
+                      className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm relative z-10`}
+                      style={{ transform: "translateZ(30px)" }}
+                    >
+                      <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300`} />
+                    </div>
+                    
+                    {/* Text (3D pop) */}
+                    <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
+                      <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-slate-900 transition-colors">
+                        {service.title}
+                      </h3>
+                    </div>
+                    
+                    <div 
+                      className={`mt-auto pt-4 flex items-center gap-2 text-sm font-bold opacity-60 group-hover:opacity-100 ${color.text} transition-all relative z-10`}
+                      style={{ transform: "translateZ(10px)" }}
+                    >
+                      Read More 
+                      <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
-                  
-                  {/* Text (3D pop) */}
-                  <div style={{ transform: "translateZ(20px)" }}>
-                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-slate-900 transition-colors">
-                      {service.title}
-                    </h3>
-                  </div>
-                  
-                  <div 
-                    className="mt-auto pt-4 flex items-center gap-2 text-sm font-bold text-slate-400 group-hover:text-[#2eb872] transition-colors"
-                    style={{ transform: "translateZ(10px)" }}
-                  >
-                    Read More 
-                    <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

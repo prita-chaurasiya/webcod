@@ -1,22 +1,17 @@
 import { PageBanner } from "@/components/PageBanner";
-import { PremiumFormLayout } from "@/components/PremiumFormLayout";
+import { PremiumWebsiteValidity } from "@/components/PremiumWebsiteValidity";
 
 export default function Page() {
   return (
     <main>
       <PageBanner 
-        title="Website Validity Check" 
+        title="Check Domain" 
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Website Validity Check", href: "/website-validity-check" }
+          { label: "Check Domain", href: "/website-validity-check" }
         ]} 
       />
-      <PremiumFormLayout 
-        title="Website Validity Check"
-        subtitle="Check the maintenance and hosting validity of your WebCodian project."
-        submitText="Check Status"
-        fields={[{"name":"domain","label":"Domain Name","type":"text","placeholder":"www.example.com","required":true}]}
-      />
+      <PremiumWebsiteValidity />
     </main>
   );
 }

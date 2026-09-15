@@ -1,14 +1,14 @@
 import { PageBanner } from "@/components/PageBanner";
 import { PremiumOpenTicket } from "@/components/PremiumOpenTicket";
 
-export default function SupportPage() {
+export default function ClientSupportPage() {
   return (
     <main>
       <PageBanner 
-        title="Support" 
+        title="Client Support" 
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Support", href: "/support" }
+          { label: "Client Support", href: "/client-support" }
         ]} 
       />
       <PremiumOpenTicket />

@@ -1,5 +1,5 @@
 import { PageBanner } from "@/components/PageBanner";
-import { PremiumFormLayout } from "@/components/PremiumFormLayout";
+import { PremiumClientRegistration } from "@/components/PremiumClientRegistration";
 
 export default function Page() {
   return (
@@ -11,12 +11,7 @@ export default function Page() {
           { label: "Client Registration", href: "/client-registration-form" }
         ]} 
       />
-      <PremiumFormLayout 
-        title="Client Registration"
-        subtitle="Create your client account to track projects and access support."
-        submitText="Register Account"
-        fields={[{"name":"name","label":"Full Name","type":"text","placeholder":"John Doe","required":true},{"name":"email","label":"Email Address","type":"email","placeholder":"john@example.com","required":true},{"name":"password","label":"Password","type":"password","placeholder":"••••••••","required":true}]}
-      />
+      <PremiumClientRegistration />
     </main>
   );
 }
