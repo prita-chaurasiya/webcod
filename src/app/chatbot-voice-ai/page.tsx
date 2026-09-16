@@ -113,7 +113,7 @@ export default function Page() {
             <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-center">
               <div className="lg:col-span-2 text-white">
                 <h3 className="text-3xl font-black mb-4 leading-tight">Transform Your Business with AI</h3>
-                <p className="text-slate-400 mb-8 font-medium">Ready to see how ${route.title} can drive growth and efficiency? Book a free consultation with our AI experts today.</p>
+                <p className="text-slate-400 mb-8 font-medium">Ready to see how our AI solutions can drive growth and efficiency? Book a free consultation with our AI experts today.</p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><Zap className="w-4 h-4 text-[#2eb872]" /></div>
@@ -144,7 +144,7 @@ export default function Page() {
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">How can we help?</label>
-                    <textarea rows="3" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us about your project..." required></textarea>
+                    <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us about your project..." required></textarea>
                   </div>
                   <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-blue-600/30">
                     Book Free Consultation
