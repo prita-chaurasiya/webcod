@@ -1,101 +1,83 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Eye, Briefcase } from "lucide-react";
-import Image from "next/image";
+import { BookOpen, Laptop, ShoppingCart, HeartPulse, HeartHandshake, Building, Briefcase, GraduationCap, Utensils, Plane, Truck, TestTube, ShieldCheck, Building2, Newspaper, Users, Factory, Package, Search } from "lucide-react";
+import Link from "next/link";
 
-const industries = [
-  { name: "Course Selling", img: "course-Selling.jpg" },
-  { name: "Exam Portal", img: "exam-portal.jpg" },
-  { name: "E-Commerce", img: "E-Commerce.webcodian.jpg" },
-  { name: "HealthCare", img: "HealthCare.webcodian.jpg" },
-  { name: "NGO", img: "NGO.webcodian.jpg" },
-  { name: "Institute", img: "institute.jpeg" },
-  { name: "Consultant", img: "Consultant.webcodian.jpg" },
-  { name: "College", img: "college.jpeg" },
-  { name: "Hotel & Restaurant", img: "Hotel & Restaurant.webcodian.jpg" },
-  { name: "Tour And Travel", img: "Tour And Travel.webcodian.jpg" },
-  { name: "Transport Gradient", img: "Transport Gradient.webcodian.jpg" },
-  { name: "Smart Lab", img: "Smart Lab.webcodian.jpg" },
-  { name: "Security Service", img: "Security Service.webcodian.jpg" },
-  { name: "Real Estate", img: "Real Estate.webcodian.jpg" },
-  { name: "News & Blog", img: "News & Blog.webcodian.jpg" },
-  { name: "Matrimonial", img: "Matrimonial.webcodian.jpg" },
-  { name: "Manufacturing", img: "Manufacturing.webcodian.jpg" },
-  { name: "Courier", img: "corier.jpeg" },
-  { name: "Job", img: "job.jpeg" }
+const allIndustries = [
+  { name: "Course Selling", icon: BookOpen, color: "text-red-700", bgClass: "text-red-700" },
+  { name: "Online Exam Portal", icon: Laptop, color: "text-slate-900", bgClass: "text-slate-900" },
+  { name: "E-Commerce", icon: ShoppingCart, color: "text-sky-400", bgClass: "text-sky-400" },
+  { name: "HealthCare", icon: HeartPulse, color: "text-teal-400", bgClass: "text-teal-400" },
+  { name: "NGO", icon: HeartHandshake, color: "text-green-500", bgClass: "text-green-500" },
+  { name: "Institute", icon: Building, color: "text-black", bgClass: "text-black" },
+  { name: "Consultant", icon: Briefcase, color: "text-blue-600", bgClass: "text-blue-600" },
+  { name: "Education", icon: GraduationCap, color: "text-sky-500", bgClass: "text-sky-500" },
+  { name: "Hotel & Restaurant", icon: Utensils, color: "text-amber-900", bgClass: "text-amber-900" },
+  { name: "Tour And Travel", icon: Plane, color: "text-blue-800", bgClass: "text-blue-800" },
+  { name: "Transport", icon: Truck, color: "text-cyan-400", bgClass: "text-cyan-400" },
+  { name: "Smart Lab", icon: TestTube, color: "text-teal-500", bgClass: "text-teal-500" },
+  { name: "Security Service", icon: ShieldCheck, color: "text-cyan-500", bgClass: "text-cyan-500" },
+  { name: "Real Estate", icon: Building2, color: "text-slate-500", bgClass: "text-slate-500" },
+  { name: "News & Blog", icon: Newspaper, color: "text-blue-900", bgClass: "text-blue-900" },
+  { name: "Matrimonial", icon: Users, color: "text-rose-900", bgClass: "text-rose-900" },
+  { name: "Manufacturing", icon: Factory, color: "text-cyan-600", bgClass: "text-cyan-600" },
+  { name: "Courier system", icon: Package, color: "text-amber-500", bgClass: "text-amber-500" },
+  { name: "Job Portal", icon: Search, color: "text-indigo-900", bgClass: "text-indigo-900" }
 ];
 
 export function PremiumIndustry() {
   return (
-    <section className="py-24 bg-[#f8fafc] relative overflow-hidden">
-      {/* Background ambient light */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2eb872]/10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
+    <section className="py-20 bg-slate-50 relative overflow-hidden border-y border-slate-100">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         
         <div className="text-center mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-gray-100 mb-6"
-          >
-            <Briefcase className="w-5 h-5 text-[#2eb872]" />
-            <span className="text-sm font-bold text-gray-700 uppercase tracking-widest">Our Expertise</span>
-          </motion.div>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 tracking-tight"
-          >
-            Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-600">Serve</span>
-          </motion.h2>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-500 max-w-2xl mx-auto"
-          >
-            We provide cutting-edge solutions tailored to meet the unique challenges of diverse sectors.
-          </motion.p>
+          <span className="inline-block py-1.5 px-3 rounded-full bg-white shadow-sm border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Industries We Serve</span>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
+            Our Global Presence & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-600">Expertise</span>
+          </h2>
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
+            Tailored digital solutions and intelligent platforms for over 19 diverse sectors.
+          </p>
         </div>
 
-        {/* 3D Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 perspective-1000">
-          {industries.map((item, idx) => (
-            <motion.div
+        {/* Global Presence Style / Grid Style */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {allIndustries.map((ind, idx) => (
+            <motion.div 
               key={idx}
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="group relative h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white transform transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+              className="group relative rounded-3xl overflow-hidden bg-slate-200 aspect-square flex flex-col justify-end shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
-              {/* Image */}
-              <div className="absolute inset-0 w-full h-full p-4 transition-transform duration-700 group-hover:scale-110">
-                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                 <img 
-                    src={`https://webcodian.com/public/web/assets/img/industry/${item.img}`} 
-                    alt={item.name}
-                    className="w-full h-full object-contain filter drop-shadow-md"
-                 />
+              {/* Placeholder Background (since we don't have the exact image files) */}
+              <div className="absolute inset-0 bg-slate-300 group-hover:scale-110 transition-transform duration-700">
+                <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-400 opacity-50 mix-blend-multiply"></div>
               </div>
 
-              {/* Glass Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-                <h3 className="text-xl font-bold text-white mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{item.name}</h3>
+              {/* Wavy Overlay matching the screenshot style */}
+              <div className={`relative w-full h-24 ${ind.bgClass}`}>
+                <svg viewBox="0 0 400 150" preserveAspectRatio="none" className="absolute bottom-0 w-full h-32 -translate-y-4 drop-shadow-md">
+                  <path d="M0,50 C150,150 250,-50 400,50 L400,150 L0,150 Z" fill="currentColor" />
+                  <path d="M0,70 C150,170 250,-30 400,70 L400,150 L0,150 Z" fill="currentColor" opacity="0.3" />
+                </svg>
                 
-                <div className="w-full">
-                  <a href="#" className="w-full py-3 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-xl font-bold flex items-center justify-center gap-2 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 shadow-[0_0_20px_rgba(46,184,114,0.4)]">
-                    <Eye className="w-4 h-4" /> View Project
-                  </a>
+                {/* Text and Icon on top of the wave */}
+                <div className="absolute bottom-4 left-0 w-full px-5 flex items-center gap-3 text-white">
+                  <div className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center shrink-0 shadow-lg border-2 border-white/20 relative z-10 group-hover:text-[#2eb872] transition-colors">
+                    <ind.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-black relative z-10 drop-shadow-sm tracking-tight">{ind.name}</h3>
+                </div>
+                
+                {/* Tech/Hexagon background pattern on the right side of the wave */}
+                <div className="absolute right-2 bottom-2 opacity-20 pointer-events-none">
+                  <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 0L93.3 25V75L50 100L6.7 75V25L50 0Z" stroke="white" strokeWidth="2"/>
+                    <circle cx="50" cy="50" r="10" fill="white" />
+                  </svg>
                 </div>
               </div>
             </motion.div>

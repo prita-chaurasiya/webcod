@@ -54,7 +54,7 @@ export function PremiumGraphicDesign() {
     <div className="bg-slate-50 min-h-screen">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 perspective-[1000px]">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-slate-900 perspective-[1000px]">
         {/* Abstract Animated Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
@@ -82,10 +82,10 @@ export function PremiumGraphicDesign() {
                 <span className="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
                 PREMIUM DESIGN AGENCY
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
                 Graphic <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Design</span>
               </h1>
-              <p className="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 At Webcodian LLP, we believe in the power of visual storytelling. Our Graphic Design services are tailored to help businesses like yours captivate audiences, convey messages effectively, and leave a lasting impression.
               </p>
               <Link 
@@ -144,10 +144,10 @@ export function PremiumGraphicDesign() {
       </section>
 
       {/* 2. Overview & Services */}
-      <section className="py-24 relative overflow-hidden bg-white">
+      <section className="py-16 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
-          <div className="flex flex-col lg:flex-row gap-16 mb-24">
+          <div className="flex flex-col lg:flex-row gap-12 mb-16">
             <div className="lg:w-1/2">
               <span className="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">About Graphics Design</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Innovative Graphic Design Solutions</h2>
@@ -192,9 +192,9 @@ export function PremiumGraphicDesign() {
       </section>
 
       {/* 3. Tech Stack Marquee */}
-      <section className="py-20 bg-slate-900 border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-20 mb-12 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-semibold text-sm mb-4">TECHNOLOGY WE USE</span>
+      <section className="py-16 bg-slate-900 border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-20 mb-8 text-center">
+          <span className="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-semibold text-xs mb-4">TECHNOLOGY WE USE</span>
         </div>
         
         <div className="relative w-full flex flex-col gap-6 z-0">

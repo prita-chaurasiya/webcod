@@ -53,12 +53,12 @@ export function PremiumServiceDetail({
     <div className="bg-slate-50 min-h-screen">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 perspective-[1000px]">
+      <section className="relative pt-12 pb-10 lg:pt-20 lg:pb-12 overflow-hidden bg-slate-900 perspective-[1000px]">
         {/* Abstract Animated Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#2eb872]/20 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
-          <svg className="absolute inset-0 w-full h-full opacity-10 mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#2eb872]/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
+          <svg className="absolute inset-0 w-full h-full opacity-[0.03] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid-pattern-hero" width="40" height="40" patternUnits="userSpaceOnUse">
                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
@@ -69,60 +69,54 @@ export function PremiumServiceDetail({
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             {/* Hero Text */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="lg:w-1/2 text-center lg:text-left"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-blue-300 font-semibold text-sm mb-6 tracking-widest backdrop-blur-md uppercase">
-                <span className="w-2 h-2 rounded-full bg-[#2eb872] animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-300 font-bold text-xs mb-5 tracking-widest backdrop-blur-md uppercase shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2eb872] animate-pulse"></span>
                 {badgeText}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-5 tracking-tight">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 ? 
                    <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-400"> {word}</span> : 
                    <span key={i}> {word}</span>
                 )}
               </h1>
-              <p className="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-slate-400 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
                 {description}
               </p>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-[#2eb872] text-white font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all duration-300 text-lg group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-[#2eb872] text-white font-bold rounded-xl hover:shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:-translate-y-0.5 transition-all duration-300 text-base group"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
 
             {/* Hero 3D Graphic */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
-              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 50 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 50 }}
               className="lg:w-1/2 relative"
-              style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="relative w-full max-w-md mx-auto aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-[#2eb872] rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse" />
-                <motion.div 
-                  animate={{ y: [-10, 10, -10], rotateZ: [0, 2, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10 w-full h-full bg-white/5 backdrop-blur-xl border border-white/20 rounded-[3rem] shadow-2xl flex items-center justify-center overflow-hidden"
-                  style={{ transform: "translateZ(50px)" }}
-                >
+              <div className="relative w-full max-w-md mx-auto aspect-[4/3] lg:aspect-square">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-[#2eb872]/20 rounded-[2rem] filter blur-2xl opacity-50" />
+                <div className="relative z-10 w-full h-full bg-slate-800/40 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl flex items-center justify-center overflow-hidden">
                   <img 
                     src={heroImage} 
                     alt={title} 
-                    className="w-full h-full object-cover mix-blend-overlay opacity-80"
+                    className="w-full h-full object-cover mix-blend-overlay opacity-90 hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                </motion.div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -130,61 +124,127 @@ export function PremiumServiceDetail({
       </section>
 
       {/* 2. Overview & Features */}
-      <section className="py-24 relative overflow-hidden bg-white">
+      <section className="py-16 lg:py-24 relative overflow-hidden bg-white perspective-[1000px]">
+        {/* Subtle Background Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-t from-emerald-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
+
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
-              <span className="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">Service Overview</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{overviewTitle}</h2>
-              <p className="text-slate-600 mb-8 text-lg">
-                {overviewDescription}
-              </p>
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15 }
+                }
+              }}
+              className="lg:w-1/2"
+            >
+              <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+                <span className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-50 border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] mb-6 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                  Service Overview
+                </span>
+              </motion.div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <motion.h2 
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight"
+              >
+                {overviewTitle}
+              </motion.h2>
+              
+              <motion.p 
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                className="text-slate-500 mb-12 text-lg md:text-xl leading-relaxed font-medium"
+              >
+                {overviewDescription}
+              </motion.p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
                 {features.map((feature, idx) => (
-                  <div key={idx} className="flex gap-4 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
-                    <div className="mt-1 bg-blue-100 text-blue-600 p-2 rounded-xl shrink-0">
-                      {feature.icon || <CheckCircle2 className="w-5 h-5" />}
+                  <motion.div 
+                    variants={{
+                      hidden: { opacity: 0, y: 30, scale: 0.95 },
+                      visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 100, damping: 20 } }
+                    }}
+                    whileHover={{ 
+                      y: -8,
+                      scale: 1.02,
+                      transition: { type: "spring", stiffness: 300, damping: 20 }
+                    }}
+                    key={idx} 
+                    className="flex flex-col items-start p-8 bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-blue-100 transition-all duration-300 group relative overflow-hidden"
+                  >
+                    {/* Hover Glow */}
+                    <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="bg-slate-50 text-blue-600 p-4 rounded-2xl shrink-0 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-6 border border-slate-100 shadow-sm relative z-10">
+                      {feature.icon || <CheckCircle2 className="w-6 h-6" />}
                     </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 text-lg mb-2">{feature.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{feature.description}</p>
+                    <div className="relative z-10">
+                      <h4 className="font-extrabold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h4>
+                      <p className="text-slate-500 text-sm leading-relaxed font-medium group-hover:text-slate-600 transition-colors">{feature.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            <div className="lg:w-1/2 perspective-[1000px]">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, rotateY: 10 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, type: "spring", stiffness: 50 }}
+              className="lg:w-1/2 w-full transform-gpu"
+            >
                {featuresImage ? (
-                  <motion.div 
-                    whileHover={{ rotateX: 5, rotateY: -5 }}
-                    className="bg-slate-50 p-4 rounded-[2rem] border border-slate-100 shadow-xl overflow-hidden"
-                    style={{ transformStyle: "preserve-3d" }}
-                  >
-                     <img src={featuresImage} alt="Features" className="w-full h-auto rounded-2xl" />
-                  </motion.div>
+                  <div className="relative p-2 rounded-[3rem] bg-gradient-to-br from-slate-100 to-white shadow-2xl group transform transition-transform duration-700 hover:rotate-y-[-5deg]">
+                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-[#2eb872]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
+                     <div className="rounded-[2.5rem] overflow-hidden relative border-4 border-white shadow-inner bg-slate-50">
+                       <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                       <img src={featuresImage} alt="Features" className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000 ease-out" />
+                     </div>
+                  </div>
                ) : (
-                  <div className="bg-slate-50 p-8 md:p-12 rounded-[2rem] border border-slate-100 h-full flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-6">Why Choose Us?</h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-center gap-3 text-slate-700 font-medium">
-                        <CheckCircle2 className="w-5 h-5 text-[#2eb872]" /> Tailored Solutions
-                      </li>
-                      <li className="flex items-center gap-3 text-slate-700 font-medium">
-                        <CheckCircle2 className="w-5 h-5 text-[#2eb872]" /> Experienced Team
-                      </li>
-                      <li className="flex items-center gap-3 text-slate-700 font-medium">
-                        <CheckCircle2 className="w-5 h-5 text-[#2eb872]" /> Quality Assurance
-                      </li>
-                      <li className="flex items-center gap-3 text-slate-700 font-medium">
-                        <CheckCircle2 className="w-5 h-5 text-[#2eb872]" /> Ongoing Support
-                      </li>
-                    </ul>
+                  <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-br from-slate-200 via-slate-50 to-slate-200 shadow-2xl overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-[#2eb872]/10 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                    
+                    <div className="bg-white/80 backdrop-blur-xl p-10 md:p-14 rounded-[3rem] h-full flex flex-col justify-center relative overflow-hidden">
+                      {/* Decorative Shapes */}
+                      <motion.div 
+                        animate={{ rotate: 360 }} 
+                        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                        className="absolute -top-32 -right-32 w-64 h-64 border-[40px] border-[#2eb872]/5 rounded-full pointer-events-none" 
+                      />
+                      
+                      <h3 className="text-4xl font-black text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#2eb872]">Us?</span></h3>
+                      
+                      <ul className="space-y-8 relative z-10">
+                        {["Tailored Solutions", "Experienced Team", "Quality Assurance", "Ongoing Support"].map((item, i) => (
+                          <motion.li 
+                            key={i}
+                            whileHover={{ x: 10 }}
+                            className="flex items-center gap-5 text-slate-800 font-extrabold text-lg group/item cursor-default"
+                          >
+                            <div className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 text-[#2eb872] group-hover/item:bg-[#2eb872] group-hover/item:text-white group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                              <CheckCircle2 className="w-6 h-6" />
+                              <div className="absolute inset-0 rounded-2xl bg-[#2eb872] blur-md opacity-0 group-hover/item:opacity-30 transition-opacity duration-300" />
+                            </div>
+                            <span className="group-hover/item:text-blue-600 transition-colors">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                )}
-            </div>
+            </motion.div>
           </div>
 
         </div>
@@ -192,28 +252,33 @@ export function PremiumServiceDetail({
 
       {/* 3. Tech Stack Marquee (if provided) */}
       {technologies && technologies.length > 0 && (
-        <section className="py-20 bg-slate-900 border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
-          <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-20 mb-12 text-center">
-            <span className="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-semibold text-sm mb-4">TECHNOLOGY WE USE</span>
+        <section className="py-16 bg-[#f8fafc] overflow-hidden relative border-y border-slate-100">
+          <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#f8fafc] via-transparent to-[#f8fafc] w-full" />
+          
+          <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-20 mb-16 text-center">
+            <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">TECHNOLOGY WE USE</span>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900">Powered by modern technologies</h2>
           </div>
           
-          <div className="relative w-full flex flex-col gap-6 z-0">
+          <div className="relative w-full flex flex-col gap-6 perspective-[1000px] z-0">
             <div className="flex w-[2070px]">
               <motion.div
                 animate={{ x: [0, -1035] }}
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 30, ease: "linear" }}
                 className="flex gap-6 items-center"
               >
                 {[...technologies, ...technologies, ...technologies].map((tech, idx) => (
-                  <motion.div
+                  <div
                     key={idx}
-                    whileHover={{ scale: 1.1, rotateX: 10, rotateY: 10, zIndex: 30 }}
-                    className="w-48 bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-3xl p-6 flex flex-col items-center justify-center gap-4 shadow-xl cursor-pointer"
-                    style={{ transformStyle: "preserve-3d" }}
+                    className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
                   >
-                    <div className="text-5xl" style={{ transform: "translateZ(30px)" }}>{tech.icon}</div>
-                    <div className="font-bold text-lg text-slate-200 text-center" style={{ transform: "translateZ(20px)" }}>{tech.name}</div>
-                  </motion.div>
+                    {typeof tech.icon === 'string' && tech.icon.startsWith('http') ? (
+                      <img src={tech.icon} alt={tech.name} className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300" />
+                    ) : (
+                      <div className="text-5xl group-hover:scale-110 transition-transform text-slate-700 group-hover:text-blue-600">{tech.icon}</div>
+                    )}
+                    <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                  </div>
                 ))}
               </motion.div>
             </div>
@@ -223,27 +288,27 @@ export function PremiumServiceDetail({
 
       {/* 4. FAQ Section (if provided) */}
       {faqs && faqs.length > 0 && (
-        <section className="py-24 bg-white relative">
+        <section className="py-12 lg:py-16 bg-slate-50 relative">
           <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
-            <div className="text-center mb-16">
-              <span className="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">Frequently Asked Questions</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Got Questions? We Have Answers.</h2>
+            <div className="text-center mb-10">
+              <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">FAQ</span>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Got Questions?</h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {faqs.map((faq, idx) => (
                 <div 
                   key={idx} 
-                  className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-slate-50 hover:border-blue-300'}`}
+                  className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-blue-200'}`}
                 >
                   <button 
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    className="w-full flex items-center justify-between p-5 lg:p-6 text-left focus:outline-none"
                   >
-                    <span className={`font-bold text-lg ${openFaq === idx ? 'text-blue-600' : 'text-slate-800'}`}>
-                      Q{idx + 1}. {faq.q}
+                    <span className={`font-bold text-base lg:text-lg ${openFaq === idx ? 'text-blue-600' : 'text-slate-800'}`}>
+                      {faq.q}
                     </span>
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
+                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
                   </button>
                   <motion.div
                     initial={false}
@@ -251,7 +316,7 @@ export function PremiumServiceDetail({
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 mt-2">
+                    <div className="p-5 lg:p-6 pt-0 text-slate-500 text-sm lg:text-base font-medium leading-relaxed mt-1">
                       {faq.a}
                     </div>
                   </motion.div>

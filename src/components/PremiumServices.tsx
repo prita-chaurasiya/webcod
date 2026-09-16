@@ -1,12 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
 import { 
   Monitor, Code2, TrendingUp, Smartphone, 
   Search, Palette, MessageSquare, Wrench, 
   MessageCircle, Box, PhoneCall, Video
 } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const services = [
   { title: "Web Development", icon: Monitor, slug: "web-development" },
@@ -24,118 +25,186 @@ const services = [
 ];
 
 const colors = [
-  { bg: "bg-blue-50/70", glow: "from-blue-200/40", iconBg: "bg-blue-100", text: "text-blue-600", hoverBorder: "hover:border-blue-300" },
-  { bg: "bg-emerald-50/70", glow: "from-emerald-200/40", iconBg: "bg-emerald-100", text: "text-emerald-600", hoverBorder: "hover:border-emerald-300" },
-  { bg: "bg-purple-50/70", glow: "from-purple-200/40", iconBg: "bg-purple-100", text: "text-purple-600", hoverBorder: "hover:border-purple-300" },
-  { bg: "bg-orange-50/70", glow: "from-orange-200/40", iconBg: "bg-orange-100", text: "text-orange-600", hoverBorder: "hover:border-orange-300" },
-  { bg: "bg-pink-50/70", glow: "from-pink-200/40", iconBg: "bg-pink-100", text: "text-pink-600", hoverBorder: "hover:border-pink-300" },
-  { bg: "bg-cyan-50/70", glow: "from-cyan-200/40", iconBg: "bg-cyan-100", text: "text-cyan-600", hoverBorder: "hover:border-cyan-300" },
+  { bg: "bg-blue-50/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "border-blue-100", highlight: "rgba(147,197,253,0.3)" },
+  { bg: "bg-emerald-50/50", iconBg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-100", highlight: "rgba(110,231,183,0.3)" },
+  { bg: "bg-purple-50/50", iconBg: "bg-purple-100", text: "text-purple-700", border: "border-purple-100", highlight: "rgba(216,180,254,0.3)" },
+  { bg: "bg-orange-50/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "border-orange-100", highlight: "rgba(253,186,116,0.3)" },
+  { bg: "bg-pink-50/50", iconBg: "bg-pink-100", text: "text-pink-700", border: "border-pink-100", highlight: "rgba(249,168,212,0.3)" },
+  { bg: "bg-cyan-50/50", iconBg: "bg-cyan-100", text: "text-cyan-700", border: "border-cyan-100", highlight: "rgba(103,232,249,0.3)" },
 ];
 
-const containerVariants: any = {
+const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 }
+    transition: { staggerChildren: 0.08, ease: "easeOut" }
   }
 };
 
-const itemVariants: any = {
-  hidden: { opacity: 0, y: 30, scale: 0.9 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 15 } }
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.98 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 };
 
-export function PremiumServices() {
+function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: any) {
+  const isHovered = hoveredIndex === index;
+  const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  
+  // Normalized values for tilt (-0.5 to 0.5)
+  const tiltX = useMotionValue(0);
+  const tiltY = useMotionValue(0);
+
+  const springConfig = { damping: 40, stiffness: 400 };
+  const smoothMouseX = useSpring(mouseX, springConfig);
+  const smoothMouseY = useSpring(mouseY, springConfig);
+  
+  const smoothTiltX = useSpring(tiltX, springConfig);
+  const smoothTiltY = useSpring(tiltY, springConfig);
+
+  // Maximum rotation of 2 degrees
+  const rotateX = useTransform(smoothTiltY, [-0.5, 0.5], ["2deg", "-2deg"]);
+  const rotateY = useTransform(smoothTiltX, [-0.5, 0.5], ["-2deg", "2deg"]);
+
+  const background = useMotionTemplate`radial-gradient(350px circle at ${smoothMouseX}px ${smoothMouseY}px, ${color.highlight}, transparent 80%)`;
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    mouseX.set(x);
+    mouseY.set(y);
+    tiltX.set(x / width - 0.5);
+    tiltY.set(y / height - 0.5);
+  };
+
+  const handleMouseLeave = () => {
+    tiltX.set(0);
+    tiltY.set(0);
+    setHoveredIndex(null);
+  };
+
   return (
-    <section className="py-24 bg-white relative overflow-hidden perspective-[1000px]">
-      {/* Decorative background blobs */}
+    <motion.div
+      variants={itemVariants}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setHoveredIndex(index)}
+      // Disable 3D tilt if prefers-reduced-motion is enabled, or on mobile where hover isn't real
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d",
+      }}
+      className={`relative transform-gpu md:hover:-translate-y-1.5 transition-all duration-500 h-full ${
+        isOtherHovered ? 'opacity-95 blur-[0.5px]' : 'opacity-100'
+      }`}
+    >
+      <Link href={`/${service.slug}`} className="block h-full outline-none group rounded-[2rem]">
+        <div 
+          className={`relative ${color.bg} backdrop-blur-sm rounded-[2rem] p-8 border border-white/60 shadow-[0_2px_10px_rgba(0,0,0,0.02)] group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] group-hover:border-white transition-all duration-500 overflow-hidden h-full flex flex-col items-center text-center`}
+        >
+          {/* Hover highlight layer (follows mouse on desktop) */}
+          <motion.div 
+            className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
+            style={{ background }}
+          />
+
+          {/* Ambient inner glow */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-50"></div>
+          
+          {/* Icon Badge */}
+          <motion.div 
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
+            className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-6 shadow-sm border border-white/50 relative z-10 group-hover:-translate-y-1 transition-transform duration-300`}
+          >
+            <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300 group-hover:scale-105`} strokeWidth={1.5} />
+            {/* Subtle inner highlight for icon badge */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 to-white/60 pointer-events-none"></div>
+          </motion.div>
+          
+          {/* Title */}
+          <div className="relative z-10 mb-4 flex-1 flex items-start justify-center">
+            <h3 className="text-xl font-bold text-slate-800 tracking-tight group-hover:text-slate-950 transition-colors">
+              {service.title}
+            </h3>
+          </div>
+          
+          {/* Read More Interaction */}
+          <div className={`mt-auto flex items-center gap-2 text-sm font-bold opacity-70 group-hover:opacity-100 ${color.text} transition-all relative z-10 group-hover:-translate-y-[1px]`}>
+            <span>Read More</span>
+            <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+          </div>
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
+
+export function PremiumServices() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  return (
+    <section className="py-24 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
+      {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#2eb872]/5 rounded-full blur-[100px]"></div>
-        <div className="absolute top-60 -left-20 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+        <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#2eb872]/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         
-        <div className="text-center mb-16">
+        {/* Section Heading */}
+        <div className="text-center mb-16 lg:mb-20">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-slate-500 font-semibold text-sm mb-4 tracking-widest shadow-sm"
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/60 text-slate-500 font-semibold text-xs tracking-widest shadow-sm shadow-slate-200/50 mb-6 uppercase"
           >
-            <span className="w-2 h-2 rounded-full bg-[#2eb872] animate-pulse"></span>
-            CORE EXPERTISE
+            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            Core Expertise
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6"
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]"
           >
             Business-Oriented <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-600">Digital Solutions</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500">
+              Digital Solutions
+            </span>
           </motion.h2>
         </div>
 
+        {/* Services Grid */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
         >
           {services.map((service, index) => {
             const color = colors[index % colors.length];
             return (
-              <motion.div 
-                key={index} 
-                variants={itemVariants}
-                whileHover={{ 
-                  y: -10, 
-                  rotateX: 5, 
-                  rotateY: -5,
-                  scale: 1.02,
-                  transition: { type: "spring", stiffness: 300, damping: 20 } 
-                }}
-                className="transform-gpu"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <Link href={`/${service.slug}`} className="block h-full outline-none">
-                  <div className={`${color.bg} rounded-3xl p-8 shadow-[0_5px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-white/60 ${color.hoverBorder} transition-all duration-300 relative overflow-hidden h-full flex flex-col items-center text-center group`}>
-                    
-                    {/* Animated Glow Background (Always On) */}
-                    <motion.div 
-                      animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.2, 1] }}
-                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
-                      className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${color.glow} to-transparent rounded-full blur-2xl z-0`}
-                    />
-                    
-                    {/* Icon Container (3D pop) */}
-                    <div 
-                      className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm relative z-10`}
-                      style={{ transform: "translateZ(30px)" }}
-                    >
-                      <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300`} />
-                    </div>
-                    
-                    {/* Text (3D pop) */}
-                    <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
-                      <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-slate-900 transition-colors">
-                        {service.title}
-                      </h3>
-                    </div>
-                    
-                    <div 
-                      className={`mt-auto pt-4 flex items-center gap-2 text-sm font-bold opacity-60 group-hover:opacity-100 ${color.text} transition-all relative z-10`}
-                      style={{ transform: "translateZ(10px)" }}
-                    >
-                      Read More 
-                      <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
+              <ServiceCard 
+                key={index}
+                service={service}
+                color={color}
+                index={index}
+                hoveredIndex={hoveredIndex}
+                setHoveredIndex={setHoveredIndex}
+              />
             );
           })}
         </motion.div>

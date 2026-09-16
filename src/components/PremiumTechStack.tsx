@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const technologiesRow1 = [
-  { name: "React.js", color: "text-blue-500", icon: "⚛️" },
-  { name: "Node.js", color: "text-green-500", icon: "🟢" },
-  { name: "Python", color: "text-yellow-500", icon: "🐍" },
-  { name: "Laravel", color: "text-red-500", icon: "🔥" },
-  { name: "Flutter", color: "text-blue-400", icon: "📱" },
-  { name: "Kotlin", color: "text-purple-500", icon: "☕" },
+  { name: "Codeigniter", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" },
+  { name: "Laravel", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
+  { name: "Magento", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg" },
+  { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Wordpress", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+  { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
 ];
 
 const technologiesRow2 = [
-  { name: "Java", color: "text-orange-500", icon: "☕" },
-  { name: "JavaScript", color: "text-yellow-400", icon: "📜" },
-  { name: "WordPress", color: "text-blue-600", icon: "📝" },
-  { name: "Shopify", color: "text-green-600", icon: "🛍️" },
-  { name: "Magento", color: "text-orange-600", icon: "🛒" },
-  { name: "CodeIgniter", color: "text-red-600", icon: "🔥" },
+  { name: "shopify", img: "https://cdn.simpleicons.org/shopify/95BF47" },
+  { name: "Flutter", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "Kotlin", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
+  { name: "Java", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Javascript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "React-Js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
 ];
 
 export function PremiumTechStack() {
@@ -59,9 +59,9 @@ export function PremiumTechStack() {
   };
 
   return (
-    <section className="py-24 bg-slate-900 border-y border-slate-800 overflow-hidden relative">
+    <section className="py-24 bg-[#f8fafc] overflow-hidden relative">
       {/* Decorative gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-slate-900 via-transparent to-slate-900 w-full" />
+      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#f8fafc] via-transparent to-[#f8fafc] w-full" />
       
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-20 mb-16">
         <div className="text-center">
@@ -69,17 +69,21 @@ export function PremiumTechStack() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-semibold text-sm mb-4 tracking-widest"
+            className="inline-flex items-center gap-2 mb-4"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            TECHNOLOGY WE USE
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 p-1.5">
+              <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+            </div>
+            <span className="text-[#f4511e] font-extrabold text-lg uppercase tracking-wider">
+              TECHNOLOGY WE USE
+            </span>
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-white"
+            className="text-4xl md:text-5xl font-black text-slate-900"
           >
             Powered by modern technologies
           </motion.h2>
@@ -97,15 +101,13 @@ export function PremiumTechStack() {
             className="flex gap-6 items-center"
           >
             {[...technologiesRow1, ...technologiesRow1, ...technologiesRow1].map((tech, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                whileHover={{ scale: 1.1, rotateX: 10, rotateY: 10, zIndex: 30 }}
-                className="w-48 bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-3xl p-6 flex flex-col items-center justify-center gap-4 shadow-xl cursor-pointer"
-                style={{ transformStyle: "preserve-3d" }}
+                className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-5xl" style={{ transform: "translateZ(30px)" }}>{tech.icon}</div>
-                <div className={`font-bold text-lg ${tech.color}`} style={{ transform: "translateZ(20px)" }}>{tech.name}</div>
-              </motion.div>
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
+                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+              </div>
             ))}
           </motion.div>
         </div>
@@ -118,15 +120,13 @@ export function PremiumTechStack() {
             className="flex gap-6 items-center"
           >
             {[...technologiesRow2, ...technologiesRow2, ...technologiesRow2].map((tech, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                whileHover={{ scale: 1.1, rotateX: -10, rotateY: -10, zIndex: 30 }}
-                className="w-48 bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-3xl p-6 flex flex-col items-center justify-center gap-4 shadow-xl cursor-pointer"
-                style={{ transformStyle: "preserve-3d" }}
+                className="w-48 h-48 bg-white hover:bg-emerald-50/50 border border-slate-100 hover:border-emerald-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-5xl" style={{ transform: "translateZ(30px)" }}>{tech.icon}</div>
-                <div className={`font-bold text-lg ${tech.color}`} style={{ transform: "translateZ(20px)" }}>{tech.name}</div>
-              </motion.div>
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
+                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+              </div>
             ))}
           </motion.div>
         </div>

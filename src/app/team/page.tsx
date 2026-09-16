@@ -1,22 +1,20 @@
 import { PageBanner } from "@/components/PageBanner";
-import { PremiumServiceLayout } from "@/components/PremiumServiceLayout";
+import { PremiumTeam } from "@/components/PremiumTeam";
+import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 
-export default function Page() {
+export default function TeamPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-slate-50">
       <PageBanner 
         title="Our Team" 
         breadcrumbs={[
           { label: "Home", href: "/" },
-          
-          { label: "Our Team", href: "/team" }
+          { label: "Our Team" }
         ]} 
+        bgImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop"
       />
-      <PremiumServiceLayout 
-        title="Our Team"
-        description="Meet the brilliant minds behind WebCodian. Our team of experts is dedicated to your success."
-        features={["Expert Developers","Creative Designers","Strategic Marketers","Dedicated Support"]}
-      />
+      <PremiumTeam />
+      <PremiumProjectCTA />
     </main>
   );
 }

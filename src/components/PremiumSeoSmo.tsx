@@ -86,7 +86,7 @@ export function PremiumSeoSmo() {
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-300/20 rounded-full blur-[150px] mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         {/* Hero Section */}
         <motion.div 
@@ -97,15 +97,15 @@ export function PremiumSeoSmo() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md mb-6 shadow-sm">
             <LineChart className="w-4 h-4 text-emerald-500" />
-            <span className="text-sm font-medium bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Digital Growth Specialists</span>
+            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Digital Growth Specialists</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 drop-shadow-sm">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
             Dominate the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-indigo-600">
               Digital Landscape
             </span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
             At Webcodian LLP, we understand the importance of appearing at the top of search engine results. With our comprehensive SEO services, we help businesses improve their online presence, increase organic traffic, and outrank competitors.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -120,14 +120,14 @@ export function PremiumSeoSmo() {
         </motion.div>
 
         {/* About & Enhancing Visibility - Split Layout */}
-        <div className="mb-32 grid md:grid-cols-2 gap-12 items-center">
+        <div className="mb-16 grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
               Enhancing Visibility:<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
                 SEO and SMO Solutions
@@ -181,18 +181,18 @@ export function PremiumSeoSmo() {
         </div>
 
         {/* Technology Arsenal */}
-        <div className="mb-32">
-          <div className="text-center mb-12">
+        <div className="mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Technology We Use</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-4 gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
             {technologies.map((tech, idx) => (
               <motion.div 
                 key={idx}
                 whileHover={{ y: -10 }}
-                className="bg-white/80 backdrop-blur-md border border-slate-200 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:border-emerald-300 transition-all duration-300 group"
+                className="min-w-[65vw] sm:min-w-[40vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-white/80 backdrop-blur-md border border-slate-200 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:border-emerald-300 transition-all duration-300 group"
               >
                 <div className="w-20 h-20 mx-auto bg-slate-50 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:scale-110 transition-transform">
                   {tech.icon}
@@ -215,10 +215,10 @@ export function PremiumSeoSmo() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-4 lg:grid-cols-6 gap-4 pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide"
           >
             {categories.map((cat, idx) => (
-              <motion.div key={idx} variants={itemVariants} whileHover={{ scale: 1.05 }}>
+              <motion.div key={idx} variants={itemVariants} whileHover={{ scale: 1.05 }} className="min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none">
                 <div className="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:bg-white transition-all h-full flex flex-col items-center justify-center gap-3">
                   <div className="bg-slate-50 p-3 rounded-full shadow-inner">
                     {cat.icon}

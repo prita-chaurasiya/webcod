@@ -77,7 +77,7 @@ export function PremiumSoftwareDev() {
     <div className="bg-white text-gray-900 overflow-hidden" ref={containerRef}>
       
       {/* 1. Isometric Hero Section */}
-      <section className="relative min-h-[100vh] flex items-center pt-20 pb-24 overflow-hidden border-b border-gray-100">
+      <section className="relative min-h-[75vh] flex items-center pt-24 pb-16 overflow-hidden border-b border-gray-100">
         <div className="absolute top-[-10%] right-[-10%] w-[800px] h-[800px] bg-[#2eb872]/10 rounded-full blur-[150px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#2eb872]/5 rounded-full blur-[150px] pointer-events-none"></div>
         
@@ -95,21 +95,21 @@ export function PremiumSoftwareDev() {
             >
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white shadow-sm border border-gray-200 backdrop-blur-md">
                 <Cpu className="w-5 h-5 text-[#2eb872]" />
-                <span className="text-sm font-bold text-gray-700 uppercase tracking-widest">Enterprise Engineering</span>
+                <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Enterprise Engineering</span>
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
                 Custom Software <br/>
                 <span className="text-[#2eb872]">
                   Solutions.
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-600 max-w-xl leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
                 We specialize in building custom software solutions that streamline business processes, enhance productivity, and drive innovation across your entire organization.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <Link href="/contact" className="px-8 py-4 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(46,184,114,0.3)] hover:-translate-y-1 transition-all flex items-center gap-2">
                   Initiate Project <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -254,7 +254,7 @@ export function PremiumSoftwareDev() {
             <p className="text-gray-500 max-w-2xl mx-auto">We leverage the most advanced, secure, and robust technologies to build scalable enterprise architectures.</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-4 lg:grid-cols-6 gap-4 pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
             {technologies.map((tech, idx) => (
               <motion.div
                 key={idx}
@@ -262,7 +262,7 @@ export function PremiumSoftwareDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center gap-4 border border-gray-100 hover:border-[#2eb872]/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                className="min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-white rounded-2xl p-6 flex flex-col items-center justify-center gap-4 border border-gray-100 hover:border-[#2eb872]/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
                  {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} alt={tech.name} className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 drop-shadow-sm" />
@@ -281,7 +281,7 @@ export function PremiumSoftwareDev() {
             <p className="text-gray-500 max-w-2xl mx-auto">We use a systematic approach to maximize and optimize results across a wide array of diverse sectors.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[120px]">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-4 gap-4 md:auto-rows-[120px] pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
             {categories.map((cat, idx) => (
               <motion.div
                 key={idx}
@@ -289,7 +289,7 @@ export function PremiumSoftwareDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className={`${cat.span} group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-[#2eb872]/50 shadow-sm hover:shadow-md cursor-pointer`}
+                className={`${cat.span} min-w-[70vw] md:min-w-0 shrink-0 snap-center md:snap-align-none group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-[#2eb872]/50 shadow-sm hover:shadow-md cursor-pointer`}
               >
                 <div className="absolute inset-0 bg-[#2eb872]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 p-6 flex flex-col items-center justify-center text-center gap-3 z-10">

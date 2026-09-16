@@ -1,42 +1,25 @@
 import { PremiumServiceDetail } from "@/components/PremiumServiceDetail";
-import { MessageSquare, Zap, BarChart3, Puzzle } from "lucide-react";
+import { CheckCircle2, Star, Zap, Shield } from "lucide-react";
 
-export default function BulkSMSPage() {
+export default function Page() {
   return (
     <main>
       <PremiumServiceDetail 
-        title="Bulk SMS Services"
-        badgeText="INSTANT REACH"
-        description="Reach thousands of customers instantly with our reliable and lightning-fast bulk SMS gateway. Communicate effectively with a 98% open rate."
-        heroImage="https://images.unsplash.com/photo-1577563908411-50cb98976fea?auto=format&fit=crop&q=80&w=1000"
-        overviewTitle="Direct, Fast, and Reliable"
-        overviewDescription="SMS remains one of the most effective communication channels globally. Whether you need to send OTPs, alerts, or marketing campaigns, our enterprise-grade SMS gateway ensures your message is delivered securely and on time."
+        title="Bulk SMS"
+        badgeText="PREMIUM SERVICE"
+        description="Exceptional quality and unparalleled performance tailored to your specific needs."
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
+        overviewTitle="Elevate Your Business with Bulk SMS"
+        overviewDescription="Our bulk sms services are designed to give you a competitive edge. We blend innovative strategies with proven methodologies to deliver results that matter."
         features={[
-          {
-            title: "Promotional SMS",
-            description: "Send offers, discounts, and marketing campaigns to your target audience instantly to boost sales.",
-            icon: <MessageSquare className="w-5 h-5" />
-          },
-          {
-            title: "Transactional SMS",
-            description: "Automated alerts, OTPs, and notifications sent 24/7 without any DND restrictions.",
-            icon: <Zap className="w-5 h-5" />
-          },
-          {
-            title: "Real-time Reports",
-            description: "Track the status of every SMS sent with our detailed, real-time delivery tracking and analytics.",
-            icon: <BarChart3 className="w-5 h-5" />
-          },
-          {
-            title: "Seamless API Integration",
-            description: "Easily integrate our robust SMS APIs into your existing website, application, or CRM.",
-            icon: <Puzzle className="w-5 h-5" />
-          }
+          { title: "Strategic Approach", description: "Customized strategies aligned with your core business objectives.", icon: <Star className="w-5 h-5" /> },
+          { title: "Rapid Execution", description: "Agile methodologies ensuring quick turnaround without compromising quality.", icon: <Zap className="w-5 h-5" /> },
+          { title: "Reliability", description: "Built with industry-leading standards for maximum uptime and stability.", icon: <Shield className="w-5 h-5" /> },
+          { title: "Expert Support", description: "24/7 dedicated support from our team of seasoned professionals.", icon: <CheckCircle2 className="w-5 h-5" /> }
         ]}
         faqs={[
-          { q: "What is the difference between Promotional and Transactional SMS?", a: "Promotional SMS is used for marketing and cannot be sent to DND (Do Not Disturb) numbers. Transactional SMS is used for alerts/OTPs and bypasses DND restrictions." },
-          { q: "How fast are the messages delivered?", a: "Our premium gateways offer an average delivery time of less than 5 seconds for transactional routes." },
-          { q: "Do you provide API documentation?", a: "Yes, we provide comprehensive API documentation with code snippets in various languages for quick and easy integration." }
+          { q: "How do I get started?", a: "Simply contact us through our form, and our team will schedule a free consultation." },
+          { q: "Do you offer custom packages?", a: "Yes, all our services can be tailored to meet your unique requirements." }
         ]}
       />
     </main>

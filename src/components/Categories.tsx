@@ -31,7 +31,7 @@ export function Categories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid sm:grid-cols-3 md:grid-cols-4 gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
           {categories.map((category, index) => (
             <motion.div
               key={category.name}
@@ -39,7 +39,7 @@ export function Categories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white p-6 rounded text-center border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+              className="min-w-[65vw] sm:min-w-0 shrink-0 snap-center md:snap-align-none bg-white p-6 rounded text-center border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="w-[60px] h-[60px] mx-auto bg-[#f8f9fa] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#e80566] transition-colors duration-300">
                 <img 
@@ -55,6 +55,16 @@ export function Categories() {
           ))}
         </div>
       </div>
+      
+      <style dangerouslySetInnerHTML={{__html: `
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+      `}} />
     </section>
   );
 }

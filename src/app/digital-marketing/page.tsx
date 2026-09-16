@@ -34,12 +34,12 @@ export default function DigitalMarketingPage() {
           }
         ]}
         technologies={[
-          { name: "Google Ads", icon: "📊" },
-          { name: "Meta Ads", icon: "🌐" },
-          { name: "HubSpot", icon: "🧡" },
-          { name: "Mailchimp", icon: "📧" },
-          { name: "Google Analytics", icon: "📈" },
-          { name: "Semrush", icon: "🔍" }
+          { name: "Google Ads", icon: "https://cdn.simpleicons.org/googleads/4285F4" },
+          { name: "Meta Ads", icon: "https://cdn.simpleicons.org/meta/0468FF" },
+          { name: "HubSpot", icon: "https://cdn.simpleicons.org/hubspot/FF7A59" },
+          { name: "Mailchimp", icon: "https://cdn.simpleicons.org/mailchimp/FFE01B" },
+          { name: "Google Analytics", icon: "https://cdn.simpleicons.org/googleanalytics/E37400" },
+          { name: "Semrush", icon: "https://cdn.simpleicons.org/semrush/FF642D" }
         ]}
         faqs={[
           { q: "How quickly will I see results from digital marketing?", a: "PPC campaigns can generate traffic immediately, while organic strategies like SEO and Content Marketing typically show significant results within 3 to 6 months." },

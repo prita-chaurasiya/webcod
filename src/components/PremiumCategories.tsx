@@ -80,7 +80,7 @@ export function PremiumCategories() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+          className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide"
         >
           {categories.map((cat, index) => {
             const color = colors[index % colors.length];
@@ -93,7 +93,7 @@ export function PremiumCategories() {
                   scale: 1.02,
                   transition: { type: "spring", stiffness: 300, damping: 20 } 
                 }}
-                className="transform-gpu h-full"
+                className="min-w-[75vw] sm:min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none transform-gpu h-full"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Link href={`/industries/${cat.slug}`} className="block group w-full h-full outline-none">
@@ -136,6 +136,17 @@ export function PremiumCategories() {
         </motion.div>
 
       </div>
+      
+      {/* Hide scrollbar styles */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+      `}} />
     </section>
   );
 }

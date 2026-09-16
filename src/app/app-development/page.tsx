@@ -34,12 +34,12 @@ export default function AppDevelopmentPage() {
           }
         ]}
         technologies={[
-          { name: "React Native", icon: "⚛️" },
-          { name: "Flutter", icon: "🦋" },
-          { name: "Swift", icon: "🍏" },
-          { name: "Kotlin", icon: "🤖" },
-          { name: "Firebase", icon: "🔥" },
-          { name: "GraphQL", icon: "🔗" }
+          { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+          { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+          { name: "Swift", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" },
+          { name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
+          { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+          { name: "GraphQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" }
         ]}
         faqs={[
           { q: "Do you develop for both iOS and Android?", a: "Yes, we offer both native and cross-platform app development to ensure your app reaches the widest possible audience on all devices." },

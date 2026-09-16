@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const outfit = Outfit({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} h-full antialiased dark`}
+      className={`${outfit.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-white text-gray-800 font-sans selection:bg-[#2eb872] selection:text-white">
         <TopBar />

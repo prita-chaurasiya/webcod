@@ -1,42 +1,25 @@
 import { PremiumServiceDetail } from "@/components/PremiumServiceDetail";
-import { MessageCircle, Image as ImageIcon, CheckCircle, Clock } from "lucide-react";
+import { CheckCircle2, Star, Zap, Shield } from "lucide-react";
 
-export default function BulkWhatsAppPage() {
+export default function Page() {
   return (
     <main>
       <PremiumServiceDetail 
-        title="Bulk WhatsApp Marketing"
-        badgeText="100% ENGAGEMENT"
-        description="Engage your audience on the world's most popular messaging app. Send rich media, interactive buttons, and personalized messages to drive higher conversions."
-        heroImage="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000"
-        overviewTitle="Next-Generation Conversational Marketing"
-        overviewDescription="WhatsApp boasts a 98% open rate, making it the ultimate tool for customer engagement. Our bulk WhatsApp services allow you to connect, converse, and convert like never before."
+        title="Bulk WhatsApp"
+        badgeText="PREMIUM SERVICE"
+        description="Exceptional quality and unparalleled performance tailored to your specific needs."
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
+        overviewTitle="Elevate Your Business with Bulk WhatsApp"
+        overviewDescription="Our bulk whatsapp services are designed to give you a competitive edge. We blend innovative strategies with proven methodologies to deliver results that matter."
         features={[
-          {
-            title: "Rich Media Support",
-            description: "Send images, videos, PDFs, and interactive buttons along with your text to create engaging campaigns.",
-            icon: <ImageIcon className="w-5 h-5" />
-          },
-          {
-            title: "Automated Replies",
-            description: "Set up auto-responders and conversational chatbots to handle customer queries 24/7.",
-            icon: <MessageCircle className="w-5 h-5" />
-          },
-          {
-            title: "Verified Green Badge",
-            description: "We help you acquire the official WhatsApp Green Tick to establish trust and credibility with your customers.",
-            icon: <CheckCircle className="w-5 h-5" />
-          },
-          {
-            title: "Campaign Scheduling",
-            description: "Schedule your campaigns in advance and send them at the optimal time for maximum engagement.",
-            icon: <Clock className="w-5 h-5" />
-          }
+          { title: "Strategic Approach", description: "Customized strategies aligned with your core business objectives.", icon: <Star className="w-5 h-5" /> },
+          { title: "Rapid Execution", description: "Agile methodologies ensuring quick turnaround without compromising quality.", icon: <Zap className="w-5 h-5" /> },
+          { title: "Reliability", description: "Built with industry-leading standards for maximum uptime and stability.", icon: <Shield className="w-5 h-5" /> },
+          { title: "Expert Support", description: "24/7 dedicated support from our team of seasoned professionals.", icon: <CheckCircle2 className="w-5 h-5" /> }
         ]}
         faqs={[
-          { q: "Is it legal to send Bulk WhatsApp messages?", a: "Yes, provided you use the official WhatsApp Business API and send messages to users who have opted in to receive communications from you." },
-          { q: "Can I send messages to unsaved contacts?", a: "With the official WhatsApp API, you can send approved template messages to users even if they haven't saved your number." },
-          { q: "Do you provide the API integration?", a: "Yes, we provide seamless integration with your existing CRM, website, or custom software." }
+          { q: "How do I get started?", a: "Simply contact us through our form, and our team will schedule a free consultation." },
+          { q: "Do you offer custom packages?", a: "Yes, all our services can be tailored to meet your unique requirements." }
         ]}
       />
     </main>

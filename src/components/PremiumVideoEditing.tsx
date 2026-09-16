@@ -56,33 +56,33 @@ export function PremiumVideoEditing() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 overflow-hidden relative">
+    <div className="min-h-[75vh] bg-slate-50 text-slate-800 overflow-hidden relative">
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/30 rounded-full blur-[128px] mix-blend-multiply animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/30 rounded-full blur-[128px] mix-blend-multiply animate-pulse delay-1000" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         {/* Hero Section */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring" }}
-          className="text-center mb-20 pt-10"
+          className="text-center mb-16 pt-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md mb-6 shadow-xl">
             <Sparkles className="w-4 h-4 text-purple-600" />
-            <span className="text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Premium Service</span>
+            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Premium Service</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 drop-shadow-sm">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
             Transform Your Vision<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-blue-600 drop-shadow-sm">
               Into Masterpieces
             </span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10">
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-600 mb-8">
             Our team of creative professionals is dedicated to transforming your raw footage into polished, professional videos that captivate and engage your audience.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -102,7 +102,7 @@ export function PremiumVideoEditing() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="mb-32 max-w-4xl mx-auto"
+          className="mb-16 max-w-4xl mx-auto"
         >
           <div className="relative p-[2px] rounded-[24px] bg-gradient-to-b from-slate-200 to-transparent">
             <div className="bg-white/80 backdrop-blur-xl rounded-[22px] p-8 md:p-12 text-center shadow-xl">
@@ -114,8 +114,8 @@ export function PremiumVideoEditing() {
         </motion.div>
 
         {/* Why Choose Us */}
-        <div className="mb-32">
-          <div className="text-center mb-16">
+        <div className="mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Why Choose Us</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
           </div>
@@ -154,8 +154,8 @@ export function PremiumVideoEditing() {
         </div>
 
         {/* Tools Section */}
-        <div className="mb-32">
-          <div className="text-center mb-16">
+        <div className="mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Our Arsenal</h2>
             <p className="text-slate-600 text-lg">Industry-leading software we master</p>
           </div>
@@ -184,9 +184,9 @@ export function PremiumVideoEditing() {
         </div>
 
         {/* FAQ Section */}
-        <div className="max-w-3xl mx-auto mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
