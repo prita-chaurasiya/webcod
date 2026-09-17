@@ -27,6 +27,7 @@ interface PremiumServiceDetailProps {
   badgeText: string;
   description: string;
   heroImage: string;
+  heroVideo?: string;
   overviewTitle: string;
   overviewDescription: string;
   features: ServiceFeature[];
@@ -40,6 +41,7 @@ export function PremiumServiceDetail({
   badgeText,
   description,
   heroImage,
+  heroVideo,
   overviewTitle,
   overviewDescription,
   features,
@@ -48,6 +50,36 @@ export function PremiumServiceDetail({
   featuresImage
 }: PremiumServiceDetailProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const getFallbackVideo = (titleStr: string) => {
+    const t = titleStr.toLowerCase();
+    if (t.includes("app") || t.includes("mobile") || t.includes("ios") || t.includes("android")) {
+      return "/videos/app-dev.mp4";
+    }
+    if (t.includes("e-commerce") || t.includes("shop") || t.includes("commerce")) {
+      return "/videos/ecommerce.mp4";
+    }
+    if (t.includes("marketing") || t.includes("seo") || t.includes("digital")) {
+      return "/videos/digital-marketing.mp4";
+    }
+    if (t.includes("software") || t.includes("crm") || t.includes("erp") || t.includes("maintenance")) {
+      return "/videos/software-dev.mp4";
+    }
+    return "/videos/web-dev.mp4";
+  };
+
+  const isVideoUrl = (src?: string) => {
+    if (!src) return false;
+    return src.endsWith(".mp4") || src.endsWith(".webm");
+  };
+
+  const isGifUrl = (src?: string) => {
+    if (!src) return false;
+    return src.endsWith(".gif");
+  };
+
+  const resolvedMedia = heroVideo || (isVideoUrl(heroImage) || isGifUrl(heroImage) ? heroImage : getFallbackVideo(title));
+  const isVideo = isVideoUrl(resolvedMedia);
 
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -100,22 +132,75 @@ export function PremiumServiceDetail({
               </Link>
             </motion.div>
 
-            {/* Hero 3D Graphic */}
+            {/* Hero Animated Video/GIF Device Frame */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 50 }}
-              className="lg:w-1/2 relative"
+              className="lg:w-1/2 relative w-full"
             >
-              <div className="relative w-full max-w-md mx-auto aspect-[4/3] lg:aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-[#2eb872]/20 rounded-[2rem] filter blur-2xl opacity-50" />
-                <div className="relative z-10 w-full h-full bg-slate-800/40 backdrop-blur-md border border-white/10 rounded-[2rem] shadow-2xl flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={heroImage} 
-                    alt={title} 
-                    className="w-full h-full object-cover mix-blend-overlay opacity-90 hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+              <div className="relative w-full max-w-lg mx-auto aspect-[4/3] lg:aspect-[16/11]">
+                {/* Glowing Aura */}
+                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[#2eb872]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
+                
+                {/* Device / Mockup Chrome */}
+                <div className="relative z-10 w-full h-full bg-slate-900/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
+                  
+                  {/* Window Chrome Header */}
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-slate-950/70 backdrop-blur-md shrink-0">
+                    <div className="flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-rose-500/90 shadow-[0_0_8px_rgba(244,63,94,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-amber-500/90 shadow-[0_0_8px_rgba(245,158,11,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-emerald-500/90 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
+                    </div>
+                    
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#2eb872] animate-ping"></span>
+                      <span>{title.toLowerCase().replace(/[^a-z0-9]/g, '-')}.engine.preview</span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold tracking-widest uppercase">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>LIVE</span>
+                    </div>
+                  </div>
+
+                  {/* Video / GIF Display Container */}
+                  <div className="relative flex-1 w-full h-full overflow-hidden bg-slate-950">
+                    {isVideo ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src={resolvedMedia}
+                        poster={heroImage}
+                      />
+                    ) : (
+                      <img
+                        src={resolvedMedia}
+                        alt={title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    
+                    {/* Ambient subtle vignette */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none" />
+
+                    {/* Bottom Floating Badges */}
+                    <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between pointer-events-none">
+                      <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/15 text-[11px] font-bold text-white shadow-xl">
+                        <span className="w-2 h-2 rounded-full bg-[#2eb872] animate-pulse"></span>
+                        <span>Enterprise Build</span>
+                      </div>
+
+                      <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
+                        <span>⚡ 60 FPS</span>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -20,7 +20,7 @@ export function PremiumAboutDigiatureStyle() {
               Innovation & Excellence
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-8 tracking-tight">
-              About WebCodian
+              Engineering Digital Excellence & Empowering Careers
             </h2>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               WebCodian is a premier IT Training Institute and modern software development company delivering innovative digital solutions. We help students master technology and businesses transform ideas into scalable digital products using advanced technologies and intelligent architectures.

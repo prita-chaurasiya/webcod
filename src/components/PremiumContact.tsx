@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
@@ -164,6 +164,53 @@ export function PremiumContact() {
           </motion.div>
 
         </div>
+
+        {/* Google Map Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-100 overflow-hidden"
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <span className="text-[#2eb872] font-semibold text-sm tracking-wider uppercase flex items-center gap-1.5 mb-1">
+                <MapPin className="w-4 h-4" /> Location Overview
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+                Find Us on Google Maps
+              </h3>
+              <p className="text-slate-500 text-sm mt-1">
+                Visit our office or get live turn-by-turn directions on your device.
+              </p>
+            </div>
+            
+            <a 
+              href="https://www.google.com/maps?cid=2200519266001042772"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#2eb872] text-white font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg self-start sm:self-center shrink-0 group"
+            >
+              <span>Open in Google Maps</span>
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          </div>
+
+          <div className="w-full h-[400px] md:h-[480px] rounded-2xl overflow-hidden border border-slate-200 shadow-inner relative bg-slate-100">
+            <iframe
+              title="Google Maps Location"
+              src="https://maps.google.com/maps?cid=2200519266001042772&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

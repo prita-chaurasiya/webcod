@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { BookOpen, Menu, X, ChevronDown, Headset, ArrowRight, HeartPulse, GraduationCap, ShoppingCart, Building2, Plane, HeartHandshake, Briefcase, ShieldCheck, Factory, Newspaper, Utensils, MessageSquareText, Rocket, Laptop, Truck, TestTube, Users, Package, Search, Building } from "lucide-react";
+import { BookOpen, Menu, X, ChevronDown, Headset, ArrowRight, HeartPulse, GraduationCap, ShoppingCart, Building2, Plane, HeartHandshake, Briefcase, ShieldCheck, Factory, Newspaper, Utensils, MessageSquareText, Rocket, Laptop, Truck, TestTube, Users, Package, Search, Building, CreditCard, Award } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const webSoftwareServices = [
@@ -93,12 +93,41 @@ export function Navbar() {
               </button>
               <AnimatePresence>
                 {activeDropdown === "about" && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ duration: 0.2 }} className="absolute top-full left-0 mt-2 w-52 bg-white border border-gray-100 rounded-lg shadow-xl overflow-hidden">
-                    <div className="flex flex-col">
-                      <Link href="/about" className="px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#2eb872] hover:bg-[#f0fdf4] transition-colors">About Us</Link>
-                      <Link href="/team" className="px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#2eb872] hover:bg-[#f0fdf4] transition-colors">Our Team</Link>
-                      <Link href="/vision-mission" className="px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#2eb872] hover:bg-[#f0fdf4] transition-colors">Vision & Mission</Link>
-                      <Link href="/testimonials" className="px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#2eb872] hover:bg-[#f0fdf4] transition-colors">Client Testimonials</Link>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 12, scale: 0.98 }} 
+                    animate={{ opacity: 1, y: 0, scale: 1 }} 
+                    exit={{ opacity: 0, y: 10, scale: 0.98 }} 
+                    transition={{ duration: 0.22, ease: "easeOut" }} 
+                    className="absolute top-full left-0 mt-3 w-80 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 z-50 overflow-hidden"
+                  >
+                    <div className="px-3 py-2 border-b border-slate-100 flex items-center justify-between mb-1.5">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">About WebCodian</span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">Company</span>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      {[
+                        { label: "About Us", sub: "Company legacy, profile & certifications", href: "/about", icon: Building2, color: "text-blue-600 bg-blue-50" },
+                        { label: "Our Team", sub: "Senior engineers & digital architects", href: "/team", icon: Users, color: "text-emerald-600 bg-emerald-50" },
+                        { label: "Vision & Mission", sub: "Core philosophies & innovation roadmap", href: "/vision-mission", icon: Rocket, color: "text-purple-600 bg-purple-50" },
+                        { label: "Testimonials", sub: "Verified client feedback & reviews", href: "/testimonials", icon: Award, color: "text-orange-600 bg-orange-50" }
+                      ].map((item) => (
+                        <Link 
+                          key={item.label} 
+                          href={item.href} 
+                          className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-all duration-200 group/item"
+                        >
+                          <div className={`w-9 h-9 rounded-lg ${item.color} flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform`}>
+                            <item.icon className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-bold text-slate-800 group-hover/item:text-[#2eb872] transition-colors">{item.label}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-slate-400 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all" />
+                            </div>
+                            <p className="text-[11px] text-slate-400 truncate">{item.sub}</p>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                   </motion.div>
                 )}
@@ -239,18 +268,41 @@ export function Navbar() {
               </button>
               <AnimatePresence>
                 {activeDropdown === "more" && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ duration: 0.2 }} className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-100 rounded-lg shadow-xl overflow-hidden">
-                    <div className="flex flex-col">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 12, scale: 0.98 }} 
+                    animate={{ opacity: 1, y: 0, scale: 1 }} 
+                    exit={{ opacity: 0, y: 10, scale: 0.98 }} 
+                    transition={{ duration: 0.22, ease: "easeOut" }} 
+                    className="absolute top-full right-0 mt-3 w-80 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 z-50 overflow-hidden"
+                  >
+                    <div className="px-3 py-2 border-b border-slate-100 flex items-center justify-between mb-1.5">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">Explore WebCodian</span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-[#2eb872] border border-emerald-100">Quick Access</span>
+                    </div>
+                    <div className="flex flex-col gap-1">
                       {[
-                        { label: "Internship", href: "/internship" },
-                        { label: "Pay Online", href: "/pay-online" },
-                        { label: "Projects", href: "/portfolio" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Career", href: "/career" },
-                        { label: "Support", href: "/support" }
-                      ].map(link => (
-                        <Link key={link.label} href={link.href} className="px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#2eb872] hover:bg-[#f0fdf4] transition-colors">
-                          {link.label}
+                        { label: "Internship", sub: "Hands-on tech training & PPO", href: "/internship", icon: GraduationCap, color: "text-emerald-600 bg-emerald-50" },
+                        { label: "Pay Online", sub: "Instant secure fee & invoice payment", href: "/pay-online", icon: CreditCard, color: "text-blue-600 bg-blue-50" },
+                        { label: "Projects", sub: "Enterprise deliveries & case studies", href: "/portfolio", icon: Laptop, color: "text-purple-600 bg-purple-50" },
+                        { label: "Blog", sub: "Tech guides, tutorials & articles", href: "/blog", icon: BookOpen, color: "text-orange-600 bg-orange-50" },
+                        { label: "Career", sub: "Open developer & designer roles", href: "/career", icon: Briefcase, color: "text-rose-600 bg-rose-50" },
+                        { label: "Support", sub: "24/7 client desk & ticket tracking", href: "/support", icon: Headset, color: "text-teal-600 bg-teal-50" }
+                      ].map((item) => (
+                        <Link 
+                          key={item.label} 
+                          href={item.href} 
+                          className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-all duration-200 group/item"
+                        >
+                          <div className={`w-9 h-9 rounded-lg ${item.color} flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform`}>
+                            <item.icon className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-bold text-slate-800 group-hover/item:text-[#2eb872] transition-colors">{item.label}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-slate-400 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all" />
+                            </div>
+                            <p className="text-[11px] text-slate-400 truncate">{item.sub}</p>
+                          </div>
                         </Link>
                       ))}
                     </div>

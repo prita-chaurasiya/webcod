@@ -9,6 +9,7 @@ export default function WebDevelopmentPage() {
         badgeText="NEXT-GEN"
         description="We engineer bespoke, high-performance web applications that combine award-winning design with robust, scalable architecture."
         heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000"
+        heroVideo="/videos/web-dev.mp4"
         overviewTitle="Build The Future Web"
         overviewDescription="From corporate portals to complex e-commerce platforms, our web development services ensure your business stands out in the digital landscape with unmatched performance and security."
         features={[

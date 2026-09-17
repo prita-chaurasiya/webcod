@@ -2,10 +2,19 @@ import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 import { PremiumFormLayout } from "@/components/PremiumFormLayout";
 
-export default function Page() {
+export default function QuotePage() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <AboutBreadcrumb title="REQUEST A QUOTE" />
+      <AboutBreadcrumb 
+        title="REQUEST A FREE QUOTE"
+        subtitle="Share your software specifications, timeline, and goals. Our engineering architects will deliver a detailed technical roadmap and transparent cost estimate."
+        badge="✦ 24-HOUR ESTIMATE GUARANTEE"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Request a Quote" }
+        ]}
+        highlights={["Free Technical Consultation", "Strict NDA Protected", "Transparent Pricing", "Rapid 24-Hr Turnaround"]}
+      />
       
       <PremiumFormLayout 
         title="Get Your Free Quote"
