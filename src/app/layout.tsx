@@ -4,6 +4,7 @@ import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Premium3DEffects } from "@/components/Premium3DEffects";
 
 const outfit = Outfit({
   variable: "--font-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       className={`${outfit.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-white text-gray-800 font-sans selection:bg-[#2eb872] selection:text-white">
+        <Premium3DEffects />
         <TopBar />
         <Navbar />
         <main className="flex-grow">

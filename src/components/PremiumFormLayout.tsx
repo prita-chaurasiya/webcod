@@ -78,13 +78,23 @@ export function PremiumFormLayout({ title, subtitle, fields, submitText }: Premi
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
                         {field.label} {field.required && <span className="text-red-500">*</span>}
                       </label>
-                      <input 
-                        type={field.type} 
-                        name={field.name}
-                        className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2eb872] focus:border-transparent transition-all bg-gray-50 focus:bg-white text-gray-900" 
-                        placeholder={field.placeholder} 
-                        required={field.required} 
-                      />
+                      {field.type === "textarea" ? (
+                        <textarea 
+                          name={field.name}
+                          rows={4}
+                          className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2eb872] focus:border-transparent transition-all bg-gray-50 focus:bg-white text-gray-900 resize-y" 
+                          placeholder={field.placeholder} 
+                          required={field.required} 
+                        ></textarea>
+                      ) : (
+                        <input 
+                          type={field.type} 
+                          name={field.name}
+                          className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2eb872] focus:border-transparent transition-all bg-gray-50 focus:bg-white text-gray-900" 
+                          placeholder={field.placeholder} 
+                          required={field.required} 
+                        />
+                      )}
                     </div>
                   ))}
                   <button type="submit" className="w-full bg-[#1f2937] hover:bg-[#111827] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 group mt-8">

@@ -1,160 +1,198 @@
 "use client";
 
-import { PageBanner } from "@/components/PageBanner";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
-import { PremiumDigiatureServiceLayout } from "@/components/PremiumDigiatureServiceLayout";
-import { Bot, Zap, Shield, Cpu } from "lucide-react";
+import { Bot, Zap, Shield, Cpu, Layers, Link as LinkIcon, Database, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <PageBanner 
-        title="AI & SaaS Product"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "AI & Automation" },
-          { label: "AI & SaaS Product" }
-        ]}
-        bgImage="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
-      />
+    <main className="bg-white min-h-screen">
       
-      <PremiumDigiatureServiceLayout activeService="ai-saas-product">
-        <div className="space-y-12">
-          {/* Main Content Area */}
-          <div className="grid lg:grid-cols-12 gap-12 items-center mb-16">
+      {/* 1. Breadcrumb Section */}
+      <div 
+        className="relative py-24 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(230, 64, 64, 0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')"
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 capitalize tracking-tight">AI & SaaS Product</h1>
+            <ul className="flex items-center gap-2 text-white/90 font-medium uppercase text-sm tracking-wider">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              </li>
+              <li className="text-white/60">/</li>
+              <li className="text-white font-bold capitalize">ai saas product</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Hero Section */}
+      <section className="py-20 relative overflow-hidden bg-slate-900">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
             <motion.div 
-              initial={{ opacity: 0, x: -20 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-7"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-white lg:pr-12"
             >
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-                Next-Generation <span className="text-blue-600">AI & SaaS Product</span>
-              </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6 font-medium">
-                WebCodian delivers cutting-edge ai & saas product that empower businesses to automate workflows, scale operations, and drive unprecedented growth through artificial intelligence.
+              <span className="inline-block bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full mb-6 uppercase font-bold text-sm tracking-widest border border-blue-500/30">
+                Solutions
+              </span>
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-6 leading-[1.15]">
+                AI & SaaS Product Development Solutions for Scalable Digital Businesses
+              </h1>
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                The next generation of software is intelligent, cloud-native, and subscription-driven. At WebCodian, we specialize in AI SaaS product development — building scalable, AI-powered platforms that help startups, enterprises, and digital-first businesses launch and grow recurring-revenue products.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our expert engineers integrate advanced models and machine learning algorithms directly into your existing infrastructure, providing seamless intelligence exactly where you need it most.
+              <p className="text-slate-400 text-base leading-relaxed">
+                From multi-tenant SaaS applications to intelligent automation platforms, we engineer cloud-based digital products designed for performance, security, and long-term business growth.
               </p>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              whileInView={{ opacity: 1, scale: 1 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative p-4 md:p-8"
             >
-              <div className="relative p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-[2rem] border border-white shadow-xl shadow-blue-900/5 group">
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-[2rem]"></div>
-                <motion.div 
-                  animate={{ y: [-10, 10, -10] }} 
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10 w-full aspect-square rounded-[1.5rem] overflow-hidden border-4 border-white shadow-md bg-white flex items-center justify-center"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" 
-                    alt="AI & SaaS Product Visualization" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay"></div>
-                </motion.div>
-                
-                {/* Floating decorative elements */}
-                <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center z-20">
-                  <Cpu className="w-5 h-5 text-blue-600" />
-                </motion.div>
-                <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-6 -left-6 w-16 h-16 bg-blue-600 rounded-2xl shadow-xl flex items-center justify-center z-20 rotate-12">
-                  <Bot className="w-8 h-8 text-white" />
-                </motion.div>
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" 
+                alt="AI SaaS Solutions" 
+                className="w-full rounded-3xl shadow-2xl shadow-blue-900/50 border border-slate-700/50"
+              />
+              <div className="text-center mt-6 text-slate-400 italic text-sm">
+                *Visualizing scalable growth through technology*
               </div>
             </motion.div>
+
           </div>
+        </div>
+      </section>
 
-          {/* Key Benefits Grid */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <h3 className="text-2xl font-bold text-slate-900 mb-6 border-l-4 border-blue-600 pl-4">Key Benefits</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { icon: Zap, title: "Unmatched Speed", desc: "Process complex datasets in seconds rather than hours." },
-                { icon: Shield, title: "Enterprise Security", desc: "Data protection protocols built into the core logic." },
-                { icon: Cpu, title: "Scalable Architecture", desc: "Designed to grow effortlessly with your user base." },
-                { icon: Bot, title: "Intelligent Automation", desc: "Reduce manual human errors by up to 99%." }
-              ].map((benefit, idx) => (
-                <motion.div whileHover={{ y: -5, scale: 1.02 }} key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                    <benefit.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-2">{benefit.title}</h4>
-                    <p className="text-slate-600 text-sm leading-relaxed">{benefit.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Consultation Form */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            viewport={{ once: true }} 
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-16 bg-slate-900 rounded-[2rem] p-8 md:p-12 relative overflow-hidden shadow-2xl"
-          >
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2eb872]/10 rounded-full blur-[80px] pointer-events-none"></div>
+      {/* 3. What Are AI & SaaS Products */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
             
-            <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-center">
-              <div className="lg:col-span-2 text-white">
-                <h3 className="text-3xl font-black mb-4 leading-tight">Transform Your Business with AI</h3>
-                <p className="text-slate-400 mb-8 font-medium">Ready to see how our AI solutions can drive growth and efficiency? Book a free consultation with our AI experts today.</p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><Zap className="w-4 h-4 text-[#2eb872]" /></div>
-                    <span className="text-sm font-semibold">Custom Strategy Tailored to You</span>
+            <div className="lg:col-span-5 lg:pr-8">
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-[#2eb872]">
+                What Are AI & SaaS Products?
+              </h2>
+              <p className="text-slate-600 mb-5 leading-relaxed text-lg">
+                AI & SaaS products combine artificial intelligence with the Software as a Service delivery model — creating intelligent, cloud-hosted applications that users access anywhere via subscription.
+              </p>
+              <p className="text-slate-600 mb-5 leading-relaxed text-lg">
+                Unlike traditional licensed software, SaaS platforms are continuously updated in the cloud, eliminating installation overhead and reducing total cost of ownership. When AI is embedded into the core, these platforms can automate complex workflows, generate actionable insights from data, and deliver personalized experiences at scale.
+              </p>
+              <p className="text-slate-600 leading-relaxed text-lg font-medium text-slate-800">
+                For businesses, AI SaaS products represent one of the most efficient paths to recurring revenue, faster time-to-market, and scalable digital growth.
+              </p>
+            </div>
+
+            <div className="lg:col-span-7">
+              <div className="relative py-12 px-4 bg-slate-50 rounded-3xl border border-slate-100 shadow-inner">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                  
+                  {/* Left Column Cards */}
+                  <div className="md:col-span-1 flex flex-col gap-4 text-center md:text-right">
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Market Research</h6>
+                      <p className="text-slate-500 text-xs">Conduct Market Research</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Budgeting</h6>
+                      <p className="text-slate-500 text-xs">Estimate the Budget</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Business Model</h6>
+                      <p className="text-slate-500 text-xs">Determine Business Model</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Tech Stack</h6>
+                      <p className="text-slate-500 text-xs">Define Technology Stack</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><Shield className="w-4 h-4 text-[#2eb872]" /></div>
-                    <span className="text-sm font-semibold">Secure & Scalable Solutions</span>
+
+                  {/* Center Hub */}
+                  <div className="md:col-span-1 flex justify-center items-center py-6 md:py-0">
+                    <div className="w-24 h-24 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white shadow-xl shadow-blue-600/30 ring-8 ring-blue-50">
+                      <Database className="w-8 h-8 mb-1" />
+                      <span className="font-bold text-xs uppercase tracking-wider">SaaS</span>
+                    </div>
                   </div>
+
+                  {/* Right Column Cards */}
+                  <div className="md:col-span-1 flex flex-col gap-4 text-center md:text-left">
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Develop MVP</h6>
+                      <p className="text-slate-500 text-xs">Develop an MVP</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Test & Iterate</h6>
+                      <p className="text-slate-500 text-xs">Test And Iterate</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Final Release</h6>
+                      <p className="text-slate-500 text-xs">Check & Release Final Version</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      <h6 className="font-bold text-slate-900 mb-1 text-sm">Maintenance</h6>
+                      <p className="text-slate-500 text-xs">Support And Maintenance</p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-              
-              <div className="lg:col-span-3 bg-white rounded-3xl p-6 md:p-8 shadow-xl">
-                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
-                      <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="John Doe" required />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Work Email</label>
-                      <input type="email" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="john@company.com" required />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Company Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="Acme Corp" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">How can we help?</label>
-                    <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us about your project..." required></textarea>
-                  </div>
-                  <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-blue-600/30">
-                    Book Free Consultation
-                  </button>
-                </form>
-              </div>
             </div>
-          </motion.div>
+
+          </div>
         </div>
-      </PremiumDigiatureServiceLayout>
+      </section>
+
+      {/* 4. Services Section */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4">
+          
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-blue-600 mb-4">Our AI & SaaS Product Development Services</h2>
+            <p className="text-slate-600 text-lg">
+              We provide end-to-end AI SaaS product development services — from initial architecture to post-launch support — tailored to modern digital business models.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+              <div className="text-blue-600 mb-4 bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Layers className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Custom SaaS Product Development</h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                We design and build scalable SaaS platforms from the ground up, with secure cloud architecture, multi-tenant systems, role-based access control, and subscription management built in.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+              <div className="text-blue-600 mb-4 bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Cpu className="w-8 h-8" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">AI-Powered SaaS Applications</h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Integrate intelligent features like predictive analytics, natural language processing (NLP), machine learning recommendation engines, and computer vision directly into your SaaS product to create a competitive advantage.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
       <PremiumProjectCTA />
     </main>

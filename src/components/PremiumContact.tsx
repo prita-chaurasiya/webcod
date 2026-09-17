@@ -45,7 +45,7 @@ export function PremiumContact() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-slate-50 relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2eb872]/10 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -86,6 +86,17 @@ export function PremiumContact() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Trusted By / Partner Logos */}
+            <div className="pt-8 mt-8 border-t border-slate-200/60 hidden md:block">
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Trusted Partners & Recruiters</p>
+              <div className="flex flex-wrap gap-6 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <span className="font-black text-xl text-slate-600">Microsoft</span>
+                <span className="font-black text-xl text-slate-600">Google</span>
+                <span className="font-black text-xl text-slate-600">Amazon</span>
+                <span className="font-black text-xl text-slate-600">TCS</span>
+              </div>
             </div>
           </div>
 

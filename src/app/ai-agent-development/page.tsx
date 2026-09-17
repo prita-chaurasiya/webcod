@@ -1,6 +1,6 @@
 "use client";
 
-import { PageBanner } from "@/components/PageBanner";
+import { ServiceBannerShort } from "@/components/ServiceBannerShort";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 import { PremiumDigiatureServiceLayout } from "@/components/PremiumDigiatureServiceLayout";
 import { Bot, Zap, Shield, Cpu } from "lucide-react";
@@ -9,14 +9,13 @@ import { motion } from "framer-motion";
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <PageBanner 
+      <ServiceBannerShort 
         title="AI Agent Development"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "AI & Automation" },
           { label: "AI Agent Development" }
         ]}
-        bgImage="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
+        bgImage="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"
       />
       
       <PremiumDigiatureServiceLayout activeService="ai-agent-development">

@@ -1,134 +1,198 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
-    company: "TechInnovate Solutions",
-    text: "We are extremely satisfied with our new software platform. The WebCodian team understood our vision perfectly, delivered a high-quality product on time, and provided excellent support throughout the development process.",
+    company: "SKY PARK CITY",
+    text: "We are highly satisfied with the real estate software developed for Sky Park City. The solution is modern, efficient, and easy to use, helping us manage our operations more effectively. The team's professionalism and timely support made the entire experience smooth.",
     name: "Rahul Sharma",
-    role: "CEO & Director",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
-    rating: 5
+    role: "Director"
   },
   {
     id: 2,
-    company: "EduGrowth Institute",
-    text: "We have been associated with WebCodian for over 3 years, and they have always delivered reliable and customized IT solutions. Their team helped us streamline our learning management system with a solution tailored to our exact needs.",
+    company: "TECH INNOVATE",
+    text: "We have been using the software platform built by WebCodian for over a year now, and it has significantly improved our workflow. The team understood our unique requirements perfectly and delivered a high-quality product on time.",
     name: "Priya Patel",
-    role: "Founder",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
-    rating: 5
+    role: "CEO"
   },
   {
     id: 3,
-    company: "Global Logistics Pvt Ltd",
+    company: "GLOBAL LOGISTICS",
     text: "Working with the WebCodian team was a great experience. They built a powerful and easy-to-use ERP software that met all our complex business requirements. Their commitment to quality and timely delivery is truly appreciated.",
     name: "Amit Kumar",
-    role: "Operations Manager",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-    rating: 5
+    role: "Operations Manager"
   },
   {
     id: 4,
-    company: "Future Healthcare Systems",
-    text: "We are very happy with the complete software developed for our clinic. The team delivered a reliable, user-friendly solution that perfectly met our healthcare requirements. Their professionalism made the entire experience smooth.",
-    name: "Dr. Ananya Singh",
-    role: "Medical Director",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=200&auto=format&fit=crop",
-    rating: 5
-  },
-  {
-    id: 5,
-    company: "FinTech Innovations",
+    company: "FINTECH SOLUTIONS",
     text: "The financial tracking application provided by WebCodian significantly increased our operational efficiency. Their expertise in secure software architecture is top-tier. Highly recommended for any scaling enterprise.",
     name: "Vikas Verma",
-    role: "Chief Technical Officer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
-    rating: 5
-  },
-  {
-    id: 6,
-    company: "Elite Real Estate",
-    text: "WebCodian's custom CRM solution completely revolutionized how we manage properties and leads. The UI is incredibly intuitive and the automated workflows saved us hundreds of manual hours every month.",
-    name: "Neha Gupta",
-    role: "Sales Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
-    rating: 5
+    role: "CTO"
   }
 ];
 
 export function PremiumTestimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [cardsPerView, setCardsPerView] = useState(2);
+
+  // Responsive cards per view
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerView(window.innerWidth < 768 ? 1 : 2);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, testimonials.length - cardsPerView);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1));
+  }, [maxIndex]);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex <= 0 ? maxIndex : prevIndex - 1));
+  };
+
+  // Auto-play
+  useEffect(() => {
+    if (!isHovered) {
+      const timer = setInterval(() => {
+        nextSlide();
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [isHovered, nextSlide]);
+
   return (
-    <section className="py-24 bg-slate-50 relative">
-      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <section className="py-20 md:py-24 relative overflow-hidden" style={{
+      background: "linear-gradient(135deg, #eef2ff 0%, #fcfcfc 40%, #f3e8ff 100%)"
+    }}>
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         
-        {/* Digiature-style Center Title */}
-        <div className="text-center max-w-4xl mx-auto mb-20" data-aos="fade-up">
-          <span className="inline-block py-1 px-3 rounded text-[#2eb872] bg-teal-50 font-bold text-sm tracking-wide uppercase mb-4 border border-teal-100">
-            Client Testimonials
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-            Customer Reviews and Feedback for Our Software Services
-          </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            At WebCodian, our work speaks through the businesses we have helped build, automate, and grow. From healthcare platforms to real estate software and logistics systems, our clients come from diverse industries — and they share one consistent experience: reliable delivery, transparent communication, and software that actually works at scale.
-          </p>
-        </div>
-
-        {/* Digiature-style Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-          {testimonials.map((testimonial, idx) => (
-            <motion.div 
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between relative mt-8"
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-16 gap-6">
+          <div className="max-w-3xl">
+            <span className="inline-block bg-black text-white text-[10px] md:text-xs font-bold tracking-widest px-3 md:px-4 py-1.5 md:py-2 uppercase mb-4 md:mb-6 shadow-sm rounded-sm">
+              Client Testimonial
+            </span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 leading-[1.15] tracking-tight">
+              Trusted by 1,500+ Businesses — Here's What They Say
+            </h2>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-slate-800 text-lg">4.9/5</span>
+                <span className="text-slate-500 font-medium">Based on Google Reviews</span>
+              </div>
+            </div>
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed font-medium">
+              Our clients range from early-stage startups to established enterprises. Their success stories speak louder than any claim we could make.
+            </p>
+          </div>
+          
+          <div className="flex gap-3 pb-2 shrink-0">
+            <button 
+              onClick={prevSlide}
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[#2eb872] hover:shadow-md transition-all group shrink-0"
+              aria-label="Previous testimonial"
             >
-              {/* Floating Avatar */}
-              <div className="absolute -top-10 left-8">
-                <div className="w-20 h-20 rounded-full border-4 border-white shadow-lg overflow-hidden bg-slate-100">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="pt-10 mb-8 flex-1">
-                <span className="block text-[#2eb872] font-bold text-lg mb-4 uppercase tracking-wide">
-                  {testimonial.company}
-                </span>
-                <p className="text-slate-600 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-              </div>
-
-              {/* Footer */}
-              <div className="flex items-center justify-between pt-6 border-t border-slate-100">
-                <div>
-                  <h3 className="font-bold text-slate-900">{testimonial.name}</h3>
-                  <span className="text-sm text-slate-500 font-medium">{testimonial.role}</span>
-                </div>
-                
-                {/* 5 Stars */}
-                <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-              </div>
-
-            </motion.div>
-          ))}
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[#2eb872] hover:shadow-md transition-all group shrink-0"
+              aria-label="Next testimonial"
+            >
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
 
+        {/* Slider Section */}
+        <div 
+          className="relative"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+        >
+          <div className="overflow-hidden w-full pb-8 pt-4">
+            <motion.div 
+              className="flex"
+              animate={{ x: `-${currentIndex * (100 / cardsPerView)}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              {testimonials.map((testimonial) => (
+                <div 
+                  key={testimonial.id} 
+                  className={`shrink-0 px-3 md:px-4 ${cardsPerView === 1 ? 'w-full' : 'w-1/2'}`}
+                >
+                  <div className="bg-white rounded-2xl p-6 md:p-10 lg:p-12 shadow-lg shadow-slate-200/50 relative overflow-hidden flex flex-col justify-between h-full min-h-[350px] md:min-h-[420px] border border-slate-100">
+                    
+                    {/* Faint World Map Watermark */}
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+                      backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat"
+                    }}></div>
+
+                    <div className="relative z-10 text-center mb-8">
+                      {/* Logo Placeholder */}
+                      <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-4 border border-slate-100 shadow-inner">
+                        <span className="font-black text-xl md:text-2xl text-[#2eb872]">{testimonial.company.charAt(0)}</span>
+                      </div>
+                      <h4 className="text-[#2eb872] font-bold uppercase tracking-wider text-xs md:text-sm mb-6 md:mb-8">
+                        {testimonial.company}
+                      </h4>
+                      
+                      <p className="text-slate-700 text-base md:text-lg lg:text-xl leading-relaxed font-medium">
+                        "{testimonial.text}"
+                      </p>
+                    </div>
+                    
+                    <div className="relative z-10 text-center mt-auto border-t border-slate-100 pt-6">
+                      <div className="flex justify-center gap-1 mb-2">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star key={star} className="w-3 h-3 md:w-4 md:h-4 fill-amber-400 text-amber-400" />
+                        ))}
+                      </div>
+                      <h5 className="font-bold text-slate-900 text-sm md:text-base">{testimonial.name}</h5>
+                      <span className="text-xs md:text-sm text-slate-500">{testimonial.role}</span>
+                    </div>
+
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+          
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-4 md:mt-6">
+            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentIndex === idx ? "w-8 bg-[#2eb872]" : "w-2 bg-slate-300 hover:bg-slate-400"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+        </div>
       </div>
     </section>
   );

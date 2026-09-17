@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function PremiumAboutHero() {
   return (
-    <section className="pt-20 pb-16 lg:pt-28 lg:pb-24 bg-white relative overflow-hidden border-b border-gray-100">
+    <section className="pt-16 pb-12 lg:pt-20 lg:pb-16 bg-white relative overflow-hidden border-b border-gray-100">
       {/* Background Decor */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50 to-transparent rounded-full opacity-60"></div>

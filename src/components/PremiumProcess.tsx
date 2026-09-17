@@ -15,11 +15,11 @@ const processes = [
 
 export function PremiumProcess() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 lg:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export function PremiumProcess() {
              />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6 lg:gap-4 relative z-10">
+          <div className="flex md:grid overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-7 gap-4 md:gap-6 lg:gap-4 relative z-10 scroll-smooth [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {processes.map((process, idx) => (
               <motion.div 
                 key={process.id}
@@ -60,7 +60,7 @@ export function PremiumProcess() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.15, type: "spring", stiffness: 60 }}
-                className="flex flex-col items-center text-center relative group"
+                className="flex flex-col items-center text-center relative group shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none"
               >
                 {/* Number Badge */}
                 <div className="w-16 h-16 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center mb-6 shadow-xl relative z-10 group-hover:border-emerald-500 group-hover:scale-110 transition-all duration-300">

@@ -8,11 +8,15 @@ export function HomeAutoPopup() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show popup after 3 seconds on the home page
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 3000);
-    return () => clearTimeout(timer);
+    // Show popup after 2 seconds on the home page, but only once per session
+    const hasSeenPopup = sessionStorage.getItem("hasSeenEnquiryPopup");
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        sessionStorage.setItem("hasSeenEnquiryPopup", "true");
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   if (!isOpen) return null;
@@ -26,7 +30,7 @@ export function HomeAutoPopup() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
+          className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
         />
 
         {/* Modal */}
@@ -34,90 +38,92 @@ export function HomeAutoPopup() {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-[800px] bg-white rounded-[24px] shadow-2xl flex flex-col md:flex-row overflow-hidden z-10"
+          className="relative w-full max-w-[500px] bg-[#1d74b8] shadow-2xl flex flex-col z-10 p-6 md:p-8"
         >
           {/* Close Button */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 z-20 text-gray-400 hover:text-gray-700 transition-colors"
+            className="absolute top-4 right-4 z-20 text-white/80 hover:text-white transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
 
-          {/* Left Side Visual */}
-          <div className="md:w-1/2 bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 relative overflow-hidden flex flex-col p-8 items-center justify-center min-h-[300px]">
-            {/* You would place the exact image here if available, using a placeholder gradient instead */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            
-            <div className="relative z-10 text-center">
-              <div className="bg-white text-slate-900 font-black px-6 py-4 rounded-xl shadow-xl transform -rotate-2 mb-6">
-                <span className="block text-2xl uppercase tracking-wider mb-1">Don't Delay Your</span>
-                <span className="block text-3xl uppercase tracking-widest text-blue-600">Business Idea</span>
-              </div>
-              <h3 className="text-white font-bold text-lg mb-4 shadow-sm uppercase tracking-wide">
-                Launch Your Business in 5 Days
-              </h3>
-              <ul className="text-white/90 text-sm font-semibold space-y-2 text-left inline-block">
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full" /> 100% ACCURACY
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full" /> DEDICATED SUPPORT
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full" /> AFFORDABLE PRICE
-                </li>
-              </ul>
-            </div>
+          {/* Header */}
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-normal text-white mb-4">
+              Get Enquiry
+            </h2>
+            <hr className="border-t border-white/40" />
           </div>
 
-          {/* Right Side Form */}
-          <div className="md:w-1/2 bg-white p-8 md:p-10 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
-              Get a Free<br/>Software Demo
-            </h2>
-
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
-              <div>
+          {/* Form */}
+          <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Name */}
+              <div className="flex flex-col text-center">
+                <label className="text-white text-sm mb-1.5">Name</label>
                 <input 
                   type="text" 
-                  placeholder="Enter your name" 
-                  className="w-full px-0 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none bg-transparent transition-colors text-sm text-gray-800 placeholder-gray-400"
+                  placeholder="Name" 
+                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
                   required
                 />
               </div>
 
-              <div className="flex">
-                <div className="flex items-center gap-2 px-3 py-2 border-b border-gray-300 bg-gray-50/50">
-                  <span className="text-base">🇮🇳</span>
-                  <span className="text-sm font-medium text-gray-700">+91</span>
-                </div>
-                <input 
-                  type="tel" 
-                  placeholder="Mobile Number" 
-                  className="w-full px-3 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none bg-transparent transition-colors text-sm text-gray-800 placeholder-gray-400"
-                  required
-                />
-              </div>
-
-              <div>
+              {/* E-mail */}
+              <div className="flex flex-col text-center">
+                <label className="text-white text-sm mb-1.5">E-mail</label>
                 <input 
                   type="email" 
-                  placeholder="Email Address" 
-                  className="w-full px-0 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none bg-transparent transition-colors text-sm text-gray-800 placeholder-gray-400"
+                  placeholder="Email" 
+                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
                   required
                 />
               </div>
 
+              {/* Contact */}
+              <div className="flex flex-col text-center">
+                <label className="text-white text-sm mb-1.5">Contact</label>
+                <input 
+                  type="tel" 
+                  placeholder="Mobile No" 
+                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                  required
+                />
+              </div>
+
+              {/* Course */}
+              <div className="flex flex-col text-center">
+                <label className="text-white text-sm mb-1.5">Course</label>
+                <input 
+                  type="text" 
+                  placeholder="Course Interested" 
+                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col text-center mt-2">
+              <label className="text-white text-sm mb-1.5">Message</label>
+              <textarea 
+                rows={5}
+                className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none resize-y"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <div className="flex justify-center mt-4">
               <button 
                 type="submit"
-                className="w-full bg-[#5d9bfa] hover:bg-blue-600 text-white font-semibold py-3.5 rounded-lg mt-6 transition-colors shadow-sm"
+                className="bg-[#4fb2d9] hover:bg-[#3ca4cc] text-white font-bold tracking-wider py-3 px-12 transition-colors shadow-sm uppercase"
               >
-                Book Now
+                Submit
               </button>
-            </form>
-          </div>
+            </div>
+
+          </form>
         </motion.div>
       </div>
     </AnimatePresence>

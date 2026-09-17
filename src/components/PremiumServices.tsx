@@ -101,7 +101,7 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className={`relative transform-gpu md:hover:-translate-y-1.5 transition-all duration-500 h-full ${
+      className={`relative transform-gpu md:hover:-translate-y-1.5 transition-all duration-500 h-[320px] md:h-full shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none ${
         isOtherHovered ? 'opacity-95 blur-[0.5px]' : 'opacity-100'
       }`}
     >
@@ -151,7 +151,7 @@ export function PremiumServices() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
+    <section className="py-16 lg:py-20 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
       {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>
@@ -161,7 +161,7 @@ export function PremiumServices() {
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +192,8 @@ export function PremiumServices() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          className="flex md:grid overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 scroll-smooth [&::-webkit-scrollbar]:hidden"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {services.map((service, index) => {
             const color = colors[index % colors.length];

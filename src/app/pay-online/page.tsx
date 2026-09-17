@@ -1,16 +1,10 @@
-import { PageBanner } from "@/components/PageBanner";
+import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumPayment } from "@/components/PremiumPayment";
 
 export default function Page() {
   return (
     <main>
-      <PageBanner 
-        title="Pay Online securely" 
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Pay Online securely", href: "/pay-online" }
-        ]} 
-      />
+      <AboutBreadcrumb title="PAY ONLINE" />
       <PremiumPayment />
     </main>
   );

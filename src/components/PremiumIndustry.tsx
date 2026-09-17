@@ -1,87 +1,93 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Laptop, ShoppingCart, HeartPulse, HeartHandshake, Building, Briefcase, GraduationCap, Utensils, Plane, Truck, TestTube, ShieldCheck, Building2, Newspaper, Users, Factory, Package, Search } from "lucide-react";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const allIndustries = [
-  { name: "Course Selling", icon: BookOpen, color: "text-red-700", bgClass: "text-red-700" },
-  { name: "Online Exam Portal", icon: Laptop, color: "text-slate-900", bgClass: "text-slate-900" },
-  { name: "E-Commerce", icon: ShoppingCart, color: "text-sky-400", bgClass: "text-sky-400" },
-  { name: "HealthCare", icon: HeartPulse, color: "text-teal-400", bgClass: "text-teal-400" },
-  { name: "NGO", icon: HeartHandshake, color: "text-green-500", bgClass: "text-green-500" },
-  { name: "Institute", icon: Building, color: "text-black", bgClass: "text-black" },
-  { name: "Consultant", icon: Briefcase, color: "text-blue-600", bgClass: "text-blue-600" },
-  { name: "Education", icon: GraduationCap, color: "text-sky-500", bgClass: "text-sky-500" },
-  { name: "Hotel & Restaurant", icon: Utensils, color: "text-amber-900", bgClass: "text-amber-900" },
-  { name: "Tour And Travel", icon: Plane, color: "text-blue-800", bgClass: "text-blue-800" },
-  { name: "Transport", icon: Truck, color: "text-cyan-400", bgClass: "text-cyan-400" },
-  { name: "Smart Lab", icon: TestTube, color: "text-teal-500", bgClass: "text-teal-500" },
-  { name: "Security Service", icon: ShieldCheck, color: "text-cyan-500", bgClass: "text-cyan-500" },
-  { name: "Real Estate", icon: Building2, color: "text-slate-500", bgClass: "text-slate-500" },
-  { name: "News & Blog", icon: Newspaper, color: "text-blue-900", bgClass: "text-blue-900" },
-  { name: "Matrimonial", icon: Users, color: "text-rose-900", bgClass: "text-rose-900" },
-  { name: "Manufacturing", icon: Factory, color: "text-cyan-600", bgClass: "text-cyan-600" },
-  { name: "Courier system", icon: Package, color: "text-amber-500", bgClass: "text-amber-500" },
-  { name: "Job Portal", icon: Search, color: "text-indigo-900", bgClass: "text-indigo-900" }
+  { name: "Course Selling", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&q=80" },
+  { name: "Online Exam Portal", image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&q=80" },
+  { name: "E-Commerce", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&q=80" },
+  { name: "HealthCare", image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=100&q=80" },
+  { name: "NGO", image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=100&q=80" },
+  { name: "Institute", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=100&q=80" },
+  { name: "Consultant", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&q=80" },
+  { name: "Education (EdTech)", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=100&q=80" },
+  { name: "Hotel & Restaurant", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&q=80" },
+  { name: "Tour And Travel", image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=100&q=80" },
+  { name: "Transport", image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c1590a?w=100&q=80" },
+  { name: "Smart Lab", image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=100&q=80" },
+  { name: "Security Service", image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=100&q=80" },
+  { name: "Real Estate", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100&q=80" },
+  { name: "News & Blog", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=100&q=80" },
+  { name: "Matrimonial", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=100&q=80" },
+  { name: "Manufacturing", image: "https://images.unsplash.com/photo-1565514020179-026b92b2d707?w=100&q=80" },
+  { name: "Courier system", image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=100&q=80" },
+  { name: "Job Portal", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&q=80" }
 ];
 
 export function PremiumIndustry() {
   return (
-    <section className="py-20 bg-slate-50 relative overflow-hidden border-y border-slate-100">
-      <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
         
-        <div className="text-center mb-16">
-          <span className="inline-block py-1.5 px-3 rounded-full bg-white shadow-sm border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Industries We Serve</span>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
-            Our Global Presence & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-600">Expertise</span>
+        {/* Header Section */}
+        <div className="text-center mb-16 flex flex-col items-center">
+          <span className="inline-block bg-black text-white text-xs font-bold tracking-widest px-4 py-2 uppercase mb-6 shadow-sm">
+            INDUSTRY SECTOR
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+            Industries We Empower with Technology
           </h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
-            Tailored digital solutions and intelligent platforms for over 19 diverse sectors.
+          <p className="text-lg text-slate-500 max-w-4xl mx-auto leading-relaxed">
+            We've built production-grade software for some of the most demanding industries in the world. Our domain knowledge means less ramp-up time and better product decisions for you.
           </p>
         </div>
 
-        {/* Global Presence Style / Grid Style */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Pill Layout */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-8 px-4">
           {allIndustries.map((ind, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="group relative rounded-3xl overflow-hidden bg-slate-200 aspect-square flex flex-col justify-end shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              className="relative"
             >
-              {/* Placeholder Background (since we don't have the exact image files) */}
-              <div className="absolute inset-0 bg-slate-300 group-hover:scale-110 transition-transform duration-700">
-                <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-400 opacity-50 mix-blend-multiply"></div>
-              </div>
-
-              {/* Wavy Overlay matching the screenshot style */}
-              <div className={`relative w-full h-24 ${ind.bgClass}`}>
-                <svg viewBox="0 0 400 150" preserveAspectRatio="none" className="absolute bottom-0 w-full h-32 -translate-y-4 drop-shadow-md">
-                  <path d="M0,50 C150,150 250,-50 400,50 L400,150 L0,150 Z" fill="currentColor" />
-                  <path d="M0,70 C150,170 250,-30 400,70 L400,150 L0,150 Z" fill="currentColor" opacity="0.3" />
-                </svg>
-                
-                {/* Text and Icon on top of the wave */}
-                <div className="absolute bottom-4 left-0 w-full px-5 flex items-center gap-3 text-white">
-                  <div className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center shrink-0 shadow-lg border-2 border-white/20 relative z-10 group-hover:text-[#2eb872] transition-colors">
-                    <ind.icon className="w-5 h-5" />
+              <Link href={`/industry/${ind.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="block group">
+                <div className="flex items-center bg-white border border-slate-200 rounded-full pr-6 pl-1.5 py-1.5 shadow-sm hover:shadow-md hover:bg-[#2eb872] hover:border-[#2eb872] transition-all duration-300 min-w-[200px]">
+                  
+                  {/* Left Circle Image Container */}
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0">
+                    <div className="absolute inset-0 bg-slate-100 rounded-full overflow-hidden transition-transform duration-500 origin-center group-hover:scale-[1.8] group-hover:z-50 group-hover:shadow-2xl border-2 border-white group-hover:border-[#2eb872] z-10">
+                      <img 
+                        src={ind.image} 
+                        alt={ind.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-black relative z-10 drop-shadow-sm tracking-tight">{ind.name}</h3>
+                  
+                  {/* Text */}
+                  <span className="ml-4 font-medium text-slate-700 group-hover:text-white transition-colors duration-300 whitespace-nowrap relative z-0">
+                    {ind.name}
+                  </span>
                 </div>
-                
-                {/* Tech/Hexagon background pattern on the right side of the wave */}
-                <div className="absolute right-2 bottom-2 opacity-20 pointer-events-none">
-                  <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
-                    <path d="M50 0L93.3 25V75L50 100L6.7 75V25L50 0Z" stroke="white" strokeWidth="2"/>
-                    <circle cx="50" cy="50" r="10" fill="white" />
-                  </svg>
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* View All Link */}
+        <div className="text-center mt-12 md:mt-16">
+          <Link 
+            href="/industry" 
+            className="inline-flex items-center gap-2 text-[#2eb872] font-bold uppercase tracking-wider text-sm hover:text-[#25945c] transition-colors group"
+          >
+            VIEW ALL INDUSTRY
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </div>
 
       </div>

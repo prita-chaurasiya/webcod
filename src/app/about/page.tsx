@@ -1,17 +1,11 @@
-import { PageBanner } from "@/components/PageBanner";
+import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumAboutDigiatureStyle } from "@/components/PremiumAboutDigiatureStyle";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <PageBanner 
-        title="About WebCodian"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About Us" }
-        ]}
-      />
+      <AboutBreadcrumb title="ABOUT US" />
       
       {/* 
         This new component perfectly replicates the 3-section layout 

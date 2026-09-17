@@ -1,16 +1,10 @@
-import { PageBanner } from "@/components/PageBanner";
+import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumFormLayout } from "@/components/PremiumFormLayout";
 
 export default function Page() {
   return (
     <main>
-      <PageBanner 
-        title="Internship Registration" 
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Internship Registration", href: "/internship" }
-        ]} 
-      />
+      <AboutBreadcrumb title="INTERNSHIP" />
       <PremiumFormLayout 
         title="Internship Registration"
         subtitle="Kickstart your career with WebCodian. Apply for our rigorous internship program."

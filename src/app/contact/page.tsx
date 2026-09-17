@@ -1,16 +1,10 @@
-import { PageBanner } from "@/components/PageBanner";
+import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumContact } from "@/components/PremiumContact";
 
 export default function ContactPage() {
   return (
     <main>
-      <PageBanner 
-        title="Contact Us" 
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Contact", href: "/contact" }
-        ]} 
-      />
+      <AboutBreadcrumb title="CONTACT US" />
       <PremiumContact />
     </main>
   );

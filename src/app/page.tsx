@@ -12,6 +12,7 @@ import { PremiumBlog } from "@/components/PremiumBlog";
 import { PremiumVision } from "@/components/PremiumVision";
 import { HomeAutoPopup } from "@/components/HomeAutoPopup";
 import { PremiumHomeAbout } from "@/components/PremiumHomeAbout";
+import { PremiumIndustry } from "@/components/PremiumIndustry";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <PremiumServices />
       <PremiumInstitute />
       <PremiumProcess />
+      <PremiumIndustry />
       <PremiumTechStack />
       <PremiumCategories />
       <PremiumWhyChooseUs />

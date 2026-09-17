@@ -1,16 +1,10 @@
-import { PageBanner } from "@/components/PageBanner";
+import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumOpenTicket } from "@/components/PremiumOpenTicket";
 
 export default function SupportPage() {
   return (
     <main>
-      <PageBanner 
-        title="Support" 
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Support", href: "/support" }
-        ]} 
-      />
+      <AboutBreadcrumb title="SUPPORT" />
       <PremiumOpenTicket />
     </main>
   );
