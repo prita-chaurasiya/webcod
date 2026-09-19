@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { CheckCircle2, MonitorSmartphone, Server, Code2, Database, ChevronDown, Rocket, ShieldCheck, Zap, ArrowRight, LayoutTemplate, Layers } from "lucide-react";
+import { MonitorSmartphone, Code2, ChevronDown, Rocket, ShieldCheck, Zap, ArrowRight, LayoutTemplate } from "lucide-react";
 import { useState, useRef } from "react";
 import Link from "next/link";
 
@@ -138,12 +138,12 @@ export function PremiumWebDev() {
                 </div>
                 {/* Code Body */}
                 <div className="p-6 font-mono text-sm bg-gray-900 text-slate-300">
-                  <p className="text-purple-400">import <span className="text-white">&#123;</span> Webcodian <span className="text-white">&#125;</span> from <span className="text-[#2eb872]">'@agency/core'</span>;</p>
+                  <p className="text-purple-400">import <span className="text-white">&#123;</span> Webcodian <span className="text-white">&#125;</span> from <span className="text-[#2eb872]">&apos;@agency/core&apos;</span>;</p>
                   <p className="mt-4 text-blue-400">const <span className="text-white">Project</span> = <span className="text-yellow-300">()</span> =&#62; <span className="text-white">&#123;</span></p>
                   <p className="pl-4 text-slate-400">return (</p>
                   <p className="pl-8 text-cyan-400">&#60;<span className="text-pink-400">Webcodian</span></p>
-                  <p className="pl-12 text-blue-300">performance=<span className="text-[#2eb872]">"unmatched"</span></p>
-                  <p className="pl-12 text-blue-300">design=<span className="text-[#2eb872]">"pixel-perfect"</span></p>
+                  <p className="pl-12 text-blue-300">performance=<span className="text-[#2eb872]">&quot;unmatched&quot;</span></p>
+                  <p className="pl-12 text-blue-300">design=<span className="text-[#2eb872]">&quot;pixel-perfect&quot;</span></p>
                   <p className="pl-12 text-blue-300">scalability=&#123;<span className="text-purple-400">true</span>&#125;</p>
                   <p className="pl-8 text-cyan-400">/&#62;</p>
                   <p className="pl-4 text-slate-400">);</p>
@@ -334,7 +334,7 @@ export function PremiumWebDev() {
       <section className="py-24 relative overflow-hidden bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Ready to Transform Your Digital Presence?</h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Stop settling for templates. Let's build a custom, high-converting web platform that dominates your industry.</p>
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Stop settling for templates. Let&apos;s build a custom, high-converting web platform that dominates your industry.</p>
           
           <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-2xl font-black text-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
             Start Your Project Now <Rocket className="w-6 h-6 text-white" />

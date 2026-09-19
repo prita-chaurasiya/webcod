@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Premium3DEffects } from "@/components/Premium3DEffects";
+import { SmoothScrolling } from "@/components/SmoothScrolling";
 
-const outfit = Outfit({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -21,6 +22,12 @@ export const metadata: Metadata = {
   }
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,15 +36,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} h-full antialiased dark`}
+      className={`${inter.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-white text-gray-800 font-sans selection:bg-[#2eb872] selection:text-white">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans selection:bg-cyan-500 selection:text-white">
         <Premium3DEffects />
         <TopBar />
         <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <SmoothScrolling>
+          <main className="flex-grow">
+            {children}
+          </main>
+        </SmoothScrolling>
         <Footer />
       </body>
     </html>

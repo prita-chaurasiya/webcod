@@ -39,7 +39,7 @@ export function PremiumWebsiteValidity() {
               Check Domain Status
             </h2>
             <p className="text-slate-500 font-medium">
-              Verify your WebCodian project's validity, hosting, and maintenance status instantly.
+              Verify your WebCodian project&apos;s validity, hosting, and maintenance status instantly.
             </p>
           </div>
 

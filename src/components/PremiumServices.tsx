@@ -7,7 +7,11 @@ import {
   MessageCircle, Box, PhoneCall, Video
 } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   { title: "Web Development", icon: Monitor, slug: "web-development" },
@@ -25,26 +29,11 @@ const services = [
 ];
 
 const colors = [
-  { bg: "bg-blue-50/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "border-blue-100", highlight: "rgba(147,197,253,0.3)" },
-  { bg: "bg-emerald-50/50", iconBg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-100", highlight: "rgba(110,231,183,0.3)" },
-  { bg: "bg-purple-50/50", iconBg: "bg-purple-100", text: "text-purple-700", border: "border-purple-100", highlight: "rgba(216,180,254,0.3)" },
-  { bg: "bg-orange-50/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "border-orange-100", highlight: "rgba(253,186,116,0.3)" },
-  { bg: "bg-pink-50/50", iconBg: "bg-pink-100", text: "text-pink-700", border: "border-pink-100", highlight: "rgba(249,168,212,0.3)" },
-  { bg: "bg-cyan-50/50", iconBg: "bg-cyan-100", text: "text-cyan-700", border: "border-cyan-100", highlight: "rgba(103,232,249,0.3)" },
+  { bg: "bg-white/5", iconBg: "bg-white/10", text: "text-cyan-400", border: "border-white/10", highlight: "rgba(6,182,212,0.15)" },
+  { bg: "bg-white/5", iconBg: "bg-white/10", text: "text-blue-400", border: "border-white/10", highlight: "rgba(59,130,246,0.15)" },
 ];
 
-const containerVariants: any = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, ease: "easeOut" }
-  }
-};
 
-const itemVariants: any = {
-  hidden: { opacity: 0, y: 20, scale: 0.98 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
-};
 
 function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: any) {
   const isHovered = hoveredIndex === index;
@@ -91,7 +80,7 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
 
   return (
     <motion.div
-      variants={itemVariants}
+
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={() => setHoveredIndex(index)}
@@ -107,7 +96,7 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
     >
       <Link href={`/${service.slug}`} className="block h-full outline-none group rounded-[2rem]">
         <div 
-          className={`relative ${color.bg} backdrop-blur-sm rounded-[2rem] p-8 border border-white/60 shadow-[0_2px_10px_rgba(0,0,0,0.02)] group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] group-hover:border-white transition-all duration-500 overflow-hidden h-full flex flex-col items-center text-center`}
+          className={`relative ${color.bg} backdrop-blur-md rounded-[2rem] p-8 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.2)] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)] group-hover:border-white/20 transition-all duration-500 overflow-hidden h-full flex flex-col items-center text-center`}
         >
           {/* Hover highlight layer (follows mouse on desktop) */}
           <motion.div 
@@ -116,7 +105,7 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
           />
 
           {/* Ambient inner glow */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-50"></div>
           
           {/* Icon Badge */}
           <motion.div 
@@ -126,12 +115,12 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
           >
             <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300 group-hover:scale-105`} strokeWidth={1.5} />
             {/* Subtle inner highlight for icon badge */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 to-white/60 pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 to-white/10 pointer-events-none"></div>
           </motion.div>
           
           {/* Title */}
           <div className="relative z-10 mb-4 flex-1 flex items-start justify-center">
-            <h3 className="text-xl font-bold text-slate-800 tracking-tight group-hover:text-slate-950 transition-colors">
+            <h3 className="text-xl font-bold text-slate-200 tracking-tight group-hover:text-white transition-colors">
               {service.title}
             </h3>
           </div>
@@ -149,13 +138,36 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
 
 export function PremiumServices() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const cards = containerRef.current.querySelectorAll('.service-card-wrapper');
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    }
+  }, []);
 
   return (
-    <section className="py-16 lg:py-20 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
+    <section className="py-16 lg:py-20 bg-transparent relative overflow-hidden perspective-[1000px]">
       {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#2eb872]/5 rounded-full blur-[100px]"></div>
+        <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-cyan-500/5 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
@@ -167,9 +179,9 @@ export function PremiumServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/60 text-slate-500 font-semibold text-xs tracking-widest shadow-sm shadow-slate-200/50 mb-6 uppercase"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-cyan-400 font-semibold text-xs tracking-widest shadow-sm shadow-black/20 mb-6 uppercase"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
             Core Expertise
           </motion.div>
           <motion.h2 
@@ -177,38 +189,36 @@ export function PremiumServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]"
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]"
           >
             Business-Oriented <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
               Digital Solutions
             </span>
           </motion.h2>
         </div>
 
         {/* Services Grid */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+        <div 
+          ref={containerRef}
           className="flex md:grid overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 scroll-smooth [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {services.map((service, index) => {
             const color = colors[index % colors.length];
             return (
-              <ServiceCard 
-                key={index}
-                service={service}
-                color={color}
-                index={index}
-                hoveredIndex={hoveredIndex}
-                setHoveredIndex={setHoveredIndex}
-              />
+              <div key={index} className="service-card-wrapper opacity-0">
+                <ServiceCard 
+                  service={service}
+                  color={color}
+                  index={index}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                />
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

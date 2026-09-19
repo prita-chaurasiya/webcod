@@ -2,6 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
   { title: "E-Commerce", icon: "https://webcodian.com/public/web/assets/img/services/shopping.png", slug: "e-commerce" },
@@ -19,30 +24,38 @@ const categories = [
 ];
 
 const colors = [
-  { bg: "bg-blue-50/70", glow: "from-blue-200/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "from-blue-400 to-cyan-400" },
-  { bg: "bg-emerald-50/70", glow: "from-emerald-200/50", iconBg: "bg-emerald-100", text: "text-emerald-700", border: "from-emerald-400 to-teal-400" },
-  { bg: "bg-orange-50/70", glow: "from-orange-200/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "from-orange-400 to-amber-400" },
-  { bg: "bg-purple-50/70", glow: "from-purple-200/50", iconBg: "bg-purple-100", text: "text-purple-700", border: "from-purple-400 to-fuchsia-400" },
-  { bg: "bg-pink-50/70", glow: "from-pink-200/50", iconBg: "bg-pink-100", text: "text-pink-700", border: "from-pink-400 to-rose-400" },
-  { bg: "bg-indigo-50/70", glow: "from-indigo-200/50", iconBg: "bg-indigo-100", text: "text-indigo-700", border: "from-indigo-400 to-blue-400" },
+  { bg: "bg-blue-500/10", glow: "from-blue-500/30", iconBg: "bg-blue-500/20", text: "text-blue-400", border: "from-blue-500 to-cyan-500" },
+  { bg: "bg-cyan-500/10", glow: "from-cyan-500/30", iconBg: "bg-cyan-500/20", text: "text-cyan-400", border: "from-cyan-500 to-blue-500" },
 ];
 
-const containerVariants: any = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
-};
-
-const itemVariants: any = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 15 } }
-};
-
 export function PremiumCategories() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const cats = containerRef.current.querySelectorAll('.category-card');
+      
+      gsap.fromTo(cats,
+        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 75%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    }
+  }, []);
+
   return (
-    <section className="py-24 bg-white relative overflow-hidden perspective-[1000px]">
+    <section className="py-24 bg-transparent relative overflow-hidden perspective-[1000px]" ref={containerRef}>
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         
         <div className="text-center mb-16">
@@ -50,9 +63,9 @@ export function PremiumCategories() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 text-orange-600 font-semibold text-sm mb-4 tracking-widest shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold text-sm mb-4 tracking-widest shadow-[0_0_15px_rgba(6,182,212,0.15)]"
           >
-            <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
             OUR CATEGORIES
           </motion.div>
           <motion.h2 
@@ -60,7 +73,7 @@ export function PremiumCategories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-4 max-w-2xl mx-auto"
+            className="text-3xl md:text-4xl font-extrabold text-white mb-4 max-w-2xl mx-auto"
           >
             We use a systematic approach to maximum and optimize results.
           </motion.h2>
@@ -69,17 +82,13 @@ export function PremiumCategories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 max-w-2xl mx-auto"
+            className="text-slate-300 max-w-2xl mx-auto font-medium"
           >
             We follow the below process to develop any website for various industries.
           </motion.p>
         </div>
 
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+        <div 
           className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide"
         >
           {categories.map((cat, index) => {
@@ -87,13 +96,13 @@ export function PremiumCategories() {
             return (
               <motion.div 
                 key={index} 
-                variants={itemVariants}
                 whileHover={{ 
+
                   y: -5, 
                   scale: 1.02,
                   transition: { type: "spring", stiffness: 300, damping: 20 } 
                 }}
-                className="min-w-[75vw] sm:min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none transform-gpu h-full"
+                className="category-card opacity-0 min-w-[75vw] sm:min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none transform-gpu h-full"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Link href={`/industries/${cat.slug}`} className="block group w-full h-full outline-none">
@@ -106,8 +115,8 @@ export function PremiumCategories() {
                       className={`absolute inset-0 bg-gradient-to-r ${color.border} bg-[length:200%_200%] opacity-100 rounded-2xl -z-10`}
                     />
                     
-                    {/* Inner slightly tinted white background */}
-                    <div className={`absolute inset-[2px] bg-gradient-to-br from-white to-slate-50/95 rounded-[14px] -z-10`}></div>
+                    {/* Inner slightly tinted dark background */}
+                    <div className={`absolute inset-[2px] bg-gradient-to-br from-[#0f172a] to-[#0a0f1c] rounded-[14px] -z-10`}></div>
 
                     {/* Always-on Glow Effect that pulses */}
                     <motion.div 
@@ -117,10 +126,10 @@ export function PremiumCategories() {
                     />
 
                     <div 
-                      className={`w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10`}
+                      className={`w-16 h-16 md:w-20 md:h-20 bg-white/5 backdrop-blur-md rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.5)] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-white/10 relative z-10`}
                       style={{ transform: "translateZ(30px)" }}
                     >
-                      <img src={cat.icon} alt={cat.title} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:-translate-y-1 transition-transform duration-500" />
+                      <img src={cat.icon} alt={cat.title} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:-translate-y-1 transition-transform duration-500 drop-shadow-lg filter brightness-0 invert" />
                     </div>
                     
                     <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
@@ -133,7 +142,7 @@ export function PremiumCategories() {
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
       </div>
       

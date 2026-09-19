@@ -1,8 +1,11 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { Calendar, Users, ThumbsUp, Headset } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { icon: Calendar, value: 6, label: "Years", sublabel: "On the market" },
@@ -13,8 +16,19 @@ const stats = [
 
 function Counter({ from, to, duration = 2 }: { from: number; to: number; duration?: number }) {
   const [count, setCount] = useState(from);
-  const nodeRef = useRef(null);
-  const isInView = useInView(nodeRef, { once: true, margin: "-100px" });
+  const nodeRef = useRef<HTMLSpanElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    if (nodeRef.current) {
+      ScrollTrigger.create({
+        trigger: nodeRef.current,
+        start: "top 85%",
+        once: true,
+        onEnter: () => setIsInView(true),
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (isInView) {
@@ -44,19 +58,42 @@ function Counter({ from, to, duration = 2 }: { from: number; to: number; duratio
 }
 
 export function PremiumStats() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const statsElements = containerRef.current.querySelectorAll('.stat-item');
+      gsap.fromTo(statsElements,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    }
+  }, []);
+
   return (
-    <section className="py-20 relative bg-[#1f2937] overflow-hidden">
+    <section className="py-20 relative bg-transparent overflow-hidden" ref={containerRef}>
       {/* Decorative Network Background */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="network" width="100" height="100" patternUnits="userSpaceOnUse">
-              <circle cx="20" cy="20" r="2" fill="#2eb872" />
-              <circle cx="80" cy="80" r="3" fill="#2eb872" />
-              <circle cx="80" cy="20" r="1.5" fill="#2eb872" />
-              <circle cx="20" cy="80" r="2.5" fill="#2eb872" />
-              <line x1="20" y1="20" x2="80" y2="80" stroke="#2eb872" strokeWidth="0.5" />
-              <line x1="20" y1="80" x2="80" y2="20" stroke="#2eb872" strokeWidth="0.5" />
+              <circle cx="20" cy="20" r="2" fill="#0ea5e9" />
+              <circle cx="80" cy="80" r="3" fill="#0ea5e9" />
+              <circle cx="80" cy="20" r="1.5" fill="#0ea5e9" />
+              <circle cx="20" cy="80" r="2.5" fill="#0ea5e9" />
+              <line x1="20" y1="20" x2="80" y2="80" stroke="#0ea5e9" strokeWidth="0.5" />
+              <line x1="20" y1="80" x2="80" y2="20" stroke="#0ea5e9" strokeWidth="0.5" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#network)" />
@@ -66,16 +103,12 @@ export function PremiumStats() {
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-x divide-gray-800/50">
           {stats.map((stat, index) => (
-            <motion.div 
+            <div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4 lg:gap-6 pl-4 lg:pl-8 first:border-0 first:pl-0"
+              className="stat-item opacity-0 flex items-start gap-4 lg:gap-6 pl-4 lg:pl-8 first:border-0 first:pl-0"
             >
-              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl bg-gray-800/80 flex items-center justify-center shrink-0 border border-gray-700 shadow-[0_0_15px_rgba(46,184,114,0.15)] group-hover:shadow-[0_0_25px_rgba(46,184,114,0.3)] transition-all">
-                <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-[#2eb872]" />
+              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 shadow-[0_0_15px_rgba(6,182,212,0.15)] group-hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all">
+                <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-cyan-400" />
               </div>
               <div>
                 <div className="text-3xl lg:text-4xl font-extrabold text-white flex items-baseline">
@@ -85,7 +118,7 @@ export function PremiumStats() {
                 <div className="text-lg font-bold text-gray-200 mt-1">{stat.label}</div>
                 <div className="text-sm text-gray-400 mt-1">{stat.sublabel}</div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

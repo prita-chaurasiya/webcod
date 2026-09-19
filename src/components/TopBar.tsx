@@ -4,23 +4,23 @@ import { Phone, Mail } from "lucide-react";
 
 export function TopBar() {
   return (
-    <div className="bg-[#242c27] text-white/80 py-2.5 hidden lg:block border-b border-white/5 relative z-50">
+    <div className="bg-[#0a0f1c]/50 backdrop-blur-md text-slate-300 py-2.5 hidden lg:block border-b border-white/5 relative z-50">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl flex items-center justify-between text-[13px] font-medium">
         
         {/* Left: Offer */}
         <div className="flex items-center gap-2">
           <span>All course 28% off for</span>
-          <span className="text-[#2eb872] font-semibold">WebCodian students.</span>
+          <span className="text-cyan-400 font-semibold">WebCodian students.</span>
         </div>
         
         {/* Right: Contact & Socials */}
         <div className="flex items-center gap-6">
-          <a href="tel:+919794412733" className="flex items-center gap-2 hover:text-white transition-colors">
-            <Phone className="w-3.5 h-3.5 text-[#2eb872]" />
+          <a href="tel:+919794412733" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+            <Phone className="w-3.5 h-3.5 text-cyan-400" />
             <span>(91) 9794412733</span>
           </a>
-          <a href="mailto:info@webcodian.com" className="flex items-center gap-2 hover:text-white transition-colors">
-            <Mail className="w-3.5 h-3.5 text-[#2eb872]" />
+          <a href="mailto:info@webcodian.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+            <Mail className="w-3.5 h-3.5 text-cyan-400" />
             <span>info@webcodian.com</span>
           </a>
           

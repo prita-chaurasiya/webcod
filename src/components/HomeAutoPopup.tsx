@@ -38,7 +38,7 @@ export function HomeAutoPopup() {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-[500px] bg-[#1d74b8] shadow-2xl flex flex-col z-10 p-6 md:p-8"
+          className="relative w-full max-w-[500px] bg-[#0a0f1c] border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-10 p-6 md:p-8"
         >
           {/* Close Button */}
           <button 
@@ -50,10 +50,10 @@ export function HomeAutoPopup() {
 
           {/* Header */}
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-normal text-white mb-4">
-              Get Enquiry
+            <h2 className="text-3xl font-extrabold text-white mb-4">
+              Get <span className="text-cyan-400">Enquiry</span>
             </h2>
-            <hr className="border-t border-white/40" />
+            <hr className="border-t border-white/10" />
           </div>
 
           {/* Form */}
@@ -62,54 +62,55 @@ export function HomeAutoPopup() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Name */}
               <div className="flex flex-col text-center">
-                <label className="text-white text-sm mb-1.5">Name</label>
+                <label className="text-slate-300 text-sm mb-1.5 font-medium">Name</label>
                 <input 
                   type="text" 
                   placeholder="Name" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder:text-slate-500 transition-all"
                   required
                 />
               </div>
 
               {/* E-mail */}
               <div className="flex flex-col text-center">
-                <label className="text-white text-sm mb-1.5">E-mail</label>
+                <label className="text-slate-300 text-sm mb-1.5 font-medium">E-mail</label>
                 <input 
                   type="email" 
                   placeholder="Email" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder:text-slate-500 transition-all"
                   required
                 />
               </div>
 
               {/* Contact */}
               <div className="flex flex-col text-center">
-                <label className="text-white text-sm mb-1.5">Contact</label>
+                <label className="text-slate-300 text-sm mb-1.5 font-medium">Contact</label>
                 <input 
                   type="tel" 
                   placeholder="Mobile No" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder:text-slate-500 transition-all"
                   required
                 />
               </div>
 
               {/* Course */}
               <div className="flex flex-col text-center">
-                <label className="text-white text-sm mb-1.5">Course</label>
+                <label className="text-slate-300 text-sm mb-1.5 font-medium">Course</label>
                 <input 
                   type="text" 
                   placeholder="Course Interested" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-400"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder:text-slate-500 transition-all"
                 />
               </div>
             </div>
 
             {/* Message */}
             <div className="flex flex-col text-center mt-2">
-              <label className="text-white text-sm mb-1.5">Message</label>
+              <label className="text-slate-300 text-sm mb-1.5 font-medium">Message</label>
               <textarea 
-                rows={5}
-                className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none resize-y"
+                rows={4}
+                placeholder="Message"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder:text-slate-500 transition-all resize-y"
               ></textarea>
             </div>
 
@@ -117,7 +118,7 @@ export function HomeAutoPopup() {
             <div className="flex justify-center mt-4">
               <button 
                 type="submit"
-                className="bg-[#4fb2d9] hover:bg-[#3ca4cc] text-white font-bold tracking-wider py-3 px-12 transition-colors shadow-sm uppercase"
+                className="bg-cyan-500 hover:bg-cyan-400 text-white font-extrabold tracking-wider py-3 px-12 rounded-xl transition-colors shadow-[0_0_15px_rgba(6,182,212,0.3)] uppercase"
               >
                 Submit
               </button>

@@ -18,56 +18,61 @@
 }
 
 :root {
-  --background: #ffffff; /* Typically white/light for the main body unless specified dark */
-  --foreground: #0f172a;
+  --background: #0a0f1c; /* Deep Navy / Charcoal */
+  --foreground: #f8fafc;
   
-  --primary: #0f172a; /* Dark Navy */
+  --primary: #0ea5e9; /* Cyan */
   --primary-foreground: #ffffff;
   
-  --secondary: #3b82f6; /* Blue */
+  --secondary: #6366f1; /* Indigo */
   --secondary-foreground: #ffffff;
   
-  --accent: #f97316; /* Orange */
+  --accent: #8b5cf6; /* Violet */
   --accent-foreground: #ffffff;
   
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
   
-  --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card: rgba(15, 23, 42, 0.4);
+  --card-foreground: #f8fafc;
   
-  --border: #e2e8f0;
-  --ring: #10b981; /* WebCodian Green */
+  --border: rgba(255, 255, 255, 0.1);
+  --ring: #0ea5e9;
   
   /* AI Accents */
   --ai-cyan: #06b6d4;
-  --ai-blue: #1d4ed8;
-  --ai-violet: #6d28d9;
+  --ai-blue: #3b82f6;
+  --ai-violet: #8b5cf6;
+  --ai-emerald: #10b981;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #F8FAFC;
-    
-    --primary: #F8FAFC; 
-    --primary-foreground: #000000;
-    
-    --secondary: #3b82f6; 
-    --secondary-foreground: #ffffff;
-    
-    --accent: #f97316; 
-    --accent-foreground: #ffffff;
-    
-    --muted: #0F172A;
-    --muted-foreground: #94A3B8;
-    
-    --card: rgba(15, 23, 42, 0.6);
-    --card-foreground: #F8FAFC;
-    
-    --border: #1E293B;
-    --ring: #10b981;
-  }
+.dark {
+  --background: #0a0f1c;
+  --foreground: #f8fafc;
+  
+  --primary: #0ea5e9; 
+  --primary-foreground: #ffffff;
+  
+  --secondary: #6366f1; 
+  --secondary-foreground: #ffffff;
+  
+  --accent: #8b5cf6; 
+  --accent-foreground: #ffffff;
+  
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  
+  --card: rgba(15, 23, 42, 0.4);
+  --card-foreground: #f8fafc;
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --ring: #0ea5e9;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 html {
@@ -78,7 +83,6 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
-  overflow-x: hidden;
 }
 
 :root {
@@ -102,14 +106,7 @@ body {
   background: radial-gradient(circle at top center, rgba(30, 41, 59, 0.3) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
-/* Force input text color to fix dark background inheritance */
-@layer base {
-  input:not([type="checkbox"]):not([type="radio"]),
-  textarea,
-  select {
-    color: #111827 !important;
-  }
-}
+
 
 @layer utilities {
   .stroke-text {

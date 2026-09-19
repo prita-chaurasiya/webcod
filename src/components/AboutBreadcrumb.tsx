@@ -46,7 +46,7 @@ export function AboutBreadcrumb({
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute -top-24 left-1/4 w-[500px] h-[360px] bg-[#2eb872]/18 rounded-full blur-[110px] pointer-events-none"
+        className="absolute -top-24 left-1/4 w-[500px] h-[360px] bg-cyan-500/18 rounded-full blur-[110px] pointer-events-none"
       />
       <motion.div
         animate={{
@@ -70,7 +70,7 @@ export function AboutBreadcrumb({
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute -bottom-10 left-1/3 w-[350px] h-[200px] bg-emerald-500/10 rounded-full blur-[90px] pointer-events-none"
+        className="absolute -bottom-10 left-1/3 w-[350px] h-[200px] bg-cyan-400/10 rounded-full blur-[90px] pointer-events-none"
       />
 
       {/* Cyber Grid Pattern Background */}
@@ -93,7 +93,7 @@ export function AboutBreadcrumb({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#2eb872] to-transparent shadow-[0_0_12px_#2eb872]"
+          className="w-1/3 h-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent shadow-[0_0_12px_rgba(6,182,212,0.8)]"
         />
       </div>
 
@@ -107,13 +107,13 @@ export function AboutBreadcrumb({
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] backdrop-blur-md border border-[#2eb872]/30 text-emerald-400 text-xs font-bold tracking-wider uppercase mb-4 shadow-[0_0_20px_rgba(46,184,114,0.15)]"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] backdrop-blur-md border border-cyan-500/30 text-cyan-400 text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-4 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
-              <Sparkles className="w-3.5 h-3.5 text-[#2eb872]" />
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>{badge}</span>
             </motion.div>
 
@@ -150,9 +150,9 @@ export function AboutBreadcrumb({
                 {highlights.map((item, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs text-slate-300 font-medium backdrop-blur-sm"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-[11px] sm:text-xs text-slate-300 font-medium backdrop-blur-sm"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#2eb872]" />
+                    <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-cyan-400" />
                     {item}
                   </span>
                 ))}
@@ -169,7 +169,7 @@ export function AboutBreadcrumb({
           >
             <nav 
               aria-label="Breadcrumb"
-              className="inline-flex flex-wrap items-center gap-1.5 px-4 py-2.5 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+              className="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.03] backdrop-blur-md border border-white/5 shadow-sm"
             >
               {resolvedBreadcrumbs.map((crumb, idx) => {
                 const isLast = idx === resolvedBreadcrumbs.length - 1;
@@ -180,26 +180,26 @@ export function AboutBreadcrumb({
                     {crumb.href && !isLast ? (
                       <Link
                         href={crumb.href}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-white transition-all duration-200 py-1 px-2 rounded-lg hover:bg-white/10 group"
+                        className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-slate-400 hover:text-white transition-colors duration-200 group"
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-[#2eb872] group-hover:scale-110 transition-transform" />}
+                        {isFirst && <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-400 group-hover:text-white transition-colors" />}
                         <span>{crumb.label}</span>
                       </Link>
                     ) : (
                       <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-extrabold py-1 px-2.5 rounded-lg ${
+                        className={`inline-flex items-center gap-1.5 text-[11px] sm:text-xs ${
                           isLast
-                            ? "bg-[#2eb872]/20 text-[#2eb872] border border-[#2eb872]/30 shadow-[0_0_12px_rgba(46,184,114,0.25)]"
-                            : "text-slate-300"
+                            ? "text-cyan-400 font-semibold"
+                            : "text-slate-400 font-medium"
                         }`}
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-[#2eb872]" />}
+                        {isFirst && <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
                         <span>{crumb.label}</span>
                       </span>
                     )}
 
                     {!isLast && (
-                      <ChevronRight className="w-3.5 h-3.5 text-slate-500 mx-1 shrink-0" />
+                      <span className="text-slate-500/50 mx-2 text-[10px] sm:text-xs font-light">/</span>
                     )}
                   </div>
                 );
@@ -211,7 +211,7 @@ export function AboutBreadcrumb({
       </div>
 
       {/* Bottom Glowing Accent Border Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#2eb872]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
     </section>
   );
 }

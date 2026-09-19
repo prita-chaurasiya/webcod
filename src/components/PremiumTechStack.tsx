@@ -1,7 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const technologiesRow1 = [
   { name: "Codeigniter", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" },
@@ -23,9 +27,30 @@ const technologiesRow2 = [
 
 export function PremiumTechStack() {
   const [isClient, setIsClient] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsClient(true);
+    
+    if (containerRef.current) {
+      const texts = containerRef.current.querySelectorAll('.tech-header-text');
+      
+      gsap.fromTo(texts,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    }
   }, []);
 
   if (!isClient) return null;
@@ -59,34 +84,27 @@ export function PremiumTechStack() {
   };
 
   return (
-    <section className="py-24 bg-[#f8fafc] overflow-hidden relative">
+    <section className="py-24 bg-transparent overflow-hidden relative" ref={containerRef}>
       {/* Decorative gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#f8fafc] via-transparent to-[#f8fafc] w-full" />
+      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#0a0f1c] via-transparent to-[#0a0f1c] w-full" />
       
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-20 mb-16">
         <div className="text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 mb-4"
+          <div 
+            className="inline-flex items-center gap-2 mb-4 tech-header-text opacity-0"
           >
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 p-1.5">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/5 shadow-sm border border-white/10 p-1.5">
               <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
             </div>
-            <span className="text-[#f4511e] font-extrabold text-lg uppercase tracking-wider">
+            <span className="text-cyan-400 font-extrabold text-lg uppercase tracking-wider">
               TECHNOLOGY WE USE
             </span>
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-slate-900"
+          </div>
+          <h2 
+            className="text-4xl md:text-5xl font-black text-white tech-header-text opacity-0"
           >
             Powered by modern technologies
-          </motion.h2>
+          </h2>
         </div>
       </div>
 
@@ -103,10 +121,10 @@ export function PremiumTechStack() {
             {[...technologiesRow1, ...technologiesRow1, ...technologiesRow1].map((tech, idx) => (
               <div
                 key={idx}
-                className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="w-48 h-48 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/30 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 backdrop-blur-sm"
               >
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
-                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain drop-shadow-md" />
+                <div className="font-extrabold text-lg text-slate-200">{tech.name}</div>
               </div>
             ))}
           </motion.div>
@@ -122,10 +140,10 @@ export function PremiumTechStack() {
             {[...technologiesRow2, ...technologiesRow2, ...technologiesRow2].map((tech, idx) => (
               <div
                 key={idx}
-                className="w-48 h-48 bg-white hover:bg-emerald-50/50 border border-slate-100 hover:border-emerald-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="w-48 h-48 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-500/30 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 backdrop-blur-sm"
               >
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
-                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain drop-shadow-md" />
+                <div className="font-extrabold text-lg text-slate-200">{tech.name}</div>
               </div>
             ))}
           </motion.div>
