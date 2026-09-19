@@ -4,7 +4,7 @@ import { ServiceBannerShort } from "@/components/ServiceBannerShort";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
 import { PremiumDigiatureServiceLayout } from "@/components/PremiumDigiatureServiceLayout";
 import { PremiumAiConsultationForm } from "@/components/PremiumAiConsultationForm";
-import { Settings, RefreshCcw, Shield, Cpu, Star, Bot, Zap } from "lucide-react";
+import { Settings, RefreshCcw, Shield, Cpu, Star, Bot, Zap, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Page() {
