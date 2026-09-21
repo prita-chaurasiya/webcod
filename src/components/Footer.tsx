@@ -25,7 +25,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-6 relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-[#2eb872]/20 to-blue-500/20 rounded-xl blur-lg group-hover:opacity-100 transition duration-500 opacity-40"></div>
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-2xl shadow-xl transition-all group-hover:bg-white/10 group-hover:border-white/20">
-                <img src="/images/logo.png" alt="WebCodian Logo" className="h-9 w-auto object-contain brightness-0 invert" />
+                <img src="/images/logo.png" alt="WebCodian Logo" className="h-9 w-auto object-contain" />
               </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-[280px]">
