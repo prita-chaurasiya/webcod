@@ -204,65 +204,211 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Sections 7-14 via PremiumAIExtendedSections */}
-      <PremiumAIExtendedSections 
-        useCases={[
-          {
-            title: "Automated Customer Support Agent",
-            description: "Deploy an AI agent that doesn't just answer FAQs, but actually processes returns, checks inventory, and books appointments by interfacing directly with your ERP system.",
-            image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop"
-          },
-          {
-            title: "Financial Data Analyst Agent",
-            description: "An autonomous agent that monitors financial markets, analyzes your internal expense data, and generates comprehensive risk-assessment reports every morning.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-          },
-          {
-            title: "HR Onboarding Agent",
-            description: "A specialized swarm of agents that handles employee onboarding. One drafts the contract, another sets up IT credentials, and a third schedules orientation meetings.",
-            image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop"
-          },
-          {
-            title: "Code Review & Security Agent",
-            description: "Integrate an AI agent into your CI/CD pipeline that automatically reviews pull requests, identifies security vulnerabilities, and suggests optimized code rewrites.",
-            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
-          }
-        ]}
-        faqs={[
-          {
-            q: "What is an AI Agent and how is it different from a chatbot?",
-            a: "While a chatbot simply generates text responses based on user input, an AI Agent has 'agency'. It can break down a complex goal into steps, reason about how to solve it, and use tools (like APIs, web browsers, or databases) to actually execute actions autonomously."
-          },
-          {
-            q: "Are these AI agents secure enough for enterprise data?",
-            a: "Absolutely. We build strict guardrails and human-in-the-loop (HITL) protocols into every agent. We can deploy them in isolated cloud environments (VPC) and ensure they only have access to the specific data and APIs you authorize, fully compliant with SOC2 and GDPR."
-          },
-          {
-            q: "What Large Language Models (LLMs) do you use to power the agents?",
-            a: "We are model-agnostic. We use the best model for the specific task, including OpenAI's GPT-4, Anthropic's Claude 3, Google Gemini, or even custom-fine-tuned open-source models like Llama 3 when data privacy is the absolute highest priority."
-          },
-          {
-            q: "How long does it take to develop a custom AI agent?",
-            a: "A proof-of-concept (POC) can typically be developed in 2-4 weeks. A fully integrated, enterprise-grade agent deployed to production usually takes 8-12 weeks, depending on the complexity of your internal APIs and security requirements."
-          },
-          {
-            q: "Can the AI agent integrate with my existing software?",
-            a: "Yes. Our agents are designed to integrate seamlessly with your existing tech stack, including CRMs like Salesforce, ERPs like SAP, and team communication tools like Slack or Microsoft Teams via secure REST and GraphQL APIs."
-          },
-          {
-            q: "What happens if the AI agent makes a mistake?",
-            a: "We implement 'Chain of Thought' reasoning and rigorous fallback protocols. If an agent is uncertain, it pauses execution and escalates the issue to a human supervisor for approval before taking any critical action."
-          },
-          {
-            q: "Do I need technical expertise to manage the AI agents?",
-            a: "No. We provide a user-friendly management dashboard where your non-technical team can monitor agent performance, view logs, adjust permissions, and see the exact ROI and time saved."
-          },
-          {
-            q: "How do you handle agent hallucinations?",
-            a: "We use Retrieval-Augmented Generation (RAG) and strict prompt engineering guardrails. The agent is strictly instructed to only use the context provided by your secure database, reducing hallucinations to near-zero."
-          }
-        ]}
-      />
+      {/* 5. Business Challenges We Solve */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <p className="text-xl text-slate-600 font-medium">Overcome operational bottlenecks with autonomous task execution.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Layers, title: "Siloed Operations", desc: "Data and workflows are trapped across multiple disconnected software platforms." },
+              { icon: Settings, title: "Manual Repetition", desc: "Your top talent is wasting hours on mundane data entry and repetitive tasks." },
+              { icon: BarChart, title: "Scaling Bottlenecks", desc: "Customer support and operational output cannot scale without linearly increasing headcount." }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-cyan-300 transition-colors group">
+                <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Business Benefits */}
+      <section className="py-24 bg-cyan-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">Unfair Business Advantage</h2>
+              <ul className="space-y-6">
+                {[
+                  "Reduce operational overhead by up to 60%",
+                  "Execute cross-platform workflows 24/7 without human intervention",
+                  "Eliminate manual data entry errors completely",
+                  "Scale customer and internal support infinitely"
+                ].map((benefit, i) => (
+                  <li key={i} className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-cyan-100">
+                    <ShieldCheck className="w-8 h-8 text-cyan-600 flex-shrink-0" />
+                    <span className="text-lg font-bold text-slate-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Technology Stack */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-black text-[#0f2c59]">AI Agent Tech Stack</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {["LangGraph", "CrewAI", "AutoGPT", "OpenAI Tool Calling", "Anthropic Claude", "Python", "FastAPI", "Vector Databases", "MCP", "RAG", "REST/GraphQL Integration", "Docker"].map((tech) => (
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-cyan-500 hover:text-cyan-600 transition-colors">
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Development Process */}
+      <section className="py-24 lg:py-32 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Our Implementation Process</h2>
+            <p className="text-xl text-slate-400">A rigorous, enterprise-grade methodology for deploying Autonomous AI safely.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Workflow Audit", desc: "We map your existing manual workflows and identify where agents can take over tool execution." },
+              { step: "02", title: "API Integration", desc: "Building secure connectors so the agent can read/write to your CRM, ERP, and databases." },
+              { step: "03", title: "Cognitive Engineering", desc: "Designing the reasoning loops (ReAct) and memory systems for complex problem solving." },
+              { step: "04", title: "Human-in-the-Loop", desc: "Deploying with strict approval gates before the agent executes high-stakes actions." }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-800 p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
+                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                <p className="text-slate-400 font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Enterprise Use Cases */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Enterprise Use Cases</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { title: "Autonomous Customer Support", desc: "Agents that access billing APIs to process refunds, update subscriptions, and resolve tickets entirely on their own.", img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop" },
+              { title: "Financial Data Analysts", desc: "Agent swarms that monitor live markets, query internal SQL databases, and compile morning executive reports automatically.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" }
+            ].map((uc, i) => (
+              <div key={i} className="bg-white rounded-[2rem] overflow-hidden group shadow-xl border border-slate-100">
+                <div className="h-64 overflow-hidden relative">
+                  <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
+                <div className="p-10">
+                  <h3 className="text-2xl font-black mb-4 text-slate-900">{uc.title}</h3>
+                  <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. Security & Compliance */}
+      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-600/20 rounded-full blur-[100px]"></div>
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-black text-white mb-6">Uncompromising Data Security</h2>
+              <p className="text-lg text-blue-200 mb-8 font-medium">When you give AI agency, security is paramount. We build systems that guarantee agents only operate within strict boundaries with robust audit trails.</p>
+              <ul className="space-y-4">
+                {["Human-in-the-Loop (HITL) Execution", "SOC2 Compliant API Gateways", "Strict Role-Based Access Controls (RBAC)", "Immutable Agent Action Logs"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Shield className="w-6 h-6 text-cyan-400" />
+                    <span className="font-bold">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-blue-800" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 11. Industries We Serve */}
+      <section className="py-24 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: Cloud, name: "E-Commerce" },
+              { icon: BarChart, name: "Logistics" },
+              { icon: Network, name: "Telecom" },
+              { icon: Brain, name: "FinTech" }
+            ].map((ind, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-blue-600 hover:text-white transition-all group border border-slate-200 cursor-default">
+                <ind.icon className="w-10 h-10 text-blue-600 group-hover:text-white mb-4 transition-colors" />
+                <span className="font-bold text-lg">{ind.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 12. Quality Assurance */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
+          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Agent QA & Red Teaming</h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We rigorously stress-test agent reasoning loops against edge cases, infinite loops, and prompt injections to ensure enterprise-ready reliability before deployment.</p>
+        </div>
+      </section>
+
+      {/* 13. Case Studies / Success Stories */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="bg-cyan-50 p-12 lg:p-20 rounded-[3rem] text-center border border-cyan-100 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
+            <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
+              "WebCodian engineered an autonomous support swarm that integrates directly with our Shopify and Zendesk APIs. It now handles 40% of our return processing without a single human touch."
+            </p>
+            <div className="font-bold text-slate-800 uppercase tracking-widest text-sm">— Global Retail Enterprise</div>
+          </div>
+        </div>
+      </section>
+
+      {/* 14. FAQs */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: "What is an AI Agent and how is it different from a chatbot?", a: "A chatbot just talks. An AI agent has agency—it uses tools like APIs to execute tasks in the real world." },
+              { q: "What happens if the agent makes a mistake?", a: "We implement Human-in-the-Loop constraints. The agent prepares the action, but a human clicks 'Approve' for anything sensitive." },
+              { q: "Can agents communicate with each other?", a: "Yes. Using frameworks like CrewAI, we deploy swarms where specialized agents hand off tasks to one another." }
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                <h4 className="font-bold text-lg text-slate-900 mb-2">{faq.q}</h4>
+                <p className="text-slate-600 font-medium">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <PremiumProjectCTA />
     </main>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Premium3DEffects } from "@/components/Premium3DEffects";
 
-const jakarta = Plus_Jakarta_Sans({
+const manrope = Manrope({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
       <html
         lang="en"
-        className={`${jakarta.variable} h-full antialiased`}
+        className={`${manrope.variable} h-full antialiased`}
       >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] font-sans selection:bg-[var(--primary)] selection:text-white">
         <Premium3DEffects />

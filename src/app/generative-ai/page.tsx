@@ -22,11 +22,11 @@ export default function Page() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
               Generative AI Solutions
             </h1>
-            <ul className="flex items-center gap-3 text-purple-100 font-bold uppercase text-sm tracking-widest">
+            <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">HOME</Link>
               </li>
-              <li className="text-purple-300">/</li>
+              <li className="text-blue-300">/</li>
               <li className="text-white">GENERATIVE AI</li>
             </ul>
           </div>
@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* 2. Hero Section */}
       <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
@@ -44,13 +44,13 @@ export default function Page() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-8 inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+              <div className="mb-8 inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
                 Creative Intelligence
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Unlock Infinite Potential with <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-600">Generative AI</span>
+                Unlock Infinite Potential with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Generative AI</span>
               </h2>
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
@@ -61,7 +61,7 @@ export default function Page() {
               </p>
               
               <div className="flex flex-wrap gap-5">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-900 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-900 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
                   Innovate Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -74,7 +74,7 @@ export default function Page() {
               className="relative"
             >
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent mix-blend-overlay z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay z-10"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" 
                   alt="Generative AI" 
@@ -88,7 +88,7 @@ export default function Page() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
               >
-                <div className="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                   <Sparkles className="w-8 h-8" />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export default function Page() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             
             <div>
-              <span className="text-purple-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
+              <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-10 leading-tight">
                 Enterprise-Grade Generative Systems
               </h2>
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Data Privacy", desc: "We implement on-premise or private-cloud LLM deployments so your proprietary data never touches a public API." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-purple-500 transition-colors shrink-0">
+                    <div className="text-5xl font-black text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -190,10 +190,10 @@ export default function Page() {
                {/* Decorative structural elements to make it look premium */}
                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-20 pl-12">
                  <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.8)]"></div>
+                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(168,85,247,0.8)]"></div>
                  </div>
                  <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-pink-400"></div>
+                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-400"></div>
                  </div>
                  <div className="w-full h-px bg-slate-700/50 relative">
                    <div className="absolute right-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
@@ -218,8 +218,8 @@ export default function Page() {
               { icon: Layers, title: "Creative Burnout", desc: "Teams struggle to consistently produce fresh, innovative ideas at scale." },
               { icon: BarChart, title: "High Operational Costs", desc: "Scaling content and code production linearly increases headcount and expenses." }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-purple-300 transition-colors group">
-                <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-blue-300 transition-colors group">
+                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
                   <item.icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -231,7 +231,7 @@ export default function Page() {
       </section>
 
       {/* 6. Business Benefits */}
-      <section className="py-24 bg-purple-50">
+      <section className="py-24 bg-blue-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -246,8 +246,8 @@ export default function Page() {
                   "Personalize customer communication at infinite scale",
                   "Automate repetitive coding and documentation tasks"
                 ].map((benefit, i) => (
-                  <li key={i} className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-purple-100">
-                    <ShieldCheck className="w-8 h-8 text-purple-600 flex-shrink-0" />
+                  <li key={i} className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-blue-100">
+                    <ShieldCheck className="w-8 h-8 text-blue-600 flex-shrink-0" />
                     <span className="text-lg font-bold text-slate-700">{benefit}</span>
                   </li>
                 ))}
@@ -265,7 +265,7 @@ export default function Page() {
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {["GPT-4", "Claude 3.5", "Gemini 1.5 Pro", "Llama 3", "Stable Diffusion", "Midjourney", "LangChain", "HuggingFace", "Pinecone", "Milvus", "PyTorch", "TensorFlow"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-purple-500 hover:text-purple-600 transition-colors">
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
                 {tech}
               </div>
             ))}
@@ -324,24 +324,24 @@ export default function Page() {
       </section>
 
       {/* 10. Security & Compliance */}
-      <section className="py-24 bg-purple-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-fuchsia-600/20 rounded-full blur-[100px]"></div>
+      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-black text-white mb-6">Uncompromising Data Security</h2>
-              <p className="text-lg text-purple-200 mb-8 font-medium">When you implement Generative AI with WebCodian, your data remains yours. We build systems that guarantee your proprietary information is never used to train public models.</p>
+              <p className="text-lg text-blue-200 mb-8 font-medium">When you implement Generative AI with WebCodian, your data remains yours. We build systems that guarantee your proprietary information is never used to train public models.</p>
               <ul className="space-y-4">
                 {["Private Cloud & On-Premise Deployments", "SOC2 & ISO 27001 Compliant Infrastructure", "Strict Role-Based Access Controls (RBAC)", "Hallucination Guardrails & Content Filtering"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <Shield className="w-6 h-6 text-fuchsia-400" />
+                    <Shield className="w-6 h-6 text-indigo-400" />
                     <span className="font-bold">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-purple-800" />
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-blue-800" />
             </div>
           </div>
         </div>
@@ -360,8 +360,8 @@ export default function Page() {
               { icon: MessageSquare, name: "Media & Ent." },
               { icon: Brain, name: "Healthcare" }
             ].map((ind, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-purple-600 hover:text-white transition-all group border border-slate-200 cursor-default">
-                <ind.icon className="w-10 h-10 text-purple-600 group-hover:text-white mb-4 transition-colors" />
+              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-blue-600 hover:text-white transition-all group border border-slate-200 cursor-default">
+                <ind.icon className="w-10 h-10 text-blue-600 group-hover:text-white mb-4 transition-colors" />
                 <span className="font-bold text-lg">{ind.name}</span>
               </div>
             ))}
@@ -380,7 +380,7 @@ export default function Page() {
       {/* 13. Case Studies / Success Stories */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-purple-50 p-12 lg:p-20 rounded-[3rem] text-center border border-purple-100 shadow-lg">
+          <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian implemented a secure Generative AI writing assistant for our legal team, reducing contract drafting time by 65% while ensuring 100% compliance with our private data policies."
