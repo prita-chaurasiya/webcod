@@ -33,7 +33,7 @@ export function EduCTA() {
             <span className="text-[var(--primary)] font-bold text-lg mb-4 block">
               Become A Instructor
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1f2937] leading-[1.3] font-sans">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1f2937] leading-[1.3] ">
               You can join with WebCodian <br className="hidden md:block" />
               as a <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-10 text-[var(--primary)]">instructor?</span>

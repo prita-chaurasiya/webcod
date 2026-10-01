@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Send, User, Mail, Phone, BookOpen, MessageSquare } from "lucide-react";
+import Image from "next/image";
 
 export function HomeAutoPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,108 +24,146 @@ export function HomeAutoPopup() {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="absolute inset-0 bg-white/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
         />
 
-        {/* Modal */}
+        {/* Premium Modal */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-[500px] bg-[#1d74b8] shadow-2xl flex flex-col z-10 p-5 md:p-8 max-h-[95vh] md:max-h-[90vh] overflow-y-auto rounded-2xl"
+          transition={{ type: "spring", damping: 25, stiffness: 300 }}
+          className="relative w-full max-w-[850px] bg-white shadow-2xl flex flex-col md:flex-row z-10 max-h-[95vh] overflow-y-auto rounded-3xl overflow-hidden"
         >
           {/* Close Button */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-3 right-3 md:top-4 md:right-4 z-50 text-slate-900 bg-white/40 hover:bg-white rounded-full p-1.5 transition-all shadow-sm"
+            className="absolute top-4 right-4 z-50 text-slate-400 hover:text-slate-900 bg-white/80 backdrop-blur-md hover:bg-slate-100 rounded-full p-2 transition-all shadow-sm"
             aria-label="Close"
           >
-            <X className="w-5 h-5 md:w-6 md:h-6" />
+            <X className="w-5 h-5" />
           </button>
 
-          {/* Header */}
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-normal text-[var(--heading)] mb-4">
-              Get Enquiry
-            </h2>
-            <hr className="border-t border-white/40" />
+          {/* Left Column - Image & Branding */}
+          <div className="hidden md:flex w-2/5 bg-gradient-to-br from-blue-600 to-indigo-900 relative p-8 flex-col justify-between overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-[-20%] left-[-20%] w-[140%] h-[140%] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-[spin_60s_linear_infinite]" />
+            </div>
+            
+            <div className="relative z-10">
+              <img src="/images/logo.png" alt="WebCodian" className="h-10 mb-8 filter brightness-0 invert" />
+              <h2 className="text-3xl font-bold text-white mb-4 leading-tight">Start Your Digital Journey.</h2>
+              <p className="text-blue-100/80">Get expert consultation for web development, marketing, and IT training.</p>
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex -space-x-3 mb-3">
+                <img className="w-10 h-10 rounded-full border-2 border-indigo-900" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User" />
+                <img className="w-10 h-10 rounded-full border-2 border-indigo-900" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="User" />
+                <img className="w-10 h-10 rounded-full border-2 border-indigo-900" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="User" />
+                <div className="w-10 h-10 rounded-full border-2 border-indigo-900 bg-white flex items-center justify-center text-xs font-bold text-indigo-900">+5k</div>
+              </div>
+              <p className="text-xs text-blue-200 font-medium">Trusted by thousands of clients worldwide.</p>
+            </div>
           </div>
 
-          {/* Form */}
-          <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Name */}
-              <div className="flex flex-col text-center">
-                <label className="text-[var(--heading)] text-sm mb-1.5">Name</label>
-                <input 
-                  type="text" 
-                  placeholder="Name" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-500"
-                  required
-                />
-              </div>
-
-              {/* E-mail */}
-              <div className="flex flex-col text-center">
-                <label className="text-[var(--heading)] text-sm mb-1.5">E-mail</label>
-                <input 
-                  type="email" 
-                  placeholder="Email" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-500"
-                  required
-                />
-              </div>
-
-              {/* Contact */}
-              <div className="flex flex-col text-center">
-                <label className="text-[var(--heading)] text-sm mb-1.5">Contact</label>
-                <input 
-                  type="tel" 
-                  placeholder="Mobile No" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-500"
-                  required
-                />
-              </div>
-
-              {/* Course */}
-              <div className="flex flex-col text-center">
-                <label className="text-[var(--heading)] text-sm mb-1.5">Course</label>
-                <input 
-                  type="text" 
-                  placeholder="Course Interested" 
-                  className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none placeholder:text-slate-500"
-                />
-              </div>
+          {/* Right Column - Form */}
+          <div className="w-full md:w-3/5 p-6 md:p-10 bg-white">
+            <div className="md:hidden text-center mb-6">
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Get Free Enquiry</h2>
+              <p className="text-slate-500 text-sm">Fill out the form below and we'll contact you shortly.</p>
             </div>
 
-            {/* Message */}
-            <div className="flex flex-col text-center mt-2">
-              <label className="text-[var(--heading)] text-sm mb-1.5">Message</label>
-              <textarea 
-                rows={5}
-                className="w-full px-3 py-2.5 bg-[#f2f2f2] text-slate-800 focus:outline-none resize-y"
-              ></textarea>
-            </div>
+            <form className="flex flex-col gap-5" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Name */}
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                    <User className="h-5 w-5" />
+                  </div>
+                  <input 
+                    type="text" 
+                    placeholder="Full Name" 
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-slate-400 font-medium"
+                    required
+                  />
+                </div>
 
-            {/* Submit Button */}
-            <div className="flex justify-center mt-4">
+                {/* E-mail */}
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-slate-400 font-medium"
+                    required
+                  />
+                </div>
+
+                {/* Contact */}
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <input 
+                    type="tel" 
+                    placeholder="Mobile Number" 
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-slate-400 font-medium"
+                    required
+                  />
+                </div>
+
+                {/* Course/Service */}
+                <div className="relative group">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                    <BookOpen className="h-5 w-5" />
+                  </div>
+                  <input 
+                    type="text" 
+                    placeholder="Course or Service" 
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-slate-400 font-medium"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Message */}
+              <div className="relative group">
+                <div className="absolute top-3 left-0 pl-3 flex items-start pointer-events-none text-slate-400 group-focus-within:text-blue-600 transition-colors">
+                  <MessageSquare className="h-5 w-5" />
+                </div>
+                <textarea 
+                  placeholder="How can we help you?" 
+                  rows={3}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-slate-400 font-medium resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
               <button 
-                type="submit"
-                className="bg-[#4fb2d9] hover:bg-[#3ca4cc] text-white font-bold tracking-wider py-3 px-12 transition-colors shadow-sm uppercase"
+                type="submit" 
+                className="w-full mt-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[var(--primary)]/30 active:translate-y-0"
               >
-                Submit
+                <span>Submit Enquiry</span>
+                <Send className="w-5 h-5" />
               </button>
-            </div>
-
-          </form>
+              
+              <p className="text-center text-xs text-slate-400 mt-2">
+                By submitting this form, you agree to our privacy policy.
+              </p>
+            </form>
+          </div>
         </motion.div>
       </div>
     </AnimatePresence>

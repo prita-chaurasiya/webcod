@@ -90,7 +90,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-6 2xl:gap-8 shrink-0 h-full">
-            <Link href="/" className="relative text-[14px] font-bold text-[var(--heading)] hover:text-[var(--primary)] transition-colors group/navlink h-full flex items-center">
+            <Link href="/" className="relative text-[15px] font-bold font-heading tracking-wide text-[var(--heading)] hover:text-[var(--primary)] transition-colors group/navlink h-full flex items-center">
               Home
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[var(--primary)] scale-x-0 group-hover/navlink:scale-x-100 origin-left transition-transform duration-300 rounded-t-full"></span>
             </Link>
