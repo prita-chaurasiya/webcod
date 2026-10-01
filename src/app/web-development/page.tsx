@@ -1,52 +1,61 @@
-import { PremiumServiceDetail } from "@/components/PremiumServiceDetail";
-import { Monitor, Server, Code2, Globe } from "lucide-react";
+import { PremiumSolutionDetail } from "@/components/PremiumSolutionDetail";
+import { Monitor, Server, Code2, Globe, Shield, Zap } from "lucide-react";
 import { PremiumWebDevOverview } from "@/components/PremiumWebDevOverview";
 
 export default function WebDevelopmentPage() {
   return (
     <main>
-      <PremiumServiceDetail 
+      <PremiumSolutionDetail 
         title="Web Development"
-        badgeText="NEXT-GEN"
-        description="We engineer bespoke, high-performance web applications that combine award-winning design with robust, scalable architecture."
-        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
-        heroVideo="/videos/web-dev.mp4"
-        overviewTitle="Build The Future Web"
-        overviewDescription="From corporate portals to complex e-commerce platforms, our web development services ensure your business stands out in the digital landscape with unmatched performance and security."
+        heroHeading={
+          <>Web Application Development Company in <span className="text-[#c25916]">Noida</span> – Custom, Scalable & Secure Web Applications for Global Businesses</>
+        }
+        subtitle="Build Powerful Web Applications That Accelerate Business Growth"
+        heroDescription={
+          <>
+            <p>Looking for a reliable Web Application Development Company in Noida that can transform your business processes into intelligent digital solutions?</p>
+            <p>WebCodian specializes in designing and developing custom web applications that help startups, SMEs, enterprises, and organizations automate workflows, improve customer experiences, and scale operations efficiently.</p>
+            <p>From business management portals and SaaS platforms to enterprise applications and cloud-based systems, our expert developers create secure, scalable, and high-performance web applications tailored to your business goals.</p>
+            <p>Serving clients globally, we deliver future-ready web solutions that drive measurable business results.</p>
+          </>
+        }
+        heroImage="https://takshitsolutions.com/img/web-application-development.svg"
+        whyHeading={
+          <>Why Modern Businesses Need Custom <span className="text-[#c25916]">Web Applications</span></>
+        }
+        whyDescription="Today's businesses require more than traditional websites. Organizations need intelligent applications that can:"
+        whyImage="https://takshitsolutions.com/img/w1.svg"
         features={[
           {
-            title: "Custom Web Apps",
-            description: "Scalable, secure, and lightning-fast web applications tailored to your specific business workflows.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Automate Tasks",
+            description: "Automate repetitive workflows and eliminate manual data entry.",
+            icon: <Zap className="w-5 h-5" />
           },
           {
-            title: "E-Commerce Solutions",
-            description: "High-converting online stores built on Shopify, WooCommerce, or custom tech stacks.",
-            icon: <Globe className="w-5 h-5" />
-          },
-          {
-            title: "Backend Architecture",
-            description: "Robust server-side engineering and API development ensuring your data is secure and accessible.",
+            title: "Centralize Ops",
+            description: "Centralize core business operations and data across departments.",
             icon: <Server className="w-5 h-5" />
           },
           {
-            title: "Frontend Excellence",
-            description: "Pixel-perfect, responsive user interfaces that provide an engaging experience on every device.",
+            title: "Team Collaboration",
+            description: "Empower remote and office teams with real-time collaboration tools.",
+            icon: <Monitor className="w-5 h-5" />
+          },
+          {
+            title: "Customer UX",
+            description: "Deliver seamless, responsive self-service customer portals.",
+            icon: <Globe className="w-5 h-5" />
+          },
+          {
+            title: "Cost Reduction",
+            description: "Reduce administrative overhead and operational software costs.",
+            icon: <Shield className="w-5 h-5" />
+          },
+          {
+            title: "Scale & Growth",
+            description: "Scale infrastructure easily to support user and revenue expansion.",
             icon: <Code2 className="w-5 h-5" />
           }
-        ]}
-        technologies={[
-          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-          { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-          { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-          { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-          { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" },
-          { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" }
-        ]}
-        faqs={[
-          { q: "How long does it take to develop a custom website?", a: "A standard corporate site takes 2-4 weeks, while a complex e-commerce or SaaS platform can take 8-12 weeks." },
-          { q: "Do you provide SEO and performance optimization?", a: "Yes! Every website we build is fundamentally optimized for search engines (SEO) and lightning-fast loading speeds." },
-          { q: "Will my website be mobile-responsive?", a: "Absolutely. We adopt a mobile-first approach ensuring your platform looks and functions flawlessly across all devices." }
         ]}
       />
       <PremiumWebDevOverview />
