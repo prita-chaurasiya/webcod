@@ -1,210 +1,352 @@
-"use client";
+import { SolutionPageTemplate } from "@/components/SolutionPageTemplate";
+import { Metadata } from "next";
 
-import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
-import { PremiumFeatureCard } from "@/components/PremiumFeatureCard";
-import { Server, Database, Layers, ArrowRight, Shield, Cpu, Cloud, Code2, Globe } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+export const metadata: Metadata = {
+  title: "AI SaaS Product Development | WebCodian",
+  description: "Build and launch scalable, subscription-based AI products. From multi-tenant architecture and Stripe billing to core AI model integration, we engineer end-to-end SaaS platforms that disrupt markets.",
+};
+
+const pageData = {
+  "heroTitle": "AI SaaS Product Development",
+  "heroSubtitle": "Build and launch scalable, subscription-based AI products. From multi-tenant architecture and Stripe billing to core AI model integration, we engineer end-to-end SaaS platforms that disrupt markets.",
+  "heroImg": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop",
+  "breadcrumbLabel": "AI SaaS Product",
+  "category": "AI & Automation",
+  "overviewHeading": "Engineer Your AI Vision into a Scalable SaaS Business",
+  "overviewText": "The next generation of billion-dollar companies are AI-native SaaS platforms. Building them requires profound expertise in both complex cloud architecture (multi-tenancy, subscription billing, secure data isolation) and cutting-edge Artificial Intelligence (LLM orchestration, RAG, agentic workflows). WebCodian bridges this gap. We act as your elite engineering partner, taking your AI product vision from concept to a production-ready, globally scalable SaaS platform designed for rapid growth and high valuation.",
+  "overviewImg": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+  "overviewBullets": [
+    "End-to-End B2B & B2C SaaS Engineering",
+    "LLM & Core AI Model Integration",
+    "Secure Multi-Tenant Cloud Architectures",
+    "Subscription Billing & Usage Metering (Stripe)",
+    "Scalable API Platforms & Developer Portals",
+    "High-Performance Modern Frontend (React/Next.js)"
+  ],
+  "challenges": [
+    {
+      "title": "AI Integration Complexity",
+      "desc": "Struggling to move AI from a Python script on a laptop to a reliable, low-latency feature within a web application."
+    },
+    {
+      "title": "Unpredictable AI Costs",
+      "desc": "Failing to implement usage-based metering, leading to runaway LLM API costs that destroy SaaS profit margins."
+    },
+    {
+      "title": "Multi-Tenant Data Security",
+      "desc": "Risking severe data breaches by improperly isolating Customer A's data from Customer B in vector databases."
+    },
+    {
+      "title": "Scalability Under Load",
+      "desc": "The platform crashing during launch or viral moments because the architecture cannot handle concurrent AI generation requests."
+    },
+    {
+      "title": "Slow Time-to-Market",
+      "desc": "Losing the first-mover advantage because internal teams lack the specialized full-stack and AI expertise to build quickly."
+    },
+    {
+      "title": "Clunky User Experience",
+      "desc": "Building powerful AI that users abandon because the frontend interface is confusing, slow, or unresponsive."
+    }
+  ],
+  "whyPoints": [
+    {
+      "title": "First-Mover Advantage",
+      "desc": "We accelerate your time-to-market using proven SaaS boilerplates for auth/billing, focusing engineering effort purely on your unique AI differentiator."
+    },
+    {
+      "title": "Protected Profit Margins",
+      "desc": "We implement granular token tracking and caching strategies to minimize inference costs and align them perfectly with your pricing tiers."
+    },
+    {
+      "title": "Enterprise-Ready Security",
+      "desc": "We build isolated, secure multi-tenant architectures from Day 1, allowing you to pass strict enterprise procurement security audits."
+    },
+    {
+      "title": "Infinite Scalability",
+      "desc": "Cloud-native, serverless, and containerized architectures ensure your SaaS can handle 10 users or 1,000,000 users flawlessly."
+    },
+    {
+      "title": "World-Class UX/UI",
+      "desc": "We design premium, intuitive interfaces that make complex AI interactions feel magical and effortless to the end user."
+    },
+    {
+      "title": "Complete IP Ownership",
+      "desc": "You retain 100% ownership of the source code, custom models, and intellectual property. No vendor lock-in."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "AI-Native SaaS Architecture",
+      "desc": "We design the entire stack—React/Next.js frontend, Node/Python microservices, PostgreSQL, and Pinecone vector databases—optimized specifically for AI workloads."
+    },
+    {
+      "title": "Monetization & Billing",
+      "desc": "Deep integration with Stripe for tiered subscriptions, token-based usage metering, overages, and seamless checkout experiences."
+    },
+    {
+      "title": "Asynchronous AI Processing",
+      "desc": "Implementing robust queueing systems (Redis/Celery) so long-running AI generations don't block the UI, utilizing WebSockets for real-time updates."
+    },
+    {
+      "title": "Admin & Analytics Dashboards",
+      "desc": "Building comprehensive super-admin panels to monitor MRR, active users, LLM token costs, and system health in real-time."
+    }
+  ],
+  "features": [
+    {
+      "icon": "☁️",
+      "title": "Multi-Tenant Architecture",
+      "desc": "Secure, logical data isolation ensuring complete privacy between different organizations using your SaaS."
+    },
+    {
+      "icon": "💳",
+      "title": "Subscription Management",
+      "desc": "Complex Stripe integrations supporting flat-rate, per-seat, and usage-based (token) billing models."
+    },
+    {
+      "icon": "🔐",
+      "title": "Authentication & SSO",
+      "desc": "Secure login, OAuth (Google/GitHub), Magic Links, and Enterprise SAML/SSO integration."
+    },
+    {
+      "icon": "🤖",
+      "title": "Core AI Engine",
+      "desc": "Seamless integration of GPT-4, Claude, or custom models to power the core value proposition of your product."
+    },
+    {
+      "icon": "⚡",
+      "title": "Real-Time WebSockets",
+      "desc": "Streaming AI responses token-by-token to the frontend for a fast, ChatGPT-like user experience."
+    },
+    {
+      "icon": "🔌",
+      "title": "Public API Development",
+      "desc": "Exposing your SaaS features via a secure REST API with developer documentation and API key management."
+    },
+    {
+      "icon": "📱",
+      "title": "Responsive UX/UI",
+      "desc": "Pixel-perfect, accessible, and responsive interfaces that look beautiful on desktop and mobile."
+    },
+    {
+      "icon": "📈",
+      "title": "Usage Metering",
+      "desc": "Granular tracking of user actions and AI token consumption to prevent abuse and manage costs."
+    },
+    {
+      "icon": "⚙️",
+      "title": "CI/CD & DevOps",
+      "desc": "Automated testing and deployment pipelines for rapid, zero-downtime feature releases."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Rapid Concept to Launch",
+      "desc": "Launch your MVP in weeks, not years, capturing market share while the AI landscape is hot."
+    },
+    {
+      "title": "High Valuation Architecture",
+      "desc": "Build on a modern, scalable stack that technical due-diligence teams at VC firms love."
+    },
+    {
+      "title": "Recurring Revenue Stream",
+      "desc": "Establish a highly profitable SaaS business model with predictable Monthly Recurring Revenue (MRR)."
+    },
+    {
+      "title": "Optimized Cloud Spend",
+      "desc": "Efficient architecture and caching prevent AWS and OpenAI bills from destroying your profitability."
+    },
+    {
+      "title": "Global Reach",
+      "desc": "Deploy on Edge networks ensuring ultra-fast load times for users anywhere in the world."
+    },
+    {
+      "title": "Focus on Growth",
+      "desc": "You focus on sales, marketing, and product vision while we handle the complex technical execution."
+    }
+  ],
+  "techStack": [
+    "Next.js",
+    "React",
+    "Node.js",
+    "Python",
+    "FastAPI",
+    "TypeScript",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Pinecone",
+    "Stripe API",
+    "AWS",
+    "Docker",
+    "Vercel",
+    "Tailwind CSS",
+    "OpenAI API",
+    "WebSockets"
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Product Strategy & UX Design",
+      "desc": "Defining the MVP scope, mapping user journeys, creating wireframes, and designing a premium UI/UX."
+    },
+    {
+      "step": "02",
+      "title": "Architecture & AI Prototyping",
+      "desc": "Designing the database schema, selecting the right AI models, and building a core proof-of-concept for the AI feature."
+    },
+    {
+      "step": "03",
+      "title": "Full-Stack Agile Development",
+      "desc": "Building the frontend, backend APIs, billing integration, and deploying in 2-week sprints with continuous feedback."
+    },
+    {
+      "step": "04",
+      "title": "Launch, Scale & Iterate",
+      "desc": "Beta testing, production launch, setting up monitoring, and rapidly iterating based on early user analytics."
+    }
+  ],
+  "industries": [
+    "B2B Software",
+    "Marketing Tech (MarTech)",
+    "Legal Tech",
+    "Health Tech",
+    "EdTech",
+    "FinTech",
+    "Real Estate PropTech",
+    "Creator Economy",
+    "E-Commerce Tools",
+    "HR Tech"
+  ],
+  "aiPoints": [
+    {
+      "title": "Semantic Caching",
+      "desc": "Storing AI responses for common queries to serve future identical requests instantly and at zero API cost."
+    },
+    {
+      "title": "Streaming Responses",
+      "desc": "Implementing Server-Sent Events (SSE) to stream AI output to the UI in real-time, drastically reducing perceived latency."
+    },
+    {
+      "title": "Background Job Processing",
+      "desc": "Offloading heavy AI generation tasks (like video or large document synthesis) to background worker queues to keep the app responsive."
+    },
+    {
+      "title": "Tenant-Specific RAG",
+      "desc": "Ensuring that when User A queries the AI, the RAG pipeline strictly filters vectors to only include User A's uploaded documents."
+    },
+    {
+      "title": "Model Fallbacks",
+      "desc": "Implementing logic to automatically switch to a backup LLM (e.g., Gemini) if the primary LLM (e.g., OpenAI) experiences an outage."
+    }
+  ],
+  "securityTitle": "Bank-Grade SaaS Security",
+  "securityDesc": "When customers trust you with their data, security is your product. We build SaaS platforms with defense-in-depth strategies, ensuring compliance with global data protection standards from the first line of code.",
+  "securityPoints": [
+    "Strict Multi-Tenant Row-Level Security (RLS)",
+    "End-to-End Encryption (TLS 1.3 & AES-256)",
+    "Automated Vulnerability & Dependency Scanning",
+    "PCI-DSS Compliant Payment Processing (via Stripe)",
+    "Regular Penetration Testing Readiness",
+    "GDPR, CCPA, and SOC2 Compliance Architecture"
+  ],
+  "securityImg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop",
+  "caseStudy": {
+    "client": "AI Copywriting Startup — USA",
+    "label": "AI SaaS · Content Generation Platform",
+    "challenge": "A startup founder had a brilliant prompt engineering strategy for SEO content but lacked the technical skills to build a scalable web application with user accounts, billing, and document management.",
+    "solution": "WebCodian engineered a complete Next.js and Python SaaS platform in 8 weeks. We implemented Auth0 for login, Stripe for tiered token billing, a rich-text editor for content, and a highly optimized background queue for managing OpenAI API calls during high traffic.",
+    "result": "The platform launched seamlessly, scaling to 10,000+ MRR within 3 months. The robust architecture handled over 1 million API requests in month 2 with zero downtime, allowing the founder to secure seed funding at a premium valuation."
+  },
+  "stats": [
+    {
+      "metric": "8 Weeks",
+      "label": "Time to Market",
+      "desc": "From concept to launch"
+    },
+    {
+      "metric": "1M+",
+      "label": "Monthly AI Requests",
+      "desc": "Handled with zero downtime"
+    },
+    {
+      "metric": "$10k+",
+      "label": "Initial MRR",
+      "desc": "Achieved within 3 months"
+    },
+    {
+      "metric": "100%",
+      "label": "IP Ownership",
+      "desc": "Retained by the founder"
+    }
+  ],
+  "supportPoints": [
+    {
+      "title": "SLA-Backed Uptime",
+      "desc": "24/7 monitoring of your SaaS infrastructure to ensure 99.9% availability for your customers."
+    },
+    {
+      "title": "Feature Iteration",
+      "desc": "Dedicated agile teams continuously building and deploying new roadmap features to stay ahead of competitors."
+    },
+    {
+      "title": "Cost & Scaling Optimization",
+      "desc": "Regular architectural reviews to reduce server and LLM costs as your user base scales."
+    },
+    {
+      "title": "Security Patching",
+      "desc": "Proactive updates to all frameworks and dependencies to protect against zero-day vulnerabilities."
+    },
+    {
+      "title": "Database Management",
+      "desc": "Automated backups, index optimization, and seamless database scaling as data volume grows."
+    },
+    {
+      "title": "Third-Party API Maintenance",
+      "desc": "Updating integrations (Stripe, OpenAI, etc.) when external providers change their API versions."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do you handle pricing and billing for AI features since AI costs can vary?",
+      "a": "We typically implement a credits or token-based system using Stripe Metered Billing. Users purchase a tier with a set number of credits; each AI action consumes credits based on backend token usage. This perfectly aligns your revenue with your LLM costs."
+    },
+    {
+      "q": "Can we build a SaaS wrapper around ChatGPT?",
+      "a": "While simple 'wrappers' exist, they are easily copied. We help you build a defensible SaaS by integrating AI into a complex workflow—adding RAG, custom data integrations, specific UI tools, and multi-step agentic workflows that create a deep competitive moat."
+    },
+    {
+      "q": "Who owns the code and the intellectual property?",
+      "a": "You do. 100%. Upon final payment, all source code, deployment scripts, custom models, and intellectual property are fully transferred to your company. We act purely as your engineering partner."
+    },
+    {
+      "q": "Do you also design the UI/UX, or just write the code?",
+      "a": "We provide end-to-end development. Our in-house UI/UX designers create premium, modern, intuitive interfaces tailored for your target audience before our engineers write a single line of code."
+    }
+  ],
+  "relatedServices": [
+    {
+      "label": "Custom Software",
+      "href": "/custom-software-development"
+    },
+    {
+      "label": "Generative AI",
+      "href": "/generative-ai"
+    },
+    {
+      "label": "Cloud & DevOps",
+      "href": "/cloud-deployment-and-devops-services"
+    },
+    {
+      "label": "Web Development",
+      "href": "/web-development"
+    }
+  ],
+  "ctaHeading": "Ready to Launch Your AI SaaS Product?",
+  "ctaDesc": "Turn your vision into a scalable, revenue-generating software business. Partner with WebCodian for elite full-stack and AI engineering."
+};
 
 export default function Page() {
-  return (
-    <main className="bg-white min-h-screen font-sans">
-      
-      {/* 1. Breadcrumb Section */}
-      <div 
-        className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "linear-gradient(rgba(10, 20, 60, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop')"
-        }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
-              AI SaaS Product Development
-            </h1>
-            <ul className="flex items-center gap-3 text-indigo-100 font-bold uppercase text-sm tracking-widest">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              </li>
-              <li className="text-indigo-300">/</li>
-              <li className="text-white">AI SAAS PLATFORMS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Hero Section */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="mb-8 inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
-                Scalable Platforms
-              </div>
-
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Architecting the <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">Future of SaaS</span>
-              </h2>
-              
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
-                We design, build, and scale enterprise-grade Software as a Service products with cutting-edge artificial intelligence seamlessly integrated into the core.
-              </p>
-              <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-                Whether you're building a highly scalable multi-tenant architecture from scratch or injecting predictive analytics into an existing legacy platform, our elite engineering team delivers robust, cloud-native solutions.
-              </p>
-              
-              <div className="flex flex-wrap gap-5">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-900 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
-                  Build Your SaaS <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600/20 to-transparent mix-blend-overlay z-10"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" 
-                  alt="SaaS Analytics Dashboard" 
-                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-              
-              {/* Floating Element */}
-              <motion.div 
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
-              >
-                <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
-                  <Cloud className="w-8 h-8" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">99.99%</div>
-                  <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Global Uptime</div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Core Capabilities Grid replaced with Premium Feature Cards */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">SaaS Engineering Capabilities</h2>
-            <p className="text-xl text-slate-600 font-medium">
-              We leverage cloud-native infrastructure, multi-tenant databases, and advanced AI to build software that scales infinitely.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            <PremiumFeatureCard 
-              number="01"
-              imageTitle="Architecture"
-              imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
-              category="MULTI-TENANT INFRASTRUCTURE"
-              title="Scalable Cloud Architecture"
-              description="We architect robust multi-tenant systems on AWS, Azure, and Google Cloud. Our serverless deployments ensure your application handles spikes in traffic gracefully without infrastructure overhead."
-              linkText="Explore cloud services"
-              href="/services"
-              reverse={false}
-            />
-
-            <PremiumFeatureCard 
-              number="02"
-              imageTitle="AI Integration"
-              imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-              category="INTELLIGENT FEATURES"
-              title="Native AI Capabilities"
-              description="Transform basic SaaS into an intelligent product. We embed predictive analytics, automated reporting, computer vision, and NLP directly into your product's core workflows."
-              linkText="Explore AI integrations"
-              href="/generative-ai"
-              reverse={true}
-            />
-
-            <PremiumFeatureCard 
-              number="03"
-              imageTitle="Monetization"
-              imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-              category="SUBSCRIPTION BILLING"
-              title="Enterprise Billing & Security"
-              description="Complete integration with Stripe, Chargebee, and Auth0. We implement enterprise-grade RBAC (Role-Based Access Control), SSO, and complex usage-based billing logic."
-              linkText="Explore our solutions"
-              href="/custom-software-development"
-              reverse={false}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Strategic Approach (Spacious Layout) */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            
-            <div>
-              <span className="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4 block">Development Lifecycle</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-                Our SaaS Engineering Process
-              </h2>
-              
-              <div className="space-y-12">
-                {[
-                  { num: "01", title: "Discovery & UX", desc: "We map out user journeys, complex permissions, and billing hierarchies to create a seamless, intuitive dashboard experience." },
-                  { num: "02", title: "Agile Engineering", desc: "Our elite engineers build the platform using React, Node.js, and Python, delivering robust features in bi-weekly sprints." },
-                  { num: "03", title: "Cloud Deployment", desc: "We set up automated CI/CD pipelines, containerized deployments, and load balancers to ensure zero-downtime updates." }
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0">
-                      {step.num}
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold mb-3 text-white">{step.title}</h4>
-                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="hidden lg:block relative h-[700px]">
-               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.8)]"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-blue-400"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)]"></div>
-                 </div>
-               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <PremiumProjectCTA />
-    </main>
-  );
+  return <SolutionPageTemplate data={pageData} />;
 }

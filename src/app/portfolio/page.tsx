@@ -194,13 +194,15 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-100 border-t border-slate-200">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Ready to Build Your Next Big Project?</h2>
-          <p className="text-slate-600 text-xl mb-10 max-w-2xl mx-auto">
+      <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none" />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Build Your Next Big Project?</h2>
+          <p className="text-slate-500 text-xl mb-10 max-w-2xl mx-auto font-medium">
             Let's discuss your architecture, timeline, and vision. Partner with us for guaranteed delivery and premium engineering.
           </p>
-          <Link href="/get-a-quote" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 transition-colors shadow-xl">
+          <Link href="/contact" className="inline-flex items-center gap-2 btn-primary px-10 py-5 rounded-2xl text-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
             Start a Project <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

@@ -2,163 +2,99 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GraduationCap, ArrowRight, Code2, MonitorSmartphone, Share2, Award, BookOpen, Users, Briefcase, Bot, Library, ChevronRight, ChevronLeft } from "lucide-react";
+import { ArrowRight, Award, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-const slides = [
-  {
-    id: 1,
-    headlinePart1: "Learn. Build.",
-    headlinePart2: "Grow Your",
-    headlinePart3: "Digital Skills.",
-    description: "Build practical skills in Computer Applications, Web Development, Digital Marketing, Programming, Graphic Design and modern technologies with WebCodian.",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1600",
-  },
-  {
-    id: 2,
-    headlinePart1: "Design. Develop.",
-    headlinePart2: "Scale Your",
-    headlinePart3: "Business Apps.",
-    description: "Enterprise-grade web and mobile applications designed to optimize your workflow and increase revenue with WebCodian's expert team.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
-  },
-  {
-    id: 3,
-    headlinePart1: "Attract. Engage.",
-    headlinePart2: "Dominate",
-    headlinePart3: "Search Results.",
-    description: "Data-driven marketing and SEO strategies to increase your visibility, traffic, and sales globally with WebCodian's growth team.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-  },
-  {
-    id: 4,
-    headlinePart1: "Innovate. Deploy.",
-    headlinePart2: "Master",
-    headlinePart3: "AI & Tech.",
-    description: "Learn modern frameworks like React, Python, and AI integration to stay ahead in the fast-paced technology landscape.",
-    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1600",
-  }
+const images = [
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=2000"
 ];
-
-
 
 export function EduHero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-
   useEffect(() => {
     const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  const slide = slides[currentSlide];
-
   return (
-    <section className="relative w-full min-h-[100vh] lg:h-[750px] bg-white overflow-hidden flex flex-col justify-center pt-24 lg:pt-32 pb-16 lg:pb-0">
+    <section className="relative w-full min-h-[100vh] bg-slate-900 overflow-hidden flex flex-col justify-center">
       
-      {/* Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] transition-all"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button 
-        onClick={nextSlide}
-        className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] transition-all"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
+      {/* Background Slider with Ken Burns */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full z-0"
         >
-          {/* Full Banner Background Image (Ken Burns Effect) */}
           <motion.img 
-            src={slide.image} 
-            alt="Hero Background" 
+            src={images[currentSlide]} 
+            alt="Enterprise Technology" 
             initial={{ scale: 1 }}
             animate={{ scale: 1.1 }}
             transition={{ duration: 15, ease: "linear" }}
-            className="absolute inset-0 w-full h-full object-cover origin-center"
+            className="absolute inset-0 w-full h-full object-cover origin-center opacity-60"
           />
-          
-          {/* Gradient Overlay for Text Readability */}
-          {/* Fades from solid white on the left, to semi-transparent in the middle, to clear on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
+          {/* Luxury dark gradient overlay to ensure text pops */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Main Text Content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl h-full relative z-30 flex flex-col justify-center">
+      {/* Main Text Content (Static) */}
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl h-full relative z-30 flex flex-col justify-center pt-20">
         
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide + '-text'}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="w-full max-w-2xl flex flex-col justify-center items-start py-10"
-          >
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm text-slate-800 font-bold text-xs tracking-wider mb-6 lg:mb-8">
-              <GraduationCap className="w-4 h-4 text-[var(--primary)]" />
-              WEB CODIAN • IT TRAINING & DIGITAL SKILLS
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="w-full max-w-3xl flex flex-col justify-center items-start py-10"
+        >
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white font-medium text-xs tracking-[0.2em] mb-8 uppercase shadow-2xl">
+            <Award className="w-4 h-4 text-blue-400" />
+            Since 2018 • INDIA • DUBAI • USA • 500+ Projects Delivered
+          </div>
 
-            {/* Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-[72px] font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
-              {slide.headlinePart1} <br className="hidden md:block" />
-              {slide.headlinePart2} <br className="hidden md:block" />
-              <span className="text-[var(--primary)] relative inline-block mt-2 lg:mt-0">
-                {slide.headlinePart3}
-                <svg className="absolute w-full h-3 -bottom-1 lg:-bottom-2 left-0 opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M 0,5 Q 25,0 50,5 T 100,5" fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" />
-                </svg>
-              </span>
-            </h1>
+          {/* Headline */}
+          <h1 className="text-5xl md:text-6xl lg:text-[80px] font-extrabold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
+            Software <br className="hidden md:block" />
+            <span className="text-slate-300 font-light">That Ships.</span><br />
+            <span className="text-blue-500">AI That Works.</span>
+          </h1>
 
-            {/* Supporting Text */}
-            <p className="text-slate-800 text-lg md:text-xl mb-10 max-w-lg font-semibold leading-relaxed drop-shadow-sm">
-              {slide.description}
-            </p>
+          {/* Supporting Text */}
+          <p className="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl font-normal leading-relaxed drop-shadow-md tracking-wide">
+            WebCodian is a premium software development and AI automation company. We build custom software, mobile apps and AI agents that remove the work slowing your business down — and the digital marketing that brings customers to it.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <motion.div whileHover={{ y: -6, scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                <Link 
-                  href="/computer-courses"
-                  className="w-full sm:w-auto bg-[var(--primary)] hover:bg-[#25995e] text-white px-8 py-4 rounded-[18px] font-bold flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:shadow-[0_20px_40px_rgba(46,184,114,0.5)] transition-shadow duration-300 text-base group relative overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out skew-x-12"></div>
-                  Explore Courses 
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.div>
-              
-              <motion.div whileHover={{ y: -6, scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                <Link 
-                  href="/contact"
-                  className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-900 px-8 py-4 rounded-[18px] font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-200 hover:border-slate-300 transition-shadow duration-300 text-base group"
-                >
-                  Enquire Now
-                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-[var(--primary)] group-hover:translate-x-1 transition-all" />
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
+            <Link 
+              href="/contact"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-9 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-300 text-base hover:-translate-y-1"
+            >
+              Consult an Expert
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            
+            <Link 
+              href="/portfolio"
+              className="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white px-9 py-4 rounded-xl font-bold flex items-center justify-center gap-2 border border-white/20 transition-all duration-300 text-base hover:-translate-y-1"
+            >
+              View Our Work
+              <ChevronRight className="w-5 h-5 text-slate-400" />
+            </Link>
+          </div>
+        </motion.div>
         
       </div>
     </section>

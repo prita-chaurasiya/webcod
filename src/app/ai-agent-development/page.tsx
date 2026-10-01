@@ -1,416 +1,352 @@
-"use client";
+import { SolutionPageTemplate } from "@/components/SolutionPageTemplate";
+import { Metadata } from "next";
 
-import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
-import { PremiumFeatureCard } from "@/components/PremiumFeatureCard";
-import { PremiumAIExtendedSections } from "@/components/PremiumAIExtendedSections";
-import { Bot, Zap, Shield, Cpu, ArrowRight, Brain, Network, Cloud, ShieldCheck, Layers, BarChart, Settings, Code2 } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+export const metadata: Metadata = {
+  title: "Enterprise AI Agent Development | WebCodian",
+  description: "Deploy autonomous AI workforces. We build sophisticated multi-agent systems using CrewAI, LangGraph, and AutoGen that plan, reason, use tools, and execute complex business workflows completely autonomously.",
+};
+
+const pageData = {
+  "heroTitle": "Enterprise AI Agent Development",
+  "heroSubtitle": "Deploy autonomous AI workforces. We build sophisticated multi-agent systems using CrewAI, LangGraph, and AutoGen that plan, reason, use tools, and execute complex business workflows completely autonomously.",
+  "heroImg": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2000&auto=format&fit=crop",
+  "breadcrumbLabel": "AI Agent Development",
+  "category": "AI & Automation",
+  "overviewHeading": "From Conversational AI to Autonomous Action",
+  "overviewText": "The paradigm is shifting from AI that simply chats, to AI that acts. Autonomous AI Agents can break down complex goals, browse the web, write code, query databases, operate software APIs, and collaborate with other specialized agents to complete end-to-end business workflows. WebCodian engineers robust, stateful multi-agent architectures that operate securely within enterprise guardrails, delivering a scalable digital workforce that accelerates operations by orders of magnitude.",
+  "overviewImg": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2000&auto=format&fit=crop",
+  "overviewBullets": [
+    "Multi-Agent Orchestration (CrewAI, LangGraph)",
+    "Autonomous Decision Making & Task Planning",
+    "Model Context Protocol (MCP) Tool Integration",
+    "Human-in-the-Loop Validation Workflows",
+    "Stateful, Long-Running Agent Processes",
+    "Enterprise API & System Control"
+  ],
+  "challenges": [
+    {
+      "title": "Complex Workflow Bottlenecks",
+      "desc": "Business processes requiring dozens of sequential decisions and tool interactions that traditional RPA bots cannot handle due to rigidity."
+    },
+    {
+      "title": "Agent Infinite Loops & Failures",
+      "desc": "Poorly designed AI agents getting stuck in reasoning loops, hallucinating tool inputs, or crashing during complex executions."
+    },
+    {
+      "title": "Lack of Enterprise System Access",
+      "desc": "Agents isolated in chat windows without the secure API access required to actually execute tasks in CRM, ERP, or internal databases."
+    },
+    {
+      "title": "Unpredictable AI Behavior",
+      "desc": "Loss of control over what actions an autonomous system might take, leading to compliance violations or corrupted business data."
+    },
+    {
+      "title": "Context Window Limitations",
+      "desc": "Agents forgetting instructions or previous steps during long-running, multi-step tasks due to poor memory management."
+    },
+    {
+      "title": "Absence of Human Oversight",
+      "desc": "Fully automated systems executing high-stakes decisions (e.g., financial transactions, client emails) without necessary human approval gates."
+    }
+  ],
+  "whyPoints": [
+    {
+      "title": "End-to-End Workflow Automation",
+      "desc": "Move beyond text generation to actual task execution—agents can research, draft, approve, and send without human prompting."
+    },
+    {
+      "title": "Asynchronous Parallel Processing",
+      "desc": "Deploy swarms of specialized agents to tackle massive data processing or research tasks in parallel, turning weeks of work into minutes."
+    },
+    {
+      "title": "Dynamic Problem Solving",
+      "desc": "Unlike brittle RPA rules, AI agents adapt to UI changes, unstructured data, and edge cases using semantic reasoning."
+    },
+    {
+      "title": "Infinite Scalability",
+      "desc": "Scale your operational capacity instantly to meet demand spikes without hiring, training, or managing additional human headcount."
+    },
+    {
+      "title": "Seamless Tool Orchestration",
+      "desc": "Give agents secure access to your existing tech stack—Salesforce, Jira, AWS, GitHub—acting as an intelligent bridge between systems."
+    },
+    {
+      "title": "Continuous Self-Correction",
+      "desc": "Agents equipped with reflection capabilities evaluate their own output and retry failed tool calls automatically until the goal is met."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "LangGraph Stateful Architectures",
+      "desc": "We design robust cyclic graphs for agent workflows, ensuring state persistence, complex branching logic, and reliable execution of long-running tasks."
+    },
+    {
+      "title": "CrewAI Multi-Agent Swarms",
+      "desc": "Orchestrating teams of specialized agents (e.g., Researcher, Analyst, Writer) that collaborate, debate, and delegate tasks to achieve a unified goal."
+    },
+    {
+      "title": "Custom MCP Integration",
+      "desc": "Building secure Model Context Protocol servers to expose your proprietary APIs and databases as powerful, standardized tools for AI agents."
+    },
+    {
+      "title": "Human-in-the-Loop (HITL) Gates",
+      "desc": "Engineering explicit pause states where agents halt execution, request human review/modification of a proposed action, and then resume upon approval."
+    }
+  ],
+  "features": [
+    {
+      "icon": "🤖",
+      "title": "Autonomous Agents",
+      "desc": "Goal-driven AI that plans sub-tasks, executes them sequentially, and adapts to errors to achieve the final objective."
+    },
+    {
+      "icon": "🤝",
+      "title": "Multi-Agent Systems",
+      "desc": "Hierarchical agent networks using CrewAI/AutoGen where manager agents delegate work to specialized worker agents."
+    },
+    {
+      "icon": "🛠️",
+      "title": "Tool & API Usage",
+      "desc": "Empowering agents to execute Python code, run SQL queries, browse the web, and interact with REST/GraphQL APIs."
+    },
+    {
+      "icon": "🔄",
+      "title": "Stateful Workflows",
+      "desc": "Long-running agent processes managed via LangGraph that can pause, sleep, and resume without losing context."
+    },
+    {
+      "icon": "🧠",
+      "title": "Agent Memory",
+      "desc": "Implementing short-term (scratchpad) and long-term (vector DB) memory so agents recall past interactions and user preferences."
+    },
+    {
+      "icon": "👁️",
+      "title": "Human-in-the-Loop",
+      "desc": "Secure approval interfaces requiring human sign-off before agents execute destructive actions or external communications."
+    },
+    {
+      "icon": "🔌",
+      "title": "MCP Integration",
+      "desc": "Universal tool access via the Model Context Protocol, seamlessly bridging LLMs with your enterprise infrastructure."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Action Guardrails",
+      "desc": "Strict deterministic validation logic preventing agents from taking unauthorized actions or exceeding budget limits."
+    },
+    {
+      "icon": "📊",
+      "title": "Agent Observability",
+      "desc": "Comprehensive tracing of agent thought processes, tool inputs/outputs, and execution times via platforms like LangSmith."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "90% Reduction in Manual Ops",
+      "desc": "Replace tedious, multi-system manual data entry and reconciliation tasks with flawless, high-speed agent execution."
+    },
+    {
+      "title": "Error Resilient Automation",
+      "desc": "Agents dynamically handle API timeouts, bad data formats, and unexpected errors that would break traditional RPA bots."
+    },
+    {
+      "title": "Hyper-Accelerated Research",
+      "desc": "Deploy agent swarms to scour the web, analyze competitor data, and synthesize executive reports overnight."
+    },
+    {
+      "title": "Cost-Efficient Scaling",
+      "desc": "Handle 10x or 100x transaction volumes during peak seasons with zero additional marginal labor cost."
+    },
+    {
+      "title": "Transparent Decision Making",
+      "desc": "Every action an agent takes is accompanied by an explicit 'Chain of Thought' log, ensuring total auditability."
+    },
+    {
+      "title": "Focus on Strategic Work",
+      "desc": "Elevate your human workforce from operators of software to managers of AI agents, focusing purely on strategy and oversight."
+    }
+  ],
+  "techStack": [
+    "LangGraph",
+    "CrewAI",
+    "AutoGen",
+    "OpenAI",
+    "Claude",
+    "Python",
+    "FastAPI",
+    "Node.js",
+    "React",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "Azure",
+    "PostgreSQL",
+    "Redis",
+    "Vector Databases",
+    "LangChain"
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Workflow Decomposition",
+      "desc": "Analyzing complex business processes to identify cognitive decisions vs. deterministic actions, mapping the ideal agent topology."
+    },
+    {
+      "step": "02",
+      "title": "Tool & API Engineering",
+      "desc": "Developing secure, highly specific API wrappers and MCP servers that agents will use to interact with your environment."
+    },
+    {
+      "step": "03",
+      "title": "Agent Prompting & Graph Design",
+      "desc": "Crafting specialized system prompts, defining agent personas, and wiring the LangGraph state machine and conditional edges."
+    },
+    {
+      "step": "04",
+      "title": "Testing, Observability & Deployment",
+      "desc": "Rigorous simulation testing of edge cases, implementing LangSmith tracing, and deploying to scalable Kubernetes clusters."
+    }
+  ],
+  "industries": [
+    "Financial Services",
+    "Software Engineering",
+    "Sales Operations",
+    "Customer Support",
+    "Legal & Compliance",
+    "Supply Chain",
+    "Marketing & SEO",
+    "Cybersecurity",
+    "Data Analysis",
+    "HR & Recruiting"
+  ],
+  "aiPoints": [
+    {
+      "title": "Agentic Design Patterns",
+      "desc": "Implementing advanced patterns like ReAct (Reason + Act), Plan-and-Solve, and Reflexion to maximize agent reliability."
+    },
+    {
+      "title": "Dynamic Tool Discovery",
+      "desc": "Agents that can dynamically read OpenAPI specs and figure out how to use new APIs on the fly without hardcoded integrations."
+    },
+    {
+      "title": "Evaluator-Optimizer Loops",
+      "desc": "A secondary agent specifically designed to critique the primary agent's output and force revisions until quality thresholds are met."
+    },
+    {
+      "title": "Cross-Agent Communication",
+      "desc": "Standardized messaging protocols allowing agents built on different frameworks (e.g., CrewAI communicating with an AutoGen swarm) to collaborate."
+    },
+    {
+      "title": "Cost-Aware Routing",
+      "desc": "Agents that intelligently decide whether to use a cheap, fast model (Llama 3 8B) for simple classification or an expensive model (GPT-4) for complex reasoning."
+    }
+  ],
+  "securityTitle": "Secure Agent Execution Environments",
+  "securityDesc": "Giving AI autonomy requires military-grade containment. We deploy AI agents within highly restricted, ephemeral environments, ensuring that even if an agent hallucinates or is subjected to prompt injection, it cannot harm your infrastructure.",
+  "securityPoints": [
+    "Ephemeral Docker Containers for Code Execution",
+    "Strict Network Egress Filtering & Proxying",
+    "Principle of Least Privilege API Credentials",
+    "Budget Caps & Token Limit Enforcement",
+    "Mandatory Human-in-the-Loop for Write Operations",
+    "Continuous Vulnerability Scanning of Agent Dependencies"
+  ],
+  "securityImg": "https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?q=80&w=2000&auto=format&fit=crop",
+  "caseStudy": {
+    "client": "B2B SaaS Enterprise",
+    "label": "AI Agents · Sales Development",
+    "challenge": "The outbound sales team spent 60% of their time researching prospects, analyzing 10-K reports, and drafting highly personalized outreach sequences. This manual bottleneck severely limited outreach volume and pipeline growth.",
+    "solution": "WebCodian deployed a CrewAI multi-agent system. A 'Researcher Agent' scraped LinkedIn and web data; a 'Financial Analyst Agent' parsed SEC filings via API; a 'Copywriter Agent' drafted hyper-personalized emails; and a 'Manager Agent' reviewed the output against brand guidelines before pushing drafts to HubSpot.",
+    "result": "The SDR team increased outbound volume by 500% without adding headcount. Personalization quality improved, resulting in a 35% increase in meeting booked rates and generating an additional $4.2M in pipeline within 6 months."
+  },
+  "stats": [
+    {
+      "metric": "500%",
+      "label": "Outbound Volume Increase",
+      "desc": "Through parallel agent execution"
+    },
+    {
+      "metric": "35%",
+      "label": "Increase in Conversion",
+      "desc": "Due to deep agent research"
+    },
+    {
+      "metric": "60%",
+      "label": "Time Saved per Rep",
+      "desc": "Eliminating manual web research"
+    },
+    {
+      "metric": "100%",
+      "label": "Data Accuracy",
+      "desc": "Via cross-agent verification"
+    }
+  ],
+  "supportPoints": [
+    {
+      "title": "Agent Tracing & Debugging",
+      "desc": "Monitoring agent thought processes in production to quickly identify and patch reasoning failures."
+    },
+    {
+      "title": "Tool Ecosystem Expansion",
+      "desc": "Continuously building and integrating new MCP tools as your business adopts new SaaS platforms."
+    },
+    {
+      "title": "Prompt & Persona Tuning",
+      "desc": "Iteratively refining agent instructions based on edge cases discovered during real-world operation."
+    },
+    {
+      "title": "Infrastructure Scaling",
+      "desc": "Managing Kubernetes clusters to support hundreds of concurrent agent executions during peak loads."
+    },
+    {
+      "title": "Cost & Token Management",
+      "desc": "Optimizing state management to prevent bloated context windows and escalating API costs."
+    },
+    {
+      "title": "Security Auditing",
+      "desc": "Regular penetration testing of agent tool boundaries and prompt injection defenses."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are AI Agents reliable enough for production business use?",
+      "a": "Standalone LLMs are not, but well-engineered Agentic systems are. By using LangGraph to create strict execution paths, requiring agents to cite sources, implementing 'Reflexion' (self-correction loops), and adding Human-in-the-Loop gates, we achieve 99%+ reliability for critical workflows."
+    },
+    {
+      "q": "What is the Model Context Protocol (MCP)?",
+      "a": "MCP is an open standard that allows us to build a single secure server exposing your internal tools and data. Any MCP-compatible AI agent (or IDE like Cursor) can then seamlessly connect to this server and use your tools, vastly simplifying enterprise integration."
+    },
+    {
+      "q": "How do you stop an agent from making a catastrophic mistake, like deleting a database?",
+      "a": "We apply the Principle of Least Privilege. Agents are only given API keys with specific, restricted scopes (e.g., read-only access to certain tables). For any action that mutates data or interacts externally (like sending an email), we strictly enforce a Human-in-the-Loop approval step."
+    },
+    {
+      "q": "Which framework do you use: LangChain, LangGraph, CrewAI, or AutoGen?",
+      "a": "We use the right tool for the job. LangGraph is our primary choice for highly reliable, stateful, complex enterprise workflows. CrewAI excels for rapid development of collaborative research swarms. We often integrate multiple frameworks within a microservices architecture."
+    }
+  ],
+  "relatedServices": [
+    {
+      "label": "Generative AI Solutions",
+      "href": "/generative-ai"
+    },
+    {
+      "label": "Business Automation",
+      "href": "/business-automation"
+    },
+    {
+      "label": "AI & Chatbot Development",
+      "href": "/ai-chatbot-development"
+    },
+    {
+      "label": "AI SaaS Products",
+      "href": "/ai-saas-product"
+    }
+  ],
+  "ctaHeading": "Ready to Build Your Autonomous AI Workforce?",
+  "ctaDesc": "Transform your operations with intelligent, tool-using AI agents. Partner with WebCodian to design, build, and deploy secure multi-agent systems that drive true business automation."
+};
 
 export default function Page() {
-  return (
-    <main className="bg-white min-h-screen font-sans">
-      
-      {/* 1. Breadcrumb Section */}
-      <div 
-        className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "linear-gradient(rgba(10, 30, 70, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop')"
-        }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
-              AI Agent Development
-            </h1>
-            <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              </li>
-              <li className="text-blue-300">/</li>
-              <li className="text-white">AI AGENT DEVELOPMENT</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Hero Section */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-cyan-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="mb-8 inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-cyan-600 animate-pulse"></span>
-                Autonomous Intelligence
-              </div>
-
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Next-Generation <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">AI Agents</span>
-              </h2>
-              
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
-                We build sophisticated, autonomous AI agents capable of reasoning, planning, and executing complex workflows without human intervention.
-              </p>
-              <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-                From customer service bots to enterprise-wide data orchestrators, our AI agents integrate directly with your existing APIs to fetch data, make decisions, and drive measurable outcomes at scale.
-              </p>
-              
-              <div className="flex flex-wrap gap-5">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-slate-50 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
-                  Build Your Agent <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-600/20 to-transparent mix-blend-overlay z-10"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" 
-                  alt="AI Agent Architecture" 
-                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-              
-              {/* Floating Element */}
-              <motion.div 
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
-              >
-                <div className="w-16 h-16 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600">
-                  <Brain className="w-8 h-8" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">10x</div>
-                  <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Efficiency</div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Core Capabilities Grid replaced with Premium Feature Cards */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Agent Capabilities</h2>
-            <p className="text-xl text-slate-600 font-medium">
-              Our AI agents do more than just chat—they execute. We engineer them with full agency to interact with your digital ecosystem.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            <PremiumFeatureCard 
-              number="01"
-              imageTitle="Integration"
-              imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-              category="API & SYSTEMS"
-              title="Secure API & CRM Integrations"
-              description="Agents that can securely read, write, and execute functions across your CRM, ERP, and internal APIs. They bridge the gap between fragmented software silos, turning complex workflows into single natural language commands."
-              linkText="Explore integration features"
-              href="/services"
-              reverse={false}
-            />
-
-            <PremiumFeatureCard 
-              number="02"
-              imageTitle="Reasoning"
-              imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
-              category="CHAIN OF THOUGHT"
-              title="Advanced Cognitive Reasoning"
-              description="Powered by cutting-edge LLMs, our agents break down complex problems into solvable steps. They don't just execute predefined scripts; they analyze context, handle edge cases, and adapt dynamically."
-              linkText="See how it works"
-              href="/generative-ai"
-              reverse={true}
-            />
-
-            <PremiumFeatureCard 
-              number="03"
-              imageTitle="Swarms"
-              imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
-              category="MULTI-AGENT COLLABORATION"
-              title="Deploy specialized AI swarms"
-              description="Scale your operations infinitely by deploying swarms of specialized agents that collaborate with each other. One agent researches, another drafts, and a third audits—working together to solve massive tasks in seconds."
-              linkText="Scale with swarms"
-              href="/business-automation"
-              reverse={false}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Agent Architecture */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            
-            <div>
-              <span className="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-4 block">Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-                How Our AI Agents Work
-              </h2>
-              
-              <div className="space-y-12">
-                {[
-                  { num: "01", title: "Perception & Input", desc: "The agent ingests multimodal data—text, images, or API payloads—to understand the user's intent." },
-                  { num: "02", title: "Reasoning Engine", desc: "Powered by Large Language Models (LLMs), the agent determines the best sequence of tools to achieve the goal." },
-                  { num: "03", title: "Action & Tool Use", desc: "The agent securely calls webhooks, APIs, or database queries to execute the planned actions autonomously." }
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-400 group-hover:text-cyan-500 transition-colors shrink-0">
-                      {step.num}
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold mb-3 text-white">{step.title}</h4>
-                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="hidden lg:block relative h-[700px]">
-               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.8)]"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-400"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
-                 </div>
-               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Business Challenges We Solve */}
-      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
-            <p className="text-xl text-slate-600 font-medium">Overcome operational bottlenecks with autonomous task execution.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: Layers, title: "Siloed Operations", desc: "Data and workflows are trapped across multiple disconnected software platforms." },
-              { icon: Settings, title: "Manual Repetition", desc: "Your top talent is wasting hours on mundane data entry and repetitive tasks." },
-              { icon: BarChart, title: "Scaling Bottlenecks", desc: "Customer support and operational output cannot scale without linearly increasing headcount." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-cyan-300 transition-colors group">
-                <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Business Benefits */}
-      <section className="py-12 md:py-16 bg-cyan-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
-              <ul className="space-y-6">
-                {[
-                  "Reduce operational overhead by up to 60%",
-                  "Execute cross-platform workflows 24/7 without human intervention",
-                  "Eliminate manual data entry errors completely",
-                  "Scale customer and internal support infinitely"
-                ].map((benefit, i) => (
-                  <li key={i} className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-cyan-100">
-                    <ShieldCheck className="w-8 h-8 text-cyan-600 flex-shrink-0" />
-                    <span className="text-lg font-bold text-slate-700">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Technology Stack */}
-      <section className="py-12 md:py-16 bg-white border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#0f2c59]">AI Agent Tech Stack</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {["LangGraph", "CrewAI", "AutoGPT", "OpenAI Tool Calling", "Anthropic Claude", "Python", "FastAPI", "Vector Databases", "MCP", "RAG", "REST/GraphQL Integration", "Docker"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-cyan-500 hover:text-cyan-600 transition-colors">
-                {tech}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Development Process */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Implementation Process</h2>
-            <p className="text-xl text-slate-600">A rigorous, enterprise-grade methodology for deploying Autonomous AI safely.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Workflow Audit", desc: "We map your existing manual workflows and identify where agents can take over tool execution." },
-              { step: "02", title: "API Integration", desc: "Building secure connectors so the agent can read/write to your CRM, ERP, and databases." },
-              { step: "03", title: "Cognitive Engineering", desc: "Designing the reasoning loops (ReAct) and memory systems for complex problem solving." },
-              { step: "04", title: "Human-in-the-Loop", desc: "Deploying with strict approval gates before the agent executes high-stakes actions." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
-                <p className="text-slate-600 font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Enterprise Use Cases */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Enterprise Use Cases</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: "Autonomous Customer Support", desc: "Agents that access billing APIs to process refunds, update subscriptions, and resolve tickets entirely on their own.", img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop" },
-              { title: "Financial Data Analysts", desc: "Agent swarms that monitor live markets, query internal SQL databases, and compile morning executive reports automatically.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" }
-            ].map((uc, i) => (
-              <div key={i} className="bg-white rounded-[2rem] overflow-hidden group shadow-xl border border-slate-100">
-                <div className="h-64 overflow-hidden relative">
-                  <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="p-10">
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
-                  <p className="text-slate-300 text-lg font-medium">{uc.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10. Security & Compliance */}
-      <section className="py-12 md:py-16 bg-blue-50 text-slate-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-600/20 rounded-full blur-[100px]"></div>
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Uncompromising Data Security</h2>
-              <p className="text-lg text-blue-700 mb-8 font-medium">When you give AI agency, security is paramount. We build systems that guarantee agents only operate within strict boundaries with robust audit trails.</p>
-              <ul className="space-y-4">
-                {["Human-in-the-Loop (HITL) Execution", "SOC2 Compliant API Gateways", "Strict Role-Based Access Controls (RBAC)", "Immutable Agent Action Logs"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Shield className="w-6 h-6 text-cyan-400" />
-                    <span className="font-bold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-blue-800" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 11. Industries We Serve */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Cloud, name: "E-Commerce" },
-              { icon: BarChart, name: "Logistics" },
-              { icon: Network, name: "Telecom" },
-              { icon: Brain, name: "FinTech" }
-            ].map((ind, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-blue-600 hover:text-white transition-all group border border-slate-200 cursor-default">
-                <ind.icon className="w-10 h-10 text-blue-600 group-hover:text-white mb-4 transition-colors" />
-                <span className="font-bold text-lg">{ind.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 12. Quality Assurance */}
-      <section className="py-12 md:py-16 bg-slate-50">
-        <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">Agent QA & Red Teaming</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We rigorously stress-test agent reasoning loops against edge cases, infinite loops, and prompt injections to ensure enterprise-ready reliability before deployment.</p>
-        </div>
-      </section>
-
-      {/* 13. Case Studies / Success Stories */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-cyan-50 p-12 lg:p-20 rounded-[3rem] text-center border border-cyan-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
-            <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
-              "WebCodian engineered an autonomous support swarm that integrates directly with our Shopify and Zendesk APIs. It now handles 40% of our return processing without a single human touch."
-            </p>
-            <div className="font-bold text-slate-800 uppercase tracking-widest text-sm">— Global Retail Enterprise</div>
-          </div>
-        </div>
-      </section>
-
-      {/* 14. FAQs */}
-      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
-          </div>
-          <div className="space-y-4">
-            {[
-              { q: "What is an AI Agent and how is it different from a chatbot?", a: "A chatbot just talks. An AI agent has agency—it uses tools like APIs to execute tasks in the real world." },
-              { q: "What happens if the agent makes a mistake?", a: "We implement Human-in-the-Loop constraints. The agent prepares the action, but a human clicks 'Approve' for anything sensitive." },
-              { q: "Can agents communicate with each other?", a: "Yes. Using frameworks like CrewAI, we deploy swarms where specialized agents hand off tasks to one another." }
-            ].map((faq, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                <h4 className="font-bold text-lg text-slate-900 mb-2">{faq.q}</h4>
-                <p className="text-slate-600 font-medium">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <PremiumProjectCTA />
-    </main>
-  );
+  return <SolutionPageTemplate data={pageData} />;
 }

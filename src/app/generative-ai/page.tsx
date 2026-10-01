@@ -1,418 +1,353 @@
-"use client";
+import { SolutionPageTemplate } from "@/components/SolutionPageTemplate";
+import { Metadata } from "next";
 
-import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
-import { PremiumFeatureCard } from "@/components/PremiumFeatureCard";
-import { Bot, Zap, Shield, Cpu, ArrowRight, Brain, Network, Cloud, ShieldCheck, Layers, BarChart, Settings, Code2, PenTool, Sparkles, MessageSquare, Clock } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+export const metadata: Metadata = {
+  title: "Enterprise Generative AI Solutions | WebCodian",
+  description: "Transform your organization with custom LLMs, RAG knowledge systems, and AI content engines. We engineer secure, private, and highly accurate Generative AI solutions that automate cognitive tasks and drive unprecedented knowledge worker productivity.",
+};
+
+const pageData = {
+  "heroTitle": "Enterprise Generative AI Solutions",
+  "heroSubtitle": "Transform your organization with custom LLMs, RAG knowledge systems, and AI content engines. We engineer secure, private, and highly accurate Generative AI solutions that automate cognitive tasks and drive unprecedented knowledge worker productivity.",
+  "heroImg": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=2000&auto=format&fit=crop",
+  "breadcrumbLabel": "Generative AI Solutions",
+  "category": "AI & Automation",
+  "overviewHeading": "Harness the Full Potential of Generative AI for Business Acceleration",
+  "overviewText": "Generative AI is shifting the fundamental economics of enterprise knowledge work. Organizations leveraging custom LLMs and Retrieval-Augmented Generation (RAG) are experiencing 30-300% productivity gains across research, content creation, and analysis workflows. WebCodian engineers production-grade Generative AI applications that are accurate, hallucination-resistant, secure, and deeply integrated into your existing enterprise systems. From private model deployments to advanced prompt engineering, we deliver AI that works.",
+  "overviewImg": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop",
+  "overviewBullets": [
+    "Enterprise AI Assistants & Internal Copilots",
+    "Retrieval-Augmented Generation (RAG) Systems",
+    "Document Intelligence & Data Extraction",
+    "AI Content & Code Generation Pipelines",
+    "Prompt Engineering & Model Fine-Tuning",
+    "Responsible AI Governance & Security"
+  ],
+  "challenges": [
+    {
+      "title": "GenAI Hallucination Risk",
+      "desc": "Out-of-the-box LLMs confidently generate factually incorrect outputs, creating severe operational and reputational risks for enterprises."
+    },
+    {
+      "title": "Enterprise Data Privacy",
+      "desc": "Sending proprietary corporate data to public APIs violates data governance, risking IP leakage and regulatory non-compliance."
+    },
+    {
+      "title": "Siloed Institutional Knowledge",
+      "desc": "Decades of valuable enterprise knowledge trapped in unstructured documents, PDFs, and legacy databases, inaccessible to employees."
+    },
+    {
+      "title": "Cost & Scalability",
+      "desc": "Uncontrolled LLM API usage resulting in massive, unpredictable monthly bills that destroy the ROI of AI initiatives."
+    },
+    {
+      "title": "Integration Complexity",
+      "desc": "Struggling to move AI from isolated chat interfaces into the actual software workflows where employees spend their time."
+    },
+    {
+      "title": "Domain Specificity",
+      "desc": "Generic models failing to understand complex industry jargon, proprietary workflows, and specialized business logic."
+    }
+  ],
+  "whyPoints": [
+    {
+      "title": "10x Knowledge Worker Output",
+      "desc": "Automate the repetitive cognitive load—first drafts, data synthesis, document review—freeing human capital for strategic work."
+    },
+    {
+      "title": "Instant Knowledge Retrieval",
+      "desc": "Turn thousands of enterprise documents into an instantly queryable, highly accurate conversational knowledge base."
+    },
+    {
+      "title": "Complete Data Sovereignty",
+      "desc": "Deploy private, open-source models (Llama, Mistral) on your infrastructure ensuring zero data leakage to third parties."
+    },
+    {
+      "title": "Hyper-Personalization at Scale",
+      "desc": "Generate thousands of personalized marketing, sales, and support communications tailored to individual customer contexts instantly."
+    },
+    {
+      "title": "Accelerated Software Delivery",
+      "desc": "Empower engineering teams with custom AI code generation tools trained on your proprietary codebase and architectural standards."
+    },
+    {
+      "title": "Defensible Competitive Moat",
+      "desc": "Build proprietary intelligence layers over your unique corporate data, creating an advantage off-the-shelf AI cannot replicate."
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Enterprise RAG Architecture",
+      "desc": "We build advanced RAG pipelines with semantic chunking, hybrid search (keyword + vector), and re-ranking to ensure your AI always references accurate internal documents."
+    },
+    {
+      "title": "Private LLM Deployment",
+      "desc": "End-to-end deployment of open-weight models on your AWS, Azure, or GCP infrastructure, guaranteeing complete privacy and regulatory compliance."
+    },
+    {
+      "title": "Multi-Model Orchestration",
+      "desc": "Intelligently routing queries to the most cost-effective model (e.g., Claude for reasoning, Mistral for summarization) to maximize ROI."
+    },
+    {
+      "title": "AI Guardrails & Evaluation",
+      "desc": "Implementing strict output validation layers, toxicity filters, and automated evaluation frameworks to ensure brand safety and accuracy."
+    }
+  ],
+  "features": [
+    {
+      "icon": "🧠",
+      "title": "Custom LLM Applications",
+      "desc": "Purpose-built conversational AI using GPT-4, Claude, Gemini, or private models designed for specific enterprise workflows."
+    },
+    {
+      "icon": "📚",
+      "title": "Enterprise RAG Systems",
+      "desc": "High-accuracy knowledge retrieval connecting LLMs to your SharePoint, Confluence, Google Drive, and internal databases."
+    },
+    {
+      "icon": "✍️",
+      "title": "AI Content Generation",
+      "desc": "Automated pipelines generating marketing copy, technical documentation, and compliance reports in your exact brand voice."
+    },
+    {
+      "icon": "🔍",
+      "title": "AI Enterprise Search",
+      "desc": "Semantic search capabilities replacing legacy keyword search, allowing employees to find exact answers, not just links."
+    },
+    {
+      "icon": "🖼️",
+      "title": "AI Image & Video Gen",
+      "desc": "Integrating multimodal models (DALL-E, Midjourney, Sora) for scalable visual content creation and marketing asset generation."
+    },
+    {
+      "icon": "💻",
+      "title": "AI Code Assistants",
+      "desc": "Internal coding copilots trained on your repositories to accelerate developer onboarding and code production."
+    },
+    {
+      "icon": "⚙️",
+      "title": "Prompt Engineering",
+      "desc": "Systematic prompt design, chain-of-thought structuring, and few-shot learning for highly reliable model behavior."
+    },
+    {
+      "icon": "🎯",
+      "title": "LLM Fine-Tuning",
+      "desc": "Adapting foundation models via PEFT/LoRA to deeply understand your industry terminology and formatting requirements."
+    },
+    {
+      "icon": "⚖️",
+      "title": "Responsible AI & Governance",
+      "desc": "Bias detection, explainability frameworks, and audit logging to meet strict enterprise AI compliance requirements."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "70% Reduction in Research Time",
+      "desc": "RAG systems instantly synthesize information across thousands of documents, drastically cutting research hours."
+    },
+    {
+      "title": "Rapid Content Velocity",
+      "desc": "Accelerate content production lifecycles from weeks to days, maintaining high quality while increasing output volume."
+    },
+    {
+      "title": "Zero Data Exposure Risk",
+      "desc": "Private deployments and stringent data filtering ensure compliance with GDPR, HIPAA, and corporate security policies."
+    },
+    {
+      "title": "Predictable Unit Economics",
+      "desc": "Optimized model routing and caching strategies reduce API costs by up to 60% compared to naive LLM implementations."
+    },
+    {
+      "title": "Seamless User Adoption",
+      "desc": "AI capabilities embedded directly into existing enterprise tools (Slack, Teams, CRM) eliminate the friction of new platforms."
+    },
+    {
+      "title": "Continuous Accuracy Improvement",
+      "desc": "Built-in feedback loops capture user corrections, automatically refining retrieval and model accuracy over time."
+    }
+  ],
+  "techStack": [
+    "OpenAI",
+    "Claude",
+    "Gemini",
+    "Llama",
+    "Mistral",
+    "LangChain",
+    "LangGraph",
+    "Pinecone",
+    "Weaviate",
+    "ChromaDB",
+    "FAISS",
+    "Python",
+    "FastAPI",
+    "React",
+    "Next.js",
+    "AWS",
+    "Azure",
+    "Google Cloud"
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "AI Use Case & Readiness Assessment",
+      "desc": "Identifying high-ROI workflows, auditing data quality, and defining strict success metrics for the GenAI initiative."
+    },
+    {
+      "step": "02",
+      "title": "Data Engineering & Vectorization",
+      "desc": "Cleaning, structuring, chunking, and embedding enterprise data into high-performance vector databases."
+    },
+    {
+      "step": "03",
+      "title": "Architecture & Prototyping",
+      "desc": "Designing the RAG pipeline, selecting foundation models, and building rapid prototypes to validate accuracy."
+    },
+    {
+      "step": "04",
+      "title": "Production Deployment & Guardrails",
+      "desc": "Scaling the solution with caching, rate limiting, security guardrails, and continuous monitoring."
+    }
+  ],
+  "industries": [
+    "Legal & Compliance",
+    "Healthcare & Pharma",
+    "Financial Services",
+    "Media & Publishing",
+    "E-Commerce",
+    "Manufacturing",
+    "Consulting",
+    "Software Development",
+    "Education",
+    "Government"
+  ],
+  "aiPoints": [
+    {
+      "title": "Hybrid Semantic Search",
+      "desc": "Combining dense vector search for conceptual matching with sparse keyword search (BM25) for exact terminology precision."
+    },
+    {
+      "title": "Agentic RAG Workflows",
+      "desc": "Moving beyond simple Q&A to agents that can summarize, compare, synthesize, and execute actions based on retrieved knowledge."
+    },
+    {
+      "title": "Automated Evaluation Frameworks",
+      "desc": "Utilizing LLM-as-a-judge frameworks to continuously score outputs for relevance, faithfulness, and hallucination rates."
+    },
+    {
+      "title": "Multimodal Processing",
+      "desc": "Parsing complex PDFs, charts, tables, and images alongside text for comprehensive enterprise document intelligence."
+    },
+    {
+      "title": "Cost & Latency Optimization",
+      "desc": "Implementing semantic caching layers to serve frequent queries instantly at zero model inference cost."
+    }
+  ],
+  "securityTitle": "Uncompromising Enterprise AI Security",
+  "securityDesc": "Generative AI introduces novel security vectors. WebCodian implements defense-in-depth AI security architectures, ensuring your proprietary data remains safe, outputs remain compliant, and your brand is protected from AI risks.",
+  "securityPoints": [
+    "VPC-Isolated Private LLM Hosting",
+    "PII & PHI Scrubbing Before Model Inference",
+    "Prompt Injection & Jailbreak Defense Layers",
+    "Role-Based Access Control (RBAC) at the Vector DB Level",
+    "Comprehensive Audit Trails of All User Prompts & AI Responses",
+    "Output Toxicity & Brand Safety Filtering"
+  ],
+  "securityImg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop",
+  "caseStudy": {
+    "client": "Global Legal Services Firm",
+    "label": "Generative AI · RAG Knowledge Base",
+    "challenge": "A 500-lawyer firm struggled with inefficient precedent research. Associates spent an average of 4 hours per day searching through millions of unstructured case files, contracts, and internal memos, leading to high non-billable overhead.",
+    "solution": "WebCodian engineered a highly secure, private RAG system deployed on Azure. We vectorized 2 million+ documents into Pinecone, orchestrated by LangChain, and utilized a fine-tuned LLM for precise legal synthesis and contract comparison.",
+    "result": "Research time dropped from 4 hours to 45 minutes daily per associate. The firm recovered ₹8.5 Crore in billable hours annually, while achieving 98% accuracy in precedent retrieval with zero cloud data leakage."
+  },
+  "stats": [
+    {
+      "metric": "80%",
+      "label": "Research Time Reduction",
+      "desc": "Via semantic enterprise search"
+    },
+    {
+      "metric": "98%",
+      "label": "Retrieval Accuracy",
+      "desc": "Through hybrid RAG techniques"
+    },
+    {
+      "metric": "100%",
+      "label": "Data Privacy Maintained",
+      "desc": "Via isolated infrastructure"
+    },
+    {
+      "metric": "3x",
+      "label": "Content Production Velocity",
+      "desc": "With AI drafting pipelines"
+    }
+  ],
+  "supportPoints": [
+    {
+      "title": "Continuous Model Evaluation",
+      "desc": "Ongoing monitoring of hallucination rates, output quality, and user feedback to detect and correct model drift."
+    },
+    {
+      "title": "Knowledge Base Updates",
+      "desc": "Automated pipelines ensuring new enterprise documents are vectorized and available to the AI in near real-time."
+    },
+    {
+      "title": "Prompt Optimization",
+      "desc": "Regular review and refinement of system prompts based on actual user query patterns to improve accuracy."
+    },
+    {
+      "title": "Model Upgrades",
+      "desc": "Seamlessly upgrading to new foundation models (e.g., GPT-4 to GPT-5) while ensuring backward compatibility."
+    },
+    {
+      "title": "Cost Analytics",
+      "desc": "Detailed dashboards tracking token usage, compute costs, and ROI per department and use case."
+    },
+    {
+      "title": "AI Literacy Training",
+      "desc": "Comprehensive training for your workforce on effective prompt engineering and safe AI usage."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is RAG and why is it better than just using ChatGPT?",
+      "a": "Retrieval-Augmented Generation (RAG) connects an LLM securely to your specific business documents. Unlike public ChatGPT which relies on general internet training data, RAG retrieves your proprietary facts first, drastically reducing hallucinations and providing highly accurate, company-specific answers."
+    },
+    {
+      "q": "Can we run Generative AI models completely privately on our servers?",
+      "a": "Yes. WebCodian specializes in deploying open-weight models like Llama 3 and Mistral on your private cloud (VPC) or on-premise infrastructure. No data is ever sent to OpenAI, Anthropic, or any external API."
+    },
+    {
+      "q": "How do you prevent the AI from giving employees access to confidential documents they shouldn't see?",
+      "a": "We implement strict Role-Based Access Control (RBAC) at the vector database level. When an employee queries the AI, the RAG system only retrieves documents that the specific user has active permissions to view in your directory (e.g., Active Directory/Okta)."
+    },
+    {
+      "q": "How much does an Enterprise GenAI solution cost?",
+      "a": "Costs vary based on data volume, security requirements, and model choice. A focused internal RAG pilot typically starts around $15,000-$25,000, while comprehensive, multi-department enterprise deployments can range from $50,000 to $150,000+. We provide fixed-scope proposals after initial discovery."
+    }
+  ],
+  "relatedServices": [
+    {
+      "label": "AI Agent Development",
+      "href": "/ai-agent-development"
+    },
+    {
+      "label": "Chatbot & Voice AI",
+      "href": "/chatbot-voice-ai"
+    },
+    {
+      "label": "Data Analytics & Tech",
+      "href": "/data-analytics-and-emerging-technologies"
+    },
+    {
+      "label": "Business Automation",
+      "href": "/business-automation"
+    }
+  ],
+  "ctaHeading": "Ready to Harness the Power of Generative AI?",
+  "ctaDesc": "Stop experimenting with generic AI chatbots. Partner with WebCodian to engineer secure, highly accurate Generative AI solutions that deliver measurable ROI for your enterprise."
+};
 
 export default function Page() {
-  return (
-    <main className="bg-white min-h-screen font-sans">
-      
-      {/* 1. Breadcrumb Section */}
-      <div 
-        className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "linear-gradient(rgba(40, 10, 60, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop')"
-        }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
-              Generative AI Solutions
-            </h1>
-            <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-              </li>
-              <li className="text-blue-300">/</li>
-              <li className="text-white">GENERATIVE AI</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Hero Section */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="mb-8 inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                Creative Intelligence
-              </div>
-
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Unlock Infinite Potential with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Generative AI</span>
-              </h2>
-              
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
-                Go beyond automation. Our Generative AI solutions empower your business to create, ideate, and produce content at unprecedented speed and scale.
-              </p>
-              <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-                From generating photorealistic marketing assets to drafting complex technical reports and writing production-ready code, we implement customized foundational models that understand your brand deeply.
-              </p>
-              
-              <div className="flex flex-wrap gap-5">
-                <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-50 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
-                  Innovate Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay z-10"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Generative AI" 
-                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-              
-              {/* Floating Element */}
-              <motion.div 
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
-              >
-                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                  <Sparkles className="w-8 h-8" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-slate-900">100x</div>
-                  <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Content Velocity</div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Core Capabilities Grid replaced with Premium Feature Cards */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Generative Capabilities</h2>
-            <p className="text-xl text-slate-600 font-medium">
-              We leverage state-of-the-art multimodal models to automate the creation of text, imagery, and code.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            <PremiumFeatureCard 
-              number="01"
-              imageTitle="Text Gen"
-              imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-              category="LLM FINE-TUNING"
-              title="Hyper-Personalized Text Generation"
-              description="Deploy LLMs that write exactly like you do. We fine-tune models on your historical data, knowledge bases, and brand guidelines to generate reports, emails, and articles instantly."
-              linkText="Explore NLP Solutions"
-              href="/services"
-              reverse={false}
-            />
-
-            <PremiumFeatureCard 
-              number="02"
-              imageTitle="Visuals"
-              imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
-              category="DIFFUSION MODELS"
-              title="Automated Visual Asset Creation"
-              description="Generate hundreds of product variations, marketing banners, and UI mockups in seconds using specialized image generation models like Stable Diffusion and Midjourney."
-              linkText="Explore visual AI"
-              href="/services"
-              reverse={true}
-            />
-
-            <PremiumFeatureCard 
-              number="03"
-              imageTitle="Code AI"
-              imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-              category="DEVELOPER PRODUCTIVITY"
-              title="AI-Assisted Software Engineering"
-              description="Boost your engineering velocity with internal AI coding assistants that understand your proprietary codebase, automatically generate boilerplate, and identify security vulnerabilities."
-              linkText="Explore code generation"
-              href="/custom-software-development"
-              reverse={false}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Strategic Approach (Spacious Layout) */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            
-            <div>
-              <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-10 leading-tight">
-                Enterprise-Grade Generative Systems
-              </h2>
-              
-              <div className="space-y-12">
-                {[
-                  { num: "01", title: "RAG Architecture", desc: "Retrieval-Augmented Generation ensures the AI only outputs facts grounded in your secure corporate database, eliminating hallucinations." },
-                  { num: "02", title: "Model Routing", desc: "We deploy intelligent routers that send complex tasks to GPT-4 and simple tasks to smaller models, optimizing for speed and cost." },
-                  { num: "03", title: "Data Privacy", desc: "We implement on-premise or private-cloud LLM deployments so your proprietary data never touches a public API." }
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-400 group-hover:text-blue-500 transition-colors shrink-0">
-                      {step.num}
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold mb-3 text-white">{step.title}</h4>
-                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="hidden lg:block relative h-[700px]">
-               {/* Decorative structural elements to make it look premium */}
-               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(168,85,247,0.8)]"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-400"></div>
-                 </div>
-                 <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
-                 </div>
-               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Business Challenges We Solve */}
-      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
-            <p className="text-xl text-slate-600 font-medium">Overcome the limitations of traditional workflows with Generative AI.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: Clock, title: "Slow Content Production", desc: "Manual content creation bottlenecks your marketing and product teams." },
-              { icon: Layers, title: "Creative Burnout", desc: "Teams struggle to consistently produce fresh, innovative ideas at scale." },
-              { icon: BarChart, title: "High Operational Costs", desc: "Scaling content and code production linearly increases headcount and expenses." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-blue-300 transition-colors group">
-                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Business Benefits */}
-      <section className="py-12 md:py-16 bg-blue-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
-              <ul className="space-y-6">
-                {[
-                  "Reduce content creation costs by up to 80%",
-                  "Accelerate go-to-market strategies with instant asset generation",
-                  "Personalize customer communication at infinite scale",
-                  "Automate repetitive coding and documentation tasks"
-                ].map((benefit, i) => (
-                  <li key={i} className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-blue-100">
-                    <ShieldCheck className="w-8 h-8 text-blue-600 flex-shrink-0" />
-                    <span className="text-lg font-bold text-slate-700">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Technology Stack */}
-      <section className="py-12 md:py-16 bg-white border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#0f2c59]">Generative AI Tech Stack</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {["GPT-4", "Claude 3.5", "Gemini 1.5 Pro", "Llama 3", "Stable Diffusion", "Midjourney", "LangChain", "HuggingFace", "Pinecone", "Milvus", "PyTorch", "TensorFlow"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
-                {tech}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Development Process */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Implementation Process</h2>
-            <p className="text-xl text-slate-600">A rigorous, enterprise-grade methodology for deploying Generative AI safely.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Data Audit", desc: "We analyze your proprietary data to ensure it's clean and ready for fine-tuning." },
-              { step: "02", title: "Model Selection", desc: "Choosing the perfect foundational model (Open Source vs Proprietary API) for your specific use case." },
-              { step: "03", title: "Fine-Tuning & RAG", desc: "Training the model on your brand voice and connecting it to your secure databases." },
-              { step: "04", title: "Safe Deployment", desc: "Rolling out the AI with strict guardrails, human-in-the-loop validation, and API gateways." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
-                <p className="text-slate-600 font-medium">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Enterprise Use Cases */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Enterprise Use Cases</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: "Automated Marketing Copy", desc: "Generate thousands of SEO-optimized product descriptions and ad copy variations.", img: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=800&auto=format&fit=crop" },
-              { title: "Dynamic Code Generation", desc: "Accelerate software development by generating unit tests, boilerplate code, and documentation.", img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" }
-            ].map((uc, i) => (
-              <div key={i} className="bg-white rounded-[2rem] overflow-hidden group shadow-xl border border-slate-100">
-                <div className="h-64 overflow-hidden relative">
-                  <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <div className="p-10">
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
-                  <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 10. Security & Compliance */}
-      <section className="py-12 md:py-16 bg-blue-50 text-slate-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[100px]"></div>
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Uncompromising Data Security</h2>
-              <p className="text-lg text-blue-700 mb-8 font-medium">When you implement Generative AI with WebCodian, your data remains yours. We build systems that guarantee your proprietary information is never used to train public models.</p>
-              <ul className="space-y-4">
-                {["Private Cloud & On-Premise Deployments", "SOC2 & ISO 27001 Compliant Infrastructure", "Strict Role-Based Access Controls (RBAC)", "Hallucination Guardrails & Content Filtering"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Shield className="w-6 h-6 text-blue-600" />
-                    <span className="font-bold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-blue-800" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 11. Industries We Serve */}
-      <section className="py-12 md:py-16 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Cloud, name: "SaaS & Tech" },
-              { icon: BarChart, name: "Finance" },
-              { icon: MessageSquare, name: "Media & Ent." },
-              { icon: Brain, name: "Healthcare" }
-            ].map((ind, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-blue-600 hover:text-white transition-all group border border-slate-200 cursor-default">
-                <ind.icon className="w-10 h-10 text-blue-600 group-hover:text-white mb-4 transition-colors" />
-                <span className="font-bold text-lg">{ind.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 12. Quality Assurance */}
-      <section className="py-12 md:py-16 bg-slate-50">
-        <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">AI Quality Assurance & Testing</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We rigorously test all Generative AI outputs against bias, hallucinations, and safety guidelines to ensure enterprise-ready reliability before deployment.</p>
-        </div>
-      </section>
-
-      {/* 13. Case Studies / Success Stories */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
-            <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
-              "WebCodian implemented a secure Generative AI writing assistant for our legal team, reducing contract drafting time by 65% while ensuring 100% compliance with our private data policies."
-            </p>
-            <div className="font-bold text-slate-800 uppercase tracking-widest text-sm">— Fortune 500 Financial Institution</div>
-          </div>
-        </div>
-      </section>
-
-      {/* 14. FAQs */}
-      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
-          </div>
-          <div className="space-y-4">
-            {[
-              { q: "Is our data safe with Generative AI?", a: "Yes. We implement private LLMs and enterprise APIs that guarantee zero data retention by the model providers." },
-              { q: "Can the AI match our specific brand voice?", a: "Absolutely. Through fine-tuning and specialized prompting (RAG), the AI learns to replicate your exact tone and style." },
-              { q: "How long does it take to implement?", a: "A standard enterprise POC takes 4-6 weeks, with full deployment scaling based on integration requirements." }
-            ].map((faq, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                <h4 className="font-bold text-lg text-slate-900 mb-2">{faq.q}</h4>
-                <p className="text-slate-600 font-medium">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 15. CTA */}
-      <PremiumProjectCTA />
-    </main>
-  );
+  return <SolutionPageTemplate data={pageData} />;
 }
