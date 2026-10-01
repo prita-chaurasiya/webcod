@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, Briefcase, UserPlus } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Briefcase, UserPlus, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export function PremiumContact() {
