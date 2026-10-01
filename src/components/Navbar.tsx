@@ -8,7 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const webSoftwareServices = [
   { name: "Web Development", href: "/web-development" },
   { name: "Software Development", href: "/software-development" },
-  { name: "Custom Software Development", href: "/custom-software-development" }
+  { name: "Custom Software Development", href: "/custom-software-development" },
+  { name: "Enterprise Software", href: "/enterprise-software" },
+  { name: "Web Application Dev", href: "/web-application-development" },
+  { name: "Website Design & Dev", href: "/website-development" },
+  { name: "Blockchain & Web3", href: "/blockchain-development" },
+  { name: "Smart Contract Dev", href: "/smart-contract-development" },
+  { name: "Crypto Wallet Dev", href: "/wallet-development" },
+  { name: "Crypto Exchange Dev", href: "/exchange-software-development" }
 ];
 
 const aiAutomationServices = [
@@ -16,11 +23,14 @@ const aiAutomationServices = [
   { name: "AI Agent Development", href: "/ai-agent-development" },
   { name: "Chatbot & Voice AI", href: "/chatbot-voice-ai" },
   { name: "Business Automation", href: "/business-automation" },
-  { name: "AI & SaaS Product", href: "/ai-saas-product" }
+  { name: "AI & SaaS Product", href: "/ai-saas-product" },
+  { name: "AI & Chatbot Dev", href: "/ai-chatbot-development" },
+  { name: "Data Analytics & Tech", href: "/data-analytics-and-emerging-technologies" }
 ];
 
 const mobileCommerceServices = [
   { name: "App Development", href: "/app-development" },
+  { name: "Mobile App Dev", href: "/mobile-app" },
   { name: "E-commerce Portal", href: "/e-commerce-portal" }
 ];
 
@@ -28,14 +38,22 @@ const digitalServices = [
   { name: "Digital Marketing", href: "/digital-marketing" },
   { name: "SEO / SMO", href: "/seo-smo" },
   { name: "Graphic Design", href: "/graphic-design" },
+  { name: "Logo & Brand Identity", href: "/logo-design" },
+  { name: "UI/UX Design", href: "/ui-ux-design-and-prototyping" },
+  { name: "Presentation (PPT)", href: "/ppt-design" },
+  { name: "Video Production", href: "/video-marketing" },
   { name: "Video Editing", href: "/video-editing" }
 ];
 
 const businessSystems = [
   { name: "CRM & ERP", href: "/crm-erp" },
+  { name: "API & Integration", href: "/api-development-and-system-integration" },
+  { name: "Cloud & DevOps", href: "/cloud-deployment-and-devops-services" },
+  { name: "Software Testing & QA", href: "/software-testing-and-qa-services" },
+  { name: "SaaS Development", href: "/saas-development" },
   { name: "Telegram Bot", href: "/telegram-bot" },
   { name: "Digital Product", href: "/digital-product" },
-  { name: "Maintenance", href: "/maintenance" },
+  { name: "Maintenance & Support", href: "/software-maintenance-and-support" },
   { name: "Bulk SMS", href: "/bulk-sms" },
   { name: "Bulk WhatsApp", href: "/bulk-whatsapp-sms" },
   { name: "Bulk Voice Call", href: "/bulk-voice-call" }
