@@ -38,7 +38,7 @@ export function PremiumSolutionDetail({
     <div className="bg-white min-h-screen font-sans overflow-hidden">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-[#f8fafc] overflow-hidden">
+      <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 bg-[#f8fafc] overflow-hidden">
         {/* Subtle background blob */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-blue-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
         
