@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-purple-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-10 leading-tight">
                 Enterprise-Grade Generative Systems
               </h2>
               
@@ -277,7 +277,7 @@ export default function Page() {
       <section className="py-24 lg:py-32 bg-slate-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">Our Implementation Process</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Our Implementation Process</h2>
             <p className="text-xl text-slate-400">A rigorous, enterprise-grade methodology for deploying Generative AI safely.</p>
           </div>
           
@@ -329,7 +329,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black mb-6">Uncompromising Data Security</h2>
+              <h2 className="text-4xl font-black text-white mb-6">Uncompromising Data Security</h2>
               <p className="text-lg text-purple-200 mb-8 font-medium">When you implement Generative AI with WebCodian, your data remains yours. We build systems that guarantee your proprietary information is never used to train public models.</p>
               <ul className="space-y-4">
                 {["Private Cloud & On-Premise Deployments", "SOC2 & ISO 27001 Compliant Infrastructure", "Strict Role-Based Access Controls (RBAC)", "Hallucination Guardrails & Content Filtering"].map((item, i) => (

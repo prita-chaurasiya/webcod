@@ -157,7 +157,7 @@ export function PremiumMobileAppDev() {
               <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" alt="Mobile Development" className="rounded-[32px] shadow-2xl" />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                 Why Partner With Us For Mobile Development?
               </h2>
               <p className="text-slate-400 text-lg mb-8">
