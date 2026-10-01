@@ -174,12 +174,12 @@ export default function Page() {
                   { num: "03", title: "Cloud Deployment", desc: "We set up automated CI/CD pipelines, containerized deployments, and load balancers to ensure zero-downtime updates." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-700 group-hover:text-indigo-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-400 group-hover:text-indigo-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
-                      <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
+                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}

@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-10 leading-tight">
                 Enterprise-Grade Generative Systems
               </h2>
               
@@ -174,12 +174,12 @@ export default function Page() {
                   { num: "03", title: "Data Privacy", desc: "We implement on-premise or private-cloud LLM deployments so your proprietary data never touches a public API." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-400 group-hover:text-blue-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
-                      <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
+                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}

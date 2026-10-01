@@ -174,12 +174,12 @@ export default function Page() {
                   { num: "03", title: "Action & Tool Use", desc: "The agent securely calls webhooks, APIs, or database queries to execute the planned actions autonomously." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-700 group-hover:text-cyan-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-400 group-hover:text-cyan-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
-                      <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
+                      <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -314,7 +314,7 @@ export default function Page() {
                 </div>
                 <div className="p-10">
                   <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
-                  <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
+                  <p className="text-slate-300 text-lg font-medium">{uc.desc}</p>
                 </div>
               </div>
             ))}

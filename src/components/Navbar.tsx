@@ -151,9 +151,9 @@ export function Navbar() {
               </button>
               <AnimatePresence>
                 {activeDropdown === "ai-automation" && (
-                  <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.3, ease: "easeOut" }} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[850px] bg-white/95 backdrop-blur-xl border border-gray-100/50 rounded-[32px] shadow-[0_30px_80px_-15px_rgba(0,0,0,0.12)] overflow-hidden">
-                    <div className="flex h-[360px]">
-                      <div className="w-1/3 bg-slate-50/80 p-10 flex flex-col justify-center border-r border-gray-100/50 relative overflow-hidden">
+                  <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.3, ease: "easeOut" }} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1000px] bg-white/95 backdrop-blur-xl border border-gray-100/50 rounded-[32px] shadow-[0_30px_80px_-15px_rgba(0,0,0,0.12)] overflow-hidden">
+                    <div className="flex h-auto min-h-[420px]">
+                      <div className="w-[30%] bg-slate-50/80 p-10 flex flex-col justify-center border-r border-gray-100/50 relative overflow-hidden">
                         <div className="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
                         <h3 className="text-2xl font-bold text-slate-900 mb-4 relative z-10">AI & Automation</h3>
                         <p className="text-sm text-slate-500 leading-relaxed mb-8 font-medium relative z-10">Intelligent systems and automation designed around modern business workflows.</p>
@@ -161,17 +161,17 @@ export function Navbar() {
                           Explore AI <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                         </Link>
                       </div>
-                      <div className="w-1/3 p-8 flex flex-col justify-center space-y-1">
+                      <div className="w-[40%] p-6 py-8 flex flex-col justify-center space-y-2 border-r border-gray-100/50">
                         {aiAutomationServices.map((item) => (
-                          <Link key={item.name} href={item.href} className="group/link flex items-center gap-4 p-3 rounded-[18px] hover:bg-slate-50 transition-colors">
-                            <div className="w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center group-hover/link:border-blue-200 transition-colors shrink-0">
-                              <div className="w-2 h-2 rounded-full bg-slate-300 group-hover/link:bg-blue-500 transition-colors" />
+                          <Link key={item.name} href={item.href} className="group/link flex items-center gap-4 p-3 rounded-[18px] hover:bg-blue-50/50 transition-colors">
+                            <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center group-hover/link:border-blue-200 transition-colors shrink-0">
+                              <div className="w-2.5 h-2.5 rounded-full bg-slate-300 group-hover/link:bg-blue-500 transition-colors" />
                             </div>
                             <span className="text-sm font-bold text-slate-700 group-hover/link:text-blue-600 transition-colors">{item.name}</span>
                           </Link>
                         ))}
                       </div>
-                      <div className="w-1/3 relative p-5">
+                      <div className="w-[30%] relative p-5">
                         <div className="w-full h-full rounded-[24px] bg-[#0A0F1C] overflow-hidden relative group/img border border-slate-800/50 shadow-inner">
                           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay group-hover/img:scale-110 transition-transform duration-1000" />
                           <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-[40px] animate-pulse"></div>
