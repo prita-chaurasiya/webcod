@@ -42,12 +42,12 @@ export default function SupportPage() {
       <section className="py-16 bg-blue-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">How can we help you today?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">How can we help you today?</h2>
           <div className="relative max-w-2xl mx-auto">
             <input 
               type="text" 
               placeholder="Search for articles, guides, or error codes..." 
-              className="w-full pl-6 pr-16 py-5 rounded-2xl text-slate-900 focus:outline-none focus:ring-4 focus:ring-blue-400/50 shadow-2xl text-lg" 
+              className="w-full pl-6 pr-16 py-5 rounded-2xl bg-white text-slate-900 focus:outline-none focus:ring-4 focus:ring-blue-400/50 shadow-2xl text-lg" 
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors">
               <Search className="w-6 h-6" />

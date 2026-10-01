@@ -5,7 +5,7 @@ import { AboutBreadcrumb } from "@/components/AboutBreadcrumb";
 import { PremiumPortfolio } from "@/components/PremiumPortfolio";
 import { 
   Building2, MonitorSmartphone, Cpu, LineChart, Code2, 
-  Settings, CheckCircle2, Quote, ArrowRight, Server, Database, Globe
+  Settings, CheckCircle2, Quote, ArrowRight, Server, Database, Globe, Target
 } from "lucide-react";
 import Link from "next/link";
 
