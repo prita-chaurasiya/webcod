@@ -52,7 +52,7 @@ export default function BlogPage() {
               </div>
               <div className="group cursor-pointer">
                 <div className="rounded-3xl overflow-hidden mb-6 relative shadow-2xl h-[400px]">
-                  <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200" alt="AI Workspace" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" alt="AI Workspace" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <div className="flex items-center gap-3 mb-4">

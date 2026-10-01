@@ -22,7 +22,7 @@ const allBlogs: BlogPost[] = [
     date: "14-Feb-2026",
     readTime: "5 min read",
     url: "/blog/unlocking-your-career-potential-the-value-of-professional-diplomas",
-    image: "https://webcodian.com/public/uploads/blog/72ac7e3c0461fe30db23c958a8ef7c7f.png",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
     excerpt: "Why professional industry-aligned certifications outshine conventional academic pathways in real-world tech recruitment."
   },
   {
@@ -31,7 +31,7 @@ const allBlogs: BlogPost[] = [
     date: "28-Jan-2026",
     readTime: "4 min read",
     url: "/blog/mastering-time-management-a-key-skill-for-online-learners",
-    image: "https://webcodian.com/public/uploads/blog/539b2043499978d8df9fd700a0d2be3f.png",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     excerpt: "Actionable frameworks for balancing full-stack software development projects, continuous learning, and sprint cycles."
   },
   {
@@ -40,7 +40,7 @@ const allBlogs: BlogPost[] = [
     date: "10-Jan-2026",
     readTime: "7 min read",
     url: "/blog/the-future-of-online-learning-pdtce-s-innovative-approach",
-    image: "https://webcodian.com/public/uploads/blog/91908ad90df562f81d86f8d828c50362.png",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
     excerpt: "How generative AI, multi-agent systems, and automated pipelines are revolutionizing high-velocity software production."
   },
   {

@@ -8,42 +8,42 @@ const projects = [
   {
     title: "anticoronataskforce",
     category: "NGO",
-    image: "https://webcodian.com/public/web/assets/img/projects/img1.jpg",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-2 md:row-span-2",
     color: "from-blue-500/80 to-cyan-400/80"
   },
   {
     title: "Satyarthyfoundation",
     category: "NGO",
-    image: "https://webcodian.com/public/web/assets/img/projects/img2.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-1 md:row-span-1",
     color: "from-emerald-500/80 to-teal-400/80"
   },
   {
     title: "theearth NGO",
     category: "Non-Profit Organization",
-    image: "https://webcodian.com/public/web/assets/img/projects/img3.jpg",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-1 md:row-span-1",
     color: "from-purple-500/80 to-indigo-400/80"
   },
   {
     title: "pdtc Institute",
     category: "Education",
-    image: "https://webcodian.com/public/web/assets/img/projects/img4.jpg",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-1 md:row-span-1",
     color: "from-rose-500/80 to-pink-400/80"
   },
   {
     title: "Hind Jai Public School",
     category: "Education",
-    image: "https://webcodian.com/public/web/assets/img/projects/img5.jpg",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-1 md:row-span-1",
     color: "from-amber-500/80 to-orange-400/80"
   },
   {
     title: "Healthical",
     category: "Healthcare",
-    image: "https://webcodian.com/public/web/assets/img/projects/img5.jpg",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-2 md:row-span-1",
     color: "from-teal-500/80 to-emerald-400/80"
   }
