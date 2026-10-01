@@ -44,9 +44,9 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-8"
               >
                 <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-                <ChevronRight className="w-4 h-4 text-slate-300" />
-                <span className="text-slate-400">Industries</span>
-                <ChevronRight className="w-4 h-4 text-slate-300" />
+                <ChevronRight className="w-4 h-4 text-slate-600" />
+                <span className="text-slate-500">Industries</span>
+                <ChevronRight className="w-4 h-4 text-slate-600" />
                 <span className="text-slate-900">{data.title}</span>
               </motion.div>
 
@@ -72,7 +72,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
-                <Link href="/quote" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-blue-600/20 hover:shadow-xl hover:-translate-y-0.5 group">
+                <Link href="/quote" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-blue-600/20 hover:shadow-xl hover:-translate-y-0.5 group">
                   Discuss Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -84,16 +84,16 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 initial={{ opacity: 0, scale: 0.95, clipPath: "inset(10% 10% 10% 10% round 32px)" }} 
                 animate={{ opacity: 1, scale: 1, clipPath: "inset(0% 0% 0% 0% round 32px)" }} 
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="relative aspect-[4/3] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-2xl border border-white/50"
+                className="relative aspect-[4/3] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-lg border border-white/50"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent mix-blend-overlay z-10"></div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={data.heroImage} alt={`${data.title} Solutions`} className="w-full h-full object-cover" />
+                <img src={data.heroImage} alt={`${data.title} Solutions`} className="w-full h-full object-cover img-premium" />
                 
                 {/* Subtle floating UI layer */}
                 <motion.div 
                   animate={{ y: [-10, 10, -10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-white/50 z-20 flex items-center gap-4 hidden md:flex"
+                  className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl p-6 rounded-[18px] shadow-xl border border-white/50 z-20 flex items-center gap-4 hidden md:flex"
                 >
                   <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
                     <CheckCircle2 className="w-6 h-6" />
@@ -158,14 +158,14 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 4. Digital Solutions */}
-      <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-32 btn-primary relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900"></div>
         </div>
         <div className="container mx-auto px-6 max-w-5xl relative z-10">
           <div className="mb-20 text-center">
             <h2 className="text-3xl md:text-5xl font-black mb-6">Digital Solutions for {data.title}</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">Purpose-built platforms and tools designed to accelerate your operational workflows and customer experiences.</p>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Purpose-built platforms and tools designed to accelerate your operational workflows and customer experiences.</p>
           </div>
           
           <div className="flex flex-col gap-4">
@@ -178,17 +178,17 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="group relative bg-slate-800/50 hover:bg-slate-800 backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
+                  className="group relative bg-slate-800/50 hover:bg-slate-800 backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-[18px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="w-16 h-16 rounded-xl bg-slate-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-all text-slate-300">
+                  <div className="w-16 h-16 rounded-[18px] bg-slate-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-all text-slate-600">
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-slate-100 group-hover:text-white transition-colors">{solution.title}</h3>
-                    <p className="text-slate-400 group-hover:text-slate-300 transition-colors">{solution.description}</p>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-slate-100 group-hover:text-[var(--heading)] transition-colors">{solution.title}</h3>
+                    <p className="text-slate-500 group-hover:text-slate-600 transition-colors">{solution.description}</p>
                   </div>
-                  <div className="shrink-0 w-12 h-12 rounded-full border border-slate-600 flex items-center justify-center group-hover:border-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all transform md:group-hover:translate-x-2">
+                  <div className="shrink-0 w-12 h-12 rounded-full border border-slate-600 flex items-center justify-center group-hover:border-blue-400 group-hover:bg-blue-500 group-hover:text-[var(--heading)] transition-all transform md:group-hover:translate-x-2">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </motion.div>
@@ -206,13 +206,13 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative aspect-video rounded-[2rem] overflow-hidden group shadow-2xl"
+            className="relative aspect-video rounded-[2rem] overflow-hidden group shadow-lg"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={data.featuredVisual.image} alt="Dashboard Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" />
+            <img src={data.featuredVisual.image} alt="Dashboard Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out img-premium" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 md:p-16">
-              <h3 className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight">
+              <h3 className="text-3xl md:text-5xl font-black text-[var(--heading)] max-w-3xl leading-tight">
                 {data.featuredVisual.overlayText}
               </h3>
             </div>
@@ -248,7 +248,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                     <ul className="space-y-3">
                       {useCase.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3 text-slate-600">
-                          <Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                          <Check className="w-5 h-5 text-[var(--primary)] shrink-0 mt-0.5" />
                           <span className="font-medium text-sm">{item}</span>
                         </li>
                       ))}
@@ -277,7 +277,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 8. Process & Why Us */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-24 btn-primary">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-20">
             <div>
@@ -291,12 +291,12 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   { title: "Launch", desc: "Deployment and ongoing support." }
                 ].map((step, idx) => (
                   <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 group-hover:bg-blue-500 text-slate-400 group-hover:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors z-10">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 group-hover:bg-blue-500 text-slate-500 group-hover:text-[var(--heading)] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors z-10">
                       <span className="text-xs font-bold">{idx + 1}</span>
                     </div>
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-700 bg-slate-800/50 shadow-sm">
+                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-[18px] border border-slate-700 bg-slate-800/50 shadow-sm">
                       <h4 className="font-bold text-lg">{step.title}</h4>
-                      <p className="text-sm text-slate-400">{step.desc}</p>
+                      <p className="text-sm text-slate-500">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -317,7 +317,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                     </div>
                     <div>
                       <h4 className="font-bold text-lg">{step.title}</h4>
-                      <p className="text-sm text-slate-400">{step.desc}</p>
+                      <p className="text-sm text-slate-500">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -327,21 +327,21 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             <div>
               <h2 className="text-3xl font-black mb-12">Why WebCodian</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="p-8 bg-slate-800 rounded-2xl border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-white mb-2">6</div>
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Years Experience</div>
+                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                  <div className="text-4xl font-black text-[var(--heading)] mb-2">6</div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Years Experience</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-2xl border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-white mb-2">15+</div>
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Team Members</div>
+                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                  <div className="text-4xl font-black text-[var(--heading)] mb-2">15+</div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Team Members</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-2xl border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-white mb-2">100%</div>
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Satisfaction</div>
+                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                  <div className="text-4xl font-black text-[var(--heading)] mb-2">100%</div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-2xl border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-white mb-2">24/7</div>
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Support</div>
+                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                  <div className="text-4xl font-black text-[var(--heading)] mb-2">24/7</div>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Support</div>
                 </div>
               </div>
             </div>

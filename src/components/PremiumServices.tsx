@@ -26,10 +26,10 @@ const services = [
 
 const colors = [
   { bg: "bg-blue-50/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "border-blue-100", highlight: "rgba(147,197,253,0.3)" },
-  { bg: "bg-emerald-50/50", iconBg: "bg-emerald-100", text: "text-emerald-700", border: "border-emerald-100", highlight: "rgba(110,231,183,0.3)" },
-  { bg: "bg-purple-50/50", iconBg: "bg-purple-100", text: "text-purple-700", border: "border-purple-100", highlight: "rgba(216,180,254,0.3)" },
-  { bg: "bg-orange-50/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "border-orange-100", highlight: "rgba(253,186,116,0.3)" },
-  { bg: "bg-pink-50/50", iconBg: "bg-pink-100", text: "text-pink-700", border: "border-pink-100", highlight: "rgba(249,168,212,0.3)" },
+  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(110,231,183,0.3)" },
+  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(216,180,254,0.3)" },
+  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(253,186,116,0.3)" },
+  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(249,168,212,0.3)" },
   { bg: "bg-cyan-50/50", iconBg: "bg-cyan-100", text: "text-cyan-700", border: "border-cyan-100", highlight: "rgba(103,232,249,0.3)" },
 ];
 
@@ -122,11 +122,11 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
           <motion.div 
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
-            className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-6 shadow-sm border border-white/50 relative z-10 group-hover:-translate-y-1 transition-transform duration-300`}
+            className={`w-20 h-20 rounded-[18px] ${color.iconBg} flex items-center justify-center mb-6 shadow-sm border border-white/50 relative z-10 group-hover:-translate-y-1 transition-transform duration-300`}
           >
             <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300 group-hover:scale-105`} strokeWidth={1.5} />
             {/* Subtle inner highlight for icon badge */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 to-white/60 pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-[18px] bg-gradient-to-tr from-white/0 to-white/60 pointer-events-none"></div>
           </motion.div>
           
           {/* Title */}
@@ -155,7 +155,7 @@ export function PremiumServices() {
       {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#2eb872]/5 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[var(--primary)]/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">

@@ -46,10 +46,10 @@ export function ServicesSection() {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <section className="py-32 relative bg-black">
+    <section className="py-32 relative bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-space-grotesk mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--heading)] font-space-grotesk mb-6">
             Everything You Need to Build Your Digital Future.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -64,10 +64,10 @@ export function ServicesSection() {
               <button
                 key={service.id}
                 onClick={() => setActiveService(service)}
-                className={`w-full text-left px-8 py-6 rounded-2xl transition-all duration-300 flex items-center justify-between group ${
+                className={`w-full text-left px-8 py-6 rounded-[18px] transition-all duration-300 flex items-center justify-between group ${
                   activeService.id === service.id
-                    ? "bg-primary text-white shadow-[0_0_30px_rgba(79,70,229,0.3)]"
-                    : "glass text-muted-foreground hover:text-white hover:bg-white/5"
+                    ? "bg-primary text-[var(--heading)] shadow-[0_0_30px_rgba(79,70,229,0.3)]"
+                    : "glass text-muted-foreground hover:text-[var(--heading)] hover:bg-white/5"
                 }`}
               >
                 <span className="text-xl font-bold font-space-grotesk">{service.title}</span>
@@ -85,13 +85,13 @@ export function ServicesSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 glass rounded-3xl p-12 border border-white/10 flex flex-col justify-center"
+                className="absolute inset-0 glass rounded-[18px] p-12 border border-white/10 flex flex-col justify-center"
               >
-                <div className="w-20 h-20 rounded-2xl bg-primary/20 flex items-center justify-center mb-8">
+                <div className="w-20 h-20 rounded-[18px] bg-primary/20 flex items-center justify-center mb-8">
                   <activeService.icon className="w-10 h-10 text-primary" />
                 </div>
                 
-                <h3 className="text-4xl font-bold text-white mb-6 font-space-grotesk">
+                <h3 className="text-4xl font-bold text-[var(--heading)] mb-6 font-space-grotesk">
                   {activeService.title}
                 </h3>
                 
@@ -100,10 +100,10 @@ export function ServicesSection() {
                 </p>
                 
                 <div>
-                  <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Core Capabilities & Tech</h4>
+                  <h4 className="text-sm font-semibold text-[var(--heading)] uppercase tracking-wider mb-4">Core Capabilities & Tech</h4>
                   <div className="flex flex-wrap gap-3">
                     {activeService.technologies.map((tech, i) => (
-                      <span key={i} className="px-4 py-2 rounded-full border border-white/20 text-sm text-white/80">
+                      <span key={i} className="px-4 py-2 rounded-full border border-white/20 text-sm text-[var(--heading)]/80">
                         {tech}
                       </span>
                     ))}
@@ -111,7 +111,7 @@ export function ServicesSection() {
                 </div>
 
                 <div className="mt-12">
-                  <a href={`/services/${activeService.id}`} className="text-primary font-semibold hover:text-white transition-colors flex items-center gap-2">
+                  <a href={`/services/${activeService.id}`} className="text-primary font-semibold hover:text-[var(--heading)] transition-colors flex items-center gap-2">
                     Explore {activeService.title} <span className="text-xl">→</span>
                   </a>
                 </div>

@@ -20,42 +20,42 @@ const teamMembers = [
   {
     name: "Alex Sterling",
     role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
     bio: "Visionary leader with 15+ years in ed-tech and software development.",
     socials: { linkedin: "#", twitter: "#" }
   },
   {
     name: "Sarah Chen",
     role: "Head of Engineering",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
     bio: "Ex-Google architect passionate about scalable AI and SaaS solutions.",
     socials: { linkedin: "#", github: "#" }
   },
   {
     name: "Marcus Johnson",
     role: "Lead IT Trainer",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
     bio: "Dedicated educator who has trained over 5,000 students in full-stack dev.",
     socials: { linkedin: "#", mail: "#" }
   },
   {
     name: "Priya Patel",
     role: "UX/UI Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
     bio: "Award-winning designer focusing on accessible, premium digital experiences.",
     socials: { linkedin: "#", twitter: "#" }
   },
   {
     name: "David Kim",
     role: "AI & Automation Lead",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
     bio: "Spearheads our generative AI integrations for enterprise clients.",
     socials: { linkedin: "#", github: "#" }
   },
   {
     name: "Elena Rodriguez",
     role: "Client Success Manager",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
     bio: "Ensures every client and student achieves their technological goals.",
     socials: { linkedin: "#", mail: "#" }
   }
@@ -68,7 +68,7 @@ export function PremiumTeam() {
         <div className="text-center mb-16">
           <span className="inline-block py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200 text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">The Minds Behind WebCodian</span>
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-teal-500">Expert Team</span>
+            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">Expert Team</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
             A diverse group of technologists, educators, and strategists united by a passion for excellence in software development and IT training.
@@ -83,31 +83,31 @@ export function PremiumTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300"
+              className="group relative bg-white rounded-[18px] p-6 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300"
             >
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-6">
-                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10"></div>
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
+              <div className="relative w-full aspect-square rounded-[18px] overflow-hidden mb-6">
+                <div className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors z-10"></div>
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 img-premium" />
                 
                 {/* Hover Social Links */}
                 <div className="absolute bottom-4 left-0 w-full flex justify-center gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20">
                   {member.socials.linkedin && (
-                    <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors shadow-lg">
+                    <a href={member.socials.linkedin} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#0077b5] hover:text-[var(--heading)] transition-colors shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                       <LinkedinIcon />
                     </a>
                   )}
                   {member.socials.twitter && (
-                    <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-colors shadow-lg">
+                    <a href={member.socials.twitter} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-[var(--heading)] transition-colors shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                       <TwitterIcon />
                     </a>
                   )}
                   {member.socials.github && (
-                    <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors shadow-lg">
+                    <a href={member.socials.github} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-white hover:text-[var(--heading)] transition-colors shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                       <GithubIcon />
                     </a>
                   )}
                   {member.socials.mail && (
-                    <a href={member.socials.mail} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#ea4335] hover:text-white transition-colors shadow-lg">
+                    <a href={member.socials.mail} className="w-10 h-10 rounded-full bg-white text-slate-800 flex items-center justify-center hover:bg-[#ea4335] hover:text-[var(--heading)] transition-colors shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                       <Mail className="w-4 h-4" />
                     </a>
                   )}
@@ -116,7 +116,7 @@ export function PremiumTeam() {
 
               <div className="text-center">
                 <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
-                <p className="text-sm font-bold text-[#2eb872] uppercase tracking-wider mb-3">{member.role}</p>
+                <p className="text-sm font-bold text-[var(--primary)] uppercase tracking-wider mb-3">{member.role}</p>
                 <p className="text-slate-500 text-sm font-medium leading-relaxed">{member.bio}</p>
               </div>
             </motion.div>

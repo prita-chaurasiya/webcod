@@ -18,7 +18,7 @@ export function PremiumWebsiteValidity() {
       {/* Premium Background Effects */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }} />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-tl from-[#2eb872]/20 to-teal-400/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-tl from-[var(--primary)]/20 to-teal-400/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 w-full max-w-2xl">
@@ -26,10 +26,10 @@ export function PremiumWebsiteValidity() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 60, damping: 20 }}
-          className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
+          className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
         >
           {/* Top Decorative bar */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-[#2eb872]"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-[var(--primary)]"></div>
 
           <div className="text-center mb-10">
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner">
@@ -55,7 +55,7 @@ export function PremiumWebsiteValidity() {
                   value={clientId}
                   onChange={(e) => setClientId(e.target.value)}
                   placeholder="Enter Client ID (e.g. WC-1234)" 
-                  className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all font-medium text-slate-700"
+                  className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all font-medium text-slate-700"
                   required
                 />
               </div>
@@ -63,7 +63,7 @@ export function PremiumWebsiteValidity() {
 
             <button 
               type="submit"
-              className="w-full relative overflow-hidden group inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all duration-300"
+              className="w-full relative overflow-hidden group inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-[18px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
               <span className="relative flex items-center gap-2 text-lg">

@@ -9,7 +9,7 @@ export function PremiumAISaaS() {
     <div className="bg-white text-gray-900 overflow-hidden">
       
       {/* Premium Hero Section */}
-      <section className="relative min-h-[75vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900 text-white">
+      <section className="relative min-h-[75vh] flex items-center pt-24 pb-16 overflow-hidden btn-primary">
         
         {/* Background Gradients */}
         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-[#f97316]/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -29,19 +29,19 @@ export function PremiumAISaaS() {
                 <span className="text-xs font-bold text-slate-200 uppercase tracking-widest">SaaS Architecture</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[var(--heading)] tracking-tight leading-[1.1]">
                 Launch Your <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f97316] to-[#fb923c]">
                   AI SaaS Startup.
                 </span>
               </h1>
               
-              <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
+              <p className="text-lg text-slate-600 max-w-xl leading-relaxed">
                 We design, architect, and develop scalable SaaS products powered by AI. From MVP to enterprise-ready platforms with subscription billing and multi-tenant architecture.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Link href="/contact" className="px-8 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-xl font-bold text-base shadow-lg shadow-[#f97316]/20 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-[18px] font-bold text-base shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-[#f97316]/20 hover:-translate-y-0.5 transition-all flex items-center gap-2">
                   Discuss Your Vision <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -55,7 +55,7 @@ export function PremiumAISaaS() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full rounded-[32px] bg-slate-800 p-2 shadow-2xl border border-slate-700 overflow-hidden backdrop-blur-xl">
+              <div className="relative w-full rounded-[32px] bg-slate-800 p-2 shadow-lg border border-slate-700 overflow-hidden backdrop-blur-xl">
                 <div className="bg-[#0f172a] rounded-[24px] overflow-hidden">
                   
                   {/* Top Navbar Mockup */}
@@ -92,11 +92,11 @@ export function PremiumAISaaS() {
                       
                       {/* Metric Cards */}
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                        <div className="bg-slate-800/50 p-4 rounded-[18px] border border-slate-700/50">
                           <div className="h-3 w-20 bg-slate-500 rounded-full mb-3"></div>
                           <div className="h-8 w-24 bg-white rounded-full"></div>
                         </div>
-                        <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 relative overflow-hidden">
+                        <div className="bg-slate-800/50 p-4 rounded-[18px] border border-slate-700/50 relative overflow-hidden">
                           <div className="absolute top-0 right-0 w-16 h-16 bg-[#06b6d4]/10 rounded-bl-full"></div>
                           <div className="h-3 w-20 bg-slate-500 rounded-full mb-3"></div>
                           <div className="h-8 w-16 bg-[#06b6d4] rounded-full"></div>
@@ -104,7 +104,7 @@ export function PremiumAISaaS() {
                       </div>
                       
                       {/* Chart Area */}
-                      <div className="flex-1 bg-slate-800/30 rounded-xl border border-slate-700/50 flex items-end px-4 gap-2 pb-4">
+                      <div className="flex-1 bg-slate-800/30 rounded-[18px] border border-slate-700/50 flex items-end px-4 gap-2 pb-4">
                         <div className="w-1/6 bg-slate-700 rounded-t-sm h-[40%]"></div>
                         <div className="w-1/6 bg-[#f97316] rounded-t-sm h-[70%]"></div>
                         <div className="w-1/6 bg-slate-700 rounded-t-sm h-[50%]"></div>
@@ -136,8 +136,8 @@ export function PremiumAISaaS() {
               { title: "API-First Development", icon: <Code2 className="w-6 h-6 text-[#10b981]" /> },
               { title: "Secure Data Isolation", icon: <Database className="w-6 h-6 text-[#6d28d9]" /> }
             ].map((feat, i) => (
-              <div key={i} className="flex items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0">
+              <div key={i} className="flex items-center gap-4 bg-slate-50 p-6 rounded-[18px] border border-slate-100">
+                <div className="w-12 h-12 rounded-[18px] bg-white shadow-sm flex items-center justify-center shrink-0">
                   {feat.icon}
                 </div>
                 <h3 className="font-bold text-slate-900">{feat.title}</h3>

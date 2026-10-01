@@ -40,80 +40,25 @@ export function PremiumBusinessAutomation() {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Link href="/contact" className="px-8 py-3.5 bg-[#0f172a] hover:bg-[#1e293b] text-white rounded-xl font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-3.5 bg-[#0f172a] hover:bg-[#1e293b] text-white rounded-[18px] font-bold text-base shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:-translate-y-0.5 transition-all flex items-center gap-2">
                   Streamline Now <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
             </motion.div>
 
-            {/* Visual: Workflow Dashboard Mockup */}
+            {/* Visual: AI Automation Vector Illustration */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full rounded-[32px] bg-white p-2 shadow-2xl overflow-hidden border border-slate-200">
-                <div className="bg-slate-50 rounded-[24px] overflow-hidden border border-slate-100">
-                  {/* Dashboard Header */}
-                  <div className="h-12 bg-white border-b border-slate-200 flex items-center px-6 justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-slate-300"></div>
-                      <div className="w-3 h-3 rounded-full bg-slate-300"></div>
-                      <div className="w-3 h-3 rounded-full bg-slate-300"></div>
-                    </div>
-                    <div className="h-4 w-32 bg-slate-100 rounded-full"></div>
-                  </div>
-                  
-                  {/* Workflow Content */}
-                  <div className="p-8">
-                    <div className="flex flex-col gap-6">
-                      
-                      {/* Step 1 */}
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#0ea5e9]/10 text-[#0ea5e9] flex items-center justify-center shrink-0">
-                          <TrendingUp className="w-6 h-6" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="h-4 w-1/3 bg-slate-200 rounded-full mb-2"></div>
-                          <div className="h-3 w-1/2 bg-slate-100 rounded-full"></div>
-                        </div>
-                        <div className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Success</div>
-                      </div>
-
-                      {/* Connecting line */}
-                      <div className="w-0.5 h-6 bg-slate-200 ml-6 -my-4"></div>
-
-                      {/* Step 2 */}
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-[#f97316]/10 text-[#f97316] flex items-center justify-center shrink-0">
-                          <GitMerge className="w-6 h-6" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="h-4 w-1/4 bg-slate-200 rounded-full mb-2"></div>
-                          <div className="h-3 w-2/3 bg-slate-100 rounded-full"></div>
-                        </div>
-                        <div className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">Routing</div>
-                      </div>
-
-                      {/* Connecting line */}
-                      <div className="w-0.5 h-6 bg-slate-200 ml-6 -my-4"></div>
-
-                      {/* Step 3 */}
-                      <div className="flex items-center gap-4 border border-[#10b981] p-3 rounded-2xl bg-white shadow-sm relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-[#10b981]"></div>
-                        <div className="w-10 h-10 rounded-xl bg-[#10b981]/10 text-[#10b981] flex items-center justify-center shrink-0">
-                          <FileCheck2 className="w-5 h-5" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm font-bold text-slate-900">CRM Updated & Notified</div>
-                          <div className="text-xs text-slate-500">Automated action completed in 0.2s</div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+              {/* Background Blob */}
+              <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-white p-2">
+                <div className="rounded-[1.5rem] overflow-hidden">
+                   <img src="/images/ai-automation-vector.jpg" alt="AI Business Automation Workflow" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             </motion.div>

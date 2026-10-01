@@ -1,112 +1,97 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, ShieldCheck, Trophy, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, ShieldCheck, Cpu, Clock, Layers } from "lucide-react";
+import Link from "next/link";
 
 export function PremiumWhyChooseUs() {
   return (
-    <section className="py-24 bg-[#1f2937] relative overflow-hidden">
-      {/* Dark background grid */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#2eb872 1px, transparent 1px)", backgroundSize: "40px 40px" }}></div>
+    <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+      {/* Premium Background Elements */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[100px] opacity-70 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-[100px] opacity-70 pointer-events-none"></div>
 
-      <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
         
-        <div className="text-center mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 text-gray-300 font-semibold text-sm mb-4 border border-gray-700"
-          >
-            <Sparkles className="w-4 h-4 text-[#2eb872]" />
-            WHY CHOOSE US
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-extrabold text-white mb-4"
-          >
-            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-[#f59e0b]">Performance</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-400 max-w-2xl mx-auto text-lg"
-          >
-            We don't just write code. We architect scalable, secure, and lightning-fast digital solutions that give you a competitive edge.
-          </motion.p>
-        </div>
-
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min perspective-1000">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-20">
           
-          {/* Card 1: Large Span */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 hover:border-[#2eb872]/50 transition-colors group relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#2eb872] opacity-5 rounded-full blur-3xl group-hover:opacity-20 transition-opacity duration-500"></div>
-            <div className="w-16 h-16 rounded-2xl bg-gray-800 flex items-center justify-center mb-6 border border-gray-700 group-hover:border-[#2eb872]/50 transition-colors relative z-10">
-              <Zap className="w-8 h-8 text-[#2eb872]" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Lightning Fast Execution</h3>
-            <p className="text-gray-400 text-lg max-w-lg relative z-10">
-              Our agile development methodology ensures rapid delivery without compromising on code quality. We turn complex requirements into functional software at unprecedented speeds.
+          {/* Left Text */}
+          <div className="w-full lg:w-1/2">
+            <span className="inline-block bg-white text-[var(--primary)] text-xs font-bold tracking-widest px-4 py-2 uppercase mb-6 shadow-sm border border-slate-100 rounded-full">
+              Why Choose WebCodian
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tight leading-[1.1]">
+              Engineered for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Enterprise Excellence</span>
+            </h2>
+            <p className="text-xl text-slate-600 mb-8 font-medium leading-relaxed">
+              We don't just write code; we build scalable digital infrastructure. Partner with a team that understands complex business logic, strict security compliances, and rapid deployment cycles.
             </p>
-          </motion.div>
+            
+            <ul className="space-y-4 mb-10">
+              {[
+                "Top 1% Elite Engineering Talent",
+                "ISO-Certified Security & Data Protection",
+                "Transparent Agile Development Sprints",
+                "Dedicated Post-Launch SLA Support"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-4 text-slate-700 font-bold text-lg">
+                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                  </div>
+                  {item}
+                </li>
+              ))}
+            </ul>
 
-          {/* Card 2 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 hover:border-[#f59e0b]/50 transition-colors group relative overflow-hidden"
-          >
-             <div className="absolute top-0 right-0 w-32 h-32 bg-[#f59e0b] opacity-5 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
-            <div className="w-16 h-16 rounded-2xl bg-gray-800 flex items-center justify-center mb-6 border border-gray-700 group-hover:border-[#f59e0b]/50 transition-colors relative z-10">
-              <ShieldCheck className="w-8 h-8 text-[#f59e0b]" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Enterprise Security</h3>
-            <p className="text-gray-400 relative z-10">
-              Security isn't an afterthought. We build platforms with enterprise-grade encryption and strict data protection protocols.
-            </p>
-          </motion.div>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-[18px] shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:shadow-xl hover:-translate-y-1 transition-all group">
+              Start Your Project <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
-          {/* Card 3 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="lg:col-span-3 bg-gradient-to-r from-[#2eb872]/10 to-transparent rounded-3xl p-8 md:p-12 border border-[#2eb872]/20 hover:border-[#2eb872]/50 transition-colors flex flex-col md:flex-row items-center justify-between gap-8 group"
-          >
-            <div>
-              <div className="w-16 h-16 rounded-full bg-[#2eb872]/20 flex items-center justify-center mb-6 text-[#2eb872]">
-                <Trophy className="w-8 h-8" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-4">Award-Winning Quality</h3>
-              <p className="text-gray-400 text-lg max-w-2xl">
-                We are Varanasi's top-rated digital agency for a reason. Our dedication to pixel-perfect design and robust backend architecture has earned us the trust of hundreds of clients globally.
-              </p>
+          {/* Right Image Grid */}
+          <div className="w-full lg:w-1/2">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="space-y-4 md:space-y-6 mt-12"
+              >
+                <div className="rounded-3xl overflow-hidden shadow-xl relative border-4 border-white group">
+                  <div className="absolute inset-0 bg-blue-600/20 mix-blend-overlay z-10 transition-opacity group-hover:opacity-0 duration-500"></div>
+                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team Collaboration" className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
+                <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                  <Cpu className="w-10 h-10 text-blue-600 mb-4" />
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">Modern Tech Stack</h4>
+                  <p className="text-slate-500 text-sm font-medium">React, Node.js, AI Models, and Cloud-Native architectures.</p>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="space-y-4 md:space-y-6"
+              >
+                <div className="bg-slate-900 p-8 rounded-3xl shadow-xl relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/20 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                  <ShieldCheck className="w-10 h-10 text-indigo-400 mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Bank-Grade Security</h4>
+                  <p className="text-slate-400 text-sm font-medium">End-to-end encryption and compliance-first engineering.</p>
+                </div>
+                <div className="rounded-3xl overflow-hidden shadow-xl relative border-4 border-white group">
+                  <div className="absolute inset-0 bg-indigo-600/20 mix-blend-overlay z-10 transition-opacity group-hover:opacity-0 duration-500"></div>
+                  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Enterprise Office" className="w-full h-56 md:h-72 object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
+              </motion.div>
             </div>
-            <div className="shrink-0 w-40 h-40 relative group-hover:scale-110 transition-transform duration-500">
-              {/* 3D abstract representation */}
-              <div className="absolute inset-0 border-4 border-[#2eb872] rounded-full animate-spin-slow opacity-20"></div>
-              <div className="absolute inset-4 border-4 border-[#f59e0b] rounded-full animate-spin-reverse opacity-20"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <span className="text-4xl font-black text-white">#1</span>
-              </div>
-            </div>
-          </motion.div>
+          </div>
 
         </div>
+
       </div>
     </section>
   );

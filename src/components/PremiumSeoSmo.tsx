@@ -12,33 +12,33 @@ import {
 import Link from "next/link";
 
 const services = [
-  { title: "Social Media Audit", icon: <Share2 className="w-6 h-6 text-emerald-500" /> },
+  { title: "Social Media Audit", icon: <Share2 className="w-6 h-6 text-[var(--primary)]" /> },
   { title: "Community Engagement", icon: <Users className="w-6 h-6 text-blue-500" /> },
   { title: "Social Media Advertising", icon: <Target className="w-6 h-6 text-indigo-500" /> },
-  { title: "On-Page Optimization", icon: <Layout className="w-6 h-6 text-emerald-500" /> },
+  { title: "On-Page Optimization", icon: <Layout className="w-6 h-6 text-[var(--primary)]" /> },
   { title: "Off-Page Optimization", icon: <Globe className="w-6 h-6 text-blue-500" /> },
   { title: "Keyword Research", icon: <Search className="w-6 h-6 text-indigo-500" /> }
 ];
 
 const technologies = [
-  { title: "Google Analytics", icon: <BarChart3 className="w-10 h-10 text-emerald-500" /> },
+  { title: "Google Analytics", icon: <BarChart3 className="w-10 h-10 text-[var(--primary)]" /> },
   { title: "Keyword Tools", icon: <Search className="w-10 h-10 text-blue-500" /> },
   { title: "Schema Markup", icon: <Code className="w-10 h-10 text-indigo-500" /> },
-  { title: "Social Platforms", icon: <MessageCircle className="w-10 h-10 text-emerald-500" /> }
+  { title: "Social Platforms", icon: <MessageCircle className="w-10 h-10 text-[var(--primary)]" /> }
 ];
 
 const categories = [
   { title: "E-Commerce", icon: <ShoppingBag className="w-8 h-8 text-blue-500" /> },
-  { title: "School & College", icon: <GraduationCap className="w-8 h-8 text-emerald-500" /> },
+  { title: "School & College", icon: <GraduationCap className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Institute", icon: <Building2 className="w-8 h-8 text-indigo-500" /> },
   { title: "Tour & Travel", icon: <Globe className="w-8 h-8 text-blue-500" /> },
-  { title: "NGO", icon: <HeartHandshake className="w-8 h-8 text-emerald-500" /> },
+  { title: "NGO", icon: <HeartHandshake className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Consulting", icon: <Users className="w-8 h-8 text-indigo-500" /> },
   { title: "HealthCare", icon: <PlusCircle className="w-8 h-8 text-blue-500" /> },
-  { title: "Security Service", icon: <ShieldCheck className="w-8 h-8 text-emerald-500" /> },
+  { title: "Security Service", icon: <ShieldCheck className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Manufacturing", icon: <Factory className="w-8 h-8 text-indigo-500" /> },
   { title: "News & Blog", icon: <Newspaper className="w-8 h-8 text-blue-500" /> },
-  { title: "Landing Page", icon: <Layout className="w-8 h-8 text-emerald-500" /> },
+  { title: "Landing Page", icon: <Layout className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Crowd Funding", icon: <Target className="w-8 h-8 text-indigo-500" /> }
 ];
 
@@ -81,7 +81,7 @@ export function PremiumSeoSmo() {
     <div className="min-h-screen bg-slate-50 text-slate-800 overflow-hidden relative">
       {/* Background Orbs */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-300/20 rounded-full blur-[100px] mix-blend-multiply" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-50/20 rounded-full blur-[100px] mix-blend-multiply" />
         <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-blue-300/20 rounded-full blur-[120px] mix-blend-multiply" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-300/20 rounded-full blur-[150px] mix-blend-multiply" />
       </div>
@@ -96,7 +96,7 @@ export function PremiumSeoSmo() {
           className="text-center mb-24 pt-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md mb-6 shadow-sm">
-            <LineChart className="w-4 h-4 text-emerald-500" />
+            <LineChart className="w-4 h-4 text-[var(--primary)]" />
             <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Digital Growth Specialists</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
@@ -111,7 +111,7 @@ export function PremiumSeoSmo() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-full shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-[var(--heading)] font-semibold rounded-full shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all duration-300"
             >
               Start Growing Today
               <ArrowUpRight className="w-5 h-5" />
@@ -139,7 +139,7 @@ export function PremiumSeoSmo() {
             
             <div className="space-y-6">
               <div className="flex gap-4 items-start">
-                <div className="p-3 bg-emerald-100 rounded-xl text-emerald-600">
+                <div className="p-3 bg-slate-50 rounded-[18px] text-[var(--primary)]">
                   <Target className="w-6 h-6" />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ export function PremiumSeoSmo() {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <div className="p-3 bg-blue-100 rounded-xl text-blue-600">
+                <div className="p-3 bg-blue-100 rounded-[18px] text-blue-600">
                   <Globe className="w-6 h-6" />
                 </div>
                 <div>
@@ -166,11 +166,11 @@ export function PremiumSeoSmo() {
             transition={{ duration: 0.8, type: "spring" }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-blue-400 rounded-3xl blur-2xl opacity-30" />
-            <div className="relative bg-white/60 backdrop-blur-xl border border-white rounded-3xl p-8 shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-blue-400 rounded-[18px] blur-2xl opacity-30" />
+            <div className="relative bg-white/60 backdrop-blur-xl border border-white rounded-[18px] p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-4">
                 {services.map((svc, idx) => (
-                  <div key={idx} className="p-4 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow hover:border-emerald-200">
+                  <div key={idx} className="p-4 bg-white rounded-[18px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow hover:border-slate-100">
                     <div className="mb-3">{svc.icon}</div>
                     <h5 className="font-semibold text-slate-900 text-sm">{svc.title}</h5>
                   </div>
@@ -192,9 +192,9 @@ export function PremiumSeoSmo() {
               <motion.div 
                 key={idx}
                 whileHover={{ y: -10 }}
-                className="min-w-[65vw] sm:min-w-[40vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-white/80 backdrop-blur-md border border-slate-200 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:border-emerald-300 transition-all duration-300 group"
+                className="min-w-[65vw] sm:min-w-[40vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-white/80 backdrop-blur-md border border-slate-200 rounded-[18px] p-8 text-center shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:border-slate-100 transition-all duration-300 group"
               >
-                <div className="w-20 h-20 mx-auto bg-slate-50 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 mx-auto bg-slate-50 rounded-[18px] flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:scale-110 transition-transform">
                   {tech.icon}
                 </div>
                 <h4 className="font-bold text-slate-900 text-lg">{tech.title}</h4>
@@ -219,7 +219,7 @@ export function PremiumSeoSmo() {
           >
             {categories.map((cat, idx) => (
               <motion.div key={idx} variants={itemVariants} whileHover={{ scale: 1.05 }} className="min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none">
-                <div className="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:bg-white transition-all h-full flex flex-col items-center justify-center gap-3">
+                <div className="bg-white/70 backdrop-blur-sm border border-slate-200 rounded-[18px] p-6 text-center shadow-sm hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:bg-white transition-all h-full flex flex-col items-center justify-center gap-3">
                   <div className="bg-slate-50 p-3 rounded-full shadow-inner">
                     {cat.icon}
                   </div>
@@ -242,7 +242,7 @@ export function PremiumSeoSmo() {
                 key={idx}
                 initial={false}
                 animate={{ backgroundColor: openFaq === idx ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.6)" }}
-                className="border border-slate-200 rounded-2xl overflow-hidden backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300"
+                className="border border-slate-200 rounded-[18px] overflow-hidden backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <button 
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -254,7 +254,7 @@ export function PremiumSeoSmo() {
                   <motion.div
                     animate={{ rotate: openFaq === idx ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className={`p-2 rounded-full transition-colors duration-300 ${openFaq === idx ? "bg-emerald-100 text-emerald-600" : "bg-slate-100 text-slate-400 group-hover:bg-slate-200"}`}
+                    className={`p-2 rounded-full transition-colors duration-300 ${openFaq === idx ? "bg-slate-50 text-[var(--primary)]" : "bg-slate-100 text-slate-500 group-hover:bg-slate-200"}`}
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>

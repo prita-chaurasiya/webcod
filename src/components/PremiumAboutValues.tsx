@@ -21,8 +21,8 @@ const values = [
     icon: Target,
     points: ["Creating. Results.", "Expect more", "Good thinking", "In real we trust"],
     color: "from-orange-500 to-orange-600",
-    bg: "bg-orange-50",
-    textColor: "text-orange-600"
+    bg: "bg-slate-50",
+    textColor: "text-[var(--primary)]"
   },
   {
     id: 3,
@@ -30,9 +30,9 @@ const values = [
     description: "Experienced team crafting innovative software solutions, dedicated to empowering businesses and driving digital transformation for optimal success.",
     icon: Users,
     points: ["Stay real. Always.", "We have you covered", "We turn heads", "Your brand, promoted"],
-    color: "from-[#2eb872] to-emerald-600",
+    color: "from-[var(--primary)] to-emerald-600",
     bg: "bg-[#e8f6ef]",
-    textColor: "text-[#2eb872]"
+    textColor: "text-[var(--primary)]"
   }
 ];
 
@@ -85,7 +85,7 @@ export function PremiumAboutValues() {
             <motion.div key={value.id} variants={itemVariants} className="h-full">
               <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-slate-100 group relative overflow-hidden">
                 
-                <div className={`w-16 h-16 rounded-2xl ${value.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                <div className={`w-16 h-16 rounded-[18px] ${value.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                   <value.icon className={`w-8 h-8 ${value.textColor}`} />
                 </div>
                 
@@ -101,7 +101,7 @@ export function PremiumAboutValues() {
                   {value.points.map((point, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className={`w-5 h-5 rounded-full flex items-center justify-center bg-gradient-to-br ${value.color} shadow-sm shrink-0`}>
-                        <CheckCircle2 className="w-3 h-3 text-white" />
+                        <CheckCircle2 className="w-3 h-3 text-[var(--heading)]" />
                       </div>
                       <span className="text-slate-700 font-bold text-sm">{point}</span>
                     </div>

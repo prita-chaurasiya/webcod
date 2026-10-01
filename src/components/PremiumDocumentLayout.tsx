@@ -18,15 +18,15 @@ export function PremiumDocumentLayout({ title, lastUpdated, content }: PremiumDo
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
+          className="bg-white rounded-[18px] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 bg-blue-50 rounded-[18px] flex items-center justify-center shrink-0">
                <FileText className="w-6 h-6 text-blue-500" />
             </div>
             <div>
               <h2 className="text-3xl font-extrabold text-gray-800">{title}</h2>
-              <p className="text-sm font-semibold text-gray-400 mt-1">Last Updated: {lastUpdated}</p>
+              <p className="text-sm font-semibold text-slate-500 mt-1">Last Updated: {lastUpdated}</p>
             </div>
           </div>
           

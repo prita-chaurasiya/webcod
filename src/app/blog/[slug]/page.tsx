@@ -25,7 +25,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
       <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10">
           
-          <Link href="/blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-[#2eb872] transition-colors mb-10 font-medium">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-[var(--primary)] transition-colors mb-10 font-medium">
             <ArrowLeft className="w-4 h-4" />
             Back to all articles
           </Link>
@@ -36,7 +36,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             className="mb-12"
           >
             <div className="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-500 mb-6">
-              <span className="flex items-center gap-2 bg-[#e8f6ef] text-[#2eb872] px-4 py-2 rounded-full">
+              <span className="flex items-center gap-2 bg-[#e8f6ef] text-[var(--primary)] px-4 py-2 rounded-full">
                 <Calendar className="w-4 h-4" />
                 Latest Update
               </span>
@@ -54,13 +54,13 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="w-full h-[40vh] md:h-[60vh] rounded-3xl overflow-hidden mb-16 shadow-2xl relative"
+            className="w-full h-[40vh] md:h-[60vh] rounded-[18px] overflow-hidden mb-16 shadow-lg relative"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/40 to-transparent z-10"></div>
             <img 
               src="https://webcodian.com/public/uploads/blog/72ac7e3c0461fe30db23c958a8ef7c7f.png" 
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover img-premium"
             />
           </motion.div>
 
@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
               The digital landscape is evolving rapidly. Whether you are an industry professional looking to upgrade your skills or a business trying to stay ahead of the curve, understanding these core principles is essential. The value provided here transcends basic knowledge, offering a strategic advantage.
             </p>
 
-            <div className="bg-[#f8fafc] border-l-4 border-[#2eb872] p-8 rounded-r-2xl my-12 shadow-sm">
+            <div className="bg-[#f8fafc] border-l-4 border-[var(--primary)] p-8 rounded-r-2xl my-12 shadow-sm">
               <p className="text-xl italic text-gray-700 font-medium m-0">
                 "Innovation distinguishes between a leader and a follower. By leveraging these new methodologies, you position yourself at the forefront of the industry."
               </p>
@@ -88,15 +88,15 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Key Takeaways</h2>
             <ul className="space-y-4 mb-10">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 rounded-full bg-[#2eb872] shrink-0"></div>
+                <div className="w-2 h-2 mt-2 rounded-full bg-[var(--primary)] shrink-0"></div>
                 <span><strong>Strategic Implementation:</strong> Applying these methods guarantees a higher success rate in real-world scenarios.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 rounded-full bg-[#2eb872] shrink-0"></div>
+                <div className="w-2 h-2 mt-2 rounded-full bg-[var(--primary)] shrink-0"></div>
                 <span><strong>Future Proofing:</strong> Staying updated with these trends ensures long-term viability and growth.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 rounded-full bg-[#2eb872] shrink-0"></div>
+                <div className="w-2 h-2 mt-2 rounded-full bg-[var(--primary)] shrink-0"></div>
                 <span><strong>Enhanced Productivity:</strong> Streamlined processes lead to significant time and cost savings.</span>
               </li>
             </ul>
@@ -111,7 +111,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
             <h4 className="text-lg font-bold text-gray-800">Share this article:</h4>
             <div className="flex gap-4">
               {['Twitter', 'LinkedIn', 'Facebook'].map(network => (
-                <button key={network} className="px-6 py-2 rounded-full bg-gray-50 border border-gray-200 text-gray-600 font-medium hover:text-[#2eb872] hover:border-[#2eb872] hover:bg-[#e8f6ef] transition-all flex items-center gap-2">
+                <button key={network} className="px-6 py-2 rounded-full bg-gray-50 border border-gray-200 text-gray-600 font-medium hover:text-[var(--primary)] hover:border-[var(--primary)] hover:bg-[#e8f6ef] transition-all flex items-center gap-2">
                   <Share2 className="w-4 h-4" />
                   {network}
                 </button>

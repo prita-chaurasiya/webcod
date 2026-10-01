@@ -65,7 +65,7 @@ export function PremiumWebDev() {
       {/* 1. Next-Gen Hero Section */}
       <section className="relative min-h-[75vh] flex items-center pt-24 pb-16 overflow-hidden">
         {/* Animated Background Gradients */}
-        <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#2eb872]/10 rounded-full blur-[150px] animate-pulse pointer-events-none"></div>
+        <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[var(--primary)]/10 rounded-full blur-[150px] animate-pulse pointer-events-none"></div>
         <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-gray-200/50 rounded-full blur-[150px] pointer-events-none delay-1000"></div>
         
         {/* Grid Pattern */}
@@ -81,13 +81,13 @@ export function PremiumWebDev() {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white shadow-sm border border-gray-200">
-                <Rocket className="w-5 h-5 text-[#2eb872]" />
+                <Rocket className="w-5 h-5 text-[var(--primary)]" />
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Next-Generation Development</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
                 Build The <br/>
-                <span className="text-[#2eb872]">
+                <span className="text-[var(--primary)]">
                   Future Web.
                 </span>
               </h1>
@@ -97,10 +97,10 @@ export function PremiumWebDev() {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Link href="/contact" className="px-8 py-4 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-xl font-bold text-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-4 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-bold text-lg shadow-md hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all flex items-center gap-2">
                   Start Your Project <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link href="/portfolio" className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 rounded-xl font-bold text-lg border border-gray-200 transition-all shadow-sm">
+                <Link href="/portfolio" className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 rounded-[18px] font-bold text-lg border border-gray-200 transition-all shadow-sm">
                   View Our Work
                 </Link>
               </div>
@@ -129,34 +129,34 @@ export function PremiumWebDev() {
               transition={{ duration: 1, delay: 0.2 }}
               className="relative perspective-1000 hidden lg:block"
             >
-              <motion.div style={{ y: yBg }} className="relative z-10 w-full rounded-2xl bg-white border border-gray-200 shadow-2xl overflow-hidden transform-gpu">
+              <motion.div style={{ y: yBg }} className="relative z-10 w-full rounded-[18px] bg-white border border-gray-200 shadow-lg overflow-hidden transform-gpu">
                 {/* Mockup Header */}
                 <div className="h-10 bg-gray-50 border-b border-gray-200 flex items-center px-4 gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-[#2eb872]"></div>
+                  <div className="w-3 h-3 rounded-full bg-slate-50"></div>
+                  <div className="w-3 h-3 rounded-full bg-slate-50"></div>
+                  <div className="w-3 h-3 rounded-full bg-[var(--primary)]"></div>
                 </div>
                 {/* Code Body */}
-                <div className="p-6 font-mono text-sm bg-gray-900 text-slate-300">
-                  <p className="text-purple-400">import <span className="text-white">&#123;</span> Webcodian <span className="text-white">&#125;</span> from <span className="text-[#2eb872]">'@agency/core'</span>;</p>
-                  <p className="mt-4 text-blue-400">const <span className="text-white">Project</span> = <span className="text-yellow-300">()</span> =&#62; <span className="text-white">&#123;</span></p>
-                  <p className="pl-4 text-slate-400">return (</p>
-                  <p className="pl-8 text-cyan-400">&#60;<span className="text-pink-400">Webcodian</span></p>
-                  <p className="pl-12 text-blue-300">performance=<span className="text-[#2eb872]">"unmatched"</span></p>
-                  <p className="pl-12 text-blue-300">design=<span className="text-[#2eb872]">"pixel-perfect"</span></p>
-                  <p className="pl-12 text-blue-300">scalability=&#123;<span className="text-purple-400">true</span>&#125;</p>
+                <div className="p-6 font-mono text-sm bg-white text-slate-600">
+                  <p className="text-[var(--primary)]">import <span className="text-[var(--heading)]">&#123;</span> Webcodian <span className="text-[var(--heading)]">&#125;</span> from <span className="text-[var(--primary)]">'@agency/core'</span>;</p>
+                  <p className="mt-4 text-blue-400">const <span className="text-[var(--heading)]">Project</span> = <span className="text-[var(--primary)]">()</span> =&#62; <span className="text-[var(--heading)]">&#123;</span></p>
+                  <p className="pl-4 text-slate-500">return (</p>
+                  <p className="pl-8 text-cyan-400">&#60;<span className="text-[var(--primary)]">Webcodian</span></p>
+                  <p className="pl-12 text-blue-300">performance=<span className="text-[var(--primary)]">"unmatched"</span></p>
+                  <p className="pl-12 text-blue-300">design=<span className="text-[var(--primary)]">"pixel-perfect"</span></p>
+                  <p className="pl-12 text-blue-300">scalability=&#123;<span className="text-[var(--primary)]">true</span>&#125;</p>
                   <p className="pl-8 text-cyan-400">/&#62;</p>
-                  <p className="pl-4 text-slate-400">);</p>
-                  <p className="text-white">&#125;;</p>
+                  <p className="pl-4 text-slate-500">);</p>
+                  <p className="text-[var(--heading)]">&#125;;</p>
                 </div>
                 
                 {/* Floating elements over the code */}
                 <motion.div 
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -right-8 top-20 bg-white/90 backdrop-blur border border-gray-100 p-4 rounded-xl shadow-xl flex items-center gap-4"
+                  className="absolute -right-8 top-20 bg-white/90 backdrop-blur border border-gray-100 p-4 rounded-[18px] shadow-xl flex items-center gap-4"
                 >
-                  <ShieldCheck className="w-8 h-8 text-[#2eb872]" />
+                  <ShieldCheck className="w-8 h-8 text-[var(--primary)]" />
                   <div>
                     <p className="text-sm font-bold text-gray-900">Bank-Grade Security</p>
                     <p className="text-xs text-gray-500">AES-256 Encryption</p>
@@ -166,9 +166,9 @@ export function PremiumWebDev() {
                 <motion.div 
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -left-12 bottom-12 bg-white/90 backdrop-blur border border-gray-100 p-4 rounded-xl shadow-xl flex items-center gap-4"
+                  className="absolute -left-12 bottom-12 bg-white/90 backdrop-blur border border-gray-100 p-4 rounded-[18px] shadow-xl flex items-center gap-4"
                 >
-                  <Zap className="w-8 h-8 text-yellow-500" />
+                  <Zap className="w-8 h-8 text-[var(--primary)]" />
                   <div>
                     <p className="text-sm font-bold text-gray-900">Lighthouse 100</p>
                     <p className="text-xs text-gray-500">Perfect Performance</p>
@@ -185,7 +185,7 @@ export function PremiumWebDev() {
       <section className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Our Proven <span className="text-[#2eb872]">Process</span></h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Our Proven <span className="text-[var(--primary)]">Process</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">A systematic, transparent approach ensuring flawless execution from concept to deployment.</p>
           </div>
 
@@ -202,13 +202,13 @@ export function PremiumWebDev() {
                 transition={{ delay: idx * 0.1 }}
                 className="relative"
               >
-                <div className="w-24 h-24 mx-auto bg-white border-4 border-gray-50 rounded-2xl flex items-center justify-center text-[#2eb872] shadow-sm hover:shadow-md rotate-45 mb-8 hover:bg-[#2eb872] hover:text-white transition-colors duration-300">
+                <div className="w-24 h-24 mx-auto bg-white border-4 border-gray-50 rounded-[18px] flex items-center justify-center text-[var(--primary)] shadow-sm hover:shadow-md rotate-45 mb-8 hover:bg-[var(--primary)] hover:text-white transition-colors duration-300">
                   <div className="-rotate-45">
                     {step.icon}
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="inline-block px-3 py-1 bg-green-50 text-[#2eb872] text-xs font-bold rounded-full mb-3">STEP 0{step.id}</div>
+                  <div className="inline-block px-3 py-1 bg-slate-50 text-[var(--primary)] text-xs font-bold rounded-full mb-3">STEP 0{step.id}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                 </div>
@@ -224,10 +224,10 @@ export function PremiumWebDev() {
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Modern <span className="text-[#2eb872]">Tech Stack</span></h2>
+              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Modern <span className="text-[var(--primary)]">Tech Stack</span></h2>
               <p className="text-gray-500">We utilize cutting-edge technologies to build platforms that are fast, secure, and infinitely scalable.</p>
             </div>
-            <Link href="/contact" className="text-[#2eb872] hover:text-[#259b5f] font-bold flex items-center gap-2 transition-colors">
+            <Link href="/contact" className="text-[var(--primary)] hover:text-[#259b5f] font-bold flex items-center gap-2 transition-colors">
               Request Stack Audit <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -240,10 +240,10 @@ export function PremiumWebDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white border border-gray-100 hover:border-[#2eb872]/50 hover:shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group"
+                className="bg-white border border-gray-100 hover:border-[var(--primary)]/50 hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group"
               >
                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} alt={tech.name} className="w-12 h-12 object-contain group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300 filter grayscale group-hover:grayscale-0 drop-shadow-sm" />
+                <img src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} alt={tech.name} className="w-12 h-12 object-contain group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300 filter grayscale group-hover:grayscale-0 drop-shadow-sm img-premium" />
                 <span className="font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">{tech.name}</span>
               </motion.div>
             ))}
@@ -255,7 +255,7 @@ export function PremiumWebDev() {
       <section className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[#2eb872]">Expertise</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Expertise</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Tailored web solutions designed specifically for the unique demands of your sector.</p>
           </div>
 
@@ -267,19 +267,19 @@ export function PremiumWebDev() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative h-64 rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                className="group relative h-64 rounded-[18px] overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-[#2eb872] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                <div className={`absolute inset-0 bg-[var(--primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
                 <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:bg-white group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
+                  <div className="w-16 h-16 rounded-[18px] bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:bg-white group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`https://webcodian.com/public/web/assets/img/services/${cat.img}`} alt={cat.name} className="w-8 h-8 object-contain" />
+                    <img src={`https://webcodian.com/public/web/assets/img/services/${cat.img}`} alt={cat.name} className="w-8 h-8 object-contain img-premium" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{cat.name}</h3>
-                    <div className="w-0 h-1 bg-[#2eb872] group-hover:w-12 transition-all duration-300"></div>
+                    <div className="w-0 h-1 bg-[var(--primary)] group-hover:w-12 transition-all duration-300"></div>
                   </div>
                 </div>
               </motion.div>
@@ -287,7 +287,7 @@ export function PremiumWebDev() {
           </div>
           
           <div className="mt-12 text-center">
-             <Link href="/industry" className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold transition-colors">
+             <Link href="/industry" className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-gray-800 text-[var(--heading)] rounded-[18px] font-bold transition-colors">
                View All 20+ Industries <ArrowRight className="w-4 h-4" />
              </Link>
           </div>
@@ -298,7 +298,7 @@ export function PremiumWebDev() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Common <span className="text-[#2eb872]">Inquiries</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Common <span className="text-[var(--primary)]">Inquiries</span></h2>
           </div>
 
           <div className="space-y-4">
@@ -308,15 +308,15 @@ export function PremiumWebDev() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-[#2eb872]/50 bg-green-50/30 shadow-[0_4px_20px_rgba(46,184,114,0.1)]' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-[var(--primary)]/50 bg-slate-50/30 shadow-[0_4px_20px_rgba(46,184,114,0.1)]' : 'border-gray-200 bg-white hover:border-gray-300'}`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full px-8 py-6 flex items-center justify-between text-left"
                 >
                   <span className={`font-bold pr-4 transition-colors ${openFaq === idx ? 'text-gray-900' : 'text-gray-700'}`}>{faq.q}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-[#2eb872]/20' : 'bg-gray-50'}`}>
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-[#2eb872]' : 'text-gray-400'}`} />
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-[var(--primary)]/20' : 'bg-gray-50'}`}>
+                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-[var(--primary)]' : 'text-slate-500'}`} />
                   </div>
                 </button>
                 <div 
@@ -336,8 +336,8 @@ export function PremiumWebDev() {
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Ready to Transform Your Digital Presence?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Stop settling for templates. Let's build a custom, high-converting web platform that dominates your industry.</p>
           
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-2xl font-black text-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all">
-            Start Your Project Now <Rocket className="w-6 h-6 text-white" />
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-black text-xl shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-2 transition-all">
+            Start Your Project Now <Rocket className="w-6 h-6 text-[var(--heading)]" />
           </Link>
         </div>
       </section>

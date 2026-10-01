@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "News & Media Digital Solutions | WebCodian",
-  description: "High-performance publishing platforms and scalable Content Management Systems built for modern digital journalism.",
-};
-
-const newsData: IndustryPageData = {
-  id: "news",
-  title: "News & Media",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "High-performance publishing platforms and scalable Content Management Systems built for modern digital journalism.",
-  heroImage: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around the 24/7 news cycle.",
-  introDescription: "In the digital publishing world, speed and reliability are everything. When breaking news happens, your platform needs to handle massive traffic spikes without going offline. We build ultra-fast, SEO-optimized publishing platforms and custom CMS tools that empower editors to write, publish, and distribute content seamlessly.",
+const industryData = {
+  title: "News",
+  overview: "Empowering the news sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Traffic Spikes",
-      description: "Standard web hosting crashes under the weight of sudden viral traffic, leading to lost readership and ad revenue."
-    },
-    {
-      id: "02",
-      title: "Editorial Bottlenecks",
-      description: "Clunky, outdated CMS interfaces slow down journalists and complicate the editorial review process."
-    },
-    {
-      id: "03",
-      title: "Content Monetization",
-      description: "Integrating paywalls, subscriptions, and dynamic ad-bidding networks is highly complex on legacy systems."
-    },
-    {
-      id: "04",
-      title: "Mobile Experience",
-      description: "Slow mobile load times drastically reduce reader engagement and hurt Google search rankings."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "LayoutGrid",
-      title: "Custom CMS Platforms",
-      description: "Tailor-made Content Management Systems designed specifically for complex editorial workflows."
-    },
-    {
-      icon: "Globe",
-      title: "High-Traffic Architectures",
-      description: "Serverless and CDN-backed infrastructures guaranteed to stay online during massive traffic spikes."
-    },
-    {
-      icon: "PenTool",
-      title: "Monetization Systems",
-      description: "Seamless integration of paywalls, premium subscriptions, and programmatic advertising."
-    },
-    {
-      icon: "Rss",
-      title: "Content Distribution",
-      description: "Automated syndication tools to push articles to social media, newsletters, and news aggregators."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From breaking news to global distribution."
-  },
-  whatWeCanBuild: [
-    "High-Performance News Portals",
-    "Custom Editorial CMS",
-    "Paywall & Subscription Platforms",
-    "Digital Magazine Web Apps",
-    "Native News Mobile Applications",
-    "Newsletter Automation Systems"
-  ],
-  useCases: [
-    {
-      title: "Editorial Workflow",
-      items: ["Drafting & review pipelines", "Multimedia asset management", "SEO optimization tools", "Automated tagging"]
-    },
-    {
-      title: "Reader Experience",
-      items: ["Personalized news feeds", "Offline reading mode", "Push notifications", "Seamless subscription checkout"]
-    }
-  ],
-  technologies: ["Next.js", "WordPress VIP", "Node.js", "AWS CloudFront", "Redis", "React Native", "Elasticsearch"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function NewsIndustryPage() {
-  return <PremiumIndustryDetailPage data={newsData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="News" 
+        subtitle="Advanced digital solutions tailored for the news industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "News" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

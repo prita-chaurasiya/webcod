@@ -8,7 +8,7 @@ export default function SoftwareDevelopmentPage() {
         title="Software Development"
         badgeText="ENTERPRISE GRADE"
         description="End-to-end software solutions tailored to your business processes. We build robust architectures that grow with you."
-        heroImage="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000"
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
         overviewTitle="Empowering Businesses with Custom Software"
         overviewDescription="Off-the-shelf software doesn't always fit. Our custom software development services deliver exactly what your business needs to automate workflows, manage data, and increase overall efficiency."
         features={[

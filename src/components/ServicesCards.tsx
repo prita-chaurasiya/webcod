@@ -25,7 +25,7 @@ export function ServicesCards() {
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 justify-center mb-4">
-            <img src="https://webcodian.com/public/web/assets/img/star-icon.png" alt="star" className="w-5 h-5" />
+            <img src="https://webcodian.com/public/web/assets/img/star-icon.png" alt="star" className="w-5 h-5 img-premium" />
             <span className="text-[#e80566] text-[15px] font-semibold tracking-wide uppercase">Our Services</span>
           </div>
           <h2 className="text-[32px] md:text-[40px] font-bold text-[#252525] font-lato">
@@ -47,7 +47,7 @@ export function ServicesCards() {
                 <img 
                   src={`https://webcodian.com/public/web/assets/img/services/${service.img}`} 
                   alt={service.title} 
-                  className="w-8 h-8 object-contain group-hover:brightness-0 group-hover:invert transition-all"
+                  className="w-8 h-8 object-contain group-hover:brightness-0 group-hover:invert transition-all img-premium"
                 />
               </div>
               <h3 className="text-[17px] font-bold text-[#252525] mb-4 flex-grow font-lato group-hover:text-[#e80566] transition-colors">

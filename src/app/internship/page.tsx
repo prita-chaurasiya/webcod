@@ -54,9 +54,9 @@ export default function InternshipPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#2eb872]/40 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="p-6 rounded-[18px] bg-slate-50 border border-slate-100 hover:border-[var(--primary)]/40 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#2eb872]/10 text-[#2eb872] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-[18px] bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <perk.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-base font-bold text-slate-900 mb-2">{perk.title}</h3>

@@ -29,11 +29,11 @@ export function FunFacts() {
                 <img 
                   src={`https://webcodian.com/public/web/assets/img/${fact.img}`} 
                   alt={fact.label} 
-                  className="w-10 h-10 object-contain filter brightness-0 invert"
+                  className="w-10 h-10 object-contain filter brightness-0 invert img-premium"
                 />
               </div>
-              <h3 className="text-4xl font-bold text-white mb-2 font-lato">{fact.value}</h3>
-              <p className="text-lg font-medium text-white/90">{fact.label}</p>
+              <h3 className="text-4xl font-bold text-[var(--heading)] mb-2 font-lato">{fact.value}</h3>
+              <p className="text-lg font-medium text-[var(--heading)]/90">{fact.label}</p>
             </motion.div>
           ))}
         </div>

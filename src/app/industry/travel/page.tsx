@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Tour & Travel Digital Solutions | WebCodian",
-  description: "Dynamic booking platforms and travel management systems designed to simplify global adventures.",
-};
-
-const travelData: IndustryPageData = {
-  id: "travel",
-  title: "Tour & Travel",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Dynamic booking platforms and travel management systems designed to simplify global adventures.",
-  heroImage: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around the modern traveler.",
-  introDescription: "In the travel industry, user experience is everything. Customers expect seamless booking, transparent pricing, and instant confirmations. We build comprehensive travel technology that connects global inventory, automates reservations, and provides travelers with beautiful, frictionless booking experiences.",
+const industryData = {
+  title: "Travel",
+  overview: "Empowering the travel sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Complex Integrations",
-      description: "Aggregating flights, hotels, and activities from multiple third-party APIs (GDS) requires robust technical architecture."
-    },
-    {
-      id: "02",
-      title: "Booking Friction",
-      description: "Complicated checkout flows and limited payment options lead to high abandonment rates for expensive travel packages."
-    },
-    {
-      id: "03",
-      title: "Inventory Management",
-      description: "Agencies struggle to manage custom tour packages, seat availability, and dynamic pricing without centralized systems."
-    },
-    {
-      id: "04",
-      title: "Post-Booking Support",
-      description: "Handling cancellations, itinerary updates, and customer support requires intelligent automation to reduce overhead."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Globe2",
-      title: "Travel Booking Portals",
-      description: "B2C and B2B platforms for booking flights, hotels, cars, and custom holiday packages."
-    },
-    {
-      icon: "Calendar",
-      title: "Tour Management Systems",
-      description: "Backend tools to create itineraries, manage group allocations, and track operational costs."
-    },
-    {
-      icon: "CreditCard",
-      title: "Payment & API Integration",
-      description: "Seamless connection with global GDS providers (Amadeus, Sabre) and multi-currency payment gateways."
-    },
-    {
-      icon: "Ticket",
-      title: "Travel Agency CRM",
-      description: "Customer relationship tools designed specifically to track traveler preferences and booking history."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From itinerary planning to global booking."
-  },
-  whatWeCanBuild: [
-    "B2B/B2C Travel Booking Engines",
-    "Tour Operator Software",
-    "Hotel Booking Systems",
-    "Travel Agency CRM",
-    "Flight & Hotel API Integrations",
-    "Mobile Travel Companion Apps"
-  ],
-  useCases: [
-    {
-      title: "Traveler Experience",
-      items: ["Dynamic package builder", "Mobile itineraries", "Instant booking confirmation", "Multi-currency checkout"]
-    },
-    {
-      title: "Agency Operations",
-      items: ["GDS integration", "Markup & commission management", "Supplier management", "Booking analytics"]
-    }
-  ],
-  technologies: ["React", "Node.js", "Python", "Redis", "Amadeus API", "Sabre API", "AWS"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function TravelIndustryPage() {
-  return <PremiumIndustryDetailPage data={travelData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Travel" 
+        subtitle="Advanced digital solutions tailored for the travel industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Travel" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

@@ -12,7 +12,7 @@ const slides = [
     headlinePart2: "Grow Your",
     headlinePart3: "Digital Skills.",
     description: "Build practical skills in Computer Applications, Web Development, Digital Marketing, Programming, Graphic Design and modern technologies with WebCodian.",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const slides = [
     headlinePart2: "Scale Your",
     headlinePart3: "Business Apps.",
     description: "Enterprise-grade web and mobile applications designed to optimize your workflow and increase revenue with WebCodian's expert team.",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const slides = [
     headlinePart2: "Dominate",
     headlinePart3: "Search Results.",
     description: "Data-driven marketing and SEO strategies to increase your visibility, traffic, and sales globally with WebCodian's growth team.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const slides = [
     headlinePart2: "Master",
     headlinePart3: "AI & Tech.",
     description: "Learn modern frameworks like React, Python, and AI integration to stay ahead in the fast-paced technology landscape.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
   }
 ];
 
@@ -58,18 +58,18 @@ export function EduHero() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative w-full min-h-[100vh] lg:h-[750px] bg-slate-900 overflow-hidden flex flex-col justify-center pt-24 lg:pt-32 pb-16 lg:pb-0">
+    <section className="relative w-full min-h-[100vh] lg:h-[750px] bg-white overflow-hidden flex flex-col justify-center pt-24 lg:pt-32 pb-16 lg:pb-0">
       
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
-        className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-lg transition-all"
+        className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] transition-all"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-lg transition-all"
+        className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white text-slate-800 rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] transition-all"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -113,7 +113,7 @@ export function EduHero() {
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm text-slate-800 font-bold text-xs tracking-wider mb-6 lg:mb-8">
-              <GraduationCap className="w-4 h-4 text-[#2eb872]" />
+              <GraduationCap className="w-4 h-4 text-[var(--primary)]" />
               WEB CODIAN • IT TRAINING & DIGITAL SKILLS
             </div>
 
@@ -121,10 +121,10 @@ export function EduHero() {
             <h1 className="text-5xl md:text-6xl lg:text-[72px] font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
               {slide.headlinePart1} <br className="hidden md:block" />
               {slide.headlinePart2} <br className="hidden md:block" />
-              <span className="text-[#2eb872] relative inline-block mt-2 lg:mt-0">
+              <span className="text-[var(--primary)] relative inline-block mt-2 lg:mt-0">
                 {slide.headlinePart3}
                 <svg className="absolute w-full h-3 -bottom-1 lg:-bottom-2 left-0 opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
-                  <path d="M 0,5 Q 25,0 50,5 T 100,5" fill="none" stroke="#2eb872" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M 0,5 Q 25,0 50,5 T 100,5" fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
@@ -139,7 +139,7 @@ export function EduHero() {
               <motion.div whileHover={{ y: -6, scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link 
                   href="/computer-courses"
-                  className="w-full sm:w-auto bg-[#2eb872] hover:bg-[#25995e] text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:shadow-[0_20px_40px_rgba(46,184,114,0.5)] transition-shadow duration-300 text-base group relative overflow-hidden"
+                  className="w-full sm:w-auto bg-[var(--primary)] hover:bg-[#25995e] text-white px-8 py-4 rounded-[18px] font-bold flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:shadow-[0_20px_40px_rgba(46,184,114,0.5)] transition-shadow duration-300 text-base group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out skew-x-12"></div>
                   Explore Courses 
@@ -150,10 +150,10 @@ export function EduHero() {
               <motion.div whileHover={{ y: -6, scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link 
                   href="/contact"
-                  className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-900 px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-200 hover:border-slate-300 transition-shadow duration-300 text-base group"
+                  className="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-900 px-8 py-4 rounded-[18px] font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-slate-200 hover:border-slate-300 transition-shadow duration-300 text-base group"
                 >
                   Enquire Now
-                  <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-[#2eb872] group-hover:translate-x-1 transition-all" />
+                  <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-[var(--primary)] group-hover:translate-x-1 transition-all" />
                 </Link>
               </motion.div>
             </div>

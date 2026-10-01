@@ -72,7 +72,7 @@ export function PremiumTechStack() {
             className="inline-flex items-center gap-2 mb-4"
           >
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 p-1.5">
-              <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+              <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain img-premium" onError={(e) => e.currentTarget.style.display = 'none'} />
             </div>
             <span className="text-[#f4511e] font-extrabold text-lg uppercase tracking-wider">
               TECHNOLOGY WE USE
@@ -103,9 +103,9 @@ export function PremiumTechStack() {
             {[...technologiesRow1, ...technologiesRow1, ...technologiesRow1].map((tech, idx) => (
               <div
                 key={idx}
-                className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain img-premium" />
                 <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
               </div>
             ))}
@@ -122,9 +122,9 @@ export function PremiumTechStack() {
             {[...technologiesRow2, ...technologiesRow2, ...technologiesRow2].map((tech, idx) => (
               <div
                 key={idx}
-                className="w-48 h-48 bg-white hover:bg-emerald-50/50 border border-slate-100 hover:border-emerald-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="w-48 h-48 bg-white hover:bg-slate-50/50 border border-slate-100 hover:border-slate-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain" />
+                <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain img-premium" />
                 <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
               </div>
             ))}

@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Education Digital Solutions | WebCodian",
-  description: "Transforming the learning experience through intelligent Learning Management Systems and unified campus operations.",
-};
-
-const educationData: IndustryPageData = {
-  id: "education",
+const industryData = {
   title: "Education",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Transforming the learning experience through intelligent Learning Management Systems and unified campus operations.",
-  heroImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around modern learning.",
-  introDescription: "Education is evolving faster than ever. Institutions face the dual challenge of engaging digital-native students while streamlining administrative workflows. We build unified educational platforms that connect administrators, teachers, and students in one seamless, interactive ecosystem.",
+  overview: "Empowering the education sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Fragmented Systems",
-      description: "Using separate platforms for attendance, exams, fees, and communication creates data silos and administrative overhead."
-    },
-    {
-      id: "02",
-      title: "Student Engagement",
-      description: "Traditional passive learning tools fail to keep remote and hybrid students actively engaged in their coursework."
-    },
-    {
-      id: "03",
-      title: "Manual Administration",
-      description: "Fee collection, timetable generation, and grading require massive manual effort without automation."
-    },
-    {
-      id: "04",
-      title: "Exam Integrity",
-      description: "Conducting secure, large-scale online assessments requires advanced proctoring and robust infrastructure."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "MonitorPlay",
-      title: "Learning Management Systems (LMS)",
-      description: "Interactive platforms for delivering courses, assignments, and multimedia content."
-    },
-    {
-      icon: "Users",
-      title: "Student & Parent Portals",
-      description: "Centralized dashboards for tracking academic progress, attendance, and fee payments."
-    },
-    {
-      icon: "FileText",
-      title: "Online Examination Portals",
-      description: "Secure, scalable testing environments with automated grading and result generation."
-    },
-    {
-      icon: "Settings",
-      title: "Institute Management Systems",
-      description: "Comprehensive ERPs for managing HR, payroll, admissions, and campus resources."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From student engagement to campus administration."
-  },
-  whatWeCanBuild: [
-    "Learning Management Systems (LMS)",
-    "Institute ERP Software",
-    "Online Course Selling Platforms",
-    "Computer-Based Testing (CBT) Systems",
-    "Alumni Network Platforms",
-    "Virtual Classroom Applications"
-  ],
-  useCases: [
-    {
-      title: "Academic Delivery",
-      items: ["Video lectures & streaming", "Interactive assignments", "Peer-to-peer discussions", "Digital library access"]
-    },
-    {
-      title: "Campus Operations",
-      items: ["Automated fee collection", "Digital admissions", "Timetable scheduling", "Staff & faculty management"]
-    }
-  ],
-  technologies: ["React", "Node.js", "Python", "AWS", "Flutter", "PostgreSQL", "WebRTC"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function EducationIndustryPage() {
-  return <PremiumIndustryDetailPage data={educationData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Education" 
+        subtitle="Advanced digital solutions tailored for the education industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Education" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

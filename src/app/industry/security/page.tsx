@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Security & Surveillance Digital Solutions | WebCodian",
-  description: "Advanced digital monitoring platforms and access control software for physical and digital security agencies.",
-};
-
-const securityData: IndustryPageData = {
-  id: "security",
-  title: "Security & Surveillance",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Advanced digital monitoring platforms and access control software for physical and digital security agencies.",
-  heroImage: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around absolute control.",
-  introDescription: "In the security sector, response time is everything. Relying on fragmented hardware systems and analog reporting leads to critical blind spots. We build unified security platforms that aggregate video feeds, automate access control, and provide real-time incident reporting in centralized, highly-secure command dashboards.",
+const industryData = {
+  title: "Security",
+  overview: "Empowering the security sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Fragmented Hardware",
-      description: "Managing cameras, biometric scanners, and alarms from different manufacturers creates massive operational blind spots."
-    },
-    {
-      id: "02",
-      title: "Incident Response",
-      description: "Without automated alerts and centralized monitoring, response times to critical breaches are significantly delayed."
-    },
-    {
-      id: "03",
-      title: "Guard Management",
-      description: "Tracking the real-time location, patrols, and reporting of physical security personnel is inefficient without mobile tools."
-    },
-    {
-      id: "04",
-      title: "Data Vulnerability",
-      description: "Security companies must protect their own surveillance data from cyber threats with robust encryption protocols."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Activity",
-      title: "Central Command Dashboards",
-      description: "Unified web interfaces that aggregate feeds and alerts from all connected security hardware."
-    },
-    {
-      icon: "Fingerprint",
-      title: "Access Control Software",
-      description: "Digital systems to manage employee permissions, visitor logs, and biometric access points."
-    },
-    {
-      icon: "ShieldAlert",
-      title: "Incident Reporting Systems",
-      description: "Mobile applications for on-the-ground guards to log incidents, upload photos, and request backup."
-    },
-    {
-      icon: "Video",
-      title: "VMS Integrations",
-      description: "Connecting Video Management Systems with cloud storage and AI-driven analytics for threat detection."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From localized monitoring to centralized command."
-  },
-  whatWeCanBuild: [
-    "Security Command Dashboards",
-    "Guard Tracking Mobile Apps",
-    "Visitor Management Systems",
-    "Hardware API Integrations",
-    "Automated Alerting Systems",
-    "Encrypted Data Storage Solutions"
-  ],
-  useCases: [
-    {
-      title: "Command Center",
-      items: ["Real-time threat monitoring", "Automated dispatching", "Hardware health checks", "System-wide lockdowns"]
-    },
-    {
-      title: "Field Operations",
-      items: ["GPS guard tracking", "Digital shift logs", "Mobile incident reporting", "QR-code checkpoint scanning"]
-    }
-  ],
-  technologies: ["React", "Node.js", "WebSockets", "React Native", "AWS IoT", "Python", "AES-256"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function SecurityIndustryPage() {
-  return <PremiumIndustryDetailPage data={securityData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Security" 
+        subtitle="Advanced digital solutions tailored for the security industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Security" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

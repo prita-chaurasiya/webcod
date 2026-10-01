@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "E-Commerce Digital Solutions | WebCodian",
-  description: "High-performance digital storefronts and unified retail management systems built to drive global sales.",
-};
-
-const ecommerceData: IndustryPageData = {
-  id: "ecommerce",
-  title: "E-Commerce & Retail",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "High-performance digital storefronts and unified retail management systems built to drive global sales.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around the modern shopper.",
-  introDescription: "In the hyper-competitive e-commerce landscape, a slow or confusing checkout can cost millions in abandoned carts. We engineer high-performance, scalable commerce architectures that combine beautiful consumer-facing storefronts with powerful backend inventory and order management systems.",
+const industryData = {
+  title: "Ecommerce",
+  overview: "Empowering the ecommerce sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Platform Scalability",
-      description: "Traffic spikes during holiday sales or product launches cause downtime and lost revenue on legacy platforms."
-    },
-    {
-      id: "02",
-      title: "Omnichannel Friction",
-      description: "Managing inventory, pricing, and orders across web, mobile, and physical stores is highly error-prone without centralization."
-    },
-    {
-      id: "03",
-      title: "Cart Abandonment",
-      description: "Complex checkout flows and limited payment options drastically reduce final conversion rates."
-    },
-    {
-      id: "04",
-      title: "Data Disconnect",
-      description: "Failing to capture and analyze customer shopping behavior limits personalization and remarketing efforts."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "ShoppingCart",
-      title: "Custom Storefronts",
-      description: "Lightning-fast, mobile-optimized digital storefronts designed for maximum conversion."
-    },
-    {
-      icon: "Box",
-      title: "Inventory & Order Management",
-      description: "Centralized hubs to track stock levels, manage warehouses, and automate fulfillment."
-    },
-    {
-      icon: "CreditCard",
-      title: "Payment Integrations",
-      description: "Secure integration with global payment gateways, multi-currency support, and financing options."
-    },
-    {
-      icon: "BarChart3",
-      title: "Commerce CRM & Analytics",
-      description: "Deep insights into customer behavior, predictive analytics, and automated marketing tools."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From browsing to checkout to fulfillment."
-  },
-  whatWeCanBuild: [
-    "Custom E-Commerce Web Platforms",
-    "Native Mobile Shopping Apps",
-    "Multi-Vendor Marketplaces",
-    "B2B Wholesale Portals",
-    "Inventory Management ERPs",
-    "Headless Commerce Architectures"
-  ],
-  useCases: [
-    {
-      title: "Customer Experience",
-      items: ["Personalized product recommendations", "One-click checkout", "Real-time order tracking", "Loyalty programs"]
-    },
-    {
-      title: "Retail Operations",
-      items: ["Multi-warehouse inventory", "Automated reordering", "Vendor management", "Financial reporting"]
-    }
-  ],
-  technologies: ["Next.js", "Shopify Plus", "Magento", "Node.js", "React Native", "Stripe", "Redis"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function EcommerceIndustryPage() {
-  return <PremiumIndustryDetailPage data={ecommerceData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Ecommerce" 
+        subtitle="Advanced digital solutions tailored for the ecommerce industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Ecommerce" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

@@ -8,7 +8,7 @@ export default function VideoEditingPage() {
         title="Video Editing"
         badgeText="CINEMATIC QUALITY"
         description="Engage your audience with professional video content. We transform raw footage into compelling stories that drive conversions."
-        heroImage="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1000"
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
         overviewTitle="Storytelling Through Motion"
         overviewDescription="Video is the most powerful medium on the internet today. Our expert editing team creates high-impact videos for YouTube, social media, corporate presentations, and advertising campaigns."
         features={[

@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Real Estate Digital Solutions | WebCodian",
-  description: "Next-generation property technology connecting agents, buyers, and management through unified digital platforms.",
-};
-
-const realEstateData: IndustryPageData = {
-  id: "real-estate",
+const industryData = {
   title: "Real Estate",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Next-generation property technology connecting agents, buyers, and management through unified digital platforms.",
-  heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around property workflows.",
-  introDescription: "The real estate market moves fast. Success relies on matching the right property with the right buyer at exactly the right time. We build sophisticated PropTech solutions that streamline property listings, automate lead generation, and equip agents with powerful CRM tools to close deals faster.",
+  overview: "Empowering the real estate sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Lead Leakage",
-      description: "Without automated CRM pipelines, high-value property leads fall through the cracks or receive delayed responses."
-    },
-    {
-      id: "02",
-      title: "Data Fragmentation",
-      description: "Agents waste time jumping between multiple systems for listings, client data, and contract management."
-    },
-    {
-      id: "03",
-      title: "Search Experience",
-      description: "Poor property search interfaces and lacking map integrations frustrate potential buyers and renters."
-    },
-    {
-      id: "04",
-      title: "Agent Performance",
-      description: "Brokerages struggle to track individual agent performance and property movement without unified dashboards."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Search",
-      title: "Property Listing Portals",
-      description: "High-performance property search engines with advanced filtering, map integration, and virtual tours."
-    },
-    {
-      icon: "Users2",
-      title: "Real Estate CRM",
-      description: "Intelligent lead management systems that track client interactions, preferences, and property matches."
-    },
-    {
-      icon: "LayoutDashboard",
-      title: "Brokerage Management",
-      description: "Centralized platforms to manage agents, commissions, property portfolios, and agency analytics."
-    },
-    {
-      icon: "Key",
-      title: "Tenant & Lease Portals",
-      description: "Secure environments for property managers to handle leases, maintenance requests, and rent collection."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From property discovery to contract closing."
-  },
-  whatWeCanBuild: [
-    "Custom Real Estate Portals (B2C)",
-    "Brokerage CRM Systems",
-    "Property Management ERP",
-    "Real Estate Mobile Applications",
-    "Map-Based Search Interfaces",
-    "Agent Performance Dashboards"
-  ],
-  useCases: [
-    {
-      title: "Buyer Experience",
-      items: ["Interactive map search", "3D virtual property tours", "Automated alert systems", "Mortgage calculators"]
-    },
-    {
-      title: "Agency Operations",
-      items: ["Automated lead distribution", "Contract management", "Commission tracking", "Listing syndication"]
-    }
-  ],
-  technologies: ["React", "Next.js", "Laravel", "Mapbox", "PostGIS", "AWS", "React Native"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function RealEstateIndustryPage() {
-  return <PremiumIndustryDetailPage data={realEstateData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Real Estate" 
+        subtitle="Advanced digital solutions tailored for the real estate industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Real Estate" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

@@ -68,7 +68,7 @@ export function PremiumPortfolio() {
       {/* Premium Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-[100px] mix-blend-multiply animate-[pulse_8s_ease-in-out_infinite_alternate]" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-tl from-[#2eb872]/10 to-emerald-100 rounded-full blur-[120px] mix-blend-multiply animate-[pulse_12s_ease-in-out_infinite_alternate-reverse]" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-tl from-[var(--primary)]/10 to-emerald-100 rounded-full blur-[120px] mix-blend-multiply animate-[pulse_12s_ease-in-out_infinite_alternate-reverse]" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -83,8 +83,8 @@ export function PremiumPortfolio() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs mb-6 tracking-widest uppercase shadow-sm"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2eb872] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2eb872]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--primary)]"></span>
               </span>
               Selected Works
             </motion.div>
@@ -125,14 +125,14 @@ export function PremiumPortfolio() {
             <motion.div 
               key={idx} 
               variants={itemVariants}
-              className={`group relative rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl ${project.span}`}
+              className={`group relative rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-lg ${project.span}`}
             >
               {/* Image Container */}
               <div className="absolute inset-0 w-full h-full p-8 flex items-center justify-center transition-transform duration-700 group-hover:scale-110">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="max-w-full max-h-full object-contain filter drop-shadow-xl"
+                  className="max-w-full max-h-full object-contain filter drop-shadow-xl img-premium"
                 />
               </div>
 
@@ -141,15 +141,15 @@ export function PremiumPortfolio() {
                 
                 <div className="flex items-end justify-between translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                   <div>
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-bold tracking-wider uppercase mb-3 border border-white/20">
+                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[var(--heading)] text-xs font-bold tracking-wider uppercase mb-3 border border-white/20">
                       {project.category}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white drop-shadow-md">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[var(--heading)] drop-shadow-md">
                       {project.title}
                     </h3>
                   </div>
                   
-                  <Link href="/contact" className="w-12 h-12 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                  <Link href="/contact" className="w-12 h-12 rounded-full bg-white text-slate-900 flex items-center justify-center hover:scale-110 transition-transform shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
                     <ArrowUpRight className="w-6 h-6" />
                   </Link>
                 </div>
@@ -159,7 +159,7 @@ export function PremiumPortfolio() {
         </motion.div>
 
         <div className="mt-16 text-center">
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-slate-800 text-[var(--heading)] font-bold rounded-[18px] transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1">
             View All Projects <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>

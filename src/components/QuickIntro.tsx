@@ -19,7 +19,7 @@ export function QuickIntro() {
             <img 
               src="https://webcodian.com/public/web/assets/img/project-start1.png" 
               alt="Start Project" 
-              className="max-w-full h-auto animate-[bounce_5s_infinite_ease-in-out]" 
+              className="max-w-full h-auto animate-[bounce_5s_infinite_ease-in-out] img-premium" 
             />
           </motion.div>
 
@@ -38,7 +38,7 @@ export function QuickIntro() {
             </p>
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#e80566] text-white font-semibold rounded hover:bg-[#252525] transition-colors duration-300 shadow-[0_5px_15px_rgba(232,5,102,0.3)] hover:shadow-[0_8px_20px_rgba(37,37,37,0.3)]"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#e80566] text-[var(--heading)] font-semibold rounded hover:bg-[#252525] transition-colors duration-300 shadow-[0_5px_15px_rgba(232,5,102,0.3)] hover:shadow-[0_8px_20px_rgba(37,37,37,0.3)]"
             >
               Get a Quote
             </Link>

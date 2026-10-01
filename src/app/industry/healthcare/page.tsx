@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Healthcare Digital Solutions | WebCodian",
-  description: "Digital solutions designed to simplify healthcare operations, improve patient experiences, and connect teams through intelligent technology.",
-};
-
-const healthcareData: IndustryPageData = {
-  id: "healthcare",
+const industryData = {
   title: "Healthcare",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Digital solutions designed to simplify healthcare operations, improve patient experiences, and connect teams through intelligent technology.",
-  heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around the way healthcare works.",
-  introDescription: "In the modern healthcare environment, disconnected systems lead to operational delays and fragmented patient care. We build comprehensive digital platforms that unify hospital management, empower patients through intuitive portals, and ensure strict compliance with medical data security standards. Our solutions bridge the gap between clinical excellence and digital efficiency.",
+  overview: "Empowering the healthcare sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Disconnected Workflows",
-      description: "Siloed data between departments leads to inefficiencies and delays in critical patient care and administrative tasks."
-    },
-    {
-      id: "02",
-      title: "Patient Experience",
-      description: "Patients struggle with complex booking systems, lack of communication, and difficulty accessing their own medical records."
-    },
-    {
-      id: "03",
-      title: "Data Security & Compliance",
-      description: "Managing sensitive health data requires rigorous adherence to HIPAA and other international data protection regulations."
-    },
-    {
-      id: "04",
-      title: "Resource Management",
-      description: "Difficulty in tracking hospital beds, inventory, and staff availability in real-time limits operational capacity."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Building2",
-      title: "Hospital Management Systems (HMS)",
-      description: "End-to-end platforms for managing inpatient, outpatient, billing, and clinical workflows."
-    },
-    {
-      icon: "Users",
-      title: "Patient Portals",
-      description: "Secure, intuitive portals for patients to book appointments, view results, and communicate with doctors."
-    },
-    {
-      icon: "Smartphone",
-      title: "Telemedicine Solutions",
-      description: "Integrated video consultation platforms with secure file sharing and e-prescription capabilities."
-    },
-    {
-      icon: "Activity",
-      title: "Healthcare CRM",
-      description: "Advanced relationship management tools to track patient journeys and improve engagement."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From patient experience to clinical efficiency."
-  },
-  whatWeCanBuild: [
-    "Hospital Management Systems (HMS)",
-    "Custom Telemedicine Apps",
-    "Electronic Health Records (EHR)",
-    "Pharmacy Management Systems",
-    "Medical Billing Software",
-    "Healthcare Analytics Dashboards"
-  ],
-  useCases: [
-    {
-      title: "Patient Journey",
-      items: ["Online booking & scheduling", "Virtual consultations", "Secure message portals", "Digital prescriptions"]
-    },
-    {
-      title: "Clinical Operations",
-      items: ["Doctor & staff scheduling", "Bed management", "Lab integration", "Patient history tracking"]
-    }
-  ],
-  technologies: ["React", "Node.js", "Python", "React Native", "MongoDB", "AWS", "WebRTC"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function HealthcareIndustryPage() {
-  return <PremiumIndustryDetailPage data={healthcareData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Healthcare" 
+        subtitle="Advanced digital solutions tailored for the healthcare industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Healthcare" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

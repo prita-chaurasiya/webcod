@@ -23,7 +23,7 @@ export function TechnologyBelt() {
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 justify-center mb-4">
-            <img src="https://webcodian.com/public/web/assets/img/star-icon.png" alt="star" className="w-5 h-5" />
+            <img src="https://webcodian.com/public/web/assets/img/star-icon.png" alt="star" className="w-5 h-5 img-premium" />
             <span className="text-[#e80566] text-[15px] font-semibold tracking-wide uppercase">Technology We Use</span>
           </div>
         </div>
@@ -42,7 +42,7 @@ export function TechnologyBelt() {
                 <img 
                   src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} 
                   alt={tech.name} 
-                  className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 img-premium"
                 />
               </div>
               <h4 className="text-[15px] font-semibold text-[#252525] font-lato">{tech.name}</h4>

@@ -47,7 +47,7 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
           </div>
 
           {/* Sidebar (Right Side) matching the screenshot exactly */}
-          <div className="w-full lg:w-1/3 xl:w-[30%] sticky top-28 bg-[#f4f7fc] rounded-3xl p-6 lg:p-8 shadow-sm border border-white">
+          <div className="w-full lg:w-1/3 xl:w-[30%] sticky top-28 bg-[#f4f7fc] rounded-[18px] p-6 lg:p-8 shadow-sm border border-white">
             
             {/* AI & Automation Section */}
             <div className="mb-10">
@@ -65,7 +65,7 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
                           : "bg-white text-slate-700 border-white hover:border-blue-200 hover:shadow-md hover:scale-105"
                       }`}
                     >
-                      <service.icon className={`w-4 h-4 shrink-0 ${isActive ? "text-white" : "text-blue-600"}`} />
+                      <service.icon className={`w-4 h-4 shrink-0 ${isActive ? "text-[var(--heading)]" : "text-blue-600"}`} />
                       <span className="leading-tight">{service.name}</span>
                     </Link>
                   );
@@ -90,9 +90,9 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
             </div>
 
             {/* Support CTA Banner */}
-            <div className="relative mt-12 bg-[#0B0F19] rounded-3xl p-8 text-white shadow-xl overflow-visible border border-slate-800">
+            <div className="relative mt-12 bg-slate-50 rounded-[18px] p-8 text-[var(--heading)] shadow-xl overflow-visible border border-slate-800">
               {/* Blur accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 rounded-full blur-[40px] pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50/20 rounded-full blur-[40px] pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-500/20 rounded-full blur-[40px] pointer-events-none"></div>
               
               <h4 className="text-xl md:text-2xl font-bold leading-[1.2] relative z-10 max-w-[90%] tracking-tight">
@@ -105,7 +105,7 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
                 target="_blank"
                 className="absolute -right-4 -bottom-4 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 z-20 border-4 border-[#f4f7fc]"
               >
-                <MessagesSquare className="w-6 h-6 text-white fill-white" />
+                <MessagesSquare className="w-6 h-6 text-[var(--heading)] fill-white" />
               </Link>
             </div>
 

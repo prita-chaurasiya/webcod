@@ -1,23 +1,39 @@
 import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
+
+const industryData = {
+  title: "Tour Travel",
+  overview: "Empowering the tour travel sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop",
+  challenges: [
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
+  ],
+  solutions: [
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
+  ],
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
+};
 
 export default function Page() {
   return (
     <>
       <PageBanner 
-        title="Tour & Travel" 
-        breadcrumbs={[{ label: "Tour & Travel" }]} 
+        title="Tour Travel" 
+        subtitle="Advanced digital solutions tailored for the tour travel industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Tour Travel" }]} 
       />
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
-          <div className="bg-gray-50 rounded-2xl p-12 text-center border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Tour & Travel Content Coming Soon</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              We are currently migrating this content from the original WebCodian website. 
-              Stay tuned for updates.
-            </p>
-          </div>
-        </div>
-      </section>
+      <EnterpriseIndustryLayout data={industryData} />
     </>
   );
 }

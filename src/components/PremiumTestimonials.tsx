@@ -79,7 +79,7 @@ export function PremiumTestimonials() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-16 gap-6">
           <div className="max-w-3xl">
-            <span className="inline-block bg-black text-white text-[10px] md:text-xs font-bold tracking-widest px-3 md:px-4 py-1.5 md:py-2 uppercase mb-4 md:mb-6 shadow-sm rounded-sm">
+            <span className="inline-block bg-white text-[var(--heading)] text-[10px] md:text-xs font-bold tracking-widest px-3 md:px-4 py-1.5 md:py-2 uppercase mb-4 md:mb-6 shadow-sm rounded-sm">
               Client Testimonial
             </span>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 leading-[1.15] tracking-tight">
@@ -88,7 +88,7 @@ export function PremiumTestimonials() {
             <div className="flex items-center gap-4 mb-6">
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-[var(--primary)]" />
                 ))}
               </div>
               <div className="flex items-center gap-2">
@@ -104,14 +104,14 @@ export function PremiumTestimonials() {
           <div className="flex gap-3 pb-2 shrink-0">
             <button 
               onClick={prevSlide}
-              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[#2eb872] hover:shadow-md transition-all group shrink-0"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[var(--primary)] hover:shadow-md transition-all group shrink-0"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={nextSlide}
-              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[#2eb872] hover:shadow-md transition-all group shrink-0"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-white hover:text-[var(--primary)] hover:shadow-md transition-all group shrink-0"
               aria-label="Next testimonial"
             >
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -138,7 +138,7 @@ export function PremiumTestimonials() {
                   key={testimonial.id} 
                   className={`shrink-0 px-3 md:px-4 ${cardsPerView === 1 ? 'w-full' : 'w-1/2'}`}
                 >
-                  <div className="bg-white rounded-2xl p-6 md:p-10 lg:p-12 shadow-lg shadow-slate-200/50 relative overflow-hidden flex flex-col justify-between h-full min-h-[350px] md:min-h-[420px] border border-slate-100">
+                  <div className="bg-white rounded-[18px] p-6 md:p-10 lg:p-12 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-slate-200/50 relative overflow-hidden flex flex-col justify-between h-full min-h-[350px] md:min-h-[420px] border border-slate-100">
                     
                     {/* Faint World Map Watermark */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
@@ -151,9 +151,9 @@ export function PremiumTestimonials() {
                     <div className="relative z-10 text-center mb-8">
                       {/* Logo Placeholder */}
                       <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-4 border border-slate-100 shadow-inner">
-                        <span className="font-black text-xl md:text-2xl text-[#2eb872]">{testimonial.company.charAt(0)}</span>
+                        <span className="font-black text-xl md:text-2xl text-[var(--primary)]">{testimonial.company.charAt(0)}</span>
                       </div>
-                      <h4 className="text-[#2eb872] font-bold uppercase tracking-wider text-xs md:text-sm mb-6 md:mb-8">
+                      <h4 className="text-[var(--primary)] font-bold uppercase tracking-wider text-xs md:text-sm mb-6 md:mb-8">
                         {testimonial.company}
                       </h4>
                       
@@ -165,7 +165,7 @@ export function PremiumTestimonials() {
                     <div className="relative z-10 text-center mt-auto border-t border-slate-100 pt-6">
                       <div className="flex justify-center gap-1 mb-2">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} className="w-3 h-3 md:w-4 md:h-4 fill-amber-400 text-amber-400" />
+                          <Star key={star} className="w-3 h-3 md:w-4 md:h-4 fill-amber-400 text-[var(--primary)]" />
                         ))}
                       </div>
                       <h5 className="font-bold text-slate-900 text-sm md:text-base">{testimonial.name}</h5>
@@ -185,7 +185,7 @@ export function PremiumTestimonials() {
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  currentIndex === idx ? "w-8 bg-[#2eb872]" : "w-2 bg-slate-300 hover:bg-slate-400"
+                  currentIndex === idx ? "w-8 bg-[var(--primary)]" : "w-2 bg-slate-300 hover:bg-slate-400"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

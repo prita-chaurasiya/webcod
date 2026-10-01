@@ -32,24 +32,24 @@ export function PremiumAboutDigiatureStyle() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto bg-white rounded-2xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col md:flex-row items-center gap-6 mb-24"
+            className="max-w-3xl mx-auto bg-white rounded-[18px] p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col md:flex-row items-center gap-6 mb-24"
           >
             <div className="flex-1 flex gap-4 items-start">
-              <ShieldCheck className="w-8 h-8 text-[#2eb872] shrink-0 mt-1" />
+              <ShieldCheck className="w-8 h-8 text-[var(--primary)] shrink-0 mt-1" />
               <p className="text-slate-700 font-medium">
                 <strong>WEBCODIAN</strong> is a certified educational institute and leading software development agency dedicated to empowering the next generation of tech leaders.
               </p>
             </div>
             <div className="hidden md:block w-px h-16 bg-slate-200"></div>
             <div className="w-full md:w-auto text-center md:text-left pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
-              <span className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Status</span>
+              <span className="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">Status</span>
               <span className="text-lg font-black text-slate-900">ISO Certified</span>
             </div>
           </motion.div>
 
           {/* Specializations Grid */}
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 pl-4 border-l-4 border-[#2eb872]">
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 pl-4 border-l-4 border-[var(--primary)]">
               Our Specializations:
             </h3>
             
@@ -71,7 +71,7 @@ export function PremiumAboutDigiatureStyle() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="group bg-white rounded-xl p-5 shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md hover:border-blue-100 transition-all duration-300"
+                  className="group bg-white rounded-[18px] p-5 shadow-sm border border-slate-100 flex items-center gap-4 hover:shadow-md hover:border-blue-100 transition-all duration-300"
                 >
                   <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                     {spec.icon}
@@ -98,7 +98,7 @@ export function PremiumAboutDigiatureStyle() {
               viewport={{ once: true }}
               className="flex-1"
             >
-              <span className="text-[#2eb872] font-bold text-sm tracking-widest uppercase mb-4 block">Next-Gen Ecosystems</span>
+              <span className="text-[var(--primary)] font-bold text-sm tracking-widest uppercase mb-4 block">Next-Gen Ecosystems</span>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 Building Future-Ready Digital Solutions
               </h2>
@@ -107,8 +107,8 @@ export function PremiumAboutDigiatureStyle() {
               </p>
 
               {/* Quote Card */}
-              <div className="relative bg-slate-50 rounded-2xl p-8 pl-12 shadow-inner">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-600 to-[#2eb872] rounded-l-2xl"></div>
+              <div className="relative bg-slate-50 rounded-[18px] p-8 pl-12 shadow-inner">
+                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-600 to-[var(--primary)] rounded-l-2xl"></div>
                 <p className="text-lg font-medium text-slate-800 italic">
                   "Our team combines educational innovation, technical expertise, and industry knowledge to deliver high-performance training and digital solutions tailored to modern needs."
                 </p>
@@ -139,7 +139,7 @@ export function PremiumAboutDigiatureStyle() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 text-[#2eb872] flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-slate-50 text-[var(--primary)] flex items-center justify-center shrink-0 mt-1">
                     <Lock className="w-5 h-5" />
                   </div>
                   <div>
@@ -149,7 +149,7 @@ export function PremiumAboutDigiatureStyle() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-slate-50 text-[var(--primary)] flex items-center justify-center shrink-0 mt-1">
                     <Cpu className="w-5 h-5" />
                   </div>
                   <div>
@@ -167,21 +167,21 @@ export function PremiumAboutDigiatureStyle() {
 
 
       {/* SECTION 3: Dark Gradient Services Section */}
-      <section className="py-20 lg:py-32 bg-slate-900 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2eb872]/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--primary)]/10 rounded-full blur-[100px]"></div>
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
           <div className="max-w-3xl mb-16" data-aos="fade-up">
-            <span className="inline-block py-1.5 px-3 rounded-full bg-white/5 border border-white/10 text-slate-300 font-bold text-xs uppercase tracking-widest mb-6">
+            <span className="inline-block py-1.5 px-3 rounded-full bg-white/5 border border-white/10 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6">
               Our Core Services
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-[var(--heading)] mb-6 leading-tight">
               Corporate Training &<br className="hidden md:block" /> Custom Software
             </h2>
-            <p className="text-lg text-slate-400">
+            <p className="text-lg text-slate-500">
               Our premium services help businesses automate processes, launch digital products, and train their workforce with cutting-edge technology skills.
             </p>
           </div>
@@ -226,21 +226,21 @@ export function PremiumAboutDigiatureStyle() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative bg-slate-800/50 rounded-2xl p-1 overflow-hidden"
+                className="group relative bg-slate-800/50 rounded-[18px] p-1 overflow-hidden"
               >
                 {/* Glowing Border Mask Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-[#2eb872] to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-[var(--primary)] to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Inner Card Content */}
-                <div className="relative h-full bg-slate-900 rounded-xl p-8 flex flex-col items-start transition-all duration-300">
-                  <div className="w-14 h-14 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 flex items-center justify-center mb-6 group-hover:text-[#2eb872] group-hover:border-[#2eb872]/30 transition-colors duration-300">
+                <div className="relative h-full bg-white rounded-[18px] p-8 flex flex-col items-start transition-all duration-300">
+                  <div className="w-14 h-14 rounded-[18px] bg-slate-800 border border-slate-700 text-slate-600 flex items-center justify-center mb-6 group-hover:text-[var(--primary)] group-hover:border-[var(--primary)]/30 transition-colors duration-300">
                     {service.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-teal-300 transition-all duration-300">
+                  <h4 className="text-xl font-bold text-[var(--heading)] mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-teal-300 transition-all duration-300">
                     {service.title}
                   </h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-slate-500 text-sm leading-relaxed">
                     {service.desc}
                   </p>
                 </div>

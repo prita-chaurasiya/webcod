@@ -1,6 +1,7 @@
 "use client";
 
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
+import { PremiumFeatureCard } from "@/components/PremiumFeatureCard";
 import { Bot, Zap, Shield, Cpu, Layers, Link as LinkIcon, Database, ArrowRight, Settings, TrendingUp, Layers as LayersIcon, Zap as ZapIcon, Brain, Network, Cloud, ShieldCheck, Headphones, Briefcase, ShoppingCart, Building, DollarSign, GraduationCap, HeartPulse } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -13,18 +14,18 @@ export default function Page() {
       <div 
         className="relative py-24 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(230, 64, 64, 0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop')"
+          backgroundImage: "linear-gradient(rgba(230, 64, 64, 0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop')"
         }}
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 capitalize tracking-tight">Business Automation Solutions</h1>
-            <ul className="flex items-center gap-2 text-white/90 font-medium uppercase text-sm tracking-wider">
+            <h1 className="text-4xl md:text-5xl font-bold text-[var(--heading)] mb-4 capitalize tracking-tight">Business Automation Solutions</h1>
+            <ul className="flex items-center gap-2 text-[var(--heading)]/90 font-medium uppercase text-sm tracking-wider">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+                <Link href="/" className="hover:text-[var(--heading)] transition-colors">HOME</Link>
               </li>
-              <li className="text-white/60">/</li>
-              <li className="text-white font-bold capitalize">business automation solutions</li>
+              <li className="text-[var(--heading)]/60">/</li>
+              <li className="text-[var(--heading)] font-bold capitalize">business automation solutions</li>
             </ul>
           </div>
         </div>
@@ -59,7 +60,7 @@ export default function Page() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-blue-600/30 transition-all">
+                <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-blue-600/30 transition-all">
                   Explore Solutions
                 </Link>
                 <Link href="/contact" className="bg-white border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 text-slate-700 font-bold py-3 px-8 rounded-full shadow-sm transition-all">
@@ -73,18 +74,18 @@ export default function Page() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-700">
+              <div className="bg-slate-800 rounded-[18px] shadow-lg overflow-hidden border border-slate-700">
                 {/* Browser bar fake */}
-                <div className="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="bg-white px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                  <div className="w-3 h-3 rounded-full bg-slate-50"></div>
+                  <div className="w-3 h-3 rounded-full bg-slate-50"></div>
+                  <div className="w-3 h-3 rounded-full bg-slate-50"></div>
                 </div>
                 <div className="p-1">
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" 
                     alt="Automation Dashboard" 
-                    className="w-full h-auto rounded-xl"
+                    className="w-full h-auto rounded-[18px] img-premium"
                   />
                 </div>
               </div>
@@ -127,9 +128,9 @@ export default function Page() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   key={idx}
-                  className="bg-white border border-slate-100 shadow-lg shadow-slate-200/50 p-6 rounded-2xl flex items-start gap-5 hover:-translate-y-1 transition-transform"
+                  className="bg-white border border-slate-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-slate-200/50 p-6 rounded-[18px] flex items-start gap-5 hover:-translate-y-1 transition-transform"
                 >
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-[18px] flex items-center justify-center shrink-0">
                     <item.icon className="w-7 h-7" />
                   </div>
                   <div>
@@ -144,63 +145,64 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 4. Services Grid */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+      {/* 4. Services Grid replaced with Premium Feature Cards */}
+      <section className="py-24 lg:py-32 bg-slate-50 border-t border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">AI Services</span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Our Artificial Intelligence Services</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Artificial Intelligence Services</h2>
+            <p className="text-xl text-slate-600 font-medium">
               At WebCodian, we build innovative AI solutions that help businesses automate operations, improve decision-making, and create intelligent digital experiences.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { badge: "Generative AI", icon: ZapIcon, title: "Generative AI Solutions", desc: "Build intelligent AI systems that generate content, automate workflows, create documents, and enhance productivity.", link: "/generative-ai", color: "from-purple-500 to-indigo-500" },
-              { badge: "AI Agents", icon: Brain, title: "AI Agents Development", desc: "Develop custom AI agents capable of handling tasks, managing workflows, supporting teams, and automating operations.", link: "/ai-agent-development", color: "from-blue-500 to-cyan-500" },
-              { badge: "Conversational AI", icon: Headphones, title: "Chatbot & Voice AI", desc: "Create smart chatbots and voice assistants that automate conversations, improve engagement, and deliver instant support.", link: "/chatbot-voice-ai", color: "from-emerald-500 to-teal-500" },
-              { badge: "Data Intelligence", icon: TrendingUp, title: "Predictive Analytics", desc: "Use advanced AI models to predict trends, forecast outcomes, analyze customer behavior, and support decisions.", link: "/services", color: "from-orange-500 to-amber-500" },
-              { badge: "Computer Vision", icon: ShieldCheck, title: "Computer Vision Solutions", desc: "Implement AI-powered image and video analysis systems for object detection, recognition, monitoring, and automation.", link: "/services", color: "from-rose-500 to-pink-500" },
-              { badge: "AI Products", icon: Layers, title: "AI SaaS Products", desc: "Design and develop scalable AI-powered SaaS platforms that streamline processes, enhance experiences, and drive growth.", link: "/ai-saas-product", color: "from-blue-600 to-indigo-600" }
-            ].map((srv, i) => (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                key={i}
-                className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all relative overflow-hidden group"
-              >
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${srv.color} opacity-5 rounded-bl-full group-hover:scale-150 transition-transform duration-700`}></div>
-                
-                <span className="inline-block bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                  {srv.badge}
-                </span>
-                
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${srv.color} text-white flex items-center justify-center mb-6 shadow-lg shadow-slate-200`}>
-                  <srv.icon className="w-6 h-6" />
-                </div>
-                
-                <h4 className="text-xl font-bold text-slate-900 mb-3">{srv.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">{srv.desc}</p>
-                
-                <Link href={srv.link} className="inline-flex items-center gap-2 text-blue-600 font-bold text-sm hover:text-blue-800 transition-colors">
-                  Explore More <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            ))}
+          <div className="space-y-12">
+            <PremiumFeatureCard 
+              number="01"
+              imageTitle="Gen AI"
+              imageSrc="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+              category="GENERATIVE AI"
+              title="Generative AI Solutions"
+              description="Build intelligent AI systems that generate content, automate workflows, create documents, and enhance productivity. Harness the power of Generative AI to scale your operations."
+              linkText="Explore Generative AI"
+              href="/generative-ai"
+              reverse={false}
+            />
+
+            <PremiumFeatureCard 
+              number="02"
+              imageTitle="AI Agents"
+              imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+              category="AI AUTOMATION"
+              title="AI Agents Development"
+              description="Develop custom AI agents capable of handling tasks, managing workflows, supporting teams, and automating operations autonomously without human intervention."
+              linkText="Explore AI agent development"
+              href="/ai-agent-development"
+              reverse={true}
+            />
+
+            <PremiumFeatureCard 
+              number="03"
+              imageTitle="Voice AI"
+              imageSrc="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=800"
+              category="CONVERSATIONAL AI"
+              title="Chatbot & Voice AI"
+              description="Create smart chatbots and voice assistants that automate conversations, improve engagement, and deliver instant 24/7 support to your customers globally."
+              linkText="Explore voice AI"
+              href="/chatbot-voice-ai"
+              reverse={false}
+            />
           </div>
         </div>
       </section>
 
       {/* 5. Why Business Automation Is Important (Orbital Layout) */}
-      <section className="py-24 bg-slate-900 overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2 block">Operational Efficiency</span>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Why Business Automation Is Important</h2>
-            <p className="text-slate-400 text-lg">
+            <h2 className="text-3xl md:text-4xl font-black text-[var(--heading)] mb-6">Why Business Automation Is Important</h2>
+            <p className="text-slate-500 text-lg">
               Manual processes often slow down business growth and increase operational costs. Automation helps organizations become more agile, efficient, and scalable.
             </p>
           </div>
@@ -210,15 +212,15 @@ export default function Page() {
             {/* Left Side Benefits */}
             <div className="w-full lg:w-1/3 space-y-8">
               {[
-                { num: "01", color: "text-emerald-400", title: "Faster workflow execution", desc: "Improve operational speed with intelligent automated systems." },
+                { num: "01", color: "text-[var(--primary)]", title: "Faster workflow execution", desc: "Improve operational speed with intelligent automated systems." },
                 { num: "02", color: "text-cyan-400", title: "Reduced human errors", desc: "Minimize manual mistakes and improve operational accuracy." },
                 { num: "03", color: "text-sky-400", title: "Improved productivity", desc: "Allow teams to focus on strategy and high-value operations." }
               ].map((item, i) => (
                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} key={i} className="flex gap-6 items-start">
                   <div className={`text-4xl font-black ${item.color} opacity-80 shrink-0`}>{item.num}</div>
                   <div>
-                    <h4 className="text-white font-bold text-xl mb-2">{item.title}</h4>
-                    <p className="text-slate-400 text-sm">{item.desc}</p>
+                    <h4 className="text-[var(--heading)] font-bold text-xl mb-2">{item.title}</h4>
+                    <p className="text-slate-500 text-sm">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -228,7 +230,7 @@ export default function Page() {
             <div className="w-full lg:w-1/3 flex justify-center py-12 lg:py-0 relative">
               <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
                 {/* Center Hub */}
-                <div className="relative z-20 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex flex-col items-center justify-center text-white shadow-2xl shadow-blue-500/50 border-4 border-slate-800">
+                <div className="relative z-20 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex flex-col items-center justify-center text-[var(--heading)] shadow-lg shadow-blue-500/50 border-4 border-slate-800">
                   <span className="text-4xl font-black leading-none mb-1">6</span>
                   <span className="text-xs uppercase tracking-widest font-bold">Benefits</span>
                 </div>
@@ -247,7 +249,7 @@ export default function Page() {
                     return (
                       <div 
                         key={idx}
-                        className="absolute w-12 h-12 bg-slate-800 rounded-full border-2 border-slate-700 flex items-center justify-center text-blue-400 shadow-lg"
+                        className="absolute w-12 h-12 bg-slate-800 rounded-full border-2 border-slate-700 flex items-center justify-center text-blue-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]"
                         style={{
                           top: '50%', left: '50%',
                           transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-140px) rotate(-${angle}deg)` // The second rotate keeps the icon upright if we wanted, but since the parent rotates, we need counter-rotation
@@ -268,13 +270,13 @@ export default function Page() {
               {[
                 { num: "04", color: "text-blue-400", title: "Better customer experience", desc: "Deliver faster communication and streamlined services." },
                 { num: "05", color: "text-indigo-400", title: "Real-time tracking", desc: "Generate insights instantly with automation-driven analytics." },
-                { num: "06", color: "text-purple-400", title: "Lower operational costs", desc: "Reduce repetitive manual workloads and optimize resources." }
+                { num: "06", color: "text-[var(--primary)]", title: "Lower operational costs", desc: "Reduce repetitive manual workloads and optimize resources." }
               ].map((item, i) => (
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} key={i} className="flex gap-6 items-start lg:flex-row-reverse text-left lg:text-right">
                   <div className={`text-4xl font-black ${item.color} opacity-80 shrink-0`}>{item.num}</div>
                   <div>
-                    <h4 className="text-white font-bold text-xl mb-2">{item.title}</h4>
-                    <p className="text-slate-400 text-sm">{item.desc}</p>
+                    <h4 className="text-[var(--heading)] font-bold text-xl mb-2">{item.title}</h4>
+                    <p className="text-slate-500 text-sm">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -300,15 +302,15 @@ export default function Page() {
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
             
             <div className="flex flex-col gap-8 w-full lg:w-1/3">
-              <div className="flex items-center gap-4 bg-red-50/50 p-4 rounded-2xl border border-red-100">
-                <div className="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-red-500/30"><ShoppingCart className="w-6 h-6"/></div>
+              <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-[18px] border border-slate-100">
+                <div className="w-14 h-14 bg-slate-50 text-[var(--heading)] rounded-full flex items-center justify-center shrink-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-red-500/30"><ShoppingCart className="w-6 h-6"/></div>
                 <div>
                   <h4 className="font-bold text-slate-900">E-commerce</h4>
                   <p className="text-sm text-slate-600">Order processing automation, inventory management and customer support.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-orange-50/50 p-4 rounded-2xl border border-orange-100">
-                <div className="w-14 h-14 bg-orange-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/30"><Building className="w-6 h-6"/></div>
+              <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-[18px] border border-slate-100">
+                <div className="w-14 h-14 bg-slate-50 text-[var(--heading)] rounded-full flex items-center justify-center shrink-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-orange-500/30"><Building className="w-6 h-6"/></div>
                 <div>
                   <h4 className="font-bold text-slate-900">Real Estate</h4>
                   <p className="text-sm text-slate-600">CRM workflows, inquiry systems and document automation.</p>
@@ -317,7 +319,7 @@ export default function Page() {
             </div>
 
             <div className="w-full lg:w-1/3 flex justify-center">
-              <div className="w-64 h-64 bg-slate-100 rounded-full flex items-center justify-center border-8 border-white shadow-2xl relative overflow-hidden p-6">
+              <div className="w-64 h-64 bg-slate-100 rounded-full flex items-center justify-center border-8 border-white shadow-lg relative overflow-hidden p-6">
                 <div className="absolute inset-0 bg-blue-600 opacity-5 rounded-full"></div>
                 <div className="text-center relative z-10">
                    <Network className="w-16 h-16 text-blue-600 mx-auto mb-4" />
@@ -327,22 +329,22 @@ export default function Page() {
             </div>
 
             <div className="flex flex-col gap-8 w-full lg:w-1/3">
-              <div className="flex items-center gap-4 bg-green-50/50 p-4 rounded-2xl border border-green-100">
-                <div className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-green-500/30"><DollarSign className="w-6 h-6"/></div>
+              <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-[18px] border border-slate-100">
+                <div className="w-14 h-14 bg-slate-50 text-[var(--heading)] rounded-full flex items-center justify-center shrink-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-green-500/30"><DollarSign className="w-6 h-6"/></div>
                 <div>
                   <h4 className="font-bold text-slate-900">FinTech</h4>
                   <p className="text-sm text-slate-600">Transaction monitoring and financial workflow automation systems.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
-                <div className="w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/30"><HeartPulse className="w-6 h-6"/></div>
+              <div className="flex items-center gap-4 bg-blue-50/50 p-4 rounded-[18px] border border-blue-100">
+                <div className="w-14 h-14 bg-blue-500 text-[var(--heading)] rounded-full flex items-center justify-center shrink-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-blue-500/30"><HeartPulse className="w-6 h-6"/></div>
                 <div>
                   <h4 className="font-bold text-slate-900">Healthcare</h4>
                   <p className="text-sm text-slate-600">Patient automation and AI-powered healthcare support systems.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-purple-50/50 p-4 rounded-2xl border border-purple-100">
-                <div className="w-14 h-14 bg-purple-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-purple-500/30"><GraduationCap className="w-6 h-6"/></div>
+              <div className="flex items-center gap-4 bg-slate-50/50 p-4 rounded-[18px] border border-slate-100">
+                <div className="w-14 h-14 bg-slate-50 text-[var(--heading)] rounded-full flex items-center justify-center shrink-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-purple-500/30"><GraduationCap className="w-6 h-6"/></div>
                 <div>
                   <h4 className="font-bold text-slate-900">Education</h4>
                   <p className="text-sm text-slate-600">Student enrollment systems and online learning workflow automation.</p>
@@ -372,7 +374,7 @@ export default function Page() {
               { icon: Layers, label: "CRM & ERP Integrations" },
               { icon: Bot, label: "Robotic Process Automation (RPA)" }
             ].map((tech, i) => (
-              <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-[18px] border border-slate-200 shadow-sm">
                 <tech.icon className="w-6 h-6 text-blue-600 shrink-0" />
                 <span className="font-bold text-slate-700">{tech.label}</span>
               </div>
@@ -387,8 +389,8 @@ export default function Page() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center bg-blue-700/50 rounded-[2.5rem] p-8 md:p-12 border border-white/10 backdrop-blur-sm">
             
-            <div className="lg:col-span-7 text-white">
-              <span className="inline-block bg-white/10 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-6">
+            <div className="lg:col-span-7 text-[var(--heading)]">
+              <span className="inline-block bg-white/10 text-[var(--heading)] px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-6">
                 AI Automation
               </span>
               <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
@@ -402,8 +404,8 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-white/10 rounded-2xl p-8 border border-white/20">
-              <p className="text-white font-bold text-lg mb-6">Our solutions help you:</p>
+            <div className="lg:col-span-5 bg-white/10 rounded-[18px] p-8 border border-white/20">
+              <p className="text-[var(--heading)] font-bold text-lg mb-6">Our solutions help you:</p>
               <ul className="space-y-4">
                 {[
                   "Automate customer interactions",
@@ -412,7 +414,7 @@ export default function Page() {
                   "Enable predictive analytics",
                   "Enhance decision-making"
                 ].map((text, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white">
+                  <li key={i} className="flex items-center gap-3 text-[var(--heading)]">
                     <ShieldCheck className="w-5 h-5 text-blue-300 shrink-0" />
                     <span className="font-medium">{text}</span>
                   </li>
@@ -454,7 +456,7 @@ export default function Page() {
                   { icon: Shield, label: "Secure & Reliable Systems" },
                   { icon: Headphones, label: "24/7 Dedicated Support" }
                 ].map((item, i) => (
-                  <div key={i} className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div key={i} className="bg-slate-50 border border-slate-100 rounded-[18px] p-6 flex items-center gap-4 hover:shadow-md transition-shadow">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm shrink-0">
                       <item.icon className="w-6 h-6" />
                     </div>
@@ -469,17 +471,17 @@ export default function Page() {
       </section>
 
       {/* 10. CTA */}
-      <section className="py-16 bg-slate-900 border-t border-slate-800">
+      <section className="py-16 bg-white border-t border-slate-800">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8 items-center bg-slate-800 rounded-[2rem] p-8 md:p-12 shadow-2xl border border-slate-700">
-            <div className="md:col-span-2 text-white">
+          <div className="grid md:grid-cols-3 gap-8 items-center bg-slate-800 rounded-[2rem] p-8 md:p-12 shadow-lg border border-slate-700">
+            <div className="md:col-span-2 text-[var(--heading)]">
               <span className="inline-block bg-white/10 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Intelligent Automation</span>
               <h2 className="text-3xl font-black mb-4">Transform Your Business with Automation</h2>
-              <p className="text-slate-400 mb-4">Ready to automate your business processes and improve operational efficiency? WebCodian provides scalable Business Automation Solutions designed to optimize workflows and accelerate growth.</p>
-              <p className="text-slate-400 font-medium">Contact our team today to build intelligent automation systems for your business.</p>
+              <p className="text-slate-500 mb-4">Ready to automate your business processes and improve operational efficiency? WebCodian provides scalable Business Automation Solutions designed to optimize workflows and accelerate growth.</p>
+              <p className="text-slate-500 font-medium">Contact our team today to build intelligent automation systems for your business.</p>
             </div>
             <div className="md:col-span-1 md:text-right text-center">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full transition-colors w-full sm:w-auto text-lg shadow-lg shadow-blue-600/20">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full transition-colors w-full sm:w-auto text-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-blue-600/20">
                 Contact Our Team <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

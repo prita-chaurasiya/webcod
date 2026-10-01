@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Restaurant & Hospitality Digital Solutions | WebCodian",
-  description: "Next-generation Point of Sale (POS) systems and digital ordering platforms designed for the modern hospitality industry.",
-};
-
-const restaurantData: IndustryPageData = {
-  id: "restaurant",
-  title: "Restaurant & Hospitality",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Next-generation Point of Sale (POS) systems and digital ordering platforms designed for the modern hospitality industry.",
-  heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around the dining experience.",
-  introDescription: "The hospitality industry is driven by speed, accuracy, and customer satisfaction. Relying on outdated POS systems and manual ticketing slows down service and hurts your bottom line. We build fully integrated digital ecosystems—from sleek consumer ordering apps to powerful kitchen display systems—that streamline your entire operation.",
+const industryData = {
+  title: "Restaurant",
+  overview: "Empowering the restaurant sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Fragmented Operations",
-      description: "Managing dine-in, takeout, and third-party delivery apps on separate devices creates chaos in the kitchen."
-    },
-    {
-      id: "02",
-      title: "Order Accuracy",
-      description: "Manual ticket writing leads to miscommunications between front-of-house and back-of-house staff."
-    },
-    {
-      id: "03",
-      title: "Inventory Waste",
-      description: "Without automated recipe costing and real-time inventory tracking, restaurants suffer from massive food waste."
-    },
-    {
-      id: "04",
-      title: "Customer Loyalty",
-      description: "Failing to capture diner data means restaurants miss out on personalized marketing and repeat business."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Calculator",
-      title: "Cloud POS Systems",
-      description: "Modern Point of Sale systems that unify orders, payments, and staff management in one interface."
-    },
-    {
-      icon: "Smartphone",
-      title: "Digital Ordering Apps",
-      description: "Custom branded mobile applications for seamless online ordering, delivery, and loyalty rewards."
-    },
-    {
-      icon: "ChefHat",
-      title: "Kitchen Display Systems (KDS)",
-      description: "Digital screens that replace paper tickets, routing orders directly to the correct prep stations."
-    },
-    {
-      icon: "Store",
-      title: "Inventory Management",
-      description: "Backend tools for automated stock tracking, recipe costing, and vendor ordering."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From the customer's phone to the kitchen line."
-  },
-  whatWeCanBuild: [
-    "Custom Restaurant POS Systems",
-    "Branded Mobile Ordering Apps",
-    "QR Code Table Menus & Ordering",
-    "Kitchen Display Systems (KDS)",
-    "Restaurant Inventory ERPs",
-    "Franchise Management Dashboards"
-  ],
-  useCases: [
-    {
-      title: "Front of House",
-      items: ["Tableside ordering tablets", "Contactless QR payments", "Waitlist management", "Loyalty program integration"]
-    },
-    {
-      title: "Back of House",
-      items: ["Digital ticket routing", "Prep time tracking", "Recipe cost analysis", "Automated stock alerts"]
-    }
-  ],
-  technologies: ["React", "React Native", "Node.js", "Firebase", "Stripe Terminal", "PostgreSQL", "AWS"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function RestaurantIndustryPage() {
-  return <PremiumIndustryDetailPage data={restaurantData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Restaurant" 
+        subtitle="Advanced digital solutions tailored for the restaurant industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Restaurant" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

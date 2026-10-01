@@ -8,7 +8,7 @@ export default function DigitalMarketingPage() {
         title="Digital Marketing"
         badgeText="ROI DRIVEN"
         description="Data-driven marketing campaigns designed to drive traffic, capture leads, and scale your sales to new heights. We connect your brand with the right audience."
-        heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
         overviewTitle="Maximize Your Digital Footprint"
         overviewDescription="In today's digital landscape, visibility is everything. Our strategic digital marketing services combine creativity and data analytics to deliver measurable business growth."
         features={[

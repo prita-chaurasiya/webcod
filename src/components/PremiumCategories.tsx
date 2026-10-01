@@ -20,10 +20,10 @@ const categories = [
 
 const colors = [
   { bg: "bg-blue-50/70", glow: "from-blue-200/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "from-blue-400 to-cyan-400" },
-  { bg: "bg-emerald-50/70", glow: "from-emerald-200/50", iconBg: "bg-emerald-100", text: "text-emerald-700", border: "from-emerald-400 to-teal-400" },
-  { bg: "bg-orange-50/70", glow: "from-orange-200/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "from-orange-400 to-amber-400" },
-  { bg: "bg-purple-50/70", glow: "from-purple-200/50", iconBg: "bg-purple-100", text: "text-purple-700", border: "from-purple-400 to-fuchsia-400" },
-  { bg: "bg-pink-50/70", glow: "from-pink-200/50", iconBg: "bg-pink-100", text: "text-pink-700", border: "from-pink-400 to-rose-400" },
+  { bg: "bg-slate-50/70", glow: "from-emerald-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-emerald-400 to-teal-400" },
+  { bg: "bg-slate-50/70", glow: "from-orange-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-orange-400 to-amber-400" },
+  { bg: "bg-slate-50/70", glow: "from-purple-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-purple-400 to-fuchsia-400" },
+  { bg: "bg-slate-50/70", glow: "from-pink-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-pink-400 to-rose-400" },
   { bg: "bg-indigo-50/70", glow: "from-indigo-200/50", iconBg: "bg-indigo-100", text: "text-indigo-700", border: "from-indigo-400 to-blue-400" },
 ];
 
@@ -50,9 +50,9 @@ export function PremiumCategories() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 text-orange-600 font-semibold text-sm mb-4 tracking-widest shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-[var(--primary)] font-semibold text-sm mb-4 tracking-widest shadow-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-slate-50 animate-pulse"></span>
             OUR CATEGORIES
           </motion.div>
           <motion.h2 
@@ -97,13 +97,13 @@ export function PremiumCategories() {
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Link href={`/industries/${cat.slug}`} className="block group w-full h-full outline-none">
-                  <div className="relative rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center gap-6 shadow-[0_5px_15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 overflow-hidden h-full">
+                  <div className="relative rounded-[18px] p-6 md:p-8 flex flex-col items-center justify-center text-center gap-6 shadow-[0_5px_15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 overflow-hidden h-full">
                     
                     {/* Always-on Animated Gradient Border Overlay */}
                     <motion.div 
                       animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                       transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                      className={`absolute inset-0 bg-gradient-to-r ${color.border} bg-[length:200%_200%] opacity-100 rounded-2xl -z-10`}
+                      className={`absolute inset-0 bg-gradient-to-r ${color.border} bg-[length:200%_200%] opacity-100 rounded-[18px] -z-10`}
                     />
                     
                     {/* Inner slightly tinted white background */}
@@ -117,10 +117,10 @@ export function PremiumCategories() {
                     />
 
                     <div 
-                      className={`w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10`}
+                      className={`w-16 h-16 md:w-20 md:h-20 bg-white rounded-[18px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10`}
                       style={{ transform: "translateZ(30px)" }}
                     >
-                      <img src={cat.icon} alt={cat.title} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:-translate-y-1 transition-transform duration-500" />
+                      <img src={cat.icon} alt={cat.title} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:-translate-y-1 transition-transform duration-500 img-premium" />
                     </div>
                     
                     <div style={{ transform: "translateZ(20px)" }} className="relative z-10">

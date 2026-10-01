@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Consulting & Enterprise Digital Solutions | WebCodian",
-  description: "Digital transformation tools and data analytics platforms designed to scale professional services and enterprise consulting.",
-};
-
-const consultingData: IndustryPageData = {
-  id: "consulting",
-  title: "Consulting & Enterprise",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Digital transformation tools and data analytics platforms designed to scale professional services and enterprise consulting.",
-  heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around strategic growth.",
-  introDescription: "In the professional services sector, data is the ultimate currency. Firms must quickly analyze complex information, collaborate securely with global clients, and deliver actionable insights. We build secure, high-performance enterprise tools that automate workflows, visualize data, and elevate the consulting experience.",
+const industryData = {
+  title: "Consulting",
+  overview: "Empowering the consulting sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Data Silos",
-      description: "Critical client data and market research are scattered across different platforms, making holistic analysis nearly impossible."
-    },
-    {
-      id: "02",
-      title: "Client Collaboration",
-      description: "Relying on email for sensitive document exchange and project tracking creates security risks and communication gaps."
-    },
-    {
-      id: "03",
-      title: "Workflow Bottlenecks",
-      description: "Manual reporting, onboarding, and compliance checks consume valuable billable hours."
-    },
-    {
-      id: "04",
-      title: "Knowledge Management",
-      description: "Consultancies struggle to centralize institutional knowledge and past project assets for future reuse."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Network",
-      title: "Client Portals",
-      description: "Secure, branded environments for document sharing, project tracking, and direct client communication."
-    },
-    {
-      icon: "BarChart4",
-      title: "Analytics Dashboards",
-      description: "Custom data visualization tools that aggregate metrics from multiple sources into actionable insights."
-    },
-    {
-      icon: "Workflow",
-      title: "Workflow Automation",
-      description: "Intelligent systems that automate onboarding, compliance checks, and standard reporting procedures."
-    },
-    {
-      icon: "FileSpreadsheet",
-      title: "Knowledge Base Systems",
-      description: "Centralized, AI-powered repositories for storing and retrieving institutional knowledge and research."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From raw data to actionable enterprise strategy."
-  },
-  whatWeCanBuild: [
-    "Enterprise Client Portals",
-    "Business Intelligence (BI) Dashboards",
-    "Workflow Automation Software",
-    "Secure Document Management Systems",
-    "Internal HR & Resource Planners",
-    "Custom Analytics APIs"
-  ],
-  useCases: [
-    {
-      title: "Client Engagement",
-      items: ["Secure file exchange", "Real-time project tracking", "Interactive data presentations", "Automated status reports"]
-    },
-    {
-      title: "Internal Operations",
-      items: ["Resource allocation", "Time & billing tracking", "Compliance management", "Knowledge retrieval"]
-    }
-  ],
-  technologies: ["React", "Python", "Node.js", "Tableau Integration", "AWS", "PostgreSQL", "PowerBI API"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function ConsultingIndustryPage() {
-  return <PremiumIndustryDetailPage data={consultingData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Consulting" 
+        subtitle="Advanced digital solutions tailored for the consulting industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Consulting" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

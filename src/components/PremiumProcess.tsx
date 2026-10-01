@@ -24,9 +24,9 @@ export function PremiumProcess() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 font-semibold text-sm mb-4 tracking-widest"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-[var(--primary)] font-semibold text-sm mb-4 tracking-widest"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-slate-50 animate-pulse"></span>
             HOW WE WORK
           </motion.div>
           <motion.h2 
@@ -63,13 +63,13 @@ export function PremiumProcess() {
                 className="flex flex-col items-center text-center relative group shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none"
               >
                 {/* Number Badge */}
-                <div className="w-16 h-16 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center mb-6 shadow-xl relative z-10 group-hover:border-emerald-500 group-hover:scale-110 transition-all duration-300">
-                  <span className="text-xl font-bold text-slate-400 group-hover:text-emerald-500 transition-colors">{process.id}</span>
+                <div className="w-16 h-16 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center mb-6 shadow-xl relative z-10 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
+                  <span className="text-xl font-bold text-slate-500 group-hover:text-[var(--primary)] transition-colors">{process.id}</span>
                 </div>
                 
                 {/* Content Card */}
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group-hover:shadow-xl group-hover:border-emerald-100 transition-all duration-300 h-full w-full">
-                  <div className="text-emerald-500 flex justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-white p-6 rounded-[18px] shadow-sm border border-slate-100 group-hover:shadow-xl group-hover:border-slate-100 transition-all duration-300 h-full w-full">
+                  <div className="text-[var(--primary)] flex justify-center mb-4 group-hover:scale-110 transition-transform">
                     {process.icon}
                   </div>
                   <h3 className="font-bold text-slate-900 mb-2">{process.title}</h3>

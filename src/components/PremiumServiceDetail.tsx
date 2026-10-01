@@ -85,11 +85,11 @@ export function PremiumServiceDetail({
     <div className="bg-slate-50 min-h-screen">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-12 pb-10 lg:pt-20 lg:pb-12 overflow-hidden bg-slate-900 perspective-[1000px]">
+      <section className="relative pt-12 pb-10 lg:pt-20 lg:pb-12 overflow-hidden bg-white perspective-[1000px]">
         {/* Abstract Animated Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#2eb872]/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
           <svg className="absolute inset-0 w-full h-full opacity-[0.03] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid-pattern-hero" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -110,22 +110,22 @@ export function PremiumServiceDetail({
               className="lg:w-1/2 text-center lg:text-left"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-300 font-bold text-xs mb-5 tracking-widest backdrop-blur-md uppercase shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2eb872] animate-pulse"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-pulse"></span>
                 {badgeText}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-5 tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-[var(--heading)] leading-[1.1] mb-5 tracking-tight">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 ? 
-                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-blue-400"> {word}</span> : 
+                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400"> {word}</span> : 
                    <span key={i}> {word}</span>
                 )}
               </h1>
-              <p className="text-slate-400 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+              <p className="text-slate-500 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
                 {description}
               </p>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-[#2eb872] text-white font-bold rounded-xl hover:shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:-translate-y-0.5 transition-all duration-300 text-base group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-[var(--primary)] text-[var(--heading)] font-bold rounded-[18px] hover:shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:-translate-y-0.5 transition-all duration-300 text-base group"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -141,32 +141,32 @@ export function PremiumServiceDetail({
             >
               <div className="relative w-full max-w-lg mx-auto aspect-[4/3] lg:aspect-[16/11]">
                 {/* Glowing Aura */}
-                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[#2eb872]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
+                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
                 
                 {/* Device / Mockup Chrome */}
-                <div className="relative z-10 w-full h-full bg-slate-900/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
+                <div className="relative z-10 w-full h-full bg-white/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
                   
                   {/* Window Chrome Header */}
-                  <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-slate-950/70 backdrop-blur-md shrink-0">
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-slate-50/70 backdrop-blur-md shrink-0">
                     <div className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-rose-500/90 shadow-[0_0_8px_rgba(244,63,94,0.4)]"></span>
-                      <span className="w-3 h-3 rounded-full bg-amber-500/90 shadow-[0_0_8px_rgba(245,158,11,0.4)]"></span>
-                      <span className="w-3 h-3 rounded-full bg-emerald-500/90 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(244,63,94,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(245,158,11,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
                     </div>
                     
-                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#2eb872] animate-ping"></span>
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-600">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-ping"></span>
                       <span>{title.toLowerCase().replace(/[^a-z0-9]/g, '-')}.engine.preview</span>
                     </div>
 
-                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold tracking-widest uppercase">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-50/10 border border-slate-100/20 text-[var(--primary)] text-[10px] font-extrabold tracking-widest uppercase">
+                      <span className="w-1.5 h-1.5 rounded-full bg-slate-50 animate-pulse"></span>
                       <span>LIVE</span>
                     </div>
                   </div>
 
                   {/* Video / GIF Display Container */}
-                  <div className="relative flex-1 w-full h-full overflow-hidden bg-slate-950">
+                  <div className="relative flex-1 w-full h-full overflow-hidden bg-slate-50">
                     {isVideo ? (
                       <video
                         autoPlay
@@ -181,7 +181,7 @@ export function PremiumServiceDetail({
                       <img
                         src={resolvedMedia}
                         alt={title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 img-premium"
                       />
                     )}
                     
@@ -190,12 +190,12 @@ export function PremiumServiceDetail({
 
                     {/* Bottom Floating Badges */}
                     <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between pointer-events-none">
-                      <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/15 text-[11px] font-bold text-white shadow-xl">
-                        <span className="w-2 h-2 rounded-full bg-[#2eb872] animate-pulse"></span>
+                      <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-[18px] bg-white/90 backdrop-blur-md border border-white/15 text-[11px] font-bold text-[var(--heading)] shadow-xl">
+                        <span className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
                         <span>Enterprise Build</span>
                       </div>
 
-                      <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
+                      <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-[18px] bg-white/10 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-600">
                         <span>⚡ 60 FPS</span>
                       </div>
                     </div>
@@ -270,7 +270,7 @@ export function PremiumServiceDetail({
                     {/* Hover Glow */}
                     <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className="bg-slate-50 text-blue-600 p-4 rounded-2xl shrink-0 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-6 border border-slate-100 shadow-sm relative z-10">
+                    <div className="bg-slate-50 text-blue-600 p-4 rounded-[18px] shrink-0 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-6 border border-slate-100 shadow-sm relative z-10">
                       {feature.icon || <CheckCircle2 className="w-6 h-6" />}
                     </div>
                     <div className="relative z-10">
@@ -290,26 +290,26 @@ export function PremiumServiceDetail({
               className="lg:w-1/2 w-full transform-gpu"
             >
                {featuresImage ? (
-                  <div className="relative p-2 rounded-[3rem] bg-gradient-to-br from-slate-100 to-white shadow-2xl group transform transition-transform duration-700 hover:rotate-y-[-5deg]">
-                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-[#2eb872]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative p-2 rounded-[3rem] bg-gradient-to-br from-slate-100 to-white shadow-lg group transform transition-transform duration-700 hover:rotate-y-[-5deg]">
+                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-[var(--primary)]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
                      <div className="rounded-[2.5rem] overflow-hidden relative border-4 border-white shadow-inner bg-slate-50">
                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-                       <img src={featuresImage} alt="Features" className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000 ease-out" />
+                       <img src={featuresImage} alt="Features" className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000 ease-out img-premium" />
                      </div>
                   </div>
                ) : (
-                  <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-br from-slate-200 via-slate-50 to-slate-200 shadow-2xl overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-[#2eb872]/10 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-br from-slate-200 via-slate-50 to-slate-200 shadow-lg overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-[var(--primary)]/10 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                     
                     <div className="bg-white/80 backdrop-blur-xl p-10 md:p-14 rounded-[3rem] h-full flex flex-col justify-center relative overflow-hidden">
                       {/* Decorative Shapes */}
                       <motion.div 
                         animate={{ rotate: 360 }} 
                         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                        className="absolute -top-32 -right-32 w-64 h-64 border-[40px] border-[#2eb872]/5 rounded-full pointer-events-none" 
+                        className="absolute -top-32 -right-32 w-64 h-64 border-[40px] border-[var(--primary)]/5 rounded-full pointer-events-none" 
                       />
                       
-                      <h3 className="text-4xl font-black text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#2eb872]">Us?</span></h3>
+                      <h3 className="text-4xl font-black text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[var(--primary)]">Us?</span></h3>
                       
                       <ul className="space-y-8 relative z-10">
                         {["Tailored Solutions", "Experienced Team", "Quality Assurance", "Ongoing Support"].map((item, i) => (
@@ -318,9 +318,9 @@ export function PremiumServiceDetail({
                             whileHover={{ x: 10 }}
                             className="flex items-center gap-5 text-slate-800 font-extrabold text-lg group/item cursor-default"
                           >
-                            <div className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 text-[#2eb872] group-hover/item:bg-[#2eb872] group-hover/item:text-white group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                            <div className="relative flex items-center justify-center w-12 h-12 rounded-[18px] bg-slate-50 border border-slate-100 text-[var(--primary)] group-hover/item:bg-[var(--primary)] group-hover/item:text-white group-hover/item:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group-hover/item:scale-110 transition-all duration-300">
                               <CheckCircle2 className="w-6 h-6" />
-                              <div className="absolute inset-0 rounded-2xl bg-[#2eb872] blur-md opacity-0 group-hover/item:opacity-30 transition-opacity duration-300" />
+                              <div className="absolute inset-0 rounded-[18px] bg-[var(--primary)] blur-md opacity-0 group-hover/item:opacity-30 transition-opacity duration-300" />
                             </div>
                             <span className="group-hover/item:text-blue-600 transition-colors">{item}</span>
                           </motion.li>
@@ -355,10 +355,10 @@ export function PremiumServiceDetail({
                 {[...technologies, ...technologies, ...technologies].map((tech, idx) => (
                   <div
                     key={idx}
-                    className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-3xl p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
+                    className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
                   >
                     {typeof tech.icon === 'string' && tech.icon.startsWith('http') ? (
-                      <img src={tech.icon} alt={tech.name} className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300" />
+                      <img src={tech.icon} alt={tech.name} className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300 img-premium" />
                     ) : (
                       <div className="text-5xl group-hover:scale-110 transition-transform text-slate-700 group-hover:text-blue-600">{tech.icon}</div>
                     )}
@@ -384,7 +384,7 @@ export function PremiumServiceDetail({
               {faqs.map((faq, idx) => (
                 <div 
                   key={idx} 
-                  className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-blue-200'}`}
+                  className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-blue-200'}`}
                 >
                   <button 
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -393,7 +393,7 @@ export function PremiumServiceDetail({
                     <span className={`font-bold text-base lg:text-lg ${openFaq === idx ? 'text-blue-600' : 'text-slate-800'}`}>
                       {faq.q}
                     </span>
-                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
+                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-blue-600' : 'text-slate-500'}`} />
                   </button>
                   <motion.div
                     initial={false}

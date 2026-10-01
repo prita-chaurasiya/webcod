@@ -9,7 +9,7 @@ export function FeaturedCourses() {
   const featuredCourses = courses.filter((course) => course.featured).slice(0, 8);
 
   return (
-    <section className="py-24 bg-zinc-50 dark:bg-black">
+    <section className="py-24 bg-zinc-50 dark:bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -33,13 +33,13 @@ export function FeaturedCourses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group bg-white dark:bg-[#111111] rounded-2xl border border-zinc-200 dark:border-white/10 overflow-hidden hover:shadow-2xl hover:border-primary/50 transition-all flex flex-col h-full"
+              className="group bg-white dark:bg-[#111111] rounded-[18px] border border-zinc-200 dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all flex flex-col h-full"
             >
               {/* Image Placeholder */}
               <div className="relative h-48 bg-zinc-200 dark:bg-white/5 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                 <div className="absolute bottom-4 left-4 z-20">
-                  <span className="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-primary text-[var(--heading)] text-xs font-bold rounded-full">
                     {course.category}
                   </span>
                 </div>

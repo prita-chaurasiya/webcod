@@ -16,24 +16,24 @@ const perks = [
     icon: Laptop,
     title: "Modern Tech Stack",
     description: "Work with the latest frameworks, tools, and hardware. We provide everything you need to do your best work.",
-    color: "text-[#2eb872]",
+    color: "text-[var(--primary)]",
     bg: "bg-[#e8f6ef]",
-    border: "group-hover:border-[#2eb872]/50"
+    border: "group-hover:border-[var(--primary)]/50"
   },
   {
     icon: HeartPulse,
     title: "Health & Wellness",
     description: "Comprehensive health coverage and wellness programs because your well-being is our top priority.",
-    color: "text-red-500",
-    bg: "bg-red-50",
-    border: "group-hover:border-red-500/50"
+    color: "text-[var(--primary)]",
+    bg: "bg-slate-50",
+    border: "group-hover:border-slate-100/50"
   },
   {
     icon: GraduationCap,
     title: "Continuous Learning",
     description: "Annual budgets for courses, conferences, and certifications. We invest heavily in your professional growth.",
     color: "text-[#f59e0b]",
-    bg: "bg-orange-50",
+    bg: "bg-slate-50",
     border: "group-hover:border-[#f59e0b]/50"
   }
 ];
@@ -48,7 +48,7 @@ export function PremiumPerks() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#e8f6ef] text-[#2eb872] font-semibold text-sm mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#e8f6ef] text-[var(--primary)] font-semibold text-sm mb-4"
           >
             <Sparkles className="w-4 h-4" />
             PERKS & BENEFITS
@@ -73,12 +73,12 @@ export function PremiumPerks() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 50 }}
             >
-              <div className={`group bg-white rounded-3xl p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl transition-all duration-500 ${perk.border} transform hover:-translate-y-2 hover:rotate-x-2 flex items-start gap-6 h-full relative overflow-hidden`}>
+              <div className={`group bg-white rounded-[18px] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-500 ${perk.border} transform hover:-translate-y-2 hover:rotate-x-2 flex items-start gap-6 h-full relative overflow-hidden`}>
                 
                 {/* Subtle background glow on hover */}
                 <div className={`absolute -right-10 -top-10 w-40 h-40 ${perk.bg} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
-                <div className={`w-16 h-16 rounded-2xl ${perk.bg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                <div className={`w-16 h-16 rounded-[18px] ${perk.bg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                   <perk.icon className={`w-8 h-8 ${perk.color}`} />
                 </div>
                 

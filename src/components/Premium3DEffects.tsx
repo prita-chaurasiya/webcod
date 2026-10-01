@@ -48,7 +48,7 @@ export function Premium3DEffects() {
           y: mousePosition.y * 2 
         }} 
         transition={{ type: "spring", stiffness: 40, damping: 30 }}
-        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-[#2eb872]/5 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-[var(--primary)]/5 rounded-full blur-[120px]"
       />
       
       {/* Floating 3D-like glass particles */}
@@ -74,7 +74,7 @@ export function Premium3DEffects() {
               ease: "linear",
               delay: Math.random() * 5,
             }}
-            className="absolute rounded-xl bg-blue-500/10 backdrop-blur-[2px] border border-blue-500/20"
+            className="absolute rounded-[18px] bg-blue-500/10 backdrop-blur-[2px] border border-blue-500/20"
             style={{
               width: `${size}px`,
               height: `${size}px`,

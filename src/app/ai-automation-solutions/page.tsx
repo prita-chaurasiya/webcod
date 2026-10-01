@@ -1,159 +1,227 @@
 "use client";
 
-import { ServiceBannerShort } from "@/components/ServiceBannerShort";
 import { PremiumProjectCTA } from "@/components/PremiumProjectCTA";
-import { PremiumDigiatureServiceLayout } from "@/components/PremiumDigiatureServiceLayout";
-import { Bot, Zap, Shield, Star, CheckCircle2, Cpu } from "lucide-react";
+import { PremiumFeatureCard } from "@/components/PremiumFeatureCard";
+import { Bot, Zap, Shield, Cpu, ArrowRight, Brain, Network, Cloud, ShieldCheck, Layers, BarChart, Settings, Code2 } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <ServiceBannerShort 
-        title="AI & Automation Solutions"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "AI & Automation Solutions" }
-        ]}
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-      />
+    <main className="bg-white min-h-screen font-sans">
       
-      <PremiumDigiatureServiceLayout activeService="ai-automation">
-        <div className="space-y-12">
-          {/* Main Content Area */}
-          <div className="grid lg:grid-cols-12 gap-12 items-center mb-16">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-7"
-            >
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-                Elevate Your Business with <span className="text-blue-600">AI & Automation</span>
-              </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6 font-medium">
-                Our AI & Automation solutions are designed to give you a competitive edge. We blend innovative strategies with proven methodologies to deliver results that matter.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Exceptional quality and unparalleled performance tailored to your specific needs. From chatbots to fully autonomous agents, we build the future of your business.
-              </p>
-            </motion.div>
+      {/* 1. Breadcrumb Section */}
+      <div 
+        className="relative py-24 lg:py-32 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(10, 20, 50, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop')"
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+              AI & Automation Solutions
+            </h1>
+            <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              </li>
+              <li className="text-blue-300">/</li>
+              <li className="text-white">AI & AUTOMATION</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      {/* 2. Hero Section */}
+      <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              whileInView={{ opacity: 1, scale: 1 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="relative p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-[2rem] border border-white shadow-xl shadow-blue-900/5 group">
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-[2rem]"></div>
-                <motion.div 
-                  animate={{ y: [-10, 10, -10] }} 
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10 w-full aspect-square rounded-[1.5rem] overflow-hidden border-4 border-white shadow-md bg-white flex items-center justify-center"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" 
-                    alt="AI Automation Solutions" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay"></div>
-                </motion.div>
-                
-                {/* Floating decorative elements */}
-                <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center z-20">
-                  <Star className="w-5 h-5 text-blue-600" />
-                </motion.div>
-                <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute -bottom-6 -left-6 w-16 h-16 bg-blue-600 rounded-2xl shadow-xl flex items-center justify-center z-20 rotate-12">
-                  <Bot className="w-8 h-8 text-white" />
-                </motion.div>
+              <div className="mb-8 inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                Intelligent Workflows
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+                Transform Your Enterprise with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Cognitive Automation</span>
+              </h2>
+              
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
+                Our AI & Automation solutions blend advanced machine learning with robotic process automation to give your business a permanent competitive edge. 
+              </p>
+              <p className="text-lg text-slate-500 mb-10 leading-relaxed">
+                We design and deploy systems that learn, adapt, and operate autonomously—allowing your team to focus on strategic growth while we handle the operational heavy lifting.
+              </p>
+              
+              <div className="flex flex-wrap gap-5">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-[18px] shadow-lg hover:-translate-y-1 transition-all group">
+                  Start Your Journey <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </motion.div>
-          </div>
 
-          {/* Key Benefits Grid */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <h3 className="text-2xl font-bold text-slate-900 mb-6 border-l-4 border-blue-600 pl-4">Why Choose Us</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { icon: Star, title: "Strategic Approach", desc: "Customized strategies aligned with your core business objectives." },
-                { icon: Zap, title: "Rapid Execution", desc: "Agile methodologies ensuring quick turnaround without compromising quality." },
-                { icon: Shield, title: "Reliability", desc: "Built with industry-leading standards for maximum uptime and stability." },
-                { icon: CheckCircle2, title: "Expert Support", desc: "24/7 dedicated support from our team of seasoned professionals." }
-              ].map((benefit, idx) => (
-                <motion.div whileHover={{ y: -5, scale: 1.02 }} key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                    <benefit.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-2">{benefit.title}</h4>
-                    <p className="text-slate-600 text-sm leading-relaxed">{benefit.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Consultation Form */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            viewport={{ once: true }} 
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-16 bg-slate-900 rounded-[2rem] p-8 md:p-12 relative overflow-hidden shadow-2xl"
-          >
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#2eb872]/10 rounded-full blur-[80px] pointer-events-none"></div>
-            
-            <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-center">
-              <div className="lg:col-span-2 text-white">
-                <h3 className="text-3xl font-black mb-4 leading-tight">Ready to get started?</h3>
-                <p className="text-slate-400 mb-8 font-medium">Simply contact us through our form, and our team will schedule a free consultation. All our services can be tailored to meet your unique requirements.</p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><Zap className="w-4 h-4 text-[#2eb872]" /></div>
-                    <span className="text-sm font-semibold">Custom Packages</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><Shield className="w-4 h-4 text-[#2eb872]" /></div>
-                    <span className="text-sm font-semibold">Free Consultation</span>
-                  </div>
-                </div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay z-10"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop" 
+                  alt="AI Automation Concepts" 
+                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-1000"
+                />
               </div>
               
-              <div className="lg:col-span-3 bg-white rounded-3xl p-6 md:p-8 shadow-xl">
-                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
-                      <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="John Doe" required />
+              {/* Floating Element */}
+              <motion.div 
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
+              >
+                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                  <Bot className="w-8 h-8" />
+                </div>
+                <div>
+                  <div className="text-2xl font-black text-slate-900">99.9%</div>
+                  <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Accuracy</div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Core Offerings Grid replaced with Premium Feature Cards */}
+      <section className="py-24 lg:py-32 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Premium Solutions</h2>
+            <p className="text-xl text-slate-600 font-medium">
+              We deliver systemic, end-to-end automation architectures that integrate seamlessly with your existing infrastructure.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            <PremiumFeatureCard 
+              number="01"
+              imageTitle="AI Agents"
+              imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+              category="AI AUTOMATION"
+              title="Agents that do the work, not just answer questions"
+              description="Custom AI agents and chatbots on OpenAI, Claude and Gemini — grounded in your data, integrated with your CRM, ERP and WhatsApp, with a human in the loop wherever you want one. Prototype in weeks, not quarters."
+              linkText="Explore AI agent development"
+              href="/ai-agent-development"
+              reverse={false}
+            />
+
+            <PremiumFeatureCard 
+              number="02"
+              imageTitle="Gen AI"
+              imageSrc="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+              category="GENERATIVE AI"
+              title="Create intelligent content at scale"
+              description="Harness the power of Generative AI to automate document creation, marketing copy, internal reporting, and rich media. We fine-tune LLMs to perfectly match your brand's voice and strict compliance standards."
+              linkText="Explore Generative AI"
+              href="/generative-ai"
+              reverse={true}
+            />
+
+            <PremiumFeatureCard 
+              number="03"
+              imageTitle="Growth"
+              imageSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+              category="DIGITAL MARKETING & AI SEARCH"
+              title="Be found on Google — and inside ChatGPT"
+              description="SEO, paid media and now generative engine optimisation so your brand shows up where buyers actually look. Strategy, execution and reporting from the same team that builds your product."
+              linkText="Explore growth services"
+              href="/digital-marketing"
+              reverse={false}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Strategic Approach (Spacious Layout) */}
+      <section className="py-24 lg:py-32 bg-slate-900 text-white relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            
+            <div>
+              <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">How We Work</span>
+              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+                A Systemic Approach to Digital Evolution
+              </h2>
+              
+              <div className="space-y-12">
+                {[
+                  { num: "01", title: "Discovery & Blueprinting", desc: "We map your existing processes to identify high-impact automation opportunities." },
+                  { num: "02", title: "Model Development", desc: "Custom AI algorithms are trained on your proprietary data for maximum relevance." },
+                  { num: "03", title: "Integration & Deployment", desc: "Seamless rollout with zero downtime, connecting legacy systems with modern AI." }
+                ].map((step, i) => (
+                  <div key={i} className="flex gap-8 group">
+                    <div className="text-5xl font-black text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
+                      {step.num}
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Work Email</label>
-                      <input type="email" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="john@company.com" required />
+                      <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
+                      <p className="text-slate-400 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Company Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm" placeholder="Acme Corp" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">How can we help?</label>
-                    <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 focus:bg-white transition-all text-sm resize-none" placeholder="Tell us about your project..." required></textarea>
-                  </div>
-                  <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-blue-600/30">
-                    Book Free Consultation
-                  </button>
-                </form>
+                ))}
               </div>
             </div>
-          </motion.div>
+
+            <div className="hidden lg:block relative h-[700px]">
+               {/* Decorative structural elements to make it look premium */}
+               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-20 pl-12">
+                 <div className="w-full h-px bg-slate-700/50 relative">
+                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.8)]"></div>
+                 </div>
+                 <div className="w-full h-px bg-slate-700/50 relative">
+                   <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-400"></div>
+                 </div>
+                 <div className="w-full h-px bg-slate-700/50 relative">
+                   <div className="absolute right-1/2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)]"></div>
+                 </div>
+               </div>
+            </div>
+
+          </div>
         </div>
-      </PremiumDigiatureServiceLayout>
+      </section>
+
+      {/* 5. Tech Stack */}
+      <section className="py-24 lg:py-32 bg-slate-50">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">Powered by Enterprise Tech</h2>
+          <p className="text-xl text-slate-600 mb-16 max-w-3xl mx-auto font-medium">
+            We build robust AI architectures utilizing the industry's most powerful and secure frameworks.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            {["OpenAI & GPT-4", "TensorFlow", "PyTorch", "AWS SageMaker", "Azure AI", "Google Cloud ML", "LangChain", "Pinecone"].map((tech, i) => (
+              <div key={i} className="px-8 py-4 bg-white rounded-full font-bold text-slate-700 shadow-sm border border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all cursor-default">
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <PremiumProjectCTA />
     </main>

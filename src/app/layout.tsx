@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Premium3DEffects } from "@/components/Premium3DEffects";
 
-const outfit = Outfit({
+const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -27,11 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} h-full antialiased dark`}
-    >
-      <body className="min-h-full flex flex-col bg-white text-gray-800 font-sans selection:bg-[#2eb872] selection:text-white">
+      <html
+        lang="en"
+        className={`${jakarta.variable} h-full antialiased`}
+      >
+      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] font-sans selection:bg-[var(--primary)] selection:text-white">
         <Premium3DEffects />
         <TopBar />
         <Navbar />

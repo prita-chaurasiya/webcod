@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const services = [
   { name: "Website Updates", desc: "Keep your platform current with the latest features and framework versions.", icon: <Activity className="w-8 h-8 text-blue-500" /> },
-  { name: "Content Management", desc: "Regular updates to your text, images, and media to keep your audience engaged.", icon: <Wrench className="w-8 h-8 text-[#2eb872]" /> },
-  { name: "Security Enhancements", desc: "Continuous monitoring, firewall updates, and vulnerability patching.", icon: <Shield className="w-8 h-8 text-purple-500" /> },
-  { name: "Performance Optimization", desc: "Database tuning, caching strategies, and asset minification for speed.", icon: <Server className="w-8 h-8 text-rose-500" /> },
-  { name: "Bug Fixing", desc: "Rapid identification and resolution of any technical glitches or errors.", icon: <Bug className="w-8 h-8 text-amber-500" /> }
+  { name: "Content Management", desc: "Regular updates to your text, images, and media to keep your audience engaged.", icon: <Wrench className="w-8 h-8 text-[var(--primary)]" /> },
+  { name: "Security Enhancements", desc: "Continuous monitoring, firewall updates, and vulnerability patching.", icon: <Shield className="w-8 h-8 text-[var(--primary)]" /> },
+  { name: "Performance Optimization", desc: "Database tuning, caching strategies, and asset minification for speed.", icon: <Server className="w-8 h-8 text-[var(--primary)]" /> },
+  { name: "Bug Fixing", desc: "Rapid identification and resolution of any technical glitches or errors.", icon: <Bug className="w-8 h-8 text-[var(--primary)]" /> }
 ];
 
 const faqs = [
@@ -50,7 +50,7 @@ export function PremiumMaintenance() {
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-24 overflow-hidden border-b border-slate-200/60">
         {/* Animated Background Gradients */}
         <div className="absolute top-[0%] right-[0%] w-[800px] h-[800px] bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-[0%] left-[0%] w-[600px] h-[600px] bg-gradient-to-tr from-[#2eb872]/20 to-emerald-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '12s' }}></div>
+        <div className="absolute bottom-[0%] left-[0%] w-[600px] h-[600px] bg-gradient-to-tr from-[var(--primary)]/20 to-emerald-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '12s' }}></div>
         
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
@@ -65,13 +65,13 @@ export function PremiumMaintenance() {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm backdrop-blur-md">
-                <Clock className="w-5 h-5 text-[#2eb872]" />
+                <Clock className="w-5 h-5 text-[var(--primary)]" />
                 <span className="text-sm font-bold text-slate-700 uppercase tracking-widest">24/7 Monitoring & Support</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.1]">
                 Unbreakable <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-emerald-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-emerald-500">
                   Reliability.
                 </span>
               </h1>
@@ -81,12 +81,12 @@ export function PremiumMaintenance() {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
-                <Link href="/contact" className="px-8 py-4 bg-[#2eb872] hover:bg-[#259b5f] text-white rounded-xl font-bold text-lg shadow-[0_10px_20px_rgba(46,184,114,0.3)] hover:shadow-[0_15px_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-4 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-bold text-lg shadow-[0_10px_20px_rgba(46,184,114,0.3)] hover:shadow-[0_15px_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all flex items-center gap-2">
                   Secure Your App <ArrowRight className="w-5 h-5" />
                 </Link>
-                <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white border border-slate-200 text-sm font-bold text-slate-700 shadow-sm">
-                  <div className="w-3 h-3 rounded-full bg-[#2eb872] animate-ping relative">
-                    <div className="absolute inset-0 bg-[#2eb872] rounded-full animate-none"></div>
+                <div className="flex items-center gap-4 px-6 py-4 rounded-[18px] bg-white border border-slate-200 text-sm font-bold text-slate-700 shadow-sm">
+                  <div className="w-3 h-3 rounded-full bg-[var(--primary)] animate-ping relative">
+                    <div className="absolute inset-0 bg-[var(--primary)] rounded-full animate-none"></div>
                   </div>
                   Systems Operational
                 </div>
@@ -103,7 +103,7 @@ export function PremiumMaintenance() {
             >
               <div className="w-[350px] flex flex-col gap-6 transform-gpu">
                 {[1, 2, 3].map((server) => (
-                  <div key={server} className="relative w-full h-32 bg-white border border-slate-100 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden group">
+                  <div key={server} className="relative w-full h-32 bg-white border border-slate-100 rounded-[18px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden group">
                     {/* Server details */}
                     <div className="flex justify-between items-start z-10 relative">
                       <div className="flex gap-3">
@@ -114,7 +114,7 @@ export function PremiumMaintenance() {
                         <motion.div 
                           animate={{ opacity: [0.4, 1, 0.4] }} 
                           transition={{ duration: 0.8, repeat: Infinity, delay: server * 0.2 }} 
-                          className="w-3 h-3 rounded-full bg-[#2eb872] shadow-[0_0_15px_rgba(46,184,114,0.5)]"
+                          className="w-3 h-3 rounded-full bg-[var(--primary)] shadow-[0_0_15px_rgba(46,184,114,0.5)]"
                         ></motion.div>
                         <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
                       </div>
@@ -128,7 +128,7 @@ export function PremiumMaintenance() {
                     {/* Ambient Glow */}
                     <motion.div 
                       style={{ opacity: serverGlow }} 
-                      className="absolute inset-0 bg-gradient-to-r from-[#2eb872]/5 to-blue-500/5 mix-blend-multiply pointer-events-none"
+                      className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/5 to-blue-500/5 mix-blend-multiply pointer-events-none"
                     ></motion.div>
                   </div>
                 ))}
@@ -138,10 +138,10 @@ export function PremiumMaintenance() {
               <motion.div 
                 animate={{ y: [-15, 15, -15] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-12 top-20 bg-white/80 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-xl z-20"
+                className="absolute -right-12 top-20 bg-white/80 backdrop-blur-md border border-slate-200 p-6 rounded-[18px] shadow-xl z-20"
               >
                 <div className="flex items-center gap-5">
-                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-teal-500">99.9%</div>
+                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">99.9%</div>
                   <div>
                     <p className="text-base font-bold text-slate-900">Uptime</p>
                     <p className="text-sm text-slate-500">Guaranteed</p>
@@ -164,7 +164,7 @@ export function PremiumMaintenance() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-slate-800 font-semibold text-sm mb-6 tracking-widest uppercase shadow-sm backdrop-blur-md"
             >
-              <Zap className="w-4 h-4 text-amber-500" /> What We Do
+              <Zap className="w-4 h-4 text-[var(--primary)]" /> What We Do
             </motion.div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6">Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Protection</span></h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We don't just fix things when they break. We proactively monitor, optimize, and secure your platform.</p>
@@ -178,10 +178,10 @@ export function PremiumMaintenance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
+                className="group bg-slate-50 rounded-[18px] p-8 border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white to-transparent rounded-bl-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-500"></div>
-                <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-sm group-hover:shadow-md">
+                <div className="w-20 h-20 rounded-[18px] bg-white border border-slate-100 flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-sm group-hover:shadow-md">
                   {srv.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{srv.name}</h3>
@@ -194,7 +194,7 @@ export function PremiumMaintenance() {
 
       {/* 3. The "Why WebCodian" Section */}
       <section className="py-24 bg-slate-50 border-y border-slate-200/50 relative overflow-hidden">
-        <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-[#2eb872]/10 rounded-full blur-[150px] mix-blend-multiply pointer-events-none"></div>
+        <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[150px] mix-blend-multiply pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
@@ -203,7 +203,7 @@ export function PremiumMaintenance() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8">Why Partner With <span className="text-[#2eb872]">Us?</span></h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8">Why Partner With <span className="text-[var(--primary)]">Us?</span></h2>
               <p className="text-slate-600 text-xl mb-10 leading-relaxed">
                 Your digital assets are critical to your business operations. Our dedicated maintenance teams ensure that you never have to worry about downtime, security breaches, or outdated software again.
               </p>
@@ -220,10 +220,10 @@ export function PremiumMaintenance() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 + (i * 0.1) }}
-                    className="flex items-center gap-5 text-slate-700 font-bold text-lg bg-white p-5 rounded-2xl border border-slate-100 hover:border-slate-300 transition-colors shadow-sm hover:shadow-md"
+                    className="flex items-center gap-5 text-slate-700 font-bold text-lg bg-white p-5 rounded-[18px] border border-slate-100 hover:border-slate-300 transition-colors shadow-sm hover:shadow-md"
                   >
-                    <div className="w-10 h-10 rounded-full bg-[#2eb872]/10 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-[#2eb872]" /> 
+                    <div className="w-10 h-10 rounded-full bg-[var(--primary)]/10 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-[var(--primary)]" /> 
                     </div>
                     {item}
                   </motion.li>
@@ -237,9 +237,9 @@ export function PremiumMaintenance() {
               transition={{ duration: 1, type: "spring" }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-[#2eb872]/20 rounded-3xl blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-[var(--primary)]/20 rounded-[18px] blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
                {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://webcodian.com/public/web/assets/img/project-start1.png" alt="Maintenance" className="relative z-10 w-full h-auto object-contain filter drop-shadow-xl" />
+              <img src="https://webcodian.com/public/web/assets/img/project-start1.png" alt="Maintenance" className="relative z-10 w-full h-auto object-contain filter drop-shadow-xl img-premium" />
             </motion.div>
           </div>
         </div>
@@ -249,7 +249,7 @@ export function PremiumMaintenance() {
       <section className="py-32 bg-white relative">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Maintenance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2eb872] to-teal-500">FAQs</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Maintenance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">FAQs</span></h2>
             <p className="text-xl text-slate-600">Everything you need to know about our maintenance and support services.</p>
           </div>
 
@@ -261,15 +261,15 @@ export function PremiumMaintenance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className={`border rounded-3xl overflow-hidden transition-all duration-500 ${openFaq === idx ? 'bg-white shadow-[0_20px_40px_rgba(0,0,0,0.06)] border-[#2eb872]/30 ring-1 ring-[#2eb872]/20' : 'bg-slate-50 border-slate-200 hover:bg-white hover:border-slate-300'}`}
+                className={`border rounded-[18px] overflow-hidden transition-all duration-500 ${openFaq === idx ? 'bg-white shadow-[0_20px_40px_rgba(0,0,0,0.06)] border-[var(--primary)]/30 ring-1 ring-[var(--primary)]/20' : 'bg-slate-50 border-slate-200 hover:bg-white hover:border-slate-300'}`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full px-8 py-7 flex items-center justify-between text-left focus:outline-none"
                 >
                   <span className={`text-lg font-bold pr-4 transition-colors ${openFaq === idx ? 'text-slate-900' : 'text-slate-700'}`}>{faq.q}</span>
-                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === idx ? 'bg-[#2eb872]/10 shadow-sm' : 'bg-white border border-slate-200'}`}>
-                    <ChevronDown className={`w-6 h-6 transition-transform duration-500 ${openFaq === idx ? 'rotate-180 text-[#2eb872]' : 'text-slate-400'}`} />
+                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === idx ? 'bg-[var(--primary)]/10 shadow-sm' : 'bg-white border border-slate-200'}`}>
+                    <ChevronDown className={`w-6 h-6 transition-transform duration-500 ${openFaq === idx ? 'rotate-180 text-[var(--primary)]' : 'text-slate-500'}`} />
                   </div>
                 </button>
                 <div 

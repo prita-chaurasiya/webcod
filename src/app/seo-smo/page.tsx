@@ -8,7 +8,7 @@ export default function SeoSmoPage() {
         title="SEO & SMO Services"
         badgeText="ORGANIC GROWTH"
         description="Dominate search rankings and social media feeds. We build organic visibility that drives high-quality traffic to your business."
-        heroImage="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1000"
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
         overviewTitle="Maximize Your Digital Footprint"
         overviewDescription="Visibility is everything. Our strategic SEO (Search Engine Optimization) and SMO (Social Media Optimization) services combine content strategy, technical optimizations, and data analytics to deliver measurable business growth."
         features={[

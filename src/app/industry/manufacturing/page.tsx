@@ -1,88 +1,39 @@
-import { PremiumIndustryDetailPage, IndustryPageData } from "@/components/PremiumIndustryDetailPage";
-import { Metadata } from "next";
+import { PageBanner } from "@/components/PageBanner";
+import { EnterpriseIndustryLayout } from "@/components/EnterpriseIndustryLayout";
 
-export const metadata: Metadata = {
-  title: "Manufacturing Digital Solutions | WebCodian",
-  description: "Industry 4.0 solutions, custom ERPs, and supply chain management platforms designed to optimize factory operations.",
-};
-
-const manufacturingData: IndustryPageData = {
-  id: "manufacturing",
-  title: "Manufacturing & Industry",
-  eyebrow: "WebCodian • Industry Solutions",
-  heroDescription: "Industry 4.0 solutions, custom ERPs, and supply chain management platforms designed to optimize factory operations.",
-  heroImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-  introHeading: "Technology built around operational efficiency.",
-  introDescription: "Modern manufacturing requires absolute precision. When production lines rely on manual data entry and disconnected supply chain systems, bottlenecks are inevitable. We build powerful Industry 4.0 platforms and ERP systems that automate inventory, track production in real-time, and eliminate operational waste.",
+const industryData = {
+  title: "Manufacturing",
+  overview: "Empowering the manufacturing sector with cutting-edge digital transformation. We engineer bespoke software ecosystems that streamline operations, enhance customer experiences, and unlock new revenue streams in a highly competitive market. Our domain experts understand the unique regulatory and operational hurdles of your industry, allowing us to build solutions that are not just technically superior, but strategically aligned with your business objectives.",
+  technologies: ["AI & Machine Learning", "IoT Integration", "Cloud Computing", "Big Data Analytics", "Blockchain", "RPA Automation"],
+  image1: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
   challenges: [
-    {
-      id: "01",
-      title: "Inventory Blind Spots",
-      description: "Inaccurate raw material tracking leads to production delays, overstocking, and increased holding costs."
-    },
-    {
-      id: "02",
-      title: "Production Bottlenecks",
-      description: "Without real-time line monitoring, identifying the root cause of production slowdowns takes days instead of minutes."
-    },
-    {
-      id: "03",
-      title: "Supply Chain Friction",
-      description: "Managing vendors, purchase orders, and logistics across multiple disconnected platforms causes massive inefficiencies."
-    },
-    {
-      id: "04",
-      title: "Quality Control",
-      description: "Relying on paper-based QA processes makes it difficult to track defect rates and maintain compliance."
-    }
+    { title: "Digital Disruption", desc: "Traditional business models struggling to keep pace with digital-first competitors." },
+    { title: "Customer Expectations", desc: "Demand for seamless, omnichannel experiences is at an all-time high." },
+    { title: "Operational Inefficiency", desc: "Manual processes leading to high overhead costs and slow turnaround times." },
+    { title: "Regulatory Pressures", desc: "Navigating complex global compliance landscapes and data sovereignty." }
   ],
   solutions: [
-    {
-      icon: "Layers",
-      title: "Manufacturing ERPs",
-      description: "Comprehensive systems to manage everything from HR and finance to production and sales."
-    },
-    {
-      icon: "Package",
-      title: "Inventory Management",
-      description: "Real-time stock tracking, automated reordering, and multi-warehouse management tools."
-    },
-    {
-      icon: "Truck",
-      title: "Supply Chain Portals",
-      description: "Secure environments for vendor management, purchase order tracking, and logistics."
-    },
-    {
-      icon: "Settings2",
-      title: "Production Dashboards",
-      description: "Real-time visualization of machine performance, output rates, and operator efficiency."
-    }
+    { title: "Custom Platform Engineering", desc: "Building tailored digital products that directly address your unique operational needs." },
+    { title: "Data-Driven Insights", desc: "Implementing advanced analytics to drive strategic decision-making." },
+    { title: "Process Automation", desc: "Deploying AI-driven automation to eliminate manual tasks and reduce errors." },
+    { title: "Secure Infrastructure", desc: "Architecting zero-trust networks that safeguard sensitive customer data." }
   ],
-  featuredVisual: {
-    image: "https://images.unsplash.com/photo-1565153205792-5b9e248a30f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    overlayText: "From raw materials to finished products."
-  },
-  whatWeCanBuild: [
-    "Custom Manufacturing ERPs",
-    "Supply Chain Management Software",
-    "Inventory & Warehouse Systems",
-    "Quality Assurance (QA) Portals",
-    "IoT Data Visualization Dashboards",
-    "B2B Wholesale Ordering Platforms"
-  ],
-  useCases: [
-    {
-      title: "Factory Floor",
-      items: ["Real-time production tracking", "Machine maintenance logging", "Digital QA checklists", "Shift management"]
-    },
-    {
-      title: "Logistics & Supply",
-      items: ["Automated purchase orders", "Vendor performance tracking", "Barcode/RFID integration", "Shipment tracking"]
-    }
-  ],
-  technologies: ["React", "Node.js", "Python", "AWS IoT", "PostgreSQL", "React Native", "Docker"]
+  outcomes: [
+    { metric: "40%", desc: "Increase in Operational Efficiency" },
+    { metric: "3x", desc: "Faster Time-to-Market" },
+    { metric: "2.5x", desc: "Growth in Customer Retention" }
+  ]
 };
 
-export default function ManufacturingIndustryPage() {
-  return <PremiumIndustryDetailPage data={manufacturingData} />;
+export default function Page() {
+  return (
+    <>
+      <PageBanner 
+        title="Manufacturing" 
+        subtitle="Advanced digital solutions tailored for the manufacturing industry."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industry" }, { label: "Manufacturing" }]} 
+      />
+      <EnterpriseIndustryLayout data={industryData} />
+    </>
+  );
 }

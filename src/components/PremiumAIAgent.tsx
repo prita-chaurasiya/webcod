@@ -40,7 +40,7 @@ export function PremiumAIAgent() {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Link href="/contact" className="px-8 py-3.5 bg-[#0f172a] hover:bg-[#1e293b] text-white rounded-xl font-bold text-base shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-3.5 bg-[#0f172a] hover:bg-[#1e293b] text-white rounded-[18px] font-bold text-base shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2">
                   Build Your Agent <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -64,7 +64,7 @@ export function PremiumAIAgent() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full rounded-[32px] bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 shadow-2xl overflow-hidden border border-slate-800">
+              <div className="relative w-full rounded-[32px] bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-8 shadow-lg overflow-hidden border border-slate-800">
                 {/* Network Lines */}
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -74,37 +74,37 @@ export function PremiumAIAgent() {
                 </div>
                 
                 <div className="relative z-10 flex flex-col gap-6">
-                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/5">
+                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-[18px] p-4 border border-white/5">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#06b6d4]/20 flex items-center justify-center">
                         <Bot className="w-5 h-5 text-[#06b6d4]" />
                       </div>
                       <div>
-                        <p className="text-white font-bold text-sm">Customer Success Agent</p>
+                        <p className="text-[var(--heading)] font-bold text-sm">Customer Success Agent</p>
                         <p className="text-[#06b6d4] text-xs">Active &bull; Processing</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/5 ml-8">
+                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-[18px] p-4 border border-white/5 ml-8">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#10b981]/20 flex items-center justify-center">
                         <Workflow className="w-5 h-5 text-[#10b981]" />
                       </div>
                       <div>
-                        <p className="text-white font-bold text-sm">Data Analysis Node</p>
+                        <p className="text-[var(--heading)] font-bold text-sm">Data Analysis Node</p>
                         <p className="text-[#10b981] text-xs">Completed 42 tasks</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/5 mr-8">
+                  <div className="flex justify-between items-center bg-white/10 backdrop-blur-md rounded-[18px] p-4 border border-white/5 mr-8">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#f97316]/20 flex items-center justify-center">
                         <BrainCircuit className="w-5 h-5 text-[#f97316]" />
                       </div>
                       <div>
-                        <p className="text-white font-bold text-sm">Decision Engine</p>
+                        <p className="text-[var(--heading)] font-bold text-sm">Decision Engine</p>
                         <p className="text-[#f97316] text-xs">Optimizing workflows</p>
                       </div>
                     </div>
@@ -131,7 +131,7 @@ export function PremiumAIAgent() {
               { title: "Cognitive Processing", desc: "Leverages advanced LLMs to understand unstructured text, images, and documents instantly.", icon: <BrainCircuit className="w-6 h-6 text-[#6d28d9]" /> }
             ].map((feat, i) => (
               <div key={i} className="bg-white p-8 rounded-[24px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-[18px] bg-slate-50 border border-slate-100 flex items-center justify-center mb-6">
                   {feat.icon}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{feat.title}</h3>

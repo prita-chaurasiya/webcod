@@ -8,7 +8,7 @@ export default function GraphicDesignPage() {
         title="Graphic Design"
         badgeText="CREATIVE EXCELLENCE"
         description="Stunning visuals that capture your brand's essence. We design compelling graphics that engage your audience and leave a lasting impression."
-        heroImage="https://images.unsplash.com/photo-1626785776965-b7529fa28115?auto=format&fit=crop&q=80&w=1000"
+        heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
         overviewTitle="Bringing Your Brand to Life"
         overviewDescription="In a crowded digital space, aesthetic excellence sets you apart. Our expert designers craft premium logos, marketing materials, and UI designs that communicate your brand values instantly."
         features={[
@@ -25,7 +25,7 @@ export default function GraphicDesignPage() {
           {
             title: "Marketing Collateral",
             description: "High-converting social media posts, banners, brochures, and email templates.",
-            icon: <ImageIcon className="w-5 h-5" />
+            icon: <ImageIcon className="w-5 h-5 img-premium" />
           },
           {
             title: "Illustrations",
