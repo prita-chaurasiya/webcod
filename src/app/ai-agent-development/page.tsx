@@ -323,7 +323,7 @@ export default function Page() {
       </section>
 
       {/* 10. Security & Compliance */}
-      <section className="py-12 md:py-16 bg-blue-50 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-blue-50 text-slate-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-600/20 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

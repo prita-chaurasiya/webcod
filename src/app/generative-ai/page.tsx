@@ -324,7 +324,7 @@ export default function Page() {
       </section>
 
       {/* 10. Security & Compliance */}
-      <section className="py-12 md:py-16 bg-blue-50 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-blue-50 text-slate-800 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -334,7 +334,7 @@ export default function Page() {
               <ul className="space-y-4">
                 {["Private Cloud & On-Premise Deployments", "SOC2 & ISO 27001 Compliant Infrastructure", "Strict Role-Based Access Controls (RBAC)", "Hallucination Guardrails & Content Filtering"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <Shield className="w-6 h-6 text-indigo-400" />
+                    <Shield className="w-6 h-6 text-blue-600" />
                     <span className="font-bold">{item}</span>
                   </li>
                 ))}
