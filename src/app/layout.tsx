@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { TopBar } from "@/components/TopBar";
 import { Navbar } from "@/components/Navbar";
@@ -8,6 +8,11 @@ import { Premium3DEffects } from "@/components/Premium3DEffects";
 
 const outfit = Outfit({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
       <html
         lang="en"
-        className={`${outfit.variable} h-full antialiased`}
+        className={`${outfit.variable} ${playfair.variable} h-full antialiased`}
       >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] font-sans selection:bg-[var(--primary)] selection:text-white">
         <Premium3DEffects />
