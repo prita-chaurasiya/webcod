@@ -19,42 +19,42 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="/videos/web-dev.mp4"
+        heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">Blockchain & Web3</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">Blockchain & Web3</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "DeFi Solutions",
+            description: "Building decentralized finance protocols, staking platforms, and liquidity pools.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Private Blockchains",
+            description: "Enterprise-grade permissioned ledgers using Hyperledger and Corda.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "DApp Development",
+            description: "Intuitive decentralized applications built on Ethereum, Solana, and Polygon.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Tokenomics Design",
+            description: "Strategic design of token utility, distribution, and economic incentive structures.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Security Auditing",
+            description: "Rigorous smart contract auditing to prevent vulnerabilities and exploits.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Layer-2 Scaling",
+            description: "Implementing state channels and rollups to reduce transaction gas fees.",
+            icon: <Code2 className='w-5 h-5' />
           }
         ]}
       />

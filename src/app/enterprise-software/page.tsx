@@ -21,40 +21,40 @@ export default function GeneratedPage() {
         }
         heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">Enterprise Software</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">Enterprise Software</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "ERP Integration",
+            description: "Centralize business operations, inventory, and HR into a single cohesive platform.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Legacy Modernization",
+            description: "Upgrade outdated monolithic software to scalable cloud-native architectures.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Workflow Automation",
+            description: "Eliminate manual data entry and human error with intelligent automation.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Custom CRM Solutions",
+            description: "Tailored customer relationship management systems that fit your sales cycle.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Role-Based Access",
+            description: "Granular access controls ensuring employees only see the data they need.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "High-Availability Systems",
+            description: "Fault-tolerant architectures ensuring 99.99% uptime for critical apps.",
+            icon: <Code2 className='w-5 h-5' />
           }
         ]}
       />

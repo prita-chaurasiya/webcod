@@ -130,53 +130,62 @@ export function PremiumSolutionDetail({
         </div>
       </section>
 
-      {/* 2. Why Choose / Features Section - Cards at Bottom */}
+      {/* 2. Why Choose / Features Section */}
       <section className="py-20 lg:py-28 bg-white relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
-          
-          {/* Top Content */}
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <motion.h3 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight tracking-tight"
-            >
-              {whyHeading}
-            </motion.h3>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-600 text-lg md:text-xl font-medium"
-            >
-              {whyDescription}
-            </motion.p>
-          </div>
-
-          {/* Bottom Cards Grid - Full Width */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {features.map((feature, idx) => (
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                key={idx} 
-                className="bg-slate-50 p-8 rounded-[24px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col group"
-              >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors duration-300 shadow-sm mb-6">
-                  {feature.icon || (
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                  )}
-                </div>
-                <h4 className="font-bold text-slate-900 text-xl mb-3">{feature.title}</h4>
-                <p className="text-slate-500 text-base leading-relaxed font-medium">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
+          <div className="flex flex-col xl:flex-row items-center gap-16 lg:gap-20">
             
+            {/* Left Illustration */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="xl:w-[45%] w-full flex justify-center xl:justify-start order-2 xl:order-1"
+            >
+              <img src={whyImage || "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"} alt="Why Choose Us" className="w-full max-w-[550px] h-auto object-cover rounded-[2rem] shadow-xl hover:scale-105 transition-transform duration-700 border-4 border-slate-50" />
+            </motion.div>
+            
+            {/* Right Content & Grid */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="xl:w-[55%] w-full order-1 xl:order-2"
+            >
+              <h3 className="text-3xl md:text-[38px] lg:text-[42px] font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+                {whyHeading}
+              </h3>
+              <p className="text-slate-600 text-lg mb-10 font-medium max-w-2xl">
+                {whyDescription}
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
+                {features.map((feature, idx) => (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    key={idx} 
+                    className="bg-white p-6 rounded-[20px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] hover:border-blue-100 transition-all duration-300 flex items-start gap-5 group"
+                  >
+                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors duration-300 shadow-sm border border-blue-100/50">
+                      {feature.icon || (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-[16px] mb-1.5 group-hover:text-[var(--primary)] transition-colors">{feature.title}</h4>
+                      <p className="text-slate-500 text-[13px] leading-relaxed font-medium">{feature.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+          </div>
         </div>
       </section>
 

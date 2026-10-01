@@ -19,42 +19,42 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="/videos/web-dev.mp4"
+        heroImage="/videos/digital-marketing.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">PPT Design</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">PPT Design</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "Pitch Deck Design",
+            description: "Persuasive and visually stunning decks designed specifically for investor pitches.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Corporate Templates",
+            description: "Branded master templates ensuring consistency across all internal communications.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Data Visualization",
+            description: "Transforming complex spreadsheets into beautiful, easily digestible infographics.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Sales Presentations",
+            description: "High-conversion sales decks that perfectly highlight your product's value proposition.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Brand Adherence",
+            description: "Strict alignment with your corporate brand guidelines, fonts, and color palettes.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Rapid Turnaround",
+            description: "Dedicated design teams capable of executing premium designs under tight deadlines.",
+            icon: <Server className='w-5 h-5' />
           }
         ]}
       />

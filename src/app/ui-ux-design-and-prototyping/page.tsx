@@ -21,40 +21,40 @@ export default function GeneratedPage() {
         }
         heroImage="/videos/web-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">UI/UX Design</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">UI/UX Design</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "User Research",
+            description: "In-depth user interviews and persona creation to understand audience psychology.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Wireframing & Prototyping",
+            description: "Interactive Figma prototypes to validate product flows before development.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Design Systems",
+            description: "Scalable component libraries that ensure visual consistency across all platforms.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Usability Testing",
+            description: "Iterative testing with real users to identify and remove friction points.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Micro-Interactions",
+            description: "Engaging animations that delight users and provide intuitive system feedback.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Accessibility (WCAG)",
+            description: "Designing inclusive interfaces that meet global accessibility standards.",
+            icon: <ShieldCheck className='w-5 h-5' />
           }
         ]}
       />

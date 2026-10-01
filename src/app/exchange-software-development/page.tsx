@@ -19,42 +19,42 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="/videos/web-dev.mp4"
+        heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">Crypto Exchange Development</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">Crypto Exchange Development</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "High-Frequency Matching",
+            description: "Ultra-fast order matching engines capable of millions of transactions per second.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Liquidity Integration",
+            description: "API connections to top-tier global exchanges for deep order book liquidity.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Advanced Trading UI",
+            description: "Professional charting tools, technical indicators, and customizable layouts.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Cold Storage Systems",
+            description: "Air-gapped security protocols ensuring the absolute safety of user funds.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Fiat Gateways",
+            description: "Seamless credit card and bank transfer integration for crypto purchases.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Admin Architecture",
+            description: "Comprehensive KYC/AML management and fee structure administration.",
+            icon: <Layers className='w-5 h-5' />
           }
         ]}
       />

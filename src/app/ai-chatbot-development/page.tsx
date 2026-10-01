@@ -19,42 +19,42 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="/videos/web-dev.mp4"
+        heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">AI & Chatbot Development</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">AI & Chatbot Development</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "NLP Integration",
+            description: "Natural Language Processing ensuring chatbots understand complex human intent.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Omnichannel Deployment",
+            description: "Deploy bots seamlessly across WhatsApp, Telegram, Website, and Messenger.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Sentiment Analysis",
+            description: "Algorithms that detect user frustration and instantly route to human agents.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "CRM Syncing",
+            description: "Automatic logging of chat transcripts and leads into Salesforce or Hubspot.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Enterprise Security",
+            description: "Encrypted conversation storage complying with global privacy regulations.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Voice Bot Capabilities",
+            description: "Speech-to-text integration for automated IVR and voice assistant skills.",
+            icon: <Monitor className='w-5 h-5' />
           }
         ]}
       />

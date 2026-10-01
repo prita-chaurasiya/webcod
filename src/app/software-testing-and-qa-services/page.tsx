@@ -21,40 +21,40 @@ export default function GeneratedPage() {
         }
         heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">Software Testing & QA</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">Software Testing & QA</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "Automated Testing",
+            description: "End-to-end automation scripts utilizing Selenium, Cypress, and Playwright.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "Performance Testing",
+            description: "Stress and load testing to ensure your application can handle massive traffic spikes.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "Security Auditing",
+            description: "Comprehensive vulnerability scanning and penetration testing.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Cross-Platform QA",
+            description: "Ensuring flawless functionality across all browsers, operating systems, and devices.",
+            icon: <Monitor className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "API Testing",
+            description: "Validating API responses, payloads, and latency using Postman and REST Assured.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Continuous Testing",
+            description: "Integrating QA directly into the CI/CD pipeline for instant bug detection.",
+            icon: <Layers className='w-5 h-5' />
           }
         ]}
       />

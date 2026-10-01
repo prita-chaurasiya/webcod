@@ -19,42 +19,42 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="/videos/web-dev.mp4"
+        heroImage="/videos/software-dev.mp4"
         whyHeading={
-          <>Why Modern Businesses Need <span className="text-[#c25916]">Smart Contract Development</span></>
+          <>Why Modern Businesses Need <span className="text-[var(--primary)]">Smart Contract Development</span></>
         }
-        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
+        whyImage="https://images.unsplash.com/photo-1639762681485-074b7f4ec672?auto=format&fit=crop&q=80&w=800"
         features={[
           {
-            title: "Automate Workflows",
-            description: "Automate repetitive workflows and eliminate manual data entry overhead.",
-            icon: <Zap className="w-5 h-5" />
+            title: "Solidity & Rust Engineering",
+            description: "Writing optimized, gas-efficient contracts for EVM and Rust-based chains.",
+            icon: <Code2 className='w-5 h-5' />
           },
           {
-            title: "Centralize Data",
-            description: "Centralize core business operations and data across multiple departments.",
-            icon: <Server className="w-5 h-5" />
+            title: "NFT Minting Contracts",
+            description: "ERC-721 and ERC-1155 standards for unique digital asset ownership.",
+            icon: <Layers className='w-5 h-5' />
           },
           {
-            title: "Enhance Collaboration",
-            description: "Empower remote and office teams with real-time enterprise collaboration tools.",
-            icon: <Monitor className="w-5 h-5" />
+            title: "DAO Governance",
+            description: "Decentralized voting mechanisms and treasury management contracts.",
+            icon: <Server className='w-5 h-5' />
           },
           {
-            title: "Improve UX",
-            description: "Deliver seamless, highly responsive self-service customer portals.",
-            icon: <Layers className="w-5 h-5" />
+            title: "Automated Market Makers",
+            description: "Complex mathematical pricing algorithms for decentralized exchanges.",
+            icon: <Zap className='w-5 h-5' />
           },
           {
-            title: "Cost Reduction",
-            description: "Significantly reduce administrative overhead and operational software costs.",
-            icon: <ShieldCheck className="w-5 h-5" />
+            title: "Comprehensive Audits",
+            description: "Multi-layered security testing utilizing MythX, Slither, and manual review.",
+            icon: <ShieldCheck className='w-5 h-5' />
           },
           {
-            title: "Scale Infrastructure",
-            description: "Scale infrastructure easily to support exponential user and revenue expansion.",
-            icon: <Code2 className="w-5 h-5" />
+            title: "Multi-Sig Wallets",
+            description: "Multi-signature contract architectures for enterprise fund security.",
+            icon: <Monitor className='w-5 h-5' />
           }
         ]}
       />

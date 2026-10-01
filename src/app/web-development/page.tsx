@@ -24,7 +24,7 @@ export default function WebDevelopmentPage() {
           <>Why Modern Businesses Need Custom <span className="text-[#c25916]">Web Applications</span></>
         }
         whyDescription="Today's businesses require more than traditional websites. Organizations need intelligent applications that can:"
-        whyImage="https://takshitsolutions.com/img/w1.svg"
+        whyImage="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
         features={[
           {
             title: "Automate Tasks",
