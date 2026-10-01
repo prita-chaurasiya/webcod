@@ -80,12 +80,12 @@ export function Navbar() {
 
   return (
     <div className="sticky w-full z-50 top-0 lg:top-4 lg:px-4 pointer-events-none">
-      <header className={`pointer-events-auto mx-auto w-full transition-all duration-500 rounded-none lg:rounded-[32px] flex items-center nav-glass ${isScrolled ? "scrolled h-[72px] lg:max-w-[1400px]" : "h-[90px] lg:max-w-[1500px]"}`}>
+      <header className={`pointer-events-auto mx-auto w-full transition-all duration-300 rounded-none lg:rounded-[32px] flex items-center h-[80px] lg:max-w-[1400px] nav-glass ${isScrolled ? "scrolled shadow-lg bg-white/95 backdrop-blur-xl" : "bg-white/90 backdrop-blur-md"}`}>
         <div className="px-5 lg:px-8 w-full flex items-center justify-between h-full">
           
           {/* Logo */}
           <Link href="/" className="shrink-0 flex items-center mr-4 group/logo">
-            <img src="/images/logo.png" alt="WebCodian Logo" className={`w-auto object-contain transition-all duration-500 ${isScrolled ? "h-11 scale-95" : "h-14 scale-100"} group-hover/logo:scale-[1.02]`} />
+            <img src="/images/logo.png" alt="WebCodian Logo" className="w-auto object-contain h-12 transition-transform duration-300 group-hover/logo:scale-[1.02]" />
           </Link>
 
           {/* Desktop Nav */}

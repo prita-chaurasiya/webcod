@@ -12,7 +12,7 @@ const slides = [
     headlinePart2: "Grow Your",
     headlinePart3: "Digital Skills.",
     description: "Build practical skills in Computer Applications, Web Development, Digital Marketing, Programming, Graphic Design and modern technologies with WebCodian.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1600",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const slides = [
     headlinePart2: "Scale Your",
     headlinePart3: "Business Apps.",
     description: "Enterprise-grade web and mobile applications designed to optimize your workflow and increase revenue with WebCodian's expert team.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const slides = [
     headlinePart2: "Dominate",
     headlinePart3: "Search Results.",
     description: "Data-driven marketing and SEO strategies to increase your visibility, traffic, and sales globally with WebCodian's growth team.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const slides = [
     headlinePart2: "Master",
     headlinePart3: "AI & Tech.",
     description: "Learn modern frameworks like React, Python, and AI integration to stay ahead in the fast-paced technology landscape.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1600",
   }
 ];
 
