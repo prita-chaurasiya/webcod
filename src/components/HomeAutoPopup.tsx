@@ -38,7 +38,7 @@ export function HomeAutoPopup() {
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-[500px] bg-[#1d74b8] shadow-lg flex flex-col z-10 p-6 md:p-8"
+          className="relative w-full max-w-[500px] bg-[#1d74b8] shadow-2xl flex flex-col z-10 p-5 md:p-8 max-h-[95vh] md:max-h-[90vh] overflow-y-auto rounded-2xl"
         >
           {/* Close Button */}
           <button 
