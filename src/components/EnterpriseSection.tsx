@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 interface EnterpriseSectionProps {
   children: ReactNode;
   className?: string;
-  background?: 'white' | 'slate' | 'navy';
+  background?: 'white' | 'slate' | 'navy' | 'blue' | 'dark';
   padding?: 'normal' | 'large' | 'none';
 }
 
@@ -17,12 +17,14 @@ export function EnterpriseSection({
   const bgColors = {
     white: 'bg-white',
     slate: 'bg-slate-50 border-y border-slate-100',
-    navy: 'bg-[#0F172A] text-white',
+    navy: 'bg-slate-900',
+    blue: 'bg-blue-600',
+    dark: 'bg-slate-800',
   };
 
   const paddings = {
-    normal: 'py-16 md:py-12 md:py-16',
-    large: 'py-12 md:py-16 md:py-16 md:py-12',
+    normal: 'py-16 md:py-20',
+    large: 'py-20 md:py-24',
     none: 'py-0',
   };
 
