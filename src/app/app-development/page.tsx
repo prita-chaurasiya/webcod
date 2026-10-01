@@ -17,7 +17,7 @@ export default function AppDevelopmentPage() {
             <p>From custom UI/UX design to backend integration, API development, and secure deployment on App Stores, we handle the complete lifecycle of mobile application development for enterprise and startup clients.</p>
           </>
         }
-        heroImage="https://takshitsolutions.com/img/mobile-app-development.svg"
+        heroImage="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
         whyHeading={
           <>Why Choose <span className="text-blue-600">Us?</span></>
         }

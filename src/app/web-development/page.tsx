@@ -19,7 +19,7 @@ export default function WebDevelopmentPage() {
             <p>Serving clients globally, we deliver future-ready web solutions that drive measurable business results.</p>
           </>
         }
-        heroImage="https://takshitsolutions.com/img/web-application-development.svg"
+        heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
         whyHeading={
           <>Why Modern Businesses Need Custom <span className="text-[#c25916]">Web Applications</span></>
         }

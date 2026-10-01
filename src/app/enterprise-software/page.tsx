@@ -19,7 +19,7 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="https://takshitsolutions.com/img/web-application-development.svg"
+        heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
         whyHeading={
           <>Why Modern Businesses Need <span className="text-[#c25916]">Enterprise Software</span></>
         }
