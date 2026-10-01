@@ -8,18 +8,18 @@ export default function WebDevelopmentPage() {
       <PremiumSolutionDetail 
         title="Web Development"
         heroHeading={
-          <>Web Application Development Company in <span className="text-[#c25916]">Noida</span> – Custom, Scalable & Secure Web Applications for Global Businesses</>
+          <>Premium Web Engineering Solutions by <span className="text-[var(--primary)]">WebCodian</span></>
         }
         subtitle="Build Powerful Web Applications That Accelerate Business Growth"
         heroDescription={
           <>
-            <p>Looking for a reliable Web Application Development Company in Noida that can transform your business processes into intelligent digital solutions?</p>
+            <p>Looking for a reliable Web Engineering partner that can transform your business processes into intelligent digital solutions?</p>
             <p>WebCodian specializes in designing and developing custom web applications that help startups, SMEs, enterprises, and organizations automate workflows, improve customer experiences, and scale operations efficiently.</p>
             <p>From business management portals and SaaS platforms to enterprise applications and cloud-based systems, our expert developers create secure, scalable, and high-performance web applications tailored to your business goals.</p>
             <p>Serving clients globally, we deliver future-ready web solutions that drive measurable business results.</p>
           </>
         }
-        heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
+        heroImage="/videos/web-dev.mp4"
         whyHeading={
           <>Why Modern Businesses Need Custom <span className="text-[#c25916]">Web Applications</span></>
         }

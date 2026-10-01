@@ -9,7 +9,7 @@ export default function GeneratedPage() {
       <PremiumSolutionDetail 
         title="Crypto Wallet Development"
         heroHeading={
-          <>Crypto Wallet Development Company in <span className="text-[#c25916]">Noida</span> – Premium Solutions for Enterprises</>
+          <>Crypto Wallet Development Solutions by <span className="text-[var(--primary)]">WebCodian</span> – Premium Enterprise Architecture</>
         }
         subtitle="Accelerate Your Business Growth with Custom Architecture"
         heroDescription={
@@ -19,7 +19,7 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
+        heroImage="/videos/web-dev.mp4"
         whyHeading={
           <>Why Modern Businesses Need <span className="text-[#c25916]">Crypto Wallet Development</span></>
         }

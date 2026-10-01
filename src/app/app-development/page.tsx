@@ -7,17 +7,17 @@ export default function AppDevelopmentPage() {
       <PremiumSolutionDetail 
         title="Mobile App Development"
         heroHeading={
-          <>Mobile App Development Company in <span className="text-[#c25916]">Noida</span> – Native & Hybrid App Solutions for Modern Brands</>
+          <>Enterprise Mobile Engineering by <span className="text-[var(--primary)]">WebCodian</span></>
         }
         subtitle="Transforming Ideas into Native & Hybrid Apps"
         heroDescription={
           <>
             <p>Our app development team builds intuitive, fast, and scalable mobile apps designed to grow your business and engage your audience on any device.</p>
-            <p>WebCodian stands as a premier Mobile App Development Company that bridges the gap between vision and reality. Whether you need an iOS, Android, or Cross-Platform application, we architect mobile experiences that capture market share.</p>
+            <p>WebCodian stands as a premier Mobile App Development partner that bridges the gap between vision and reality. Whether you need an iOS, Android, or Cross-Platform application, we architect mobile experiences that capture market share.</p>
             <p>From custom UI/UX design to backend integration, API development, and secure deployment on App Stores, we handle the complete lifecycle of mobile application development for enterprise and startup clients.</p>
           </>
         }
-        heroImage="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+        heroImage="/videos/app-dev.mp4"
         whyHeading={
           <>Why Choose <span className="text-blue-600">Us?</span></>
         }

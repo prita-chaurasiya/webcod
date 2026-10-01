@@ -65,14 +65,66 @@ export function PremiumSolutionDetail({
               
             </motion.div>
 
-            {/* Right Illustration */}
+            {/* Right Illustration / Animated Device Frame */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="lg:w-[45%] w-full flex justify-center lg:justify-end"
+              transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 50 }}
+              className="lg:w-[45%] w-full relative"
             >
-              <img src={heroImage} alt={title} className="w-full max-w-[600px] h-auto object-cover rounded-[2rem] shadow-2xl hover:scale-105 transition-transform duration-700 img-premium border-4 border-white" />
+              <div className="relative w-full max-w-lg mx-auto aspect-[4/3] lg:aspect-[16/11]">
+                {/* Glowing Aura */}
+                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
+                
+                {/* Device / Mockup Chrome */}
+                <div className="relative z-10 w-full h-full bg-white/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
+                  
+                  {/* Window Chrome Header */}
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-slate-50/70 backdrop-blur-md shrink-0">
+                    <div className="flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(244,63,94,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(245,158,11,0.4)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-slate-50/90 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
+                    </div>
+                    
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-slate-600">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-ping"></span>
+                      <span>webcodian.engine.preview</span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-50/10 border border-slate-100/20 text-[var(--primary)] text-[10px] font-bold tracking-widest uppercase">
+                      <span className="w-1.5 h-1.5 rounded-full bg-slate-50 animate-pulse"></span>
+                      <span>LIVE</span>
+                    </div>
+                  </div>
+
+                  {/* Video / GIF Display Container */}
+                  <div className="relative flex-1 w-full h-full overflow-hidden bg-slate-50">
+                    {(heroImage?.endsWith('.mp4') || heroImage?.endsWith('.webm')) ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src={heroImage}
+                      />
+                    ) : (
+                      <img
+                        src={heroImage || "/videos/web-dev.mp4"} // fallback if they provided an image instead of video
+                        alt={title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    )}
+                    
+                    {/* Ambient subtle vignette */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/20 pointer-events-none" />
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

@@ -18,6 +18,23 @@ const pages = [
   { slug: "web-application-development", title: "Web App Development", desc: "Robust, scalable, and secure web applications built on modern frameworks." },
 ];
 
+const getFallbackVideo = (titleStr) => {
+  const t = titleStr.toLowerCase();
+  if (t.includes("app") || t.includes("mobile") || t.includes("ios") || t.includes("android")) {
+    return "/videos/app-dev.mp4";
+  }
+  if (t.includes("e-commerce") || t.includes("shop") || t.includes("commerce")) {
+    return "/videos/ecommerce.mp4";
+  }
+  if (t.includes("marketing") || t.includes("seo") || t.includes("digital")) {
+    return "/videos/digital-marketing.mp4";
+  }
+  if (t.includes("software") || t.includes("crm") || t.includes("erp") || t.includes("maintenance")) {
+    return "/videos/software-dev.mp4";
+  }
+  return "/videos/web-dev.mp4";
+};
+
 const template = (title, desc) => {
   return `"use client";
 
@@ -30,7 +47,7 @@ export default function GeneratedPage() {
       <PremiumSolutionDetail 
         title="${title}"
         heroHeading={
-          <>${title} Company in <span className="text-[#c25916]">Noida</span> – Premium Solutions for Enterprises</>
+          <>${title} Solutions by <span className="text-[var(--primary)]">WebCodian</span> – Premium Enterprise Architecture</>
         }
         subtitle="Accelerate Your Business Growth with Custom Architecture"
         heroDescription={
@@ -40,7 +57,7 @@ export default function GeneratedPage() {
             <p>From initial consulting and strategic planning to deployment and post-launch support, our expert engineers create secure, scalable, and high-performance solutions tailored to your strict business goals.</p>
           </>
         }
-        heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
+        heroImage="${getFallbackVideo(title)}"
         whyHeading={
           <>Why Modern Businesses Need <span className="text-[#c25916]">${title}</span></>
         }
