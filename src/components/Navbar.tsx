@@ -47,13 +47,9 @@ const digitalServices = [
 
 const businessSystems = [
   { name: "CRM & ERP", href: "/crm-erp" },
-  { name: "API & Integration", href: "/api-development-and-system-integration" },
-  { name: "Cloud & DevOps", href: "/cloud-deployment-and-devops-services" },
-  { name: "Software Testing & QA", href: "/software-testing-and-qa-services" },
-  { name: "SaaS Development", href: "/saas-development" },
   { name: "Telegram Bot", href: "/telegram-bot" },
   { name: "Digital Product", href: "/digital-product" },
-  { name: "Maintenance & Support", href: "/software-maintenance-and-support" },
+  { name: "Maintenance", href: "/maintenance" },
   { name: "Bulk SMS", href: "/bulk-sms" },
   { name: "Bulk WhatsApp", href: "/bulk-whatsapp-sms" },
   { name: "Bulk Voice Call", href: "/bulk-voice-call" }
