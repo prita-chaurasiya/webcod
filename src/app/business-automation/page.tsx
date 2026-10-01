@@ -470,21 +470,119 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 10. CTA */}
-      <section className="py-16 bg-white border-t border-slate-800">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8 items-center bg-slate-800 rounded-[2rem] p-8 md:p-12 shadow-lg border border-slate-700">
-            <div className="md:col-span-2 text-[var(--heading)]">
-              <span className="inline-block bg-white/10 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">Intelligent Automation</span>
-              <h2 className="text-3xl font-black mb-4">Transform Your Business with Automation</h2>
-              <p className="text-slate-500 mb-4">Ready to automate your business processes and improve operational efficiency? WebCodian provides scalable Business Automation Solutions designed to optimize workflows and accelerate growth.</p>
-              <p className="text-slate-500 font-medium">Contact our team today to build intelligent automation systems for your business.</p>
+      {/* 10. Business Challenges */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <p className="text-xl text-slate-600 font-medium">Overcome scaling bottlenecks with intelligent business automation.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Layers, title: "Siloed Data Systems", desc: "Critical business data trapped across multiple incompatible software platforms." },
+              { icon: Settings, title: "Manual Data Entry", desc: "High error rates and wasted hours from manually transferring information." },
+              { icon: TrendingUp, title: "Scaling Bottlenecks", desc: "Inability to handle increased transaction volume without linearly increasing headcount." }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-50 p-10 rounded-[2rem] border border-slate-200 hover:border-blue-300 transition-colors group">
+                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. Implementation Process */}
+      <section className="py-24 lg:py-32 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Automation Rollout Process</h2>
+            <p className="text-xl text-slate-400">A structured methodology for digitizing and automating your enterprise operations.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Process Mining", desc: "We map your existing manual workflows to identify the highest ROI automation opportunities." },
+              { step: "02", title: "Architecture Design", desc: "Designing the cloud infrastructure, database schemas, and API integration layers." },
+              { step: "03", title: "Bot Development", desc: "Building the custom RPA bots, workflow scripts, and machine learning models." },
+              { step: "04", title: "UAT & Deployment", desc: "Rigorous User Acceptance Testing followed by a phased production rollout." }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-800 p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
+                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                <p className="text-slate-400 font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 12. Security & Compliance */}
+      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px]"></div>
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-black text-white mb-6">Enterprise-Grade Security</h2>
+              <p className="text-lg text-blue-200 mb-8 font-medium">When data moves automatically between systems, security cannot be an afterthought. We build secure, encrypted pipelines that comply with international data regulations.</p>
+              <ul className="space-y-4">
+                {["AES-256 Data Encryption", "SOC2 & ISO 27001 Compliance", "Role-Based Access Control (RBAC)", "Comprehensive Audit Logging"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Shield className="w-6 h-6 text-blue-400" />
+                    <span className="font-bold">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:col-span-1 md:text-right text-center">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full transition-colors w-full sm:w-auto text-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-blue-600/20">
-                Contact Our Team <ArrowRight className="w-5 h-5" />
-              </Link>
+            <div>
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" alt="Security" className="rounded-3xl shadow-2xl border-4 border-blue-800" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 13. Quality Assurance & Analytics */}
+      <section className="py-24 bg-slate-50 border-b border-slate-200">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
+          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Continuous Monitoring & Analytics</h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We don't just deploy and walk away. Our automation solutions come with comprehensive observability dashboards, alerting systems, and SLA guarantees to ensure 99.99% uptime for your critical business processes.</p>
+        </div>
+      </section>
+
+      {/* 14. Client Success Story */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Proven Business Results</h2>
+            <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
+              "WebCodian automated our entire supply chain documentation process. What used to take a team of five people a full week is now completely automated and error-free in under 10 minutes."
+            </p>
+            <div className="font-bold text-slate-800 uppercase tracking-widest text-sm">— National Logistics Corporation</div>
+          </div>
+        </div>
+      </section>
+
+      {/* 15. FAQs */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: "How long does it take to implement a business automation solution?", a: "Simple API integrations can be completed in 2-4 weeks. Comprehensive enterprise-wide RPA deployments typically take 3-6 months depending on system complexity." },
+              { q: "Will automation replace my employees?", a: "No. Automation is designed to augment your workforce, not replace it. It removes the tedious, repetitive tasks so your team can focus on high-value, strategic work." },
+              { q: "Do you integrate with legacy on-premise systems?", a: "Yes. We specialize in building secure bridges between modern cloud applications and legacy on-premise mainframes using secure middleware and custom APIs." },
+              { q: "What happens if a third-party API changes or breaks?", a: "Our managed support plans include proactive API monitoring. If a vendor changes their API, our team immediately updates the integration to prevent any business downtime." }
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                <h4 className="font-bold text-lg text-slate-900 mb-2">{faq.q}</h4>
+                <p className="text-slate-600 font-medium">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
