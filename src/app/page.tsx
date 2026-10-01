@@ -13,6 +13,7 @@ import { PremiumVision } from "@/components/PremiumVision";
 import { HomeAutoPopup } from "@/components/HomeAutoPopup";
 import { PremiumHomeAbout } from "@/components/PremiumHomeAbout";
 import { PremiumIndustry } from "@/components/PremiumIndustry";
+import { PremiumWebDevOverview } from "@/components/PremiumWebDevOverview";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <EduHero />
       <PremiumHomeAbout />
       <PremiumServices />
+      <PremiumWebDevOverview />
       <PremiumInstitute />
       <PremiumProcess />
       <PremiumIndustry />
