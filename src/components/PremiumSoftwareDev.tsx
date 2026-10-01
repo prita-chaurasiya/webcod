@@ -210,7 +210,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 2. Services / Architecture Section */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-gray-50 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Software <span className="text-[var(--primary)]">Solutions</span></h2>
@@ -246,7 +246,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 3. Tech Stack Section */}
-      <section className="py-24 bg-white border-y border-gray-100 relative">
+      <section className="py-12 md:py-16 bg-white border-y border-gray-100 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[var(--primary)]/5 rounded-[100%] blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
@@ -274,7 +274,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 4. Masonry Categories Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Applications</span></h2>
@@ -304,7 +304,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 5. Custom FAQ */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Frequently Asked <span className="text-[var(--primary)]">Questions</span></h2>

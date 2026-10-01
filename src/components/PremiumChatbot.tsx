@@ -54,7 +54,7 @@ export function PremiumChatbot() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative flex justify-center"
             >
-              <div className="relative w-full max-w-md rounded-[32px] bg-slate-800/50 p-6 shadow-lg overflow-hidden border border-slate-700 backdrop-blur-xl">
+              <div className="relative w-full max-w-md rounded-[32px] bg-white/50 p-6 shadow-lg overflow-hidden border border-slate-700 backdrop-blur-xl">
                 
                 {/* Chat Mockup */}
                 <div className="flex flex-col gap-4">

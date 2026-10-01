@@ -11,7 +11,7 @@ const funfacts = [
 
 export function FunFacts() {
   return (
-    <section className="py-24 bg-gray-50 bg-[url('https://webcodian.com/public/web/assets/img/funfacts-bg.jpg')] bg-cover bg-center bg-fixed relative">
+    <section className="py-12 md:py-16 bg-gray-50 bg-[url('https://webcodian.com/public/web/assets/img/funfacts-bg.jpg')] bg-cover bg-center bg-fixed relative">
       <div className="absolute inset-0 bg-[#e80566]/90" style={{ background: "linear-gradient(75deg, rgba(101,37,138,0.9) 10%, rgba(232,5,102,0.9))" }} />
       
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">

@@ -219,7 +219,7 @@ export function PremiumWebDev() {
       </section>
 
       {/* 3. Tech Stack Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gray-100 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -252,7 +252,7 @@ export function PremiumWebDev() {
       </section>
 
       {/* 4. Industries Showcase */}
-      <section className="py-24 bg-gray-50 border-y border-gray-100">
+      <section className="py-12 md:py-16 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Expertise</span></h2>
@@ -295,7 +295,7 @@ export function PremiumWebDev() {
       </section>
 
       {/* 5. Light Mode FAQ */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Common <span className="text-[var(--primary)]">Inquiries</span></h2>
@@ -331,7 +331,7 @@ export function PremiumWebDev() {
       </section>
 
       {/* 6. CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-gray-50 border-t border-gray-100">
+      <section className="py-12 md:py-16 relative overflow-hidden bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Ready to Transform Your Digital Presence?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Stop settling for templates. Let's build a custom, high-converting web platform that dominates your industry.</p>

@@ -12,7 +12,7 @@ export default function Page() {
       
       {/* 1. Breadcrumb Section */}
       <div 
-        className="relative py-24 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
+        className="relative py-12 md:py-16 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "linear-gradient(rgba(230, 64, 64, 0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop')"
         }}
@@ -32,7 +32,7 @@ export default function Page() {
       </div>
 
       {/* 2. Hero Section */}
-      <section className="py-20 bg-slate-50 relative overflow-hidden">
+      <section className="py-12 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
@@ -74,7 +74,7 @@ export default function Page() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-slate-800 rounded-[18px] shadow-lg overflow-hidden border border-slate-700">
+              <div className="bg-white rounded-[18px] shadow-lg overflow-hidden border border-slate-700">
                 {/* Browser bar fake */}
                 <div className="bg-white px-4 py-3 flex items-center gap-2 border-b border-slate-700">
                   <div className="w-3 h-3 rounded-full bg-slate-50"></div>
@@ -96,7 +96,7 @@ export default function Page() {
       </section>
 
       {/* 3. What is Business Automation */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
@@ -146,7 +146,7 @@ export default function Page() {
       </section>
 
       {/* 4. Services Grid replaced with Premium Feature Cards */}
-      <section className="py-24 lg:py-32 bg-slate-50 border-t border-slate-100">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">AI Services</span>
@@ -197,7 +197,7 @@ export default function Page() {
       </section>
 
       {/* 5. Why Business Automation Is Important (Orbital Layout) */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-12 md:py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2 block">Operational Efficiency</span>
@@ -249,7 +249,7 @@ export default function Page() {
                     return (
                       <div 
                         key={idx}
-                        className="absolute w-12 h-12 bg-slate-800 rounded-full border-2 border-slate-700 flex items-center justify-center text-blue-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]"
+                        className="absolute w-12 h-12 bg-white rounded-full border-2 border-slate-700 flex items-center justify-center text-blue-400 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]"
                         style={{
                           top: '50%', left: '50%',
                           transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-140px) rotate(-${angle}deg)` // The second rotate keeps the icon upright if we wanted, but since the parent rotates, we need counter-rotation
@@ -287,7 +287,7 @@ export default function Page() {
       </section>
 
       {/* 6. Industries We Serve */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">Automation Industries</span>
@@ -357,7 +357,7 @@ export default function Page() {
       </section>
 
       {/* 7. Technologies List */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-black text-slate-900 mb-4">Technologies Used in Business Automation</h3>
@@ -384,7 +384,7 @@ export default function Page() {
       </section>
 
       {/* 8. AI-Powered Automation */}
-      <section className="py-20 bg-blue-600 relative overflow-hidden">
+      <section className="py-12 bg-blue-600 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center bg-blue-700/50 rounded-[2.5rem] p-8 md:p-12 border border-white/10 backdrop-blur-sm">
@@ -399,7 +399,7 @@ export default function Page() {
               <p className="text-blue-100 text-lg mb-6 leading-relaxed">
                 Artificial intelligence is changing the future of automation. AI-powered business systems can analyze data, predict outcomes, and make intelligent decisions automatically.
               </p>
-              <div className="text-sm font-medium text-blue-200 italic border-l-4 border-blue-400 pl-4">
+              <div className="text-sm font-medium text-blue-700 italic border-l-4 border-blue-400 pl-4">
                 By combining AI with automation, businesses create smarter digital ecosystems that adapt and grow over time.
               </div>
             </div>
@@ -427,7 +427,7 @@ export default function Page() {
       </section>
 
       {/* 9. Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             
@@ -471,7 +471,7 @@ export default function Page() {
       </section>
 
       {/* 10. Business Challenges */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
@@ -496,11 +496,11 @@ export default function Page() {
       </section>
 
       {/* 11. Implementation Process */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-white">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Automation Rollout Process</h2>
-            <p className="text-xl text-slate-400">A structured methodology for digitizing and automating your enterprise operations.</p>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Automation Rollout Process</h2>
+            <p className="text-xl text-slate-600">A structured methodology for digitizing and automating your enterprise operations.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -510,10 +510,10 @@ export default function Page() {
               { step: "03", title: "Bot Development", desc: "Building the custom RPA bots, workflow scripts, and machine learning models." },
               { step: "04", title: "UAT & Deployment", desc: "Rigorous User Acceptance Testing followed by a phased production rollout." }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-800 p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
+              <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
                 <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
-                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                <p className="text-slate-400 font-medium">{item.desc}</p>
+                <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
+                <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -521,13 +521,13 @@ export default function Page() {
       </section>
 
       {/* 12. Security & Compliance */}
-      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-blue-50 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-white mb-6">Enterprise-Grade Security</h2>
-              <p className="text-lg text-blue-200 mb-8 font-medium">When data moves automatically between systems, security cannot be an afterthought. We build secure, encrypted pipelines that comply with international data regulations.</p>
+              <h2 className="text-4xl font-black text-slate-900 mb-6">Enterprise-Grade Security</h2>
+              <p className="text-lg text-blue-700 mb-8 font-medium">When data moves automatically between systems, security cannot be an afterthought. We build secure, encrypted pipelines that comply with international data regulations.</p>
               <ul className="space-y-4">
                 {["AES-256 Data Encryption", "SOC2 & ISO 27001 Compliance", "Role-Based Access Control (RBAC)", "Comprehensive Audit Logging"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
@@ -545,7 +545,7 @@ export default function Page() {
       </section>
 
       {/* 13. Quality Assurance & Analytics */}
-      <section className="py-24 bg-slate-50 border-b border-slate-200">
+      <section className="py-12 md:py-16 bg-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Continuous Monitoring & Analytics</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We don't just deploy and walk away. Our automation solutions come with comprehensive observability dashboards, alerting systems, and SLA guarantees to ensure 99.99% uptime for your critical business processes.</p>
@@ -553,7 +553,7 @@ export default function Page() {
       </section>
 
       {/* 14. Client Success Story */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Proven Business Results</h2>
@@ -566,7 +566,7 @@ export default function Page() {
       </section>
 
       {/* 15. FAQs */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200">
+      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>

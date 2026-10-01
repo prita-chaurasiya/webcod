@@ -14,7 +14,7 @@ export function PremiumWebsiteValidity() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden min-h-[70vh] flex items-center justify-center">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden min-h-[70vh] flex items-center justify-center">
       {/* Premium Background Effects */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }} />

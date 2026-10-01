@@ -5,7 +5,7 @@ import { Mail, Send } from "lucide-react";
 
 export function PremiumNewsletter() {
   return (
-    <section className="py-24 relative overflow-hidden bg-white">
+    <section className="py-12 md:py-16 relative overflow-hidden bg-white">
       <div className="container mx-auto px-4 lg:px-6 max-w-5xl relative z-10">
         
         <motion.div 

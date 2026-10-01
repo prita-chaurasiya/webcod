@@ -5,7 +5,7 @@ import { UserPlus, UploadCloud, Send } from "lucide-react";
 
 export function PremiumClientRegistration() {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       {/* Background Ambient Lights */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[0%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-[var(--primary)]/10 to-teal-400/10 rounded-full blur-[100px] mix-blend-multiply animate-pulse" style={{ animationDuration: '8s' }} />

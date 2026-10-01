@@ -46,7 +46,7 @@ export function ServicesSection() {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <section className="py-32 relative bg-white">
+    <section className="py-16 md:py-12 relative bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--heading)] font-space-grotesk mb-6">

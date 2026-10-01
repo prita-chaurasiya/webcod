@@ -12,7 +12,7 @@ export default function Page() {
       
       {/* 1. Breadcrumb Section */}
       <div 
-        className="relative py-24 lg:py-32 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
+        className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "linear-gradient(rgba(10, 40, 50, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2000&auto=format&fit=crop')"
         }}
@@ -34,7 +34,7 @@ export default function Page() {
       </div>
 
       {/* 2. Hero Section */}
-      <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-emerald-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -103,7 +103,7 @@ export default function Page() {
       </section>
 
       {/* 3. Core Capabilities Grid replaced with Premium Feature Cards */}
-      <section className="py-24 lg:py-32 bg-slate-50 border-y border-slate-100">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Intelligent Interactions</h2>
@@ -153,7 +153,7 @@ export default function Page() {
       </section>
 
       {/* 4. Strategic Approach (Spacious Layout) */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
@@ -179,7 +179,7 @@ export default function Page() {
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
-                      <p className="text-slate-400 text-lg leading-relaxed">{step.desc}</p>
+                      <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -187,7 +187,7 @@ export default function Page() {
             </div>
 
             <div className="hidden lg:block relative h-[700px]">
-               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-20 pl-12">
+               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
                  <div className="w-full h-px bg-slate-700/50 relative">
                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.8)]"></div>
                  </div>
@@ -205,7 +205,7 @@ export default function Page() {
       </section>
 
       {/* 5. Business Challenges We Solve */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
@@ -230,7 +230,7 @@ export default function Page() {
       </section>
 
       {/* 6. Business Benefits */}
-      <section className="py-24 bg-emerald-50">
+      <section className="py-12 md:py-16 bg-emerald-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -257,7 +257,7 @@ export default function Page() {
       </section>
 
       {/* 7. Technology Stack */}
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-12 md:py-16 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-black text-[#0f2c59]">Conversational AI Tech Stack</h2>
@@ -273,11 +273,11 @@ export default function Page() {
       </section>
 
       {/* 8. Development Process */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-white">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Our Implementation Process</h2>
-            <p className="text-xl text-slate-400">A rigorous methodology for deploying intelligent conversational agents.</p>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Implementation Process</h2>
+            <p className="text-xl text-slate-600">A rigorous methodology for deploying intelligent conversational agents.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -287,10 +287,10 @@ export default function Page() {
               { step: "03", title: "API Integration", desc: "Connecting the bot to your CRM, ERP, and internal databases for dynamic responses." },
               { step: "04", title: "Testing & Deployment", desc: "Simulating thousands of edge-case conversations before public launch." }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-800 p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
+              <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
                 <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
-                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                <p className="text-slate-400 font-medium">{item.desc}</p>
+                <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
+                <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -298,7 +298,7 @@ export default function Page() {
       </section>
 
       {/* 9. Enterprise Use Cases */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Enterprise Use Cases</h2>
@@ -323,13 +323,13 @@ export default function Page() {
       </section>
 
       {/* 10. Security & Compliance */}
-      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-blue-50 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-600/20 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-white mb-6">Data Privacy & Security</h2>
-              <p className="text-lg text-blue-200 mb-8 font-medium">Conversational data often contains PII. We architect our AI systems to automatically redact sensitive information and comply strictly with global data protection laws.</p>
+              <h2 className="text-4xl font-black text-slate-900 mb-6">Data Privacy & Security</h2>
+              <p className="text-lg text-blue-700 mb-8 font-medium">Conversational data often contains PII. We architect our AI systems to automatically redact sensitive information and comply strictly with global data protection laws.</p>
               <ul className="space-y-4">
                 {["End-to-End Encryption", "HIPAA & GDPR Compliance", "Automated PII Redaction", "On-Premise Deployment Options"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
@@ -347,7 +347,7 @@ export default function Page() {
       </section>
 
       {/* 11. Industries We Serve */}
-      <section className="py-24 bg-white border-b border-slate-100">
+      <section className="py-12 md:py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
@@ -369,7 +369,7 @@ export default function Page() {
       </section>
 
       {/* 12. Quality Assurance */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Conversational QA & Analytics</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We deploy comprehensive analytics dashboards to track bot deflection rates, sentiment scores, and fallback triggers, continuously optimizing the conversational flow.</p>
@@ -377,7 +377,7 @@ export default function Page() {
       </section>
 
       {/* 13. Case Studies / Success Stories */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-emerald-50 p-12 lg:p-20 rounded-[3rem] text-center border border-emerald-100 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
@@ -390,7 +390,7 @@ export default function Page() {
       </section>
 
       {/* 14. FAQs */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200">
+      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>

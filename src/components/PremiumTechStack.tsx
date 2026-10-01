@@ -59,7 +59,7 @@ export function PremiumTechStack() {
   };
 
   return (
-    <section className="py-24 bg-[#f8fafc] overflow-hidden relative">
+    <section className="py-12 md:py-16 bg-[#f8fafc] overflow-hidden relative">
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#f8fafc] via-transparent to-[#f8fafc] w-full" />
       

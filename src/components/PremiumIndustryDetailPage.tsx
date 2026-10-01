@@ -110,7 +110,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 2. Editorial Overview */}
-      <section className="py-24 bg-slate-50 border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
@@ -129,7 +129,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 3. Industry Challenges */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-16">
             <h2 className="text-3xl font-black text-slate-900">Key Challenges We Solve</h2>
@@ -158,7 +158,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 4. Digital Solutions */}
-      <section className="py-32 btn-primary relative overflow-hidden">
+      <section className="py-16 md:py-12 btn-primary relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900"></div>
         </div>
@@ -178,7 +178,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="group relative bg-slate-800/50 hover:bg-slate-800 backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-[18px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
+                  className="group relative bg-white/50 hover:bg-white backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-[18px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="w-16 h-16 rounded-[18px] bg-slate-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-all text-slate-600">
@@ -199,7 +199,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 5. Featured Visual */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-6 max-w-7xl">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
@@ -221,7 +221,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 6. What We Can Build & Use Cases (Split) */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-20">
             
@@ -263,7 +263,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 7. Technology Stack */}
-      <section className="py-24 bg-slate-50 border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 mb-12">Core Technologies We Use</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
@@ -277,7 +277,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 8. Process & Why Us */}
-      <section className="py-24 btn-primary">
+      <section className="py-12 md:py-16 btn-primary">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-20">
             <div>
@@ -294,7 +294,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                     <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 group-hover:bg-blue-500 text-slate-500 group-hover:text-[var(--heading)] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors z-10">
                       <span className="text-xs font-bold">{idx + 1}</span>
                     </div>
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-[18px] border border-slate-700 bg-slate-800/50 shadow-sm">
+                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-[18px] border border-slate-700 bg-white/50 shadow-sm">
                       <h4 className="font-bold text-lg">{step.title}</h4>
                       <p className="text-sm text-slate-500">{step.desc}</p>
                     </div>
@@ -327,19 +327,19 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             <div>
               <h2 className="text-3xl font-black mb-12">Why WebCodian</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-black text-[var(--heading)] mb-2">6</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Years Experience</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-black text-[var(--heading)] mb-2">15+</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Team Members</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-black text-[var(--heading)] mb-2">100%</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
                 </div>
-                <div className="p-8 bg-slate-800 rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-black text-[var(--heading)] mb-2">24/7</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Support</div>
                 </div>

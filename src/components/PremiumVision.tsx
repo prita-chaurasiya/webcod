@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function PremiumVision() {
   return (
-    <section className="relative py-24 lg:py-32 bg-slate-50 overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 overflow-hidden">
       {/* Animated Light Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/50 to-blue-50/20 rounded-full blur-[100px] opacity-70 animate-pulse" style={{ animationDuration: '8s' }} />

@@ -29,7 +29,7 @@ export function PremiumInternshipForm() {
 
   if (isSubmitted) {
     return (
-      <section className="py-24 bg-slate-50 relative overflow-hidden min-h-[60vh] flex items-center justify-center">
+      <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden min-h-[60vh] flex items-center justify-center">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +50,7 @@ export function PremiumInternshipForm() {
   }
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -90,7 +90,7 @@ export function PremiumInternshipForm() {
                 <img className="w-12 h-12 rounded-full border-2 border-slate-900 object-cover img-premium" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&q=80" alt="Student 1" />
                 <img className="w-12 h-12 rounded-full border-2 border-slate-900 object-cover img-premium" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=100&q=80" alt="Student 2" />
                 <img className="w-12 h-12 rounded-full border-2 border-slate-900 object-cover img-premium" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=100&q=80" alt="Student 3" />
-                <div className="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-sm font-bold text-[var(--heading)]">+500</div>
+                <div className="w-12 h-12 rounded-full border-2 border-slate-900 bg-white flex items-center justify-center text-sm font-bold text-[var(--heading)]">+500</div>
               </div>
               <p className="text-sm text-slate-500 font-medium">Join 500+ successful interns.</p>
             </div>

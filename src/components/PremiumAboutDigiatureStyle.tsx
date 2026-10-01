@@ -12,7 +12,7 @@ export function PremiumAboutDigiatureStyle() {
     <div className="w-full bg-slate-50 overflow-hidden">
       
       {/* SECTION 1: Light About Section */}
-      <section className="py-20 lg:py-32 relative">
+      <section className="py-12 lg:py-16 md:py-12 relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           
           <div className="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
@@ -87,7 +87,7 @@ export function PremiumAboutDigiatureStyle() {
       </section>
 
       {/* SECTION 2: Future Ready Split Section */}
-      <section className="py-20 lg:py-32 bg-white relative border-y border-slate-100">
+      <section className="py-12 lg:py-16 md:py-12 bg-white relative border-y border-slate-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
             
@@ -167,7 +167,7 @@ export function PremiumAboutDigiatureStyle() {
 
 
       {/* SECTION 3: Dark Gradient Services Section */}
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-12 lg:py-16 md:py-12 bg-white relative overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--primary)]/10 rounded-full blur-[100px]"></div>
@@ -226,7 +226,7 @@ export function PremiumAboutDigiatureStyle() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative bg-slate-800/50 rounded-[18px] p-1 overflow-hidden"
+                className="group relative bg-white/50 rounded-[18px] p-1 overflow-hidden"
               >
                 {/* Glowing Border Mask Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -234,7 +234,7 @@ export function PremiumAboutDigiatureStyle() {
                 
                 {/* Inner Card Content */}
                 <div className="relative h-full bg-white rounded-[18px] p-8 flex flex-col items-start transition-all duration-300">
-                  <div className="w-14 h-14 rounded-[18px] bg-slate-800 border border-slate-700 text-slate-600 flex items-center justify-center mb-6 group-hover:text-[var(--primary)] group-hover:border-[var(--primary)]/30 transition-colors duration-300">
+                  <div className="w-14 h-14 rounded-[18px] bg-white border border-slate-700 text-slate-600 flex items-center justify-center mb-6 group-hover:text-[var(--primary)] group-hover:border-[var(--primary)]/30 transition-colors duration-300">
                     {service.icon}
                   </div>
                   <h4 className="text-xl font-bold text-[var(--heading)] mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-teal-300 transition-all duration-300">

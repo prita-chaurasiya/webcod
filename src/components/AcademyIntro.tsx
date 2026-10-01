@@ -6,7 +6,7 @@ import { GraduationCap, ArrowRight, Code, Monitor, BookOpen } from "lucide-react
 
 export function AcademyIntro() {
   return (
-    <section className="py-24 bg-[#0a0a0a] border-y border-white/10 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#0a0a0a] border-y border-white/10 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2" />
       

@@ -12,7 +12,7 @@ interface PremiumServiceLayoutProps {
 
 export function PremiumServiceLayout({ title, description, features }: PremiumServiceLayoutProps) {
   return (
-    <section className="py-24 bg-[#f8fafc] relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#f8fafc] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         
         <div className="grid lg:grid-cols-3 gap-16">

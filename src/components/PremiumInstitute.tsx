@@ -79,7 +79,7 @@ const courses = [
 
 export function PremiumInstitute() {
   return (
-    <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-12 bg-white relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-50 via-white to-white" />
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">

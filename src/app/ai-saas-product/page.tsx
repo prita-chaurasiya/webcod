@@ -12,7 +12,7 @@ export default function Page() {
       
       {/* 1. Breadcrumb Section */}
       <div 
-        className="relative py-24 lg:py-32 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
+        className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-[#3b70e0] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "linear-gradient(rgba(10, 20, 60, 0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop')"
         }}
@@ -34,7 +34,7 @@ export default function Page() {
       </div>
 
       {/* 2. Hero Section */}
-      <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -103,7 +103,7 @@ export default function Page() {
       </section>
 
       {/* 3. Core Capabilities Grid replaced with Premium Feature Cards */}
-      <section className="py-24 lg:py-32 bg-slate-50 border-y border-slate-100">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">SaaS Engineering Capabilities</h2>
@@ -153,7 +153,7 @@ export default function Page() {
       </section>
 
       {/* 4. Strategic Approach (Spacious Layout) */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
@@ -179,7 +179,7 @@ export default function Page() {
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
-                      <p className="text-slate-400 text-lg leading-relaxed">{step.desc}</p>
+                      <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -187,7 +187,7 @@ export default function Page() {
             </div>
 
             <div className="hidden lg:block relative h-[700px]">
-               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-20 pl-12">
+               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
                  <div className="w-full h-px bg-slate-700/50 relative">
                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.8)]"></div>
                  </div>

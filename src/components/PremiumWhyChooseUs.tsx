@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function PremiumWhyChooseUs() {
   return (
-    <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-white relative overflow-hidden">
       {/* Premium Background Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[100px] opacity-70 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-[100px] opacity-70 pointer-events-none"></div>
@@ -76,11 +76,11 @@ export function PremiumWhyChooseUs() {
                 transition={{ delay: 0.2 }}
                 className="space-y-4 md:space-y-6"
               >
-                <div className="bg-slate-900 p-8 rounded-3xl shadow-xl relative overflow-hidden group">
+                <div className="bg-slate-50 p-8 rounded-3xl shadow-xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/20 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
                   <ShieldCheck className="w-10 h-10 text-indigo-400 mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">Bank-Grade Security</h4>
-                  <p className="text-slate-400 text-sm font-medium">End-to-end encryption and compliance-first engineering.</p>
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">Bank-Grade Security</h4>
+                  <p className="text-slate-600 text-sm font-medium">End-to-end encryption and compliance-first engineering.</p>
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-xl relative border-4 border-white group">
                   <div className="absolute inset-0 bg-indigo-600/20 mix-blend-overlay z-10 transition-opacity group-hover:opacity-0 duration-500"></div>

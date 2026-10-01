@@ -71,7 +71,7 @@ export function PremiumTestimonials() {
   }, [isHovered, nextSlide]);
 
   return (
-    <section className="py-20 md:py-24 relative overflow-hidden" style={{
+    <section className="py-12 md:py-12 md:py-16 relative overflow-hidden" style={{
       background: "linear-gradient(135deg, #eef2ff 0%, #fcfcfc 40%, #f3e8ff 100%)"
     }}>
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">

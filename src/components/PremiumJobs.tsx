@@ -32,7 +32,7 @@ export function PremiumJobs() {
   const [selectedJob, setSelectedJob] = useState<number | null>(null);
 
   return (
-    <section id="open-roles" className="py-24 bg-[#f8fafc] relative overflow-hidden">
+    <section id="open-roles" className="py-12 md:py-16 bg-[#f8fafc] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 max-w-5xl relative z-10">
         
         <div className="text-center mb-16">

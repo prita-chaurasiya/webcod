@@ -101,7 +101,7 @@ export function EduCourses() {
     : courses.filter(c => c.category === activeCategory);
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/5 rounded-full blur-[100px] pointer-events-none"></div>
 

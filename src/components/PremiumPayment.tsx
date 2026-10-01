@@ -22,7 +22,7 @@ export function PremiumPayment() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -51,12 +51,12 @@ export function PremiumPayment() {
                   <div className="w-16 h-12 bg-white/10 rounded-[18px] flex items-center justify-center backdrop-blur-sm border border-white/20">
                     <Building2 className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-medium tracking-widest text-slate-400">WEBCODIAN LLP</span>
+                  <span className="text-sm font-medium tracking-widest text-slate-600">WEBCODIAN LLP</span>
                 </div>
 
                 <div className="space-y-6 relative z-10">
                   <div>
-                    <span className="block text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Account Number</span>
+                    <span className="block text-xs font-semibold text-slate-600 uppercase tracking-widest mb-2">Account Number</span>
                     <div className="flex items-center gap-4">
                       <span className="text-2xl font-mono tracking-widest text-white">2597 9441 2733</span>
                       <button 

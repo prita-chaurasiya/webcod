@@ -22,7 +22,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
         ]}
       />
       
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-12 lg:py-16 md:py-12 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10">
           
           <Link href="/blog" className="inline-flex items-center gap-2 text-gray-500 hover:text-[var(--primary)] transition-colors mb-10 font-medium">

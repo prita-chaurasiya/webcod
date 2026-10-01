@@ -209,7 +209,7 @@ export function PremiumServiceDetail({
       </section>
 
       {/* 2. Overview & Features */}
-      <section className="py-16 lg:py-24 relative overflow-hidden bg-white perspective-[1000px]">
+      <section className="py-16 lg:py-12 md:py-16 relative overflow-hidden bg-white perspective-[1000px]">
         {/* Subtle Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-t from-emerald-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
@@ -293,7 +293,7 @@ export function PremiumServiceDetail({
                   <div className="relative p-2 rounded-[3rem] bg-gradient-to-br from-slate-100 to-white shadow-lg group transform transition-transform duration-700 hover:rotate-y-[-5deg]">
                      <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-[var(--primary)]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
                      <div className="rounded-[2.5rem] overflow-hidden relative border-4 border-white shadow-inner bg-slate-50">
-                       <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                       <div className="absolute inset-0 bg-blue-50/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                        <img src={featuresImage} alt="Features" className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000 ease-out img-premium" />
                      </div>
                   </div>

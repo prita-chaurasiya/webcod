@@ -104,7 +104,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
       {/* 4. CTA */}
       <EnterpriseSection background="navy" padding="large">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-black text-white mb-6">Innovate Your {data.title} Business Today</h2>
+          <h2 className="text-4xl font-black text-slate-900 mb-6">Innovate Your {data.title} Business Today</h2>
           <p className="text-xl text-slate-300 mb-10 leading-relaxed">Join the market leaders who have already partnered with us to undergo complete digital transformation.</p>
           <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-black text-lg shadow-xl hover:-translate-y-1 transition-all">
             Discuss Your Requirements <ArrowRight className="w-5 h-5" />

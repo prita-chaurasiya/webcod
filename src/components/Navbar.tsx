@@ -161,7 +161,7 @@ export function Navbar() {
                         <div className="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
                         <h3 className="text-2xl font-black text-slate-900 mb-4 relative z-10">AI & Automation</h3>
                         <p className="text-sm text-slate-500 leading-relaxed mb-8 font-medium relative z-10">Intelligent systems and automation designed around modern business workflows.</p>
-                        <Link href="/ai-automation-solutions" className="inline-flex items-center gap-2 text-sm font-bold text-[var(--heading)] bg-white px-6 py-3 rounded-[18px] hover:bg-slate-800 transition-all w-fit relative z-10 shadow-md hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group/btn">
+                        <Link href="/ai-automation-solutions" className="inline-flex items-center gap-2 text-sm font-bold text-[var(--heading)] bg-white px-6 py-3 rounded-[18px] hover:bg-white transition-all w-fit relative z-10 shadow-md hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group/btn">
                           Explore AI <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                         </Link>
                       </div>

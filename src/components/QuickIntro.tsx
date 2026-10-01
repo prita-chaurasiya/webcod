@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function QuickIntro() {
   return (
-    <section className="py-20 bg-[#f9f9f9] relative overflow-hidden">
+    <section className="py-12 bg-[#f9f9f9] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           

@@ -27,7 +27,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
   return (
     <>
       {/* 7. AI Development Process */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Enterprise Process</h2>
@@ -58,7 +58,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 8. Technology Stack */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200">
+      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-black text-[#0f2c59]">Enterprise AI Stack</h2>
@@ -75,7 +75,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 9. Industries We Serve */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
@@ -101,7 +101,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 10. AI Use Cases */}
-      <section className="py-24 lg:py-32 bg-slate-900 text-white">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black mb-6">Enterprise Use Cases</h2>
@@ -109,14 +109,14 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
           
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((uc, i) => (
-              <div key={i} className="bg-slate-800 rounded-[2rem] overflow-hidden group shadow-xl">
+              <div key={i} className="bg-white rounded-[2rem] overflow-hidden group shadow-xl">
                 <div className="h-64 overflow-hidden relative border-b border-slate-700">
-                  <div className="absolute inset-0 bg-slate-900/20 z-10"></div>
+                  <div className="absolute inset-0 bg-slate-50/20 z-10"></div>
                   <img src={uc.image} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-10">
-                  <h3 className="text-2xl font-bold mb-4 text-white">{uc.title}</h3>
-                  <p className="text-slate-400 text-lg leading-relaxed">{uc.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
+                  <p className="text-slate-600 text-lg leading-relaxed">{uc.description}</p>
                 </div>
               </div>
             ))}
@@ -125,7 +125,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 11 & 12. Why Choose Us & Metrics */}
-      <section className="py-24 lg:py-32 bg-blue-600 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-blue-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] opacity-10 bg-cover mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         
@@ -152,7 +152,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               ].map((stat, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-colors">
                   <div className="text-4xl font-black mb-2">{stat.val}</div>
-                  <div className="text-blue-200 font-bold uppercase tracking-wider text-sm">{stat.label}</div>
+                  <div className="text-blue-700 font-bold uppercase tracking-wider text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -161,7 +161,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 13. FAQ */}
-      <section className="py-24 lg:py-32 bg-slate-50 border-t border-slate-200">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Frequently Asked Questions</h2>
@@ -176,7 +176,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
                 >
                   {faq.q}
                   <span className="flex-shrink-0 ml-4">
-                    {openFaq === i ? <Minus className="w-5 h-5 text-blue-600" /> : <Plus className="w-5 h-5 text-slate-400" />}
+                    {openFaq === i ? <Minus className="w-5 h-5 text-blue-600" /> : <Plus className="w-5 h-5 text-slate-600" />}
                   </span>
                 </button>
                 <AnimatePresence>
@@ -198,7 +198,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 14. Related AI Services */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <h3 className="text-2xl font-black text-[#0f2c59] mb-8 text-center">Explore Other AI Solutions</h3>
           <div className="flex flex-wrap justify-center gap-6">

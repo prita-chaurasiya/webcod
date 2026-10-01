@@ -92,7 +92,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
                 <div key={idx} className="flex gap-4">
                   <div className="w-8 h-8 rounded-full bg-[var(--primary)]/20 text-[var(--primary)] flex items-center justify-center shrink-0 mt-1">✓</div>
                   <div>
-                    <h4 className="font-bold text-white">{solution.title}</h4>
+                    <h4 className="font-bold text-slate-900">{solution.title}</h4>
                     <p className="text-slate-300 text-sm mt-1">{solution.desc}</p>
                   </div>
                 </div>

@@ -88,7 +88,7 @@ export function PremiumBlog() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <section className="py-20 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 bg-slate-50 relative overflow-hidden">
       {/* Ambient background glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/8 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-[100px] pointer-events-none" />
@@ -214,7 +214,7 @@ export function PremiumBlog() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center py-20 bg-white rounded-[18px] border border-slate-100 mt-4"
+            className="text-center py-12 bg-white rounded-[18px] border border-slate-100 mt-4"
           >
             <Search className="w-12 h-12 text-slate-600 mx-auto mb-4" />
             <h4 className="text-xl font-bold text-slate-800 mb-2">No matching articles found</h4>

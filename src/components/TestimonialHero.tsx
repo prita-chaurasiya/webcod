@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function TestimonialHero() {
   return (
-    <section className="bg-slate-50 py-20 lg:py-32 overflow-hidden">
+    <section className="bg-slate-50 py-12 lg:py-16 md:py-12 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
           

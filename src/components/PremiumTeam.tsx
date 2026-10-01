@@ -63,7 +63,7 @@ const teamMembers = [
 
 export function PremiumTeam() {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-12 md:py-16 bg-white relative">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
           <span className="inline-block py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200 text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">The Minds Behind WebCodian</span>

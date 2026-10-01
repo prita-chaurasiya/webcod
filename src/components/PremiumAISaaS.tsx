@@ -55,7 +55,7 @@ export function PremiumAISaaS() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full rounded-[32px] bg-slate-800 p-2 shadow-lg border border-slate-700 overflow-hidden backdrop-blur-xl">
+              <div className="relative w-full rounded-[32px] bg-white p-2 shadow-lg border border-slate-700 overflow-hidden backdrop-blur-xl">
                 <div className="bg-[#0f172a] rounded-[24px] overflow-hidden">
                   
                   {/* Top Navbar Mockup */}
@@ -65,7 +65,7 @@ export function PremiumAISaaS() {
                       <div className="h-4 w-24 bg-slate-700 rounded-full hidden sm:block"></div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-slate-800"></div>
+                      <div className="w-6 h-6 rounded-full bg-white"></div>
                       <div className="w-8 h-8 rounded-full bg-slate-700"></div>
                     </div>
                   </div>
@@ -75,9 +75,9 @@ export function PremiumAISaaS() {
                     {/* Sidebar */}
                     <div className="w-16 sm:w-48 border-r border-slate-800 p-4 hidden sm:flex flex-col gap-4">
                       <div className="h-3 w-full bg-slate-700/50 rounded-full"></div>
-                      <div className="h-3 w-3/4 bg-slate-800 rounded-full"></div>
-                      <div className="h-3 w-5/6 bg-slate-800 rounded-full"></div>
-                      <div className="h-3 w-full bg-slate-800 rounded-full mt-4"></div>
+                      <div className="h-3 w-3/4 bg-white rounded-full"></div>
+                      <div className="h-3 w-5/6 bg-white rounded-full"></div>
+                      <div className="h-3 w-full bg-white rounded-full mt-4"></div>
                     </div>
                     
                     {/* Main Content */}
@@ -92,11 +92,11 @@ export function PremiumAISaaS() {
                       
                       {/* Metric Cards */}
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-slate-800/50 p-4 rounded-[18px] border border-slate-700/50">
+                        <div className="bg-white/50 p-4 rounded-[18px] border border-slate-700/50">
                           <div className="h-3 w-20 bg-slate-500 rounded-full mb-3"></div>
                           <div className="h-8 w-24 bg-white rounded-full"></div>
                         </div>
-                        <div className="bg-slate-800/50 p-4 rounded-[18px] border border-slate-700/50 relative overflow-hidden">
+                        <div className="bg-white/50 p-4 rounded-[18px] border border-slate-700/50 relative overflow-hidden">
                           <div className="absolute top-0 right-0 w-16 h-16 bg-[#06b6d4]/10 rounded-bl-full"></div>
                           <div className="h-3 w-20 bg-slate-500 rounded-full mb-3"></div>
                           <div className="h-8 w-16 bg-[#06b6d4] rounded-full"></div>
@@ -104,7 +104,7 @@ export function PremiumAISaaS() {
                       </div>
                       
                       {/* Chart Area */}
-                      <div className="flex-1 bg-slate-800/30 rounded-[18px] border border-slate-700/50 flex items-end px-4 gap-2 pb-4">
+                      <div className="flex-1 bg-white/30 rounded-[18px] border border-slate-700/50 flex items-end px-4 gap-2 pb-4">
                         <div className="w-1/6 bg-slate-700 rounded-t-sm h-[40%]"></div>
                         <div className="w-1/6 bg-[#f97316] rounded-t-sm h-[70%]"></div>
                         <div className="w-1/6 bg-slate-700 rounded-t-sm h-[50%]"></div>

@@ -21,7 +21,7 @@ const allIndustries = [
 
 export function PremiumIndustry() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
         
         {/* Header Section */}

@@ -240,7 +240,7 @@ export function EnterpriseAbout() {
             <div className="inline-block px-4 py-2 rounded-full bg-white/10 text-white font-bold text-sm tracking-widest uppercase">
               Global Reach
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
               Delivering Excellence Across Borders.
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed">
@@ -253,8 +253,8 @@ export function EnterpriseAbout() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">India Headquarters</h4>
-                  <p className="text-slate-400">Varanasi & Noida - Development & Education Hubs</p>
+                  <h4 className="text-lg font-bold text-slate-900">India Headquarters</h4>
+                  <p className="text-slate-600">Varanasi & Noida - Development & Education Hubs</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -262,8 +262,8 @@ export function EnterpriseAbout() {
                   <Globe2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">Global Client Base</h4>
-                  <p className="text-slate-400">Serving enterprises in USA, UK, UAE, and Australia</p>
+                  <h4 className="text-lg font-bold text-slate-900">Global Client Base</h4>
+                  <p className="text-slate-600">Serving enterprises in USA, UK, UAE, and Australia</p>
                 </div>
               </div>
             </div>
@@ -305,7 +305,7 @@ export function EnterpriseAbout() {
             </p>
             <Link 
               href="/contact" 
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[var(--primary)] hover:bg-slate-800 text-white rounded-[18px] font-bold text-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 transition-all group"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[var(--primary)] hover:bg-white text-white rounded-[18px] font-bold text-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 transition-all group"
             >
               Consult Our Experts <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>

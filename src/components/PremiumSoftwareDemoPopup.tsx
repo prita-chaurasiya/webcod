@@ -196,7 +196,7 @@ export function PremiumSoftwareDemoPopup({ isOpen, onClose }: PremiumSoftwareDem
 
                     <button 
                       type="submit" 
-                      className="w-full bg-white hover:bg-slate-800 text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl flex items-center justify-center gap-2 group mt-6"
+                      className="w-full bg-white hover:bg-white text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl flex items-center justify-center gap-2 group mt-6"
                     >
                       Request Live Demo
                       <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />

@@ -166,7 +166,7 @@ export function PremiumCourseDetail({
       </section>
 
       {/* 2. Course Overview & Benefits */}
-      <section className="py-24 relative overflow-hidden bg-white">
+      <section className="py-12 md:py-16 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
           <div className="flex flex-col lg:flex-row gap-16">
@@ -203,7 +203,7 @@ export function PremiumCourseDetail({
       </section>
 
       {/* 3. Key Highlights */}
-      <section className="py-20 bg-white relative border-y border-slate-800">
+      <section className="py-12 bg-white relative border-y border-slate-800">
          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                <div className="text-center">
@@ -239,7 +239,7 @@ export function PremiumCourseDetail({
       </section>
 
       {/* 4. Course Curriculum (Modules) */}
-      <section className="py-24 bg-slate-50 relative">
+      <section className="py-12 md:py-16 bg-slate-50 relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="text-center mb-16">
             <span className="inline-block py-1 px-3 rounded-full bg-slate-200 text-slate-700 font-semibold text-sm mb-4">Course Curriculum</span>
@@ -296,7 +296,7 @@ export function PremiumCourseDetail({
 
       {/* 5. FAQ Section (if provided) */}
       {faqs && faqs.length > 0 && (
-        <section className="py-24 bg-white relative">
+        <section className="py-12 md:py-16 bg-white relative">
           <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
             <div className="text-center mb-16">
               <span className="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">Frequently Asked Questions</span>

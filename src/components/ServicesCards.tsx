@@ -21,7 +21,7 @@ const services = [
 
 export function ServicesCards() {
   return (
-    <section className="py-20 bg-[#f1f8fb] relative overflow-hidden">
+    <section className="py-12 bg-[#f1f8fb] relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 justify-center mb-4">

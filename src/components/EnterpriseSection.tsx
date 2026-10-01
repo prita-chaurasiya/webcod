@@ -21,8 +21,8 @@ export function EnterpriseSection({
   };
 
   const paddings = {
-    normal: 'py-16 md:py-24',
-    large: 'py-24 md:py-32',
+    normal: 'py-16 md:py-12 md:py-16',
+    large: 'py-12 md:py-16 md:py-16 md:py-12',
     none: 'py-0',
   };
 

@@ -14,7 +14,7 @@ export function PremiumOpenTicket() {
   };
 
   return (
-    <section className="py-20 bg-slate-50 relative overflow-hidden">
+    <section className="py-12 bg-slate-50 relative overflow-hidden">
       {/* Background Ambient Lights */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-br from-[var(--primary)]/10 to-teal-400/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s' }} />

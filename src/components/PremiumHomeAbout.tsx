@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function PremiumHomeAbout() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-white relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-50 rounded-full blur-[120px] pointer-events-none opacity-50"></div>
       

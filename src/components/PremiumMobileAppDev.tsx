@@ -89,7 +89,7 @@ export function PremiumMobileAppDev() {
                     <Apple className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-slate-400 uppercase">iOS Apps</p>
+                    <p className="text-xs font-bold text-slate-600 uppercase">iOS Apps</p>
                     <p className="text-lg font-black text-slate-800">100% Native</p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export function PremiumMobileAppDev() {
                     <ShieldCheck className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-slate-400 uppercase">Security</p>
+                    <p className="text-xs font-bold text-slate-600 uppercase">Security</p>
                     <p className="text-lg font-black text-slate-800">Bank-Grade</p>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ export function PremiumMobileAppDev() {
       </section>
 
       {/* 2. Services Grid */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
@@ -148,7 +148,7 @@ export function PremiumMobileAppDev() {
       </section>
 
       {/* 3. Why Choose Us (Mobile Specific) */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-slate-50 text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "40px 40px" }}></div>
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
@@ -157,10 +157,10 @@ export function PremiumMobileAppDev() {
               <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" alt="Mobile Development" className="rounded-[32px] shadow-2xl" />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 Why Partner With Us For Mobile Development?
               </h2>
-              <p className="text-slate-400 text-lg mb-8">
+              <p className="text-slate-600 text-lg mb-8">
                 Building an app is easy. Building a successful app that scales to millions of users requires deep expertise, flawless architecture, and obsessive attention to detail.
               </p>
               
@@ -176,7 +176,7 @@ export function PremiumMobileAppDev() {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                      <p className="text-slate-400">{item.desc}</p>
+                      <p className="text-slate-600">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -187,7 +187,7 @@ export function PremiumMobileAppDev() {
       </section>
 
       {/* 4. Development Process */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">

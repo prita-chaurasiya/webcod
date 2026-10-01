@@ -9,7 +9,7 @@ export function FeaturedCourses() {
   const featuredCourses = courses.filter((course) => course.featured).slice(0, 8);
 
   return (
-    <section className="py-24 bg-zinc-50 dark:bg-white">
+    <section className="py-12 md:py-16 bg-zinc-50 dark:bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">

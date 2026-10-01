@@ -45,7 +45,7 @@ function Counter({ from, to, duration = 2 }: { from: number; to: number; duratio
 
 export function PremiumStats() {
   return (
-    <section className="py-20 relative bg-[#1f2937] overflow-hidden">
+    <section className="py-12 relative bg-[#1f2937] overflow-hidden">
       {/* Decorative Network Background */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">

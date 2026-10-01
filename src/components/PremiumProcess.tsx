@@ -15,7 +15,7 @@ const processes = [
 
 export function PremiumProcess() {
   return (
-    <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-12 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">

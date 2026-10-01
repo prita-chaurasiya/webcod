@@ -64,7 +64,7 @@ const itemVariants: any = {
 
 export function PremiumPortfolio() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-white relative overflow-hidden">
       {/* Premium Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-[100px] mix-blend-multiply animate-[pulse_8s_ease-in-out_infinite_alternate]" />
@@ -159,7 +159,7 @@ export function PremiumPortfolio() {
         </motion.div>
 
         <div className="mt-16 text-center">
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-slate-800 text-[var(--heading)] font-bold rounded-[18px] transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white text-[var(--heading)] font-bold rounded-[18px] transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1">
             View All Projects <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>

@@ -7,7 +7,7 @@ export default function Page() {
         title="Partner Registration" 
         breadcrumbs={[{ label: "Partner Registration" }]} 
       />
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="bg-gray-50 rounded-[18px] p-12 text-center border border-gray-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Partner Registration Content Coming Soon</h2>

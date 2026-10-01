@@ -155,7 +155,7 @@ export function PremiumMaintenance() {
       </section>
 
       {/* 2. Maintenance Pillars Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 md:py-16 bg-white relative">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-20">
             <motion.div 
@@ -193,7 +193,7 @@ export function PremiumMaintenance() {
       </section>
 
       {/* 3. The "Why WebCodian" Section */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200/50 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200/50 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[150px] mix-blend-multiply pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -246,7 +246,7 @@ export function PremiumMaintenance() {
       </section>
 
       {/* 4. Premium FAQ */}
-      <section className="py-32 bg-white relative">
+      <section className="py-16 md:py-12 bg-white relative">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Maintenance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">FAQs</span></h2>

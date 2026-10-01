@@ -17,7 +17,7 @@ export function PremiumContact() {
     <div className="w-full bg-white font-['Manrope']">
       
       {/* 1. By the Numbers */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-12">
             <span className="text-[var(--primary)]">WebCodian</span> by the Numbers
@@ -154,7 +154,7 @@ export function PremiumContact() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Primary</span>
+                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider block mb-1">Primary</span>
                     <a href="tel:+919794412733" className="font-bold text-slate-800 hover:text-[#0284c7]">+91 9794412733</a>
                   </div>
                   <div className="flex gap-2">
@@ -179,7 +179,7 @@ export function PremiumContact() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">HR & Hiring Email</span>
+                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wider block mb-1">HR & Hiring Email</span>
                     <a href="mailto:info@webcodian.com" className="font-bold text-slate-800 hover:text-[#10b981]">info@webcodian.com</a>
                   </div>
                   <div className="flex gap-2">

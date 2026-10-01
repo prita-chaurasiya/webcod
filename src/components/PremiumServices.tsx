@@ -151,7 +151,7 @@ export function PremiumServices() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 lg:py-20 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
+    <section className="py-16 lg:py-12 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
       {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>

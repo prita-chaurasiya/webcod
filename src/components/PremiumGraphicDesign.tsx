@@ -194,7 +194,7 @@ export function PremiumGraphicDesign() {
       {/* 3. Tech Stack Marquee */}
       <section className="py-16 bg-white border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-20 mb-8 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-600 font-semibold text-xs mb-4">TECHNOLOGY WE USE</span>
+          <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-700 text-slate-600 font-semibold text-xs mb-4">TECHNOLOGY WE USE</span>
         </div>
         
         <div className="relative w-full flex flex-col gap-6 z-0">
@@ -208,7 +208,7 @@ export function PremiumGraphicDesign() {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.1, rotateX: 10, rotateY: 10, zIndex: 30 }}
-                  className="w-48 bg-slate-800/80 backdrop-blur-xl border border-slate-700 rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 shadow-xl cursor-pointer"
+                  className="w-48 bg-white/80 backdrop-blur-xl border border-slate-700 rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 shadow-xl cursor-pointer"
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div className="text-5xl" style={{ transform: "translateZ(30px)" }}>{tech.icon}</div>
@@ -221,7 +221,7 @@ export function PremiumGraphicDesign() {
       </section>
 
       {/* 4. FAQ Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 md:py-16 bg-white relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <div className="text-center mb-16">
             <span className="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 font-semibold text-sm mb-4">Frequently Asked Questions</span>
