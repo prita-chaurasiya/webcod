@@ -178,7 +178,7 @@ export default function Page() {
                       {step.num}
                     </div>
                     <div>
-                      <h4 className="text-2xl font-bold mb-3">{step.title}</h4>
+                      <h4 className="text-2xl font-bold mb-3 text-white">{step.title}</h4>
                       <p className="text-slate-300 text-lg leading-relaxed">{step.desc}</p>
                     </div>
                   </div>

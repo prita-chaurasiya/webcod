@@ -143,7 +143,16 @@ export function PremiumSolutionDetail({
               transition={{ duration: 0.6 }}
               className="xl:w-[45%] w-full flex justify-center xl:justify-start order-2 xl:order-1"
             >
-              <img src={whyImage || "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"} alt="Why Choose Us" className="w-full max-w-[550px] h-auto object-cover rounded-[2rem] shadow-xl hover:scale-105 transition-transform duration-700 border-4 border-slate-50" />
+              <div className="relative w-full max-w-[550px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-slate-50">
+                <motion.img 
+                  src={whyImage || "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"} 
+                  alt="Why Choose Us" 
+                  initial={{ scale: 1 }}
+                  animate={{ scale: 1.15 }}
+                  transition={{ duration: 15, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+                  className="w-full h-auto object-cover origin-center" 
+                />
+              </div>
             </motion.div>
             
             {/* Right Content & Grid */}
