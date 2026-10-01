@@ -11,11 +11,7 @@ const webSoftwareServices = [
   { name: "Custom Software Development", href: "/custom-software-development" },
   { name: "Enterprise Software", href: "/enterprise-software" },
   { name: "Web Application Dev", href: "/web-application-development" },
-  { name: "Website Design & Dev", href: "/website-development" },
-  { name: "Blockchain & Web3", href: "/blockchain-development" },
-  { name: "Smart Contract Dev", href: "/smart-contract-development" },
-  { name: "Crypto Wallet Dev", href: "/wallet-development" },
-  { name: "Crypto Exchange Dev", href: "/exchange-software-development" }
+  { name: "Website Design & Dev", href: "/website-development" }
 ];
 
 const aiAutomationServices = [
