@@ -43,9 +43,10 @@ export function HomeAutoPopup() {
           {/* Close Button */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 z-20 text-[var(--heading)]/80 hover:text-[var(--heading)] transition-colors"
+            className="absolute top-3 right-3 md:top-4 md:right-4 z-50 text-slate-900 bg-white/40 hover:bg-white rounded-full p-1.5 transition-all shadow-sm"
+            aria-label="Close"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 md:w-6 md:h-6" />
           </button>
 
           {/* Header */}
