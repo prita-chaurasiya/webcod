@@ -30,7 +30,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Enterprise Process</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Our Enterprise Process</h2>
             <p className="text-xl text-slate-600 font-medium">A systematic, risk-free methodology designed for global enterprises.</p>
           </div>
           
@@ -47,7 +47,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-10 group-hover:scale-150 transition-transform duration-500"></div>
-                  <div className="text-5xl font-black text-slate-100 mb-6 group-hover:text-blue-600/10 transition-colors">{item.step}</div>
+                  <div className="text-5xl font-bold text-slate-100 mb-6 group-hover:text-blue-600/10 transition-colors">{item.step}</div>
                   <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                   <p className="text-slate-600 font-medium">{item.desc}</p>
                 </div>
@@ -61,7 +61,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-[#0f2c59]">Enterprise AI Stack</h2>
+            <h2 className="text-3xl font-bold text-[#0f2c59]">Enterprise AI Stack</h2>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
@@ -78,7 +78,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -104,7 +104,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">Enterprise Use Cases</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Enterprise Use Cases</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -132,7 +132,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-[1.1]">Why Global Enterprises Trust WebCodian</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-[1.1]">Why Global Enterprises Trust WebCodian</h2>
               <div className="space-y-6">
                 {["Elite Engineering Talent", "Strict Data Privacy & ISO Compliance", "Zero-Downtime Deployments", "Dedicated Post-Launch Support"].map((point, i) => (
                   <div key={i} className="flex items-center gap-4">
@@ -151,7 +151,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
                 { val: "10+", label: "Years Experience" }
               ].map((stat, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-4xl font-black mb-2">{stat.val}</div>
+                  <div className="text-4xl font-bold mb-2">{stat.val}</div>
                   <div className="text-blue-700 font-bold uppercase tracking-wider text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -164,7 +164,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Frequently Asked Questions</h2>
           </div>
           
           <div className="space-y-4">
@@ -200,7 +200,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       {/* 14. Related AI Services */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h3 className="text-2xl font-black text-[#0f2c59] mb-8 text-center">Explore Other AI Solutions</h3>
+          <h3 className="text-2xl font-bold text-[#0f2c59] mb-8 text-center">Explore Other AI Solutions</h3>
           <div className="flex flex-wrap justify-center gap-6">
             <Link href="/ai-agent-development" className="font-bold text-slate-600 hover:text-blue-600 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               AI Agents <ChevronRight className="w-4 h-4" />

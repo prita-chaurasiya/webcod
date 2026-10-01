@@ -51,7 +51,7 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
             
             {/* AI & Automation Section */}
             <div className="mb-10">
-              <h3 className="text-xl font-black text-slate-900 mb-6 tracking-tight">Ai & Automation</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-6 tracking-tight">Ai & Automation</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
                 {aiServices.map((service, idx) => {
                   const isActive = activeService === service.id;
@@ -75,7 +75,7 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
 
             {/* Industries Section */}
             <div className="mb-10">
-              <h3 className="text-xl font-black text-slate-900 mb-6 tracking-tight">Industries</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-6 tracking-tight">Industries</h3>
               <div className="flex flex-wrap gap-2.5">
                 {industries.map((ind, idx) => (
                   <div 

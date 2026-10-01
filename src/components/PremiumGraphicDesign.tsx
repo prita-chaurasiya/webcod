@@ -82,7 +82,7 @@ export function PremiumGraphicDesign() {
                 <span className="w-2 h-2 rounded-full bg-slate-50 animate-pulse"></span>
                 PREMIUM DESIGN AGENCY
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--heading)] leading-tight mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--heading)] leading-tight mb-4">
                 Graphic <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Design</span>
               </h1>
               <p className="text-slate-600 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">

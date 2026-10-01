@@ -35,7 +35,7 @@ export function PremiumWebsiteValidity() {
             <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner">
               <ShieldCheck className="w-8 h-8" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Check Domain Status
             </h2>
             <p className="text-slate-500 font-medium">

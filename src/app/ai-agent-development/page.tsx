@@ -20,7 +20,7 @@ export default function Page() {
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               AI Agent Development
             </h1>
             <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
@@ -50,7 +50,7 @@ export default function Page() {
                 Autonomous Intelligence
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                 Next-Generation <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">AI Agents</span>
               </h2>
               
@@ -93,7 +93,7 @@ export default function Page() {
                   <Brain className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-slate-900">10x</div>
+                  <div className="text-2xl font-bold text-slate-900">10x</div>
                   <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Efficiency</div>
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Agent Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Agent Capabilities</h2>
             <p className="text-xl text-slate-600 font-medium">
               Our AI agents do more than just chat—they execute. We engineer them with full agency to interact with your digital ecosystem.
             </p>
@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-4 block">Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                 How Our AI Agents Work
               </h2>
               
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Action & Tool Use", desc: "The agent securely calls webhooks, APIs, or database queries to execute the planned actions autonomously." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-cyan-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-700 group-hover:text-cyan-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -208,7 +208,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
             <p className="text-xl text-slate-600 font-medium">Overcome operational bottlenecks with autonomous task execution.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -237,7 +237,7 @@ export default function Page() {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">Unfair Business Advantage</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
               <ul className="space-y-6">
                 {[
                   "Reduce operational overhead by up to 60%",
@@ -260,11 +260,11 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-[#0f2c59]">AI Agent Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-[#0f2c59]">AI Agent Tech Stack</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {["LangGraph", "CrewAI", "AutoGPT", "OpenAI Tool Calling", "Anthropic Claude", "Python", "FastAPI", "Vector Databases", "MCP", "RAG", "REST/GraphQL Integration", "Docker"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-cyan-500 hover:text-cyan-600 transition-colors">
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-cyan-500 hover:text-cyan-600 transition-colors">
                 {tech}
               </div>
             ))}
@@ -276,7 +276,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Implementation Process</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Implementation Process</h2>
             <p className="text-xl text-slate-600">A rigorous, enterprise-grade methodology for deploying Autonomous AI safely.</p>
           </div>
           
@@ -288,7 +288,7 @@ export default function Page() {
               { step: "04", title: "Human-in-the-Loop", desc: "Deploying with strict approval gates before the agent executes high-stakes actions." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                 <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
@@ -301,7 +301,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Enterprise Use Cases</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Enterprise Use Cases</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -313,7 +313,7 @@ export default function Page() {
                   <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-10">
-                  <h3 className="text-2xl font-black mb-4 text-slate-900">{uc.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
                   <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-slate-900 mb-6">Uncompromising Data Security</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Uncompromising Data Security</h2>
               <p className="text-lg text-blue-700 mb-8 font-medium">When you give AI agency, security is paramount. We build systems that guarantee agents only operate within strict boundaries with robust audit trails.</p>
               <ul className="space-y-4">
                 {["Human-in-the-Loop (HITL) Execution", "SOC2 Compliant API Gateways", "Strict Role-Based Access Controls (RBAC)", "Immutable Agent Action Logs"].map((item, i) => (
@@ -350,7 +350,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -371,7 +371,7 @@ export default function Page() {
       {/* 12. Quality Assurance */}
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Agent QA & Red Teaming</h2>
+          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">Agent QA & Red Teaming</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We rigorously stress-test agent reasoning loops against edge cases, infinite loops, and prompt injections to ensure enterprise-ready reliability before deployment.</p>
         </div>
       </section>
@@ -380,7 +380,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-cyan-50 p-12 lg:p-20 rounded-[3rem] text-center border border-cyan-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian engineered an autonomous support swarm that integrates directly with our Shopify and Zendesk APIs. It now handles 40% of our return processing without a single human touch."
             </p>
@@ -393,7 +393,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[

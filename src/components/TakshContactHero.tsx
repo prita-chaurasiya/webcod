@@ -19,7 +19,7 @@ export function TakshContactHero() {
 
           {/* Right: Text Content */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-black text-slate-800 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
               <span className="text-[var(--primary)]">Contact</span> Us
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto md:mx-0">

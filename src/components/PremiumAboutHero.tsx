@@ -35,7 +35,7 @@ export function PremiumAboutHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight"
               dangerouslySetInnerHTML={{ __html: `About <span className="text-[var(--primary)]">Us</span>` }}
             />
             <motion.p 

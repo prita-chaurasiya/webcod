@@ -19,7 +19,7 @@ export default function Page() {
              <span className="px-4 py-1.5 rounded-full bg-white/10 text-white border border-white/20 font-bold text-sm tracking-widest uppercase mb-6 shadow-sm backdrop-blur-md">
                 Enterprise Solution
              </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight max-w-4xl tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl tracking-tight">
               Web Application Development
             </h1>
             <ul className="flex items-center gap-2 text-white/90 font-medium uppercase text-sm tracking-wider">
@@ -39,7 +39,7 @@ export default function Page() {
               <div className="mb-6 relative inline-block">
                 <span className="bg-blue-600 text-white px-5 py-2 rounded-r-full font-bold text-sm tracking-wider uppercase shadow-md relative z-10">Overview</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 Transforming Businesses With <span className="text-blue-600">Web Application Development</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed font-medium">
@@ -65,7 +65,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
             <p className="text-xl text-slate-600 font-medium">Overcome technical debt and scale your operations effortlessly.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -90,7 +90,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Premium Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Premium Capabilities</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {["High Performance", "Bank-grade Security", "Custom Architecture", "24/7 Global Support"].map((feat, i) => (
@@ -111,7 +111,7 @@ export default function Page() {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">Unfair Business Advantage</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
               <ul className="space-y-6">
                 {[
                   "Accelerate go-to-market speed by up to 60%",
@@ -134,7 +134,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Enterprise Methodology</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Enterprise Methodology</h2>
             <p className="text-xl text-slate-600">A rigorous approach to engineering digital excellence.</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
@@ -145,7 +145,7 @@ export default function Page() {
               { step: "04", title: "Deployment", desc: "Zero-downtime launches and automated scaling." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                 <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
@@ -158,11 +158,11 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-[#0f2c59]">Modern Technology Stack</h2>
+            <h2 className="text-3xl font-bold text-[#0f2c59]">Modern Technology Stack</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {["React", "Next.js", "Node.js", "Python", "AWS", "Docker", "Kubernetes", "PostgreSQL", "Redis", "GraphQL"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
                 {tech}
               </div>
             ))}
@@ -174,7 +174,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -198,7 +198,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-slate-900 mb-6">Data Privacy & Security</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Data Privacy & Security</h2>
               <p className="text-lg text-blue-700 mb-8 font-medium">We architect our systems to strictly comply with global data protection laws and security standards.</p>
               <ul className="space-y-4">
                 {["End-to-End Encryption", "SOC2 Compliance Readiness", "Automated Penetration Testing", "Role-Based Access Control"].map((item, i) => (
@@ -219,7 +219,7 @@ export default function Page() {
       {/* 10. Quality Assurance */}
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Rigorous Quality Assurance</h2>
+          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">Rigorous Quality Assurance</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">Every line of code is heavily vetted through automated pipelines, regression testing, and peer reviews to ensure zero-defect deployments.</p>
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian transformed our legacy infrastructure. Their technical excellence and rapid execution saved us thousands of hours in manual overhead."
             </p>
@@ -240,7 +240,7 @@ export default function Page() {
       {/* 12. Maintenance & Support */}
       <section className="py-12 md:py-16 bg-slate-50 text-white">
          <div className="container mx-auto px-4 max-w-7xl text-center">
-            <h2 className="text-3xl font-black mb-8">24/7 Premium Support</h2>
+            <h2 className="text-3xl font-bold mb-8">24/7 Premium Support</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We offer dedicated DevOps monitoring, SLA-backed maintenance, and continuous optimization post-launch.</p>
          </div>
       </section>
@@ -249,15 +249,15 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Proven Use Cases</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Proven Use Cases</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 rounded-[2rem] p-10 border border-slate-200">
-               <h3 className="text-2xl font-black mb-4 text-slate-900">B2B Integrations</h3>
+               <h3 className="text-2xl font-bold mb-4 text-slate-900">B2B Integrations</h3>
                <p className="text-slate-600 text-lg font-medium">Securely integrating vendor supply chains with internal ERPs.</p>
             </div>
             <div className="bg-slate-50 rounded-[2rem] p-10 border border-slate-200">
-               <h3 className="text-2xl font-black mb-4 text-slate-900">SaaS Scaling</h3>
+               <h3 className="text-2xl font-bold mb-4 text-slate-900">SaaS Scaling</h3>
                <p className="text-slate-600 text-lg font-medium">Refactoring monolithic applications into scalable microservices.</p>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[

@@ -39,7 +39,7 @@ export function EnterpriseSectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className={`text-3xl md:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.2] mb-6 ${titleColor}`}
+        className={`text-3xl md:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.2] mb-6 ${titleColor}`}
       >
         {title}
       </motion.h2>

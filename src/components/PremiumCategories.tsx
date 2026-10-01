@@ -60,7 +60,7 @@ export function PremiumCategories() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-4 max-w-2xl mx-auto"
+            className="text-3xl md:text-4xl font-bold text-[#1f2937] mb-4 max-w-2xl mx-auto"
           >
             We use a systematic approach to maximum and optimize results.
           </motion.h2>

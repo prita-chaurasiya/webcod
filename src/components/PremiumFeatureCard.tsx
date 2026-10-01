@@ -49,10 +49,10 @@ export function PremiumFeatureCard({
         
         {/* Floating Number & Title */}
         <div className="absolute bottom-8 left-8 text-white z-10">
-          <div className="text-[120px] font-black leading-none opacity-20 -mb-8 tracking-tighter mix-blend-overlay">
+          <div className="text-[120px] font-bold leading-none opacity-20 -mb-8 tracking-tighter mix-blend-overlay">
             {number}
           </div>
-          <div className="text-3xl font-black tracking-tight drop-shadow-md">
+          <div className="text-3xl font-bold tracking-tight drop-shadow-md">
             {imageTitle}
           </div>
         </div>
@@ -63,7 +63,7 @@ export function PremiumFeatureCard({
         <div className="text-sm font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">
           {category}
         </div>
-        <h3 className="text-3xl lg:text-4xl font-black text-[#0f2c59] mb-6 leading-[1.1] tracking-tight">
+        <h3 className="text-3xl lg:text-4xl font-bold text-[#0f2c59] mb-6 leading-[1.1] tracking-tight">
           {title}
         </h3>
         <p className="text-slate-600 mb-10 leading-relaxed font-medium text-lg">

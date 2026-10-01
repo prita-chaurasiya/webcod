@@ -110,7 +110,7 @@ export function EduCourses() {
         {/* Header Area */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
               Explore Our <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-500">Premium Courses</span>
             </h2>
           </div>
@@ -207,7 +207,7 @@ export function EduCourses() {
                   <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-auto">
                     <div>
                       <span className="text-xs font-semibold text-slate-500 block mb-1">Fee Status</span>
-                      <span className="text-xl font-extrabold text-slate-900">{course.price}</span>
+                      <span className="text-xl font-bold text-slate-900">{course.price}</span>
                     </div>
                     <button className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[var(--primary)] transition-colors duration-300">
                       <ArrowRight className="w-5 h-5 text-slate-600 group-hover:text-[var(--heading)] transition-colors" />

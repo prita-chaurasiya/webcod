@@ -19,7 +19,7 @@ export function PremiumAboutDigiatureStyle() {
             <span className="inline-block py-2 px-4 rounded-full bg-blue-50 text-blue-600 font-bold text-sm tracking-wide mb-6">
               Innovation & Excellence
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
               Engineering Digital Excellence & Empowering Careers
             </h2>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
@@ -43,7 +43,7 @@ export function PremiumAboutDigiatureStyle() {
             <div className="hidden md:block w-px h-16 bg-slate-200"></div>
             <div className="w-full md:w-auto text-center md:text-left pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
               <span className="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">Status</span>
-              <span className="text-lg font-black text-slate-900">ISO Certified</span>
+              <span className="text-lg font-bold text-slate-900">ISO Certified</span>
             </div>
           </motion.div>
 
@@ -99,7 +99,7 @@ export function PremiumAboutDigiatureStyle() {
               className="flex-1"
             >
               <span className="text-[var(--primary)] font-bold text-sm tracking-widest uppercase mb-4 block">Next-Gen Ecosystems</span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 Building Future-Ready Digital Solutions
               </h2>
               <p className="text-lg text-slate-600 mb-8">
@@ -178,7 +178,7 @@ export function PremiumAboutDigiatureStyle() {
             <span className="inline-block py-1.5 px-3 rounded-full bg-white/5 border border-white/10 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6">
               Our Core Services
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[var(--heading)] mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--heading)] mb-6 leading-tight">
               Corporate Training &<br className="hidden md:block" /> Custom Software
             </h2>
             <p className="text-lg text-slate-500">

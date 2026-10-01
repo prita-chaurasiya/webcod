@@ -29,7 +29,7 @@ export function PremiumAISaaS() {
                 <span className="text-xs font-bold text-slate-200 uppercase tracking-widest">SaaS Architecture</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[var(--heading)] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--heading)] tracking-tight leading-[1.1]">
                 Launch Your <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f97316] to-[#fb923c]">
                   AI SaaS Startup.
@@ -126,7 +126,7 @@ export function PremiumAISaaS() {
       <section className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-4">Built for Scale</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Built for Scale</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">Modern technology stacks tailored for high-growth SaaS environments.</p>
           </div>
 

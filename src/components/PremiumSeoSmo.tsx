@@ -99,7 +99,7 @@ export function PremiumSeoSmo() {
             <LineChart className="w-4 h-4 text-[var(--primary)]" />
             <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Digital Growth Specialists</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
             Dominate the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-indigo-600">
               Digital Landscape

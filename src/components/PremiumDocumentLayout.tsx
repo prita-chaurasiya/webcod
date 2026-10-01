@@ -25,7 +25,7 @@ export function PremiumDocumentLayout({ title, lastUpdated, content }: PremiumDo
                <FileText className="w-6 h-6 text-blue-500" />
             </div>
             <div>
-              <h2 className="text-3xl font-extrabold text-gray-800">{title}</h2>
+              <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
               <p className="text-sm font-semibold text-slate-500 mt-1">Last Updated: {lastUpdated}</p>
             </div>
           </div>

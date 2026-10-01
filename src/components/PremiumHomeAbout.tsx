@@ -24,7 +24,7 @@ export function PremiumHomeAbout() {
               <div className="inline-block px-4 py-2 rounded-full bg-blue-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase mb-6">
                 Global Technology Partner
               </div>
-              <h2 className="text-3xl lg:text-5xl font-black text-[var(--heading)] mb-6 leading-[1.1] tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[var(--heading)] mb-6 leading-[1.1] tracking-tight">
                 Architecting the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400">Enterprise Digital Transformation</span>
               </h2>
               
@@ -103,7 +103,7 @@ export function PremiumHomeAbout() {
               className="absolute bottom-20 left-10 lg:-left-10 z-30 bg-white p-4 rounded-[18px] shadow-xl border border-slate-100 flex items-center gap-4"
             >
               <div className="w-12 h-12 rounded-full bg-[var(--primary)]/10 flex items-center justify-center">
-                <span className="text-[var(--primary)] font-black text-xl">10+</span>
+                <span className="text-[var(--primary)] font-bold text-xl">10+</span>
               </div>
               <div>
                 <p className="text-sm font-bold text-slate-800">Years of</p>

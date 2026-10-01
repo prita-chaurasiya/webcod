@@ -35,7 +35,7 @@ export function PremiumContact() {
                 <div className="w-16 h-16 mb-4 rounded-full bg-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                   {stat.icon}
                 </div>
-                <h4 className="text-2xl font-black text-[var(--primary)] mb-1">{stat.num}</h4>
+                <h4 className="text-2xl font-bold text-[var(--primary)] mb-1">{stat.num}</h4>
                 <p className="text-sm font-semibold text-slate-600">{stat.text}</p>
               </div>
             ))}
@@ -50,7 +50,7 @@ export function PremiumContact() {
             
             {/* Form */}
             <div className="lg:w-2/3 bg-[#F8F9FA] rounded-[24px] p-8 md:p-12 shadow-sm border border-slate-100">
-              <h2 className="text-3xl font-black text-[#1e293b] mb-8">Ready To Get Started?</h2>
+              <h2 className="text-3xl font-bold text-[#1e293b] mb-8">Ready To Get Started?</h2>
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">

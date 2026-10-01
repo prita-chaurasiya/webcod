@@ -115,7 +115,7 @@ export function Navbar() {
                     className="absolute top-full left-0 mt-3 w-80 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-[18px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 z-50 overflow-hidden"
                   >
                     <div className="px-3 py-2 border-b border-slate-100 flex items-center justify-between mb-1.5">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">About WebCodian</span>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">About WebCodian</span>
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">Company</span>
                     </div>
                     <div className="flex flex-col gap-1">
@@ -159,7 +159,7 @@ export function Navbar() {
                     <div className="flex h-[360px]">
                       <div className="w-1/3 bg-slate-50/80 p-10 flex flex-col justify-center border-r border-gray-100/50 relative overflow-hidden">
                         <div className="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-4 relative z-10">AI & Automation</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-4 relative z-10">AI & Automation</h3>
                         <p className="text-sm text-slate-500 leading-relaxed mb-8 font-medium relative z-10">Intelligent systems and automation designed around modern business workflows.</p>
                         <Link href="/ai-automation-solutions" className="inline-flex items-center gap-2 text-sm font-bold text-[var(--heading)] bg-white px-6 py-3 rounded-[18px] hover:bg-white transition-all w-fit relative z-10 shadow-md hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group/btn">
                           Explore AI <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -207,7 +207,7 @@ export function Navbar() {
                     <div className="flex gap-8">
                       <div className="w-1/3 flex flex-col justify-between">
                         <div>
-                          <h3 className="text-2xl font-black text-slate-900 mb-2">Our Solutions</h3>
+                          <h3 className="text-2xl font-bold text-slate-900 mb-2">Our Solutions</h3>
                           <p className="text-sm font-medium text-slate-500 mb-6">Explore our comprehensive suite of enterprise software, mobile apps, and digital platforms.</p>
                         </div>
                         <div className="relative rounded-[18px] overflow-hidden shadow-sm h-[220px]">
@@ -221,25 +221,25 @@ export function Navbar() {
                       </div>
                       <div className="w-2/3 grid grid-cols-4 gap-6 xl:gap-8 border-l border-slate-100 pl-8">
                         <div>
-                          <h4 className="text-[11px] font-black uppercase tracking-widest text-slate-500 mb-5">Web & Software</h4>
+                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-5">Web & Software</h4>
                           <div className="flex flex-col gap-3">
                             {webSoftwareServices.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-[var(--primary)] hover:translate-x-1 transition-all">{item.name}</Link>)}
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-[11px] font-black uppercase tracking-widest text-blue-500 mb-5">AI & Auto</h4>
+                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-blue-500 mb-5">AI & Auto</h4>
                           <div className="flex flex-col gap-3">
                             {aiAutomationServices.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-blue-600 hover:translate-x-1 transition-all">{item.name}</Link>)}
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-[11px] font-black uppercase tracking-widest text-slate-500 mb-5">Mobile</h4>
+                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-5">Mobile</h4>
                           <div className="flex flex-col gap-3">
                             {mobileCommerceServices.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-[var(--primary)] hover:translate-x-1 transition-all">{item.name}</Link>)}
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-[11px] font-black uppercase tracking-widest text-slate-500 mb-5">Systems</h4>
+                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-5">Systems</h4>
                           <div className="flex flex-col gap-3">
                             {businessSystems.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-[var(--primary)] hover:translate-x-1 transition-all">{item.name}</Link>)}
                           </div>
@@ -261,7 +261,7 @@ export function Navbar() {
                   <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} transition={{ duration: 0.3, ease: "easeOut" }} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[950px] bg-white/95 backdrop-blur-xl border border-gray-100/50 rounded-[32px] p-8 shadow-[0_30px_80px_-15px_rgba(0,0,0,0.12)] flex gap-8">
                     <div className="w-1/3 flex flex-col justify-between">
                       <div>
-                        <h3 className="text-2xl font-black text-slate-900 mb-2">Industries</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Industries</h3>
                         <p className="text-sm font-medium text-slate-500 mb-6">Tailored digital solutions for your specific domain.</p>
                       </div>
                       <div className="relative rounded-[18px] overflow-hidden shadow-sm h-[200px] group/img">
@@ -307,7 +307,7 @@ export function Navbar() {
                     className="absolute top-full right-0 mt-3 w-80 bg-white/95 backdrop-blur-xl border border-slate-200/80 rounded-[18px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-2.5 z-50 overflow-hidden"
                   >
                     <div className="px-3 py-2 border-b border-slate-100 flex items-center justify-between mb-1.5">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Explore WebCodian</span>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Explore WebCodian</span>
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-50 text-[var(--primary)] border border-slate-100">Quick Access</span>
                     </div>
                     <div className="flex flex-col gap-1">

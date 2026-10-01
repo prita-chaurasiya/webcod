@@ -39,7 +39,7 @@ export function PremiumInternshipForm() {
           <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
             <CheckCircle2 className="w-12 h-12 text-[var(--primary)]" />
           </div>
-          <h3 className="text-3xl font-black text-slate-900 mb-4">Application Submitted!</h3>
+          <h3 className="text-3xl font-bold text-slate-900 mb-4">Application Submitted!</h3>
           <p className="text-slate-500 text-lg mb-8">Thank you for applying to the WebCodian Internship Program. Our team will review your details and contact you soon.</p>
           <button onClick={() => window.location.reload()} className="px-8 py-3 btn-primary rounded-full font-bold hover:bg-white transition-colors">
             Submit Another
@@ -76,7 +76,7 @@ export function PremiumInternshipForm() {
                 <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                 INTERNSHIP PROGRAM
               </div>
-              <h2 className="text-4xl font-extrabold mb-6 leading-tight">
+              <h2 className="text-4xl font-bold mb-6 leading-tight">
                 Start Your <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400">Learning Journey</span>
               </h2>

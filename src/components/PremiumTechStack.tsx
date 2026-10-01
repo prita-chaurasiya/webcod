@@ -74,7 +74,7 @@ export function PremiumTechStack() {
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 p-1.5">
               <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain img-premium" onError={(e) => e.currentTarget.style.display = 'none'} />
             </div>
-            <span className="text-[#f4511e] font-extrabold text-lg uppercase tracking-wider">
+            <span className="text-[#f4511e] font-bold text-lg uppercase tracking-wider">
               TECHNOLOGY WE USE
             </span>
           </motion.div>
@@ -83,7 +83,7 @@ export function PremiumTechStack() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-slate-900"
+            className="text-4xl md:text-5xl font-bold text-slate-900"
           >
             Powered by modern technologies
           </motion.h2>
@@ -106,7 +106,7 @@ export function PremiumTechStack() {
                 className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain img-premium" />
-                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                <div className="font-bold text-lg text-slate-800">{tech.name}</div>
               </div>
             ))}
           </motion.div>
@@ -125,7 +125,7 @@ export function PremiumTechStack() {
                 className="w-48 h-48 bg-white hover:bg-slate-50/50 border border-slate-100 hover:border-slate-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain img-premium" />
-                <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                <div className="font-bold text-lg text-slate-800">{tech.name}</div>
               </div>
             ))}
           </motion.div>

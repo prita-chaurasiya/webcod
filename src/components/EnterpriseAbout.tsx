@@ -26,7 +26,7 @@ export function EnterpriseAbout() {
             <div className="inline-block px-4 py-2 rounded-full bg-blue-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase">
               Who We Are
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[var(--heading)] tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--heading)] tracking-tight leading-[1.1]">
               A Global Leader in Software & Digital Transformation.
             </h2>
             <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
@@ -40,11 +40,11 @@ export function EnterpriseAbout() {
             
             <div className="flex gap-12 pt-6 border-t border-slate-200">
               <div>
-                <div className="text-4xl font-black text-[var(--heading)] mb-2">15+</div>
+                <div className="text-4xl font-bold text-[var(--heading)] mb-2">15+</div>
                 <div className="text-sm font-bold text-slate-500 uppercase tracking-wider">Years Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-black text-[var(--heading)] mb-2">500+</div>
+                <div className="text-4xl font-bold text-[var(--heading)] mb-2">500+</div>
                 <div className="text-sm font-bold text-slate-500 uppercase tracking-wider">Enterprise Clients</div>
               </div>
             </div>
@@ -85,7 +85,7 @@ export function EnterpriseAbout() {
             
             {/* Center Logo */}
             <div className="relative z-10 w-24 h-24 flex items-center justify-center">
-              <span className="text-6xl font-black text-slate-800 tracking-tighter">W<span className="text-[var(--primary)]">.</span></span>
+              <span className="text-6xl font-bold text-slate-800 tracking-tighter">W<span className="text-[var(--primary)]">.</span></span>
             </div>
             
             {/* Orbiting Elements */}
@@ -125,9 +125,9 @@ export function EnterpriseAbout() {
 
           {/* Text Content Right */}
           <div className="relative">
-            <h2 className="absolute -top-16 left-0 text-[120px] font-black text-slate-50 uppercase pointer-events-none select-none z-0">Mission</h2>
+            <h2 className="absolute -top-16 left-0 text-[120px] font-bold text-slate-50 uppercase pointer-events-none select-none z-0">Mission</h2>
             <div className="relative z-10">
-              <h3 className="text-4xl font-black text-[var(--heading)] mb-6">
+              <h3 className="text-4xl font-bold text-[var(--heading)] mb-6">
                 Our <span className="text-[var(--primary)]">Mission</span>
               </h3>
               <p className="text-lg text-slate-600 leading-[1.8]">
@@ -142,7 +142,7 @@ export function EnterpriseAbout() {
       {/* SECTION 2.5: Leadership */}
       <EnterpriseSection background="slate" padding="large">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-black text-[var(--heading)] mb-4">
+          <h2 className="text-4xl font-bold text-[var(--heading)] mb-4">
             Our <span className="text-[var(--primary)]">Leadership & Team</span>
           </h2>
           <p className="text-lg text-slate-600">
@@ -240,7 +240,7 @@ export function EnterpriseAbout() {
             <div className="inline-block px-4 py-2 rounded-full bg-white/10 text-white font-bold text-sm tracking-widest uppercase">
               Global Reach
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
               Delivering Excellence Across Borders.
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed">
@@ -297,7 +297,7 @@ export function EnterpriseAbout() {
           
           {/* Right: Text Content */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
               Ready to <span className="text-[var(--primary)]">Accelerate</span> Your Digital Transformation?
             </h2>
             <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">

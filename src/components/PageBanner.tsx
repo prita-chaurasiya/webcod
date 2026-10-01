@@ -139,7 +139,7 @@ export function PageBanner({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black text-[var(--heading)] tracking-tight leading-[1.15]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-[var(--heading)] tracking-tight leading-[1.15]"
             >
               {title}
             </motion.h1>
@@ -183,7 +183,7 @@ export function PageBanner({
                       </Link>
                     ) : (
                       <span
-                        className={`inline-flex items-center gap-1.5 text-xs font-extrabold py-1 px-2.5 rounded-lg ${
+                        className={`inline-flex items-center gap-1.5 text-xs font-bold py-1 px-2.5 rounded-lg ${
                           isLast
                             ? "bg-[var(--primary)]/20 text-[var(--primary)] border border-[var(--primary)]/30 shadow-[0_0_12px_rgba(46,184,114,0.25)]"
                             : "text-slate-600"

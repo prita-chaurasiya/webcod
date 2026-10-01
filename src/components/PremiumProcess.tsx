@@ -34,7 +34,7 @@ export function PremiumProcess() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-slate-900"
+            className="text-4xl md:text-5xl font-bold text-slate-900"
           >
             Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-600">Process</span>
           </motion.h2>

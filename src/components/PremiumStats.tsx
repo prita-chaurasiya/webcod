@@ -78,7 +78,7 @@ export function PremiumStats() {
                 <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-[var(--primary)]" />
               </div>
               <div>
-                <div className="text-3xl lg:text-4xl font-extrabold text-[var(--heading)] flex items-baseline">
+                <div className="text-3xl lg:text-4xl font-bold text-[var(--heading)] flex items-baseline">
                   <Counter from={0} to={stat.value} duration={2.5} />
                   {stat.suffix && <span className="text-xl lg:text-2xl ml-1">{stat.suffix}</span>}
                 </div>

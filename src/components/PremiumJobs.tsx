@@ -40,7 +40,7 @@ export function PremiumJobs() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-[#1f2937] mb-6"
+            className="text-3xl md:text-5xl font-bold text-[#1f2937] mb-6"
           >
             Open <span className="text-[var(--primary)]">Positions</span>
           </motion.h2>

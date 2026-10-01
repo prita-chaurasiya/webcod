@@ -31,7 +31,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
       <EnterpriseSection padding="large">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-black text-[var(--heading)] mb-6">Business Overview</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--heading)] mb-6">Business Overview</h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">{data.overview}</p>
             
             <h3 className="text-xl font-bold text-[var(--heading)] mb-4">Core Technologies</h3>
@@ -109,7 +109,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {data.process.map((step, idx) => (
             <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="relative bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] transition-colors">
-              <div className="text-5xl font-black text-slate-100 absolute top-4 right-6 pointer-events-none">{step.step}</div>
+              <div className="text-5xl font-bold text-slate-100 absolute top-4 right-6 pointer-events-none">{step.step}</div>
               <h4 className="text-xl font-bold text-[var(--heading)] mb-3 relative z-10 mt-6">{step.title}</h4>
               <p className="text-slate-600 text-sm relative z-10">{step.desc}</p>
             </motion.div>
@@ -136,9 +136,9 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
       {/* 5. CTA */}
       <EnterpriseSection padding="large">
         <div className="bg-[var(--primary)] rounded-[32px] p-12 lg:p-20 text-center text-white">
-          <h2 className="text-4xl font-black mb-6">Ready to Build Your {data.title}?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your {data.title}?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Partner with us to engineer a robust, scalable solution tailored to your enterprise needs.</p>
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[var(--heading)] rounded-[18px] font-black text-lg shadow-xl hover:-translate-y-1 transition-all">
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[var(--heading)] rounded-[18px] font-bold text-lg shadow-xl hover:-translate-y-1 transition-all">
             Schedule a Consultation <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

@@ -32,7 +32,7 @@ export function PremiumVision() {
               The WebCodian Vision
             </div>
             
-            <h2 className="font-extrabold text-[var(--heading)] leading-[1.15] mb-6">
+            <h2 className="font-bold text-[var(--heading)] leading-[1.15] mb-6">
               Elevating Digital <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-500">Excellence</span>
             </h2>
@@ -110,7 +110,7 @@ export function PremiumVision() {
                 <Star className="w-6 h-6 text-[var(--primary)]" />
               </div>
               <div>
-                <div className="text-3xl font-black text-[var(--heading)] leading-none mb-1">100%</div>
+                <div className="text-3xl font-bold text-[var(--heading)] leading-none mb-1">100%</div>
                 <div className="text-[13px] text-slate-600 font-semibold leading-tight">Job Assistance &<br/>Placement Support</div>
               </div>
             </motion.div>

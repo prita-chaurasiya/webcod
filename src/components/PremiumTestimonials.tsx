@@ -151,7 +151,7 @@ export function PremiumTestimonials() {
                     <div className="relative z-10 text-center mb-8">
                       {/* Logo Placeholder */}
                       <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-slate-50 rounded-full flex items-center justify-center mb-4 border border-slate-100 shadow-inner">
-                        <span className="font-black text-xl md:text-2xl text-[var(--primary)]">{testimonial.company.charAt(0)}</span>
+                        <span className="font-bold text-xl md:text-2xl text-[var(--primary)]">{testimonial.company.charAt(0)}</span>
                       </div>
                       <h4 className="text-[var(--primary)] font-bold uppercase tracking-wider text-xs md:text-sm mb-6 md:mb-8">
                         {testimonial.company}

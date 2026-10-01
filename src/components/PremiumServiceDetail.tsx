@@ -113,7 +113,7 @@ export function PremiumServiceDetail({
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-pulse"></span>
                 {badgeText}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-black text-[var(--heading)] leading-[1.1] mb-5 tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-[var(--heading)] leading-[1.1] mb-5 tracking-tight">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 ? 
                    <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400"> {word}</span> : 
@@ -159,7 +159,7 @@ export function PremiumServiceDetail({
                       <span>{title.toLowerCase().replace(/[^a-z0-9]/g, '-')}.engine.preview</span>
                     </div>
 
-                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-50/10 border border-slate-100/20 text-[var(--primary)] text-[10px] font-extrabold tracking-widest uppercase">
+                    <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-50/10 border border-slate-100/20 text-[var(--primary)] text-[10px] font-bold tracking-widest uppercase">
                       <span className="w-1.5 h-1.5 rounded-full bg-slate-50 animate-pulse"></span>
                       <span>LIVE</span>
                     </div>
@@ -240,7 +240,7 @@ export function PremiumServiceDetail({
               
               <motion.h2 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight"
               >
                 {overviewTitle}
               </motion.h2>
@@ -274,7 +274,7 @@ export function PremiumServiceDetail({
                       {feature.icon || <CheckCircle2 className="w-6 h-6" />}
                     </div>
                     <div className="relative z-10">
-                      <h4 className="font-extrabold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h4>
+                      <h4 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h4>
                       <p className="text-slate-500 text-sm leading-relaxed font-medium group-hover:text-slate-600 transition-colors">{feature.description}</p>
                     </div>
                   </motion.div>
@@ -309,14 +309,14 @@ export function PremiumServiceDetail({
                         className="absolute -top-32 -right-32 w-64 h-64 border-[40px] border-[var(--primary)]/5 rounded-full pointer-events-none" 
                       />
                       
-                      <h3 className="text-4xl font-black text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[var(--primary)]">Us?</span></h3>
+                      <h3 className="text-4xl font-bold text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[var(--primary)]">Us?</span></h3>
                       
                       <ul className="space-y-8 relative z-10">
                         {["Tailored Solutions", "Experienced Team", "Quality Assurance", "Ongoing Support"].map((item, i) => (
                           <motion.li 
                             key={i}
                             whileHover={{ x: 10 }}
-                            className="flex items-center gap-5 text-slate-800 font-extrabold text-lg group/item cursor-default"
+                            className="flex items-center gap-5 text-slate-800 font-bold text-lg group/item cursor-default"
                           >
                             <div className="relative flex items-center justify-center w-12 h-12 rounded-[18px] bg-slate-50 border border-slate-100 text-[var(--primary)] group-hover/item:bg-[var(--primary)] group-hover/item:text-white group-hover/item:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group-hover/item:scale-110 transition-all duration-300">
                               <CheckCircle2 className="w-6 h-6" />
@@ -342,7 +342,7 @@ export function PremiumServiceDetail({
           
           <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-20 mb-16 text-center">
             <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">TECHNOLOGY WE USE</span>
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900">Powered by modern technologies</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Powered by modern technologies</h2>
           </div>
           
           <div className="relative w-full flex flex-col gap-6 perspective-[1000px] z-0">
@@ -362,7 +362,7 @@ export function PremiumServiceDetail({
                     ) : (
                       <div className="text-5xl group-hover:scale-110 transition-transform text-slate-700 group-hover:text-blue-600">{tech.icon}</div>
                     )}
-                    <div className="font-extrabold text-lg text-slate-800">{tech.name}</div>
+                    <div className="font-bold text-lg text-slate-800">{tech.name}</div>
                   </div>
                 ))}
               </motion.div>
@@ -377,7 +377,7 @@ export function PremiumServiceDetail({
           <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
             <div className="text-center mb-10">
               <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">FAQ</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Got Questions?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Got Questions?</h2>
             </div>
 
             <div className="space-y-3">

@@ -69,7 +69,7 @@ export function PremiumMaintenance() {
                 <span className="text-sm font-bold text-slate-700 uppercase tracking-widest">24/7 Monitoring & Support</span>
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.1]">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1]">
                 Unbreakable <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-emerald-500">
                   Reliability.
@@ -141,7 +141,7 @@ export function PremiumMaintenance() {
                 className="absolute -right-12 top-20 bg-white/80 backdrop-blur-md border border-slate-200 p-6 rounded-[18px] shadow-xl z-20"
               >
                 <div className="flex items-center gap-5">
-                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">99.9%</div>
+                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">99.9%</div>
                   <div>
                     <p className="text-base font-bold text-slate-900">Uptime</p>
                     <p className="text-sm text-slate-500">Guaranteed</p>
@@ -166,7 +166,7 @@ export function PremiumMaintenance() {
             >
               <Zap className="w-4 h-4 text-[var(--primary)]" /> What We Do
             </motion.div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6">Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Protection</span></h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Protection</span></h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We don't just fix things when they break. We proactively monitor, optimize, and secure your platform.</p>
           </div>
 
@@ -203,7 +203,7 @@ export function PremiumMaintenance() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8">Why Partner With <span className="text-[var(--primary)]">Us?</span></h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8">Why Partner With <span className="text-[var(--primary)]">Us?</span></h2>
               <p className="text-slate-600 text-xl mb-10 leading-relaxed">
                 Your digital assets are critical to your business operations. Our dedicated maintenance teams ensure that you never have to worry about downtime, security breaches, or outdated software again.
               </p>
@@ -249,7 +249,7 @@ export function PremiumMaintenance() {
       <section className="py-16 md:py-12 bg-white relative">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">Maintenance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">FAQs</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Maintenance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">FAQs</span></h2>
             <p className="text-xl text-slate-600">Everything you need to know about our maintenance and support services.</p>
           </div>
 

@@ -24,7 +24,7 @@ export function PremiumNewsletter() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-[18px] bg-white/10 backdrop-blur-md mb-6 border border-white/10">
                 <Mail className="w-8 h-8 text-[var(--primary)]" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-black text-[var(--heading)] mb-4 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-[var(--heading)] mb-4 leading-tight">
                 Subscribe to our <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-emerald-300">Newsletter</span>
               </h2>
               <p className="text-slate-500 text-lg">

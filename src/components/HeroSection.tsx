@@ -74,7 +74,7 @@ export function HeroSection() {
               
               <motion.h1 
                 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-[48px] md:text-[64px] lg:text-[72px] font-black leading-[1.05] mb-8 tracking-tight"
+                className="text-[48px] md:text-[64px] lg:text-[72px] font-bold leading-[1.05] mb-8 tracking-tight"
               >
                 <span className="block text-[var(--heading)]">{slides[currentSlide].heading1}</span>
                 <span className="block text-slate-600">{slides[currentSlide].heading2}</span>

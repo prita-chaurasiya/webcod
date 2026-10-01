@@ -19,7 +19,7 @@ export default function Page() {
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               AI & Automation Solutions
             </h1>
             <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
@@ -49,7 +49,7 @@ export default function Page() {
                 Intelligent Workflows
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                 Transform Your Enterprise with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Cognitive Automation</span>
               </h2>
               
@@ -92,7 +92,7 @@ export default function Page() {
                   <Bot className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-slate-900">99.9%</div>
+                  <div className="text-2xl font-bold text-slate-900">99.9%</div>
                   <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Accuracy</div>
                 </div>
               </motion.div>
@@ -106,7 +106,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Premium Solutions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Our Premium Solutions</h2>
             <p className="text-xl text-slate-600 font-medium">
               We deliver systemic, end-to-end automation architectures that integrate seamlessly with your existing infrastructure.
             </p>
@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">How We Work</span>
-              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                 A Systemic Approach to Digital Evolution
               </h2>
               
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Integration & Deployment", desc: "Seamless rollout with zero downtime, connecting legacy systems with modern AI." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -208,7 +208,7 @@ export default function Page() {
       {/* 5. Tech Stack */}
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">Powered by Enterprise Tech</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Powered by Enterprise Tech</h2>
           <p className="text-xl text-slate-600 mb-16 max-w-3xl mx-auto font-medium">
             We build robust AI architectures utilizing the industry's most powerful and secure frameworks.
           </p>

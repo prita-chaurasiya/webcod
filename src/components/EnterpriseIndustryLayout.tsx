@@ -27,7 +27,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
       <EnterpriseSection padding="large">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-black text-[var(--heading)] mb-6">Industry Overview</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--heading)] mb-6">Industry Overview</h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">{data.overview}</p>
             <h3 className="text-xl font-bold text-[var(--heading)] mb-4">Driving Technologies</h3>
             <div className="flex flex-wrap gap-3">
@@ -94,7 +94,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {data.outcomes.map((outcome, idx) => (
             <div key={idx} className="bg-white p-8 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-slate-100 text-center hover:-translate-y-2 transition-all">
-              <div className="text-4xl font-black text-[var(--primary)] mb-4">{outcome.metric}</div>
+              <div className="text-4xl font-bold text-[var(--primary)] mb-4">{outcome.metric}</div>
               <p className="text-slate-600 font-medium">{outcome.desc}</p>
             </div>
           ))}
@@ -104,9 +104,9 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
       {/* 4. CTA */}
       <EnterpriseSection background="navy" padding="large">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-black text-slate-900 mb-6">Innovate Your {data.title} Business Today</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">Innovate Your {data.title} Business Today</h2>
           <p className="text-xl text-slate-300 mb-10 leading-relaxed">Join the market leaders who have already partnered with us to undergo complete digital transformation.</p>
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-black text-lg shadow-xl hover:-translate-y-1 transition-all">
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-bold text-lg shadow-xl hover:-translate-y-1 transition-all">
             Discuss Your Requirements <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

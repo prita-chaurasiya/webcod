@@ -28,7 +28,7 @@ export function PremiumAIAgent() {
                 <span className="text-xs font-bold text-slate-700 uppercase tracking-widest">Next-Gen Automation</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#0f172a] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0f172a] tracking-tight leading-[1.1]">
                 Intelligent <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-[#1d4ed8]">
                   AI Agents.
@@ -120,7 +120,7 @@ export function PremiumAIAgent() {
       <section className="py-16 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-slate-900 mb-4">Core Capabilities</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Core Capabilities</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">Our AI agents are tailored to integrate perfectly with your existing systems.</p>
           </div>
           

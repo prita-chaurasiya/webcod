@@ -98,7 +98,7 @@ export function PremiumSoftwareDev() {
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Enterprise Engineering</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1]">
                 Custom Software <br/>
                 <span className="text-[var(--primary)]">
                   Solutions.
@@ -213,7 +213,7 @@ export function PremiumSoftwareDev() {
       <section className="py-12 md:py-16 bg-gray-50 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Software <span className="text-[var(--primary)]">Solutions</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Software <span className="text-[var(--primary)]">Solutions</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Crafting tailored software solutions leveraging cutting-edge technology, designed to meet specific business needs and drive operational excellence.</p>
           </div>
 
@@ -250,7 +250,7 @@ export function PremiumSoftwareDev() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[var(--primary)]/5 rounded-[100%] blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Enterprise <span className="text-[var(--primary)]">Technology Stack</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Enterprise <span className="text-[var(--primary)]">Technology Stack</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">We leverage the most advanced, secure, and robust technologies to build scalable enterprise architectures.</p>
           </div>
 
@@ -277,7 +277,7 @@ export function PremiumSoftwareDev() {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Applications</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Applications</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">We use a systematic approach to maximize and optimize results across a wide array of diverse sectors.</p>
           </div>
 
@@ -307,7 +307,7 @@ export function PremiumSoftwareDev() {
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Frequently Asked <span className="text-[var(--primary)]">Questions</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked <span className="text-[var(--primary)]">Questions</span></h2>
           </div>
 
           <div className="space-y-4">

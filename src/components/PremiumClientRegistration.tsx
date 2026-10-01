@@ -26,7 +26,7 @@ export function PremiumClientRegistration() {
             <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--primary)]">
               <UserPlus className="w-8 h-8" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
               Client Registration
             </h2>
             <p className="text-slate-500 font-medium">

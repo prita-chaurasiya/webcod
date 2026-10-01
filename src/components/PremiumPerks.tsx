@@ -58,7 +58,7 @@ export function PremiumPerks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-extrabold text-[#1f2937] mb-6"
+            className="text-3xl md:text-5xl font-bold text-[#1f2937] mb-6"
           >
             Why You'll Love It Here
           </motion.h2>

@@ -62,7 +62,7 @@ export function PremiumCareerHero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, type: "spring" }}
               style={{ transform: "translateZ(50px)" }}
-              className="text-5xl md:text-7xl font-black text-[var(--heading)] leading-tight mb-6"
+              className="text-5xl md:text-7xl font-bold text-[var(--heading)] leading-tight mb-6"
             >
               Build the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[#f59e0b]">Future</span><br/>
               With Us

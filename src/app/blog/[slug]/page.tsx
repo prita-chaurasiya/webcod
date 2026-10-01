@@ -45,7 +45,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                 By WebCodian Team
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-8">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
               {title}
             </h1>
           </motion.div>

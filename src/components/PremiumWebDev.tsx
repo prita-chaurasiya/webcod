@@ -85,7 +85,7 @@ export function PremiumWebDev() {
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Next-Generation Development</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1]">
                 Build The <br/>
                 <span className="text-[var(--primary)]">
                   Future Web.
@@ -108,15 +108,15 @@ export function PremiumWebDev() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-12 border-t border-gray-100">
                 <div>
-                  <h4 className="text-3xl font-black text-gray-900 mb-1">500+</h4>
+                  <h4 className="text-3xl font-bold text-gray-900 mb-1">500+</h4>
                   <p className="text-sm text-gray-500">Projects Delivered</p>
                 </div>
                 <div>
-                  <h4 className="text-3xl font-black text-gray-900 mb-1">99%</h4>
+                  <h4 className="text-3xl font-bold text-gray-900 mb-1">99%</h4>
                   <p className="text-sm text-gray-500">Client Satisfaction</p>
                 </div>
                 <div>
-                  <h4 className="text-3xl font-black text-gray-900 mb-1">24/7</h4>
+                  <h4 className="text-3xl font-bold text-gray-900 mb-1">24/7</h4>
                   <p className="text-sm text-gray-500">Technical Support</p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function PremiumWebDev() {
       <section className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Our Proven <span className="text-[var(--primary)]">Process</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Proven <span className="text-[var(--primary)]">Process</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">A systematic, transparent approach ensuring flawless execution from concept to deployment.</p>
           </div>
 
@@ -224,7 +224,7 @@ export function PremiumWebDev() {
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Modern <span className="text-[var(--primary)]">Tech Stack</span></h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Modern <span className="text-[var(--primary)]">Tech Stack</span></h2>
               <p className="text-gray-500">We utilize cutting-edge technologies to build platforms that are fast, secure, and infinitely scalable.</p>
             </div>
             <Link href="/contact" className="text-[var(--primary)] hover:text-[#259b5f] font-bold flex items-center gap-2 transition-colors">
@@ -255,7 +255,7 @@ export function PremiumWebDev() {
       <section className="py-12 md:py-16 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Expertise</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Industry <span className="text-[var(--primary)]">Expertise</span></h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Tailored web solutions designed specifically for the unique demands of your sector.</p>
           </div>
 
@@ -298,7 +298,7 @@ export function PremiumWebDev() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4">Common <span className="text-[var(--primary)]">Inquiries</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Common <span className="text-[var(--primary)]">Inquiries</span></h2>
           </div>
 
           <div className="space-y-4">
@@ -333,10 +333,10 @@ export function PremiumWebDev() {
       {/* 6. CTA Section */}
       <section className="py-12 md:py-16 relative overflow-hidden bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl relative z-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">Ready to Transform Your Digital Presence?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Ready to Transform Your Digital Presence?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Stop settling for templates. Let's build a custom, high-converting web platform that dominates your industry.</p>
           
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-black text-xl shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-2 transition-all">
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-bold text-xl shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-2 transition-all">
             Start Your Project Now <Rocket className="w-6 h-6 text-[var(--heading)]" />
           </Link>
         </div>

@@ -78,7 +78,7 @@ export function PremiumSoftwareDemoPopup({ isOpen, onClose }: PremiumSoftwareDem
                   Live Demo
                 </motion.div>
                 
-                <motion.h3 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-3xl lg:text-4xl font-black text-[var(--heading)] mb-4 leading-[1.1] tracking-tight">
+                <motion.h3 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-3xl lg:text-4xl font-bold text-[var(--heading)] mb-4 leading-[1.1] tracking-tight">
                   Experience Our Software in Action.
                 </motion.h3>
                 

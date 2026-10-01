@@ -25,7 +25,7 @@ export function PremiumServiceLayout({ title, description, features }: PremiumSe
               viewport={{ once: true }}
               className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">{title}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{title}</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 {description}
               </p>

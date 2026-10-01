@@ -19,7 +19,7 @@ export default function Page() {
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               AI SaaS Product Development
             </h1>
             <ul className="flex items-center gap-3 text-indigo-100 font-bold uppercase text-sm tracking-widest">
@@ -49,7 +49,7 @@ export default function Page() {
                 Scalable Platforms
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                 Architecting the <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">Future of SaaS</span>
               </h2>
               
@@ -92,7 +92,7 @@ export default function Page() {
                   <Cloud className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-slate-900">99.99%</div>
+                  <div className="text-2xl font-bold text-slate-900">99.99%</div>
                   <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Global Uptime</div>
                 </div>
               </motion.div>
@@ -106,7 +106,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">SaaS Engineering Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">SaaS Engineering Capabilities</h2>
             <p className="text-xl text-slate-600 font-medium">
               We leverage cloud-native infrastructure, multi-tenant databases, and advanced AI to build software that scales infinitely.
             </p>
@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4 block">Development Lifecycle</span>
-              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                 Our SaaS Engineering Process
               </h2>
               
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Cloud Deployment", desc: "We set up automated CI/CD pipelines, containerized deployments, and load balancers to ensure zero-downtime updates." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-indigo-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-700 group-hover:text-indigo-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>

@@ -37,7 +37,7 @@ export function PremiumFormLayout({ title, subtitle, fields, submitText }: Premi
               <Sparkles className="w-4 h-4" />
               SECURE PORTAL
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
               {title}
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed">

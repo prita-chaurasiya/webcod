@@ -67,7 +67,7 @@ export function PremiumTeam() {
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
           <span className="inline-block py-1.5 px-3 rounded-full bg-slate-50 border border-slate-200 text-slate-500 font-bold text-xs uppercase tracking-widest mb-4">The Minds Behind WebCodian</span>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
             Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-teal-500">Expert Team</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">

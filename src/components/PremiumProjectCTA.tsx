@@ -20,7 +20,7 @@ export function PremiumProjectCTA() {
           
           {/* Right: Text Content */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
               Let's Build Something <span className="text-[var(--primary)]">Great Together</span>
             </h2>
             <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">

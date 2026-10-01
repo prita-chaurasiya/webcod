@@ -59,7 +59,7 @@ export function PremiumAboutValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight"
+            className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight"
           >
             Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-500 to-slate-800">Values</span>
           </motion.h2>
@@ -89,7 +89,7 @@ export function PremiumAboutValues() {
                   <value.icon className={`w-8 h-8 ${value.textColor}`} />
                 </div>
                 
-                <h3 className="text-2xl font-black text-slate-900 mb-4 relative z-10">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4 relative z-10">
                   {value.title}
                 </h3>
                 

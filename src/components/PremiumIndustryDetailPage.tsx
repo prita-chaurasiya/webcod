@@ -59,7 +59,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
 
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight"
+                className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight"
               >
                 {data.title}
               </motion.h1>
@@ -115,7 +115,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
               <div className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-6">About {data.title}</div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
                 {data.introHeading}
               </h2>
             </div>
@@ -132,7 +132,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-16">
-            <h2 className="text-3xl font-black text-slate-900">Key Challenges We Solve</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Key Challenges We Solve</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
             {data.challenges.map((challenge, idx) => (
@@ -144,7 +144,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="flex gap-6 group"
               >
-                <div className="text-4xl md:text-5xl font-black text-slate-200 group-hover:text-blue-500 transition-colors font-mono">
+                <div className="text-4xl md:text-5xl font-bold text-slate-200 group-hover:text-blue-500 transition-colors font-mono">
                   {challenge.id}
                 </div>
                 <div>
@@ -164,7 +164,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
         </div>
         <div className="container mx-auto px-6 max-w-5xl relative z-10">
           <div className="mb-20 text-center">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">Digital Solutions for {data.title}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Digital Solutions for {data.title}</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">Purpose-built platforms and tools designed to accelerate your operational workflows and customer experiences.</p>
           </div>
           
@@ -212,7 +212,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             <img src={data.featuredVisual.image} alt="Dashboard Preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out img-premium" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 md:p-16">
-              <h3 className="text-3xl md:text-5xl font-black text-[var(--heading)] max-w-3xl leading-tight">
+              <h3 className="text-3xl md:text-5xl font-bold text-[var(--heading)] max-w-3xl leading-tight">
                 {data.featuredVisual.overlayText}
               </h3>
             </div>
@@ -227,7 +227,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             
             {/* What We Can Build */}
             <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-10">What We Can Build</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-10">What We Can Build</h2>
               <div className="space-y-6">
                 {data.whatWeCanBuild.map((item, idx) => (
                   <div key={idx} className="flex gap-6 items-center border-b border-slate-100 pb-6">
@@ -240,7 +240,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
 
             {/* Use Cases */}
             <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-10">Industry Use Cases</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-10">Industry Use Cases</h2>
               <div className="grid sm:grid-cols-2 gap-8">
                 {data.useCases.map((useCase, idx) => (
                   <div key={idx}>
@@ -281,7 +281,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-3xl font-black mb-12">How We Build</h2>
+              <h2 className="text-3xl font-bold mb-12">How We Build</h2>
               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent hidden md:block">
                 {[
                   { title: "Discover", desc: "Understanding your industry workflows." },
@@ -325,22 +325,22 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             </div>
 
             <div>
-              <h2 className="text-3xl font-black mb-12">Why WebCodian</h2>
+              <h2 className="text-3xl font-bold mb-12">Why WebCodian</h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-[var(--heading)] mb-2">6</div>
+                  <div className="text-4xl font-bold text-[var(--heading)] mb-2">6</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Years Experience</div>
                 </div>
                 <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-[var(--heading)] mb-2">15+</div>
+                  <div className="text-4xl font-bold text-[var(--heading)] mb-2">15+</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Team Members</div>
                 </div>
                 <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-[var(--heading)] mb-2">100%</div>
+                  <div className="text-4xl font-bold text-[var(--heading)] mb-2">100%</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
                 </div>
                 <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
-                  <div className="text-4xl font-black text-[var(--heading)] mb-2">24/7</div>
+                  <div className="text-4xl font-bold text-[var(--heading)] mb-2">24/7</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Support</div>
                 </div>
               </div>

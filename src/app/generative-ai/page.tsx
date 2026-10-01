@@ -19,7 +19,7 @@ export default function Page() {
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               Generative AI Solutions
             </h1>
             <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
@@ -49,7 +49,7 @@ export default function Page() {
                 Creative Intelligence
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                 Unlock Infinite Potential with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Generative AI</span>
               </h2>
               
@@ -92,7 +92,7 @@ export default function Page() {
                   <Sparkles className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-slate-900">100x</div>
+                  <div className="text-2xl font-bold text-slate-900">100x</div>
                   <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Content Velocity</div>
                 </div>
               </motion.div>
@@ -106,7 +106,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Generative Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Generative Capabilities</h2>
             <p className="text-xl text-slate-600 font-medium">
               We leverage state-of-the-art multimodal models to automate the creation of text, imagery, and code.
             </p>
@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">Deployment Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-10 leading-tight">
                 Enterprise-Grade Generative Systems
               </h2>
               
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Data Privacy", desc: "We implement on-premise or private-cloud LLM deployments so your proprietary data never touches a public API." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-700 group-hover:text-blue-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -209,7 +209,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
             <p className="text-xl text-slate-600 font-medium">Overcome the limitations of traditional workflows with Generative AI.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -238,7 +238,7 @@ export default function Page() {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">Unfair Business Advantage</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
               <ul className="space-y-6">
                 {[
                   "Reduce content creation costs by up to 80%",
@@ -261,11 +261,11 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-[#0f2c59]">Generative AI Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-[#0f2c59]">Generative AI Tech Stack</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {["GPT-4", "Claude 3.5", "Gemini 1.5 Pro", "Llama 3", "Stable Diffusion", "Midjourney", "LangChain", "HuggingFace", "Pinecone", "Milvus", "PyTorch", "TensorFlow"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors">
                 {tech}
               </div>
             ))}
@@ -277,7 +277,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Implementation Process</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Implementation Process</h2>
             <p className="text-xl text-slate-600">A rigorous, enterprise-grade methodology for deploying Generative AI safely.</p>
           </div>
           
@@ -289,7 +289,7 @@ export default function Page() {
               { step: "04", title: "Safe Deployment", desc: "Rolling out the AI with strict guardrails, human-in-the-loop validation, and API gateways." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                 <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
@@ -302,7 +302,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Enterprise Use Cases</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Enterprise Use Cases</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -314,7 +314,7 @@ export default function Page() {
                   <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-10">
-                  <h3 className="text-2xl font-black mb-4 text-slate-900">{uc.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
                   <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-slate-900 mb-6">Uncompromising Data Security</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Uncompromising Data Security</h2>
               <p className="text-lg text-blue-700 mb-8 font-medium">When you implement Generative AI with WebCodian, your data remains yours. We build systems that guarantee your proprietary information is never used to train public models.</p>
               <ul className="space-y-4">
                 {["Private Cloud & On-Premise Deployments", "SOC2 & ISO 27001 Compliant Infrastructure", "Strict Role-Based Access Controls (RBAC)", "Hallucination Guardrails & Content Filtering"].map((item, i) => (
@@ -351,7 +351,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -372,7 +372,7 @@ export default function Page() {
       {/* 12. Quality Assurance */}
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">AI Quality Assurance & Testing</h2>
+          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">AI Quality Assurance & Testing</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We rigorously test all Generative AI outputs against bias, hallucinations, and safety guidelines to ensure enterprise-ready reliability before deployment.</p>
         </div>
       </section>
@@ -381,7 +381,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian implemented a secure Generative AI writing assistant for our legal team, reducing contract drafting time by 65% while ensuring 100% compliance with our private data policies."
             </p>
@@ -394,7 +394,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[

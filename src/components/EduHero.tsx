@@ -118,7 +118,7 @@ export function EduHero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-[72px] font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
+            <h1 className="text-5xl md:text-6xl lg:text-[72px] font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
               {slide.headlinePart1} <br className="hidden md:block" />
               {slide.headlinePart2} <br className="hidden md:block" />
               <span className="text-[var(--primary)] relative inline-block mt-2 lg:mt-0">

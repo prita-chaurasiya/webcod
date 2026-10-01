@@ -96,7 +96,7 @@ export function PremiumOpenTicket() {
             <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-[18px] flex items-center justify-center mx-auto mb-4 text-[var(--primary)]">
               <Ticket className="w-8 h-8" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
               Raise a Support Ticket
             </h2>
             <p className="text-slate-500 font-medium max-w-lg mx-auto">

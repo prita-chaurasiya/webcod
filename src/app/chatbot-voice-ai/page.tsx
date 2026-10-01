@@ -19,7 +19,7 @@ export default function Page() {
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 capitalize tracking-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               Chatbot & Voice AI
             </h1>
             <ul className="flex items-center gap-3 text-emerald-100 font-bold uppercase text-sm tracking-widest">
@@ -49,7 +49,7 @@ export default function Page() {
                 Omnichannel Support
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                 Transform CX with <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Conversational AI</span>
               </h2>
               
@@ -92,7 +92,7 @@ export default function Page() {
                   <Headphones className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-slate-900">24/7</div>
+                  <div className="text-2xl font-bold text-slate-900">24/7</div>
                   <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Global Support</div>
                 </div>
               </motion.div>
@@ -106,7 +106,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Intelligent Interactions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Intelligent Interactions</h2>
             <p className="text-xl text-slate-600 font-medium">
               We leverage advanced NLP and Speech-to-Text technologies to create seamless conversational experiences.
             </p>
@@ -163,7 +163,7 @@ export default function Page() {
             
             <div>
               <span className="text-emerald-400 font-bold tracking-widest uppercase text-sm mb-4 block">System Architecture</span>
-              <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                 How Our Conversational AI Works
               </h2>
               
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Human Handoff", desc: "If a query is too complex or the customer is frustrated, the AI seamlessly transfers the conversation to a human agent with full context." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-black text-slate-700 group-hover:text-emerald-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-700 group-hover:text-emerald-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -208,7 +208,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
             <p className="text-xl text-slate-600 font-medium">Overcome support bottlenecks and scale your customer engagement effortlessly.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -237,7 +237,7 @@ export default function Page() {
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Business Benefits" className="rounded-[2.5rem] shadow-xl border-4 border-white" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8">Unfair Business Advantage</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Unfair Business Advantage</h2>
               <ul className="space-y-6">
                 {[
                   "Reduce support ticket resolution time by up to 80%",
@@ -260,11 +260,11 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-[#0f2c59]">Conversational AI Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-[#0f2c59]">Conversational AI Tech Stack</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {["Dialogflow", "Rasa", "Amazon Lex", "Twilio", "OpenAI GPT-4", "Whisper STT", "ElevenLabs TTS", "Python", "Node.js", "WebSocket", "GraphQL", "Redis"].map((tech) => (
-              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-black text-slate-700 hover:border-emerald-500 hover:text-emerald-600 transition-colors">
+              <div key={tech} className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-emerald-500 hover:text-emerald-600 transition-colors">
                 {tech}
               </div>
             ))}
@@ -276,7 +276,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Our Implementation Process</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our Implementation Process</h2>
             <p className="text-xl text-slate-600">A rigorous methodology for deploying intelligent conversational agents.</p>
           </div>
           
@@ -288,7 +288,7 @@ export default function Page() {
               { step: "04", title: "Testing & Deployment", desc: "Simulating thousands of edge-case conversations before public launch." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                 <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
@@ -301,7 +301,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Enterprise Use Cases</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Enterprise Use Cases</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -313,7 +313,7 @@ export default function Page() {
                   <img src={uc.img} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-10">
-                  <h3 className="text-2xl font-black mb-4 text-slate-900">{uc.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{uc.title}</h3>
                   <p className="text-slate-600 text-lg font-medium">{uc.desc}</p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-slate-900 mb-6">Data Privacy & Security</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Data Privacy & Security</h2>
               <p className="text-lg text-blue-700 mb-8 font-medium">Conversational data often contains PII. We architect our AI systems to automatically redact sensitive information and comply strictly with global data protection laws.</p>
               <ul className="space-y-4">
                 {["End-to-End Encryption", "HIPAA & GDPR Compliance", "Automated PII Redaction", "On-Premise Deployment Options"].map((item, i) => (
@@ -350,7 +350,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Industries We Empower</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Industries We Empower</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -371,7 +371,7 @@ export default function Page() {
       {/* 12. Quality Assurance */}
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Conversational QA & Analytics</h2>
+          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">Conversational QA & Analytics</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We deploy comprehensive analytics dashboards to track bot deflection rates, sentiment scores, and fallback triggers, continuously optimizing the conversational flow.</p>
         </div>
       </section>
@@ -380,7 +380,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-emerald-50 p-12 lg:p-20 rounded-[3rem] text-center border border-emerald-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Client Success Story</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Client Success Story</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian integrated a WhatsApp conversational bot that now handles 70% of our tier-1 support queries instantly, saving us over $40,000 monthly in operational costs."
             </p>
@@ -393,7 +393,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[

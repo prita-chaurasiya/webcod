@@ -85,7 +85,7 @@ export function PremiumCourseDetail({
                 <span className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
                 {category}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--heading)] leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--heading)] leading-tight mb-6">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 || i === arr.length - 2 ? 
                    <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400"> {word}</span> : 

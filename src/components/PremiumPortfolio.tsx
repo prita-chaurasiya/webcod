@@ -94,7 +94,7 @@ export function PremiumPortfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight"
             >
               Building The <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">Future.</span>
             </motion.h2>

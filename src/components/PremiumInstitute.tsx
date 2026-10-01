@@ -95,7 +95,7 @@ export function PremiumInstitute() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
               <span className="text-sm font-semibold text-blue-700 tracking-wider uppercase">WebCodian Academy</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
               Empower Your Future with <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Professional IT Training</span>
             </h2>
@@ -143,7 +143,7 @@ export function PremiumInstitute() {
               <div className="flex justify-center mb-4 relative z-10 group-hover:scale-110 transition-transform">
                 {stat.icon}
               </div>
-              <h3 className="text-3xl md:text-4xl font-black text-[var(--heading)] mb-2 relative z-10">{stat.value}</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-[var(--heading)] mb-2 relative z-10">{stat.value}</h3>
               <p className="text-xs md:text-sm font-semibold text-[var(--foreground)] relative z-10 uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
@@ -152,7 +152,7 @@ export function PremiumInstitute() {
         {/* Choose Your Learning Path */}
         <div className="mb-16 lg:mb-20 relative">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Choose Your Learning Path</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Choose Your Learning Path</h3>
             <div className="h-1.5 w-24 bg-gradient-to-r from-[var(--primary)] to-blue-500 mx-auto rounded-full"></div>
           </div>
           

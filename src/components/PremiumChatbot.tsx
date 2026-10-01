@@ -28,7 +28,7 @@ export function PremiumChatbot() {
                 <span className="text-xs font-bold text-slate-200 uppercase tracking-widest">Conversational AI</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[var(--heading)] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--heading)] tracking-tight leading-[1.1]">
                 Speak to <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-[#6d28d9]">
                   The Future.

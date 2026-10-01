@@ -28,7 +28,7 @@ export function PremiumBusinessAutomation() {
                 <span className="text-xs font-bold text-slate-700 uppercase tracking-widest">Process Automation</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.1]">
                 Automate & <br/>
                 <span className="text-[#10b981]">
                   Accelerate.
@@ -79,7 +79,7 @@ export function PremiumBusinessAutomation() {
                 <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
-                <h4 className="text-4xl font-black text-slate-900 mb-2">{item.stat}</h4>
+                <h4 className="text-4xl font-bold text-slate-900 mb-2">{item.stat}</h4>
                 <p className="text-sm font-medium text-slate-500">{item.title}</p>
               </div>
             ))}

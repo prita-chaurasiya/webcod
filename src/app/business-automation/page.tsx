@@ -49,7 +49,7 @@ export default function Page() {
                 <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-600 rotate-45 z-0"></div>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 Business Automation Solutions for <span className="text-blue-600">Smarter and Scalable Operations</span>
               </h1>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed font-medium">
@@ -107,7 +107,7 @@ export default function Page() {
               className="lg:pr-12"
             >
               <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Intelligent Operations</span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">What Is Business Automation?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What Is Business Automation?</h2>
               <p className="text-slate-600 text-lg mb-4 leading-relaxed">
                 Business Automation is the process of using technology, software, and artificial intelligence to automate routine business operations and workflows. Instead of handling repetitive tasks manually, businesses can use automation systems to improve efficiency and save time.
               </p>
@@ -150,7 +150,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">AI Services</span>
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6 tracking-tight">Our Artificial Intelligence Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6 tracking-tight">Our Artificial Intelligence Services</h2>
             <p className="text-xl text-slate-600 font-medium">
               At WebCodian, we build innovative AI solutions that help businesses automate operations, improve decision-making, and create intelligent digital experiences.
             </p>
@@ -201,7 +201,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-2 block">Operational Efficiency</span>
-            <h2 className="text-3xl md:text-4xl font-black text-[var(--heading)] mb-6">Why Business Automation Is Important</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--heading)] mb-6">Why Business Automation Is Important</h2>
             <p className="text-slate-500 text-lg">
               Manual processes often slow down business growth and increase operational costs. Automation helps organizations become more agile, efficient, and scalable.
             </p>
@@ -217,7 +217,7 @@ export default function Page() {
                 { num: "03", color: "text-sky-400", title: "Improved productivity", desc: "Allow teams to focus on strategy and high-value operations." }
               ].map((item, i) => (
                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} key={i} className="flex gap-6 items-start">
-                  <div className={`text-4xl font-black ${item.color} opacity-80 shrink-0`}>{item.num}</div>
+                  <div className={`text-4xl font-bold ${item.color} opacity-80 shrink-0`}>{item.num}</div>
                   <div>
                     <h4 className="text-[var(--heading)] font-bold text-xl mb-2">{item.title}</h4>
                     <p className="text-slate-500 text-sm">{item.desc}</p>
@@ -231,7 +231,7 @@ export default function Page() {
               <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
                 {/* Center Hub */}
                 <div className="relative z-20 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex flex-col items-center justify-center text-[var(--heading)] shadow-lg shadow-blue-500/50 border-4 border-slate-800">
-                  <span className="text-4xl font-black leading-none mb-1">6</span>
+                  <span className="text-4xl font-bold leading-none mb-1">6</span>
                   <span className="text-xs uppercase tracking-widest font-bold">Benefits</span>
                 </div>
                 
@@ -273,7 +273,7 @@ export default function Page() {
                 { num: "06", color: "text-[var(--primary)]", title: "Lower operational costs", desc: "Reduce repetitive manual workloads and optimize resources." }
               ].map((item, i) => (
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} key={i} className="flex gap-6 items-start lg:flex-row-reverse text-left lg:text-right">
-                  <div className={`text-4xl font-black ${item.color} opacity-80 shrink-0`}>{item.num}</div>
+                  <div className={`text-4xl font-bold ${item.color} opacity-80 shrink-0`}>{item.num}</div>
                   <div>
                     <h4 className="text-[var(--heading)] font-bold text-xl mb-2">{item.title}</h4>
                     <p className="text-slate-500 text-sm">{item.desc}</p>
@@ -291,7 +291,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">Automation Industries</span>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Industries We Serve <br/> <span className="text-blue-600">with Automation Solutions</span>
             </h2>
             <p className="text-slate-600 text-lg">
@@ -323,7 +323,7 @@ export default function Page() {
                 <div className="absolute inset-0 bg-blue-600 opacity-5 rounded-full"></div>
                 <div className="text-center relative z-10">
                    <Network className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                   <div className="font-black text-slate-900 text-xl tracking-wide uppercase">Industries</div>
+                   <div className="font-bold text-slate-900 text-xl tracking-wide uppercase">Industries</div>
                 </div>
               </div>
             </div>
@@ -360,7 +360,7 @@ export default function Page() {
       <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-black text-slate-900 mb-4">Technologies Used in Business Automation</h3>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">Technologies Used in Business Automation</h3>
             <p className="text-slate-600">We use modern technologies and scalable infrastructure to build high-performance automation systems designed for scalability, security, and seamless business integration.</p>
           </div>
 
@@ -393,7 +393,7 @@ export default function Page() {
               <span className="inline-block bg-white/10 text-[var(--heading)] px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-6">
                 AI Automation
               </span>
-              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                 AI-Powered Automation for <br/> <span className="text-blue-300">Modern Businesses</span>
               </h2>
               <p className="text-blue-100 text-lg mb-6 leading-relaxed">
@@ -438,7 +438,7 @@ export default function Page() {
                 </span>
                 <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-600 rotate-45 z-0"></div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Why Choose WebCodian for <span className="text-blue-600">Business Automation?</span>
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
@@ -474,7 +474,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59] mb-6">Business Challenges We Solve</h2>
             <p className="text-xl text-slate-600 font-medium">Overcome scaling bottlenecks with intelligent business automation.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -499,7 +499,7 @@ export default function Page() {
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Automation Rollout Process</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Automation Rollout Process</h2>
             <p className="text-xl text-slate-600">A structured methodology for digitizing and automating your enterprise operations.</p>
           </div>
           
@@ -511,7 +511,7 @@ export default function Page() {
               { step: "04", title: "UAT & Deployment", desc: "Rigorous User Acceptance Testing followed by a phased production rollout." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-700 hover:bg-slate-700 transition-colors">
-                <div className="text-5xl font-black text-slate-600 mb-6">{item.step}</div>
+                <div className="text-5xl font-bold text-slate-600 mb-6">{item.step}</div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                 <p className="text-slate-600 font-medium">{item.desc}</p>
               </div>
@@ -526,7 +526,7 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-slate-900 mb-6">Enterprise-Grade Security</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Enterprise-Grade Security</h2>
               <p className="text-lg text-blue-700 mb-8 font-medium">When data moves automatically between systems, security cannot be an afterthought. We build secure, encrypted pipelines that comply with international data regulations.</p>
               <ul className="space-y-4">
                 {["AES-256 Data Encryption", "SOC2 & ISO 27001 Compliance", "Role-Based Access Control (RBAC)", "Comprehensive Audit Logging"].map((item, i) => (
@@ -547,7 +547,7 @@ export default function Page() {
       {/* 13. Quality Assurance & Analytics */}
       <section className="py-12 md:py-16 bg-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl font-black text-[#0f2c59] mb-8">Continuous Monitoring & Analytics</h2>
+          <h2 className="text-3xl font-bold text-[#0f2c59] mb-8">Continuous Monitoring & Analytics</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">We don't just deploy and walk away. Our automation solutions come with comprehensive observability dashboards, alerting systems, and SLA guarantees to ensure 99.99% uptime for your critical business processes.</p>
         </div>
       </section>
@@ -556,7 +556,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="bg-blue-50 p-12 lg:p-20 rounded-[3rem] text-center border border-blue-100 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">Proven Business Results</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Proven Business Results</h2>
             <p className="text-xl text-slate-600 font-medium italic max-w-4xl mx-auto mb-10">
               "WebCodian automated our entire supply chain documentation process. What used to take a team of five people a full week is now completely automated and error-free in under 10 minutes."
             </p>
@@ -569,7 +569,7 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-[#0f2c59]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0f2c59]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-4">
             {[

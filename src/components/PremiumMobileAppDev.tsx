@@ -62,7 +62,7 @@ export function PremiumMobileAppDev() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-6">
                 <Smartphone className="w-4 h-4" /> Top-Rated Mobile App Agency
               </motion.div>
-              <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight">
+              <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
                 Transform Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Powerful Mobile Apps</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
@@ -90,7 +90,7 @@ export function PremiumMobileAppDev() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-600 uppercase">iOS Apps</p>
-                    <p className="text-lg font-black text-slate-800">100% Native</p>
+                    <p className="text-lg font-bold text-slate-800">100% Native</p>
                   </div>
                 </div>
 
@@ -100,7 +100,7 @@ export function PremiumMobileAppDev() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-600 uppercase">Security</p>
-                    <p className="text-lg font-black text-slate-800">Bank-Grade</p>
+                    <p className="text-lg font-bold text-slate-800">Bank-Grade</p>
                   </div>
                 </div>
               </motion.div>
@@ -114,7 +114,7 @@ export function PremiumMobileAppDev() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               Comprehensive <span className="text-blue-600">Mobile App</span> Services
             </h2>
             <p className="text-lg text-slate-600 font-medium">
@@ -135,7 +135,7 @@ export function PremiumMobileAppDev() {
                 <div className={`w-20 h-20 rounded-2xl ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
                 <p className="text-slate-600 leading-relaxed text-lg">{service.desc}</p>
                 
                 <div className="mt-8 flex items-center gap-2 font-bold text-slate-800 group-hover:text-blue-600 transition-colors cursor-pointer">
@@ -157,7 +157,7 @@ export function PremiumMobileAppDev() {
               <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" alt="Mobile Development" className="rounded-[32px] shadow-2xl" />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                 Why Partner With Us For Mobile Development?
               </h2>
               <p className="text-slate-600 text-lg mb-8">
@@ -190,7 +190,7 @@ export function PremiumMobileAppDev() {
       <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
               Our Proven <span className="text-blue-600">Development Process</span>
             </h2>
             <p className="text-lg text-slate-600 font-medium">
@@ -201,7 +201,7 @@ export function PremiumMobileAppDev() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processSteps.map((step, idx) => (
               <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group">
-                <div className="text-6xl font-black text-slate-100 group-hover:text-blue-50 transition-colors mb-4 select-none">
+                <div className="text-6xl font-bold text-slate-100 group-hover:text-blue-50 transition-colors mb-4 select-none">
                   {step.num}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
