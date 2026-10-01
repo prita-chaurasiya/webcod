@@ -16,7 +16,7 @@ const caseStudies = [
     challenge: "The client needed a highly secure, low-latency trading platform capable of processing millions of transactions per second with real-time analytics.",
     solution: "We engineered a microservices-based architecture using Go, Node.js, and AWS, implementing robust end-to-end encryption and a React-based high-performance dashboard.",
     result: "400% increase in transaction throughput and a 99.999% uptime guarantee, resulting in a $5M increase in quarterly revenue.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
   },
   {
     client: "National Healthcare Network",
@@ -24,7 +24,7 @@ const caseStudies = [
     challenge: "Existing legacy systems caused severe bottlenecks in patient onboarding, and their telemedicine solution suffered from poor video quality and HIPAA compliance issues.",
     solution: "Developed a HIPAA-compliant custom CRM and integrated WebRTC for seamless, encrypted video consultations accessible via mobile and web apps.",
     result: "Patient onboarding time reduced by 70%, with over 10,000 successful video consultations hosted in the first three months of launch.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
@@ -194,13 +194,13 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-100 border-t border-slate-200">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Ready to Build Your Next Big Project?</h2>
-          <p className="text-blue-100 text-xl mb-10 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Ready to Build Your Next Big Project?</h2>
+          <p className="text-slate-600 text-xl mb-10 max-w-2xl mx-auto">
             Let's discuss your architecture, timeline, and vision. Partner with us for guaranteed delivery and premium engineering.
           </p>
-          <Link href="/get-a-quote" className="inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors shadow-xl">
+          <Link href="/get-a-quote" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 transition-colors shadow-xl">
             Start a Project <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
