@@ -1,5 +1,6 @@
 import { PremiumServiceDetail } from "@/components/PremiumServiceDetail";
 import { Monitor, Server, Code2, Globe } from "lucide-react";
+import { PremiumWebDevOverview } from "@/components/PremiumWebDevOverview";
 
 export default function WebDevelopmentPage() {
   return (
@@ -48,6 +49,7 @@ export default function WebDevelopmentPage() {
           { q: "Will my website be mobile-responsive?", a: "Absolutely. We adopt a mobile-first approach ensuring your platform looks and functions flawlessly across all devices." }
         ]}
       />
+      <PremiumWebDevOverview />
     </main>
   );
 }
