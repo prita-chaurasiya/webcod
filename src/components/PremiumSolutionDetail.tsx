@@ -38,12 +38,12 @@ export function PremiumSolutionDetail({
     <div className="bg-white min-h-screen font-sans overflow-hidden">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 bg-[#f8fafc] overflow-hidden">
+      <section className="relative pt-10 pb-12 lg:pt-16 lg:pb-16 bg-[#f8fafc] overflow-hidden">
         {/* Subtle background blob */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-blue-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
         
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px] relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
             {/* Left Content */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -131,9 +131,9 @@ export function PremiumSolutionDetail({
       </section>
 
       {/* 2. Why Choose / Features Section */}
-      <section className="py-20 lg:py-28 bg-white relative">
+      <section className="py-16 lg:py-20 bg-white relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
-          <div className="flex flex-col xl:flex-row items-center gap-16 lg:gap-20">
+          <div className="flex flex-col xl:flex-row items-center gap-12 lg:gap-16">
             
             {/* Left Illustration */}
             <motion.div 
