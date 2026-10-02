@@ -92,8 +92,9 @@ export function PremiumInstitute() {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-              <span className="text-sm font-semibold text-blue-700 tracking-wider uppercase">WebCodian Academy</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-blue-700 border border-blue-100 shadow-sm mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <span className="text-[11px] font-bold tracking-widest uppercase">WebCodian Academy</span>
             </div>
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
               Empower Your Future with <br className="hidden md:block"/>
@@ -115,7 +116,7 @@ export function PremiumInstitute() {
           >
             {/* Background Blob */}
             <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-white p-2">
+            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-gradient-to-b from-white to-slate-50 p-2">
               <div className="rounded-[1.5rem] overflow-hidden">
                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Premium Tech Academy" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
               </div>
@@ -172,7 +173,7 @@ export function PremiumInstitute() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 whileHover={{ y: -12 }}
-                className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 group flex flex-col h-full"
+                className="bg-gradient-to-b from-white to-slate-50 rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(37,99,235,0.04)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 group flex flex-col h-full"
               >
                 {/* Course Image */}
                 <div className="relative h-[220px] overflow-hidden bg-slate-100">
@@ -228,3 +229,4 @@ export function PremiumInstitute() {
     </section>
   );
 }
+

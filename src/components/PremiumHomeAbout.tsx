@@ -100,7 +100,7 @@ export function PremiumHomeAbout() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute bottom-20 left-10 lg:-left-10 z-30 bg-white p-4 rounded-[18px] shadow-xl border border-slate-100 flex items-center gap-4"
+              className="absolute bottom-20 left-10 lg:-left-10 z-30 bg-gradient-to-b from-white to-slate-50 p-4 rounded-[18px] shadow-xl border border-slate-100 flex items-center gap-4"
             >
               <div className="w-12 h-12 rounded-full bg-[var(--primary)]/10 flex items-center justify-center">
                 <span className="text-[var(--primary)] font-bold text-xl">10+</span>
@@ -118,3 +118,4 @@ export function PremiumHomeAbout() {
     </section>
   );
 }
+

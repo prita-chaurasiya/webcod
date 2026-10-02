@@ -26,7 +26,7 @@ export function PremiumWebsiteValidity() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 60, damping: 20 }}
-          className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
+          className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
         >
           {/* Top Decorative bar */}
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-[var(--primary)]"></div>
@@ -78,3 +78,4 @@ export function PremiumWebsiteValidity() {
     </section>
   );
 }
+

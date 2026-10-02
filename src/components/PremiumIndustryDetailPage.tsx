@@ -221,7 +221,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       </section>
 
       {/* 6. What We Can Build & Use Cases (Split) */}
-      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-20">
             
@@ -268,7 +268,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
           <h2 className="text-2xl font-bold text-slate-900 mb-12">Core Technologies We Use</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {data.technologies.map((tech, idx) => (
-              <span key={idx} className="px-6 py-3 bg-white rounded-full border border-slate-200 text-slate-700 font-bold shadow-sm hover:border-blue-500 hover:text-blue-600 transition-colors cursor-default">
+              <span key={idx} className="px-6 py-3 bg-gradient-to-b from-white to-slate-50 rounded-full border border-slate-200 text-slate-700 font-bold shadow-sm hover:border-blue-500 hover:text-blue-600 transition-colors cursor-default">
                 {tech}
               </span>
             ))}
@@ -327,19 +327,19 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
             <div>
               <h2 className="text-3xl font-bold mb-12">Why WebCodian</h2>
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-bold text-[var(--heading)] mb-2">6</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Years Experience</div>
                 </div>
-                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-bold text-[var(--heading)] mb-2">15+</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Team Members</div>
                 </div>
-                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-bold text-[var(--heading)] mb-2">100%</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
                 </div>
-                <div className="p-8 bg-white rounded-[18px] border border-slate-700 text-center">
+                <div className="p-8 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-700 text-center">
                   <div className="text-4xl font-bold text-[var(--heading)] mb-2">24/7</div>
                   <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Support</div>
                 </div>
@@ -355,3 +355,5 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
     </main>
   );
 }
+
+

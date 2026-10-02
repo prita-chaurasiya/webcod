@@ -64,7 +64,7 @@ export function PremiumJobs() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 50 }}
             >
-              <div className="bg-white rounded-[18px] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 hover:rotate-x-1 group">
+              <div className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 hover:rotate-x-1 group">
                 
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
                   <div>
@@ -131,7 +131,7 @@ export function PremiumJobs() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-3xl bg-white rounded-[18px] shadow-lg overflow-hidden max-h-[90vh] flex flex-col"
+              className="relative w-full max-w-3xl bg-gradient-to-b from-white to-slate-50 rounded-[18px] shadow-lg overflow-hidden max-h-[90vh] flex flex-col"
             >
               {(() => {
                 const job = jobs.find(j => j.id === selectedJob);
@@ -146,7 +146,7 @@ export function PremiumJobs() {
                       </div>
                       <button 
                         onClick={() => setSelectedJob(null)}
-                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-500 hover:text-[var(--primary)] hover:bg-slate-50 transition-all shadow-sm"
+                        className="w-10 h-10 bg-gradient-to-b from-white to-slate-50 rounded-full flex items-center justify-center text-gray-500 hover:text-[var(--primary)] hover:bg-slate-50 transition-all shadow-sm"
                       >
                         <X className="w-5 h-5" />
                       </button>
@@ -192,7 +192,7 @@ export function PremiumJobs() {
                           </div>
                           <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-1">Upload Resume <span className="text-[var(--primary)]">*</span></label>
-                            <input type="file" className="w-full px-4 py-2.5 bg-white rounded-[18px] border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#e8f6ef] file:text-[var(--primary)] hover:file:bg-[#d1ecd9]" required />
+                            <input type="file" className="w-full px-4 py-2.5 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#e8f6ef] file:text-[var(--primary)] hover:file:bg-[#d1ecd9]" required />
                           </div>
                         </div>
                         <div>
@@ -217,3 +217,4 @@ export function PremiumJobs() {
     </section>
   );
 }
+

@@ -86,7 +86,7 @@ export default function Page() {
               <motion.div 
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
+                className="absolute -bottom-10 -left-10 bg-gradient-to-b from-white to-slate-50 p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
               >
                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                   <Bot className="w-8 h-8" />
@@ -215,7 +215,7 @@ export default function Page() {
           
           <div className="flex flex-wrap justify-center gap-6">
             {["OpenAI & GPT-4", "TensorFlow", "PyTorch", "AWS SageMaker", "Azure AI", "Google Cloud ML", "LangChain", "Pinecone"].map((tech, i) => (
-              <div key={i} className="px-8 py-4 bg-white rounded-full font-bold text-slate-700 shadow-sm border border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all cursor-default">
+              <div key={i} className="px-8 py-4 bg-gradient-to-b from-white to-slate-50 rounded-full font-bold text-slate-700 shadow-sm border border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all cursor-default">
                 {tech}
               </div>
             ))}
@@ -227,3 +227,5 @@ export default function Page() {
     </main>
   );
 }
+
+

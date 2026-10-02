@@ -71,7 +71,7 @@ export function PremiumOpenTicket() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className={`p-5 rounded-[18px] bg-white border ${ch.border} shadow-sm hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 block group`}
+              className={`p-5 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border ${ch.border} shadow-sm hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:-translate-y-1 transition-all duration-300 block group`}
             >
               <div className={`w-10 h-10 rounded-[18px] ${ch.bg} ${ch.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                 <ch.icon className="w-5 h-5" />
@@ -87,7 +87,7 @@ export function PremiumOpenTicket() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative overflow-hidden"
+          className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative overflow-hidden"
         >
           {/* Top Decorative bar */}
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-teal-400 to-[var(--primary)]" />
@@ -217,7 +217,7 @@ export function PremiumOpenTicket() {
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   />
                   <div className="flex items-center gap-4 w-full">
-                    <div className="w-12 h-12 bg-white rounded-[18px] shadow-sm flex items-center justify-center text-slate-500 group-hover:text-[var(--primary)] group-hover:scale-110 transition-all">
+                    <div className="w-12 h-12 bg-gradient-to-b from-white to-slate-50 rounded-[18px] shadow-sm flex items-center justify-center text-slate-500 group-hover:text-[var(--primary)] group-hover:scale-110 transition-all">
                       <UploadCloud className="w-6 h-6" />
                     </div>
                     <div>
@@ -246,3 +246,5 @@ export function PremiumOpenTicket() {
     </section>
   );
 }
+
+

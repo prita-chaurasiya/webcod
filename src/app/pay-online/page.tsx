@@ -74,7 +74,7 @@ export default function PayOnlinePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm"
+                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm"
               >
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-6 h-6" />
@@ -165,7 +165,7 @@ export default function PayOnlinePage() {
               { q: "My payment failed but money was deducted. What should I do?", a: "This is a bank routing issue. In 99% of cases, the money automatically reverses to your bank account within 3-5 business days. You can share a screenshot of the transaction with our support team, and we will verify the status from our gateway ledger." },
               { q: "Can I pay in EMIs?", a: "Yes, we offer flexible milestone-based payment schedules for large enterprise projects, and structured installment options for our IT training programs." }
             ].map((faq, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+              <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{faq.q}</h3>
                 <p className="text-slate-600 leading-relaxed">{faq.a}</p>
               </div>
@@ -177,3 +177,4 @@ export default function PayOnlinePage() {
     </main>
   );
 }
+

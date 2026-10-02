@@ -49,7 +49,7 @@ export function PremiumIndustry() {
               className="relative"
             >
               <Link href={ind.href} className="block group">
-                <div className="flex items-center bg-white border border-slate-200 rounded-full pr-6 pl-1.5 py-1.5 shadow-sm hover:shadow-md hover:bg-[var(--primary)] hover:border-[var(--primary)] transition-all duration-300 min-w-[200px]">
+                <div className="flex items-center bg-gradient-to-b from-white to-slate-50 border border-slate-200 rounded-full pr-6 pl-1.5 py-1.5 shadow-sm hover:shadow-md hover:bg-[var(--primary)] hover:border-[var(--primary)] transition-all duration-300 min-w-[200px]">
                   
                   {/* Left Circle Image Container */}
                   <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0">
@@ -87,3 +87,4 @@ export function PremiumIndustry() {
     </section>
   );
 }
+

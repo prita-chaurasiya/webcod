@@ -296,7 +296,7 @@ export function Navbar() {
                     <div className="w-3/4 grid grid-cols-2 gap-x-4 gap-y-2 border-l border-slate-100 pl-8">
                       {industries.map((ind) => (
                         <Link key={ind.name} href={ind.href} className="flex items-start gap-3 p-3 rounded-[18px] hover:bg-slate-50 transition-colors group/ind">
-                          <div className="w-10 h-10 rounded-[18px] bg-white border border-slate-100 flex items-center justify-center shrink-0 group-hover/ind:border-[var(--primary)]/30 group-hover/ind:bg-[var(--primary)]/5 transition-colors">
+                          <div className="w-10 h-10 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/ind:border-[var(--primary)]/30 group-hover/ind:bg-[var(--primary)]/5 transition-colors">
                             <ind.icon className="w-5 h-5 text-slate-600 group-hover/ind:text-[var(--primary)] transition-colors" />
                           </div>
                           <div>
@@ -500,3 +500,4 @@ export function Navbar() {
     </div>
   );
 }
+

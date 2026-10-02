@@ -265,7 +265,7 @@ export function PremiumServiceDetail({
                       transition: { type: "spring", stiffness: 300, damping: 20 }
                     }}
                     key={idx} 
-                    className="flex flex-col items-start p-8 bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-blue-100 transition-all duration-300 group relative overflow-hidden"
+                    className="flex flex-col items-start p-8 bg-gradient-to-b from-white to-slate-50 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-blue-100 transition-all duration-300 group relative overflow-hidden"
                   >
                     {/* Hover Glow */}
                     <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -341,7 +341,7 @@ export function PremiumServiceDetail({
           <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-r from-[#f8fafc] via-transparent to-[#f8fafc] w-full" />
           
           <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-20 mb-16 text-center">
-            <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">TECHNOLOGY WE USE</span>
+            <span className="inline-block py-1.5 px-3 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">TECHNOLOGY WE USE</span>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900">Powered by modern technologies</h2>
           </div>
           
@@ -376,7 +376,7 @@ export function PremiumServiceDetail({
         <section className="py-12 lg:py-16 bg-slate-50 relative">
           <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
             <div className="text-center mb-10">
-              <span className="inline-block py-1.5 px-3 rounded-full bg-white border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">FAQ</span>
+              <span className="inline-block py-1.5 px-3 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 shadow-sm">FAQ</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Got Questions?</h2>
             </div>
 
@@ -418,3 +418,5 @@ export function PremiumServiceDetail({
     </div>
   );
 }
+
+

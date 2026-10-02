@@ -34,7 +34,7 @@ export function PremiumFeatureCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500`}
+      className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-gradient-to-b from-white to-slate-50 rounded-[2rem] border border-slate-200 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500`}
     >
       {/* Image Side */}
       <div className="w-full md:w-1/2 relative min-h-[350px] md:min-h-[400px] overflow-hidden group">
@@ -80,3 +80,4 @@ export function PremiumFeatureCard({
     </motion.div>
   );
 }
+

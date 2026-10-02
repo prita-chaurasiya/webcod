@@ -71,7 +71,7 @@ export function PremiumTechStack() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 mb-4"
           >
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-100 p-1.5">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full card-premium shadow-sm border border-slate-100 p-1.5">
               <img src="/images/logo.png" alt="Icon" className="w-full h-full object-contain img-premium" onError={(e) => e.currentTarget.style.display = 'none'} />
             </div>
             <span className="text-[#f4511e] font-bold text-lg uppercase tracking-wider">
@@ -135,3 +135,4 @@ export function PremiumTechStack() {
     </section>
   );
 }
+

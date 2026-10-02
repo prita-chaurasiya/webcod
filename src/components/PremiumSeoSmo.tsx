@@ -170,7 +170,7 @@ export function PremiumSeoSmo() {
             <div className="relative bg-white/60 backdrop-blur-xl border border-white rounded-[18px] p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-4">
                 {services.map((svc, idx) => (
-                  <div key={idx} className="p-4 bg-white rounded-[18px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow hover:border-slate-100">
+                  <div key={idx} className="p-4 bg-gradient-to-b from-white to-slate-50 rounded-[18px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow hover:border-slate-100">
                     <div className="mb-3">{svc.icon}</div>
                     <h5 className="font-semibold text-slate-900 text-sm">{svc.title}</h5>
                   </div>
@@ -282,3 +282,4 @@ export function PremiumSeoSmo() {
     </div>
   );
 }
+

@@ -36,7 +36,7 @@ export function TechnologyBelt() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white p-6 rounded border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 group"
+              className="bg-gradient-to-b from-white to-slate-50 p-6 rounded border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-4 group"
             >
               <div className="h-12 w-full flex items-center justify-center">
                 <img 
@@ -53,3 +53,4 @@ export function TechnologyBelt() {
     </section>
   );
 }
+

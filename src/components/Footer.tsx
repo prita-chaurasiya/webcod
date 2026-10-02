@@ -128,11 +128,11 @@ export function Footer() {
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-slate-600">
-            <a href="tel:+919794412733" className="flex items-center gap-2.5 hover:text-[var(--primary)] transition-colors group bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-[var(--primary)]">
+            <a href="tel:+919794412733" className="flex items-center gap-2.5 hover:text-[var(--primary)] transition-colors group bg-gradient-to-b from-white to-slate-50 border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-[var(--primary)]">
               <Phone className="w-4 h-4 text-slate-400 group-hover:text-[var(--primary)] transition-colors" />
               +91 9794412733
             </a>
-            <a href="mailto:info@webcodian.com" className="flex items-center gap-2.5 hover:text-[var(--primary)] transition-colors group bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-[var(--primary)]">
+            <a href="mailto:info@webcodian.com" className="flex items-center gap-2.5 hover:text-[var(--primary)] transition-colors group bg-gradient-to-b from-white to-slate-50 border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-[var(--primary)]">
               <Mail className="w-4 h-4 text-slate-400 group-hover:text-[var(--primary)] transition-colors" />
               info@webcodian.com
             </a>
@@ -143,3 +143,4 @@ export function Footer() {
     </footer>
   );
 }
+

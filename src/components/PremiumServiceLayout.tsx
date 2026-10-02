@@ -23,7 +23,7 @@ export function PremiumServiceLayout({ title, description, features }: PremiumSe
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
+              className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{title}</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -76,3 +76,4 @@ export function PremiumServiceLayout({ title, description, features }: PremiumSe
     </section>
   );
 }
+

@@ -120,7 +120,7 @@ export default function CareerPage() {
       {/* Internship CTA */}
       <section className="py-20 bg-blue-50 border-y border-blue-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
-          <div className="bg-white rounded-[40px] p-10 md:p-16 shadow-xl border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="bg-gradient-to-b from-white to-slate-50 rounded-[40px] p-10 md:p-16 shadow-xl border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-2/3">
               <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Rocket className="w-8 h-8" />
@@ -143,3 +143,4 @@ export default function CareerPage() {
     </main>
   );
 }
+

@@ -73,7 +73,7 @@ export function PremiumPerks() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 50 }}
             >
-              <div className={`group bg-white rounded-[18px] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-500 ${perk.border} transform hover:-translate-y-2 hover:rotate-x-2 flex items-start gap-6 h-full relative overflow-hidden`}>
+              <div className={`group bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-lg transition-all duration-500 ${perk.border} transform hover:-translate-y-2 hover:rotate-x-2 flex items-start gap-6 h-full relative overflow-hidden`}>
                 
                 {/* Subtle background glow on hover */}
                 <div className={`absolute -right-10 -top-10 w-40 h-40 ${perk.bg} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -99,3 +99,4 @@ export function PremiumPerks() {
     </section>
   );
 }
+

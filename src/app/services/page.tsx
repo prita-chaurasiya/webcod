@@ -19,7 +19,7 @@ const services = [
 
 export default function Page() {
   return (
-    <div className="bg-[#0B1121] min-h-screen">
+    <div className="bg-slate-50 min-h-screen">
       <PageBanner 
         title="Our Digital Services" 
         subtitle="End-to-end digital transformation solutions designed for modern businesses."
@@ -28,8 +28,8 @@ export default function Page() {
       />
       <section className="py-20 lg:py-28 relative overflow-hidden">
         {/* Ambient Lights */}
-        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-indigo-400/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
@@ -37,32 +37,29 @@ export default function Page() {
             {services.map((service, idx) => (
               <div 
                 key={idx}
-                className="group relative bg-white/5 rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.2)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.15)] border border-white/10 transition-all duration-500 flex flex-col h-[400px]"
+                className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(37,99,235,0.04)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 flex flex-col h-[400px]"
               >
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                  <div className="absolute inset-0 bg-blue-900/20 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                {/* Image Container (Top Half) */}
+                <div className="h-[55%] w-full overflow-hidden relative bg-slate-100">
+                  <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
                   <img 
                     src={service.image} 
                     alt={service.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                   />
                 </div>
                 
-                {/* Gradients for Text Visibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] via-[#0B1121]/60 to-transparent z-10 opacity-95 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Content */}
-                <div className="relative z-20 flex flex-col h-full justify-end p-8 text-left">
-                  <h3 className="text-3xl font-bold text-white mb-3 leading-snug drop-shadow-lg group-hover:text-blue-200 transition-colors">
+                {/* Content Container (Bottom Half) */}
+                <div className="flex-1 flex flex-col justify-center p-6 relative z-20 bg-white">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
                   
                   {/* Read More Interaction */}
-                  <div className="flex items-center gap-2 text-base font-bold text-blue-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <div className="flex items-center gap-2 text-sm font-bold text-blue-600 transition-all duration-300">
                     <Link href={`/${service.slug}`} className="flex items-center gap-2">
                       Explore Solutions
-                      <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+                      <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                     </Link>
                   </div>
                 </div>

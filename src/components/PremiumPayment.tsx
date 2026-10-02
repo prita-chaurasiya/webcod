@@ -96,14 +96,14 @@ export function PremiumPayment() {
               </div>
 
               <div className="grid grid-cols-2 gap-6 perspective-[1000px]">
-                <div className="bg-white p-6 rounded-[2rem] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] border border-slate-100 transform hover:scale-105 hover:rotate-x-2 transition-all duration-300 flex flex-col items-center justify-center">
+                <div className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[2rem] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] border border-slate-100 transform hover:scale-105 hover:rotate-x-2 transition-all duration-300 flex flex-col items-center justify-center">
                   <div className="w-32 h-32 bg-slate-50 rounded-[18px] mb-4 flex items-center justify-center overflow-hidden">
                      {/* Replace with actual QR if available, using a placeholder icon for now */}
                      <QrCode className="w-16 h-16 text-slate-600" />
                   </div>
                   <span className="text-sm font-bold text-slate-600">Scan to Pay</span>
                 </div>
-                <div className="bg-white p-6 rounded-[2rem] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] border border-slate-100 transform hover:scale-105 hover:-rotate-x-2 transition-all duration-300 flex flex-col items-center justify-center">
+                <div className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[2rem] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] border border-slate-100 transform hover:scale-105 hover:-rotate-x-2 transition-all duration-300 flex flex-col items-center justify-center">
                   <div className="w-32 h-32 bg-slate-50 rounded-[18px] mb-4 flex items-center justify-center overflow-hidden p-2">
                      <img src="https://webcodian.com/public/web/assets/img/phonepay.jpeg" alt="PhonePe QR" className="w-full h-full object-contain mix-blend-multiply img-premium" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = '<QrCode class="w-16 h-16 text-slate-600" />' }} />
                   </div>
@@ -120,7 +120,7 @@ export function PremiumPayment() {
             viewport={{ once: true }}
             className="perspective-[1000px]"
           >
-            <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-lg border border-slate-100 relative overflow-hidden">
+            <div className="bg-gradient-to-b from-white to-slate-50 rounded-[2.5rem] p-8 md:p-12 shadow-lg border border-slate-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
               {/* Tabs */}
@@ -227,3 +227,5 @@ export function PremiumPayment() {
     </section>
   );
 }
+
+

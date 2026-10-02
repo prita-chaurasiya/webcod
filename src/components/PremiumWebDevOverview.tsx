@@ -90,9 +90,9 @@ export function PremiumWebDevOverview() {
             {webServices.map((service, idx) => (
               <div 
                 key={idx} 
-                className="bg-white p-8 rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 relative z-10 group"
+                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(37,99,235,0.05)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.1)] hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 relative z-10 group"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:text-white text-[var(--primary)] transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-b from-white to-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:text-white text-[var(--primary)] transition-colors shadow-sm border border-slate-100">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{service.title}</h3>
@@ -106,3 +106,4 @@ export function PremiumWebDevOverview() {
     </section>
   );
 }
+

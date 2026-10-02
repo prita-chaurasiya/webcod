@@ -38,9 +38,9 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
               ))}
             </div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative">
-            <img src={data.image1 || "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop"} alt={`${data.title} Industry`} className="rounded-[24px] shadow-2xl relative z-10 w-full h-[500px] object-cover" />
-            <div className="absolute top-8 -right-8 w-64 h-64 bg-[var(--primary)] rounded-[24px] z-0 hidden md:block opacity-10"></div>
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative group">
+            <img src={data.image1 || "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop"} alt={`${data.title} Industry`} className="rounded-[24px] shadow-2xl relative z-10 w-full h-[500px] object-cover img-premium" />
+            <div className="absolute top-8 -right-8 w-64 h-64 bg-[var(--primary)] rounded-[24px] z-0 hidden md:block opacity-10 group-hover:scale-105 transition-transform duration-500"></div>
           </motion.div>
         </div>
       </EnterpriseSection>
@@ -51,7 +51,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Challenges */}
-          <div className="bg-white p-10 rounded-[24px] shadow-sm border border-slate-100">
+          <div className="bg-gradient-to-b from-white to-slate-50 p-10 rounded-[24px] shadow-sm border border-slate-100">
             <h3 className="text-2xl font-bold text-[var(--heading)] mb-8 flex items-center gap-3">
               Industry Bottlenecks
             </h3>
@@ -69,7 +69,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
           </div>
           
           {/* Solutions */}
-          <div className="bg-white p-10 rounded-[24px] shadow-sm border border-slate-100 border-t-4 border-t-[var(--primary)]">
+          <div className="bg-gradient-to-b from-white to-slate-50 p-10 rounded-[24px] shadow-sm border border-slate-100 border-t-4 border-t-[var(--primary)]">
             <h3 className="text-2xl font-bold text-[var(--heading)] mb-8 flex items-center gap-3">
               Our Digital Interventions
             </h3>
@@ -93,7 +93,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
         <EnterpriseSectionHeader badge="Impact" title="Measurable Business Outcomes" />
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {data.outcomes.map((outcome, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-slate-100 text-center hover:-translate-y-2 transition-all">
+            <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-slate-100 text-center hover:-translate-y-2 transition-all">
               <div className="text-4xl font-bold text-[var(--primary)] mb-4">{outcome.metric}</div>
               <p className="text-slate-600 font-medium">{outcome.desc}</p>
             </div>
@@ -104,9 +104,9 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
       {/* 4. CTA */}
       <EnterpriseSection background="navy" padding="large">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6">Innovate Your {data.title} Business Today</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Innovate Your {data.title} Business Today</h2>
           <p className="text-xl text-slate-300 mb-10 leading-relaxed">Join the market leaders who have already partnered with us to undergo complete digital transformation.</p>
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-bold text-lg shadow-xl hover:-translate-y-1 transition-all">
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-bold text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 transition-all">
             Discuss Your Requirements <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -114,3 +114,4 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
     </div>
   );
 }
+

@@ -93,7 +93,7 @@ export function PremiumChatbot() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -102,7 +102,7 @@ export function PremiumChatbot() {
               { title: "Omnichannel Support", desc: "Deploy your bot across WhatsApp, Telegram, website, and phone lines from a single brain.", icon: <Zap className="w-6 h-6 text-[#f97316]" /> }
             ].map((feat, i) => (
               <div key={i} className="bg-slate-50 p-8 rounded-[24px] border border-slate-100 hover:border-[#06b6d4]/30 transition-colors">
-                <div className="w-12 h-12 rounded-[18px] bg-white border border-slate-200 flex items-center justify-center mb-6 shadow-sm">
+                <div className="w-12 h-12 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-slate-200 flex items-center justify-center mb-6 shadow-sm">
                   {feat.icon}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{feat.title}</h3>
@@ -116,3 +116,4 @@ export function PremiumChatbot() {
     </div>
   );
 }
+

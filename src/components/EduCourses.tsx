@@ -119,7 +119,7 @@ export function EduCourses() {
             <input 
               type="text" 
               placeholder="Search your course..." 
-              className="w-full pl-5 pr-12 py-4 bg-white border border-slate-200 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all text-sm font-medium placeholder:text-slate-500 shadow-sm"
+              className="w-full pl-5 pr-12 py-4 bg-gradient-to-b from-white to-slate-50 border border-slate-200 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all text-sm font-medium placeholder:text-slate-500 shadow-sm"
             />
             <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-slate-50 text-slate-500 rounded-lg flex items-center justify-center hover:bg-[var(--primary)] hover:text-white transition-colors">
               <Search className="w-5 h-5" />
@@ -128,7 +128,7 @@ export function EduCourses() {
         </div>
 
         {/* Categories Tab Bar */}
-        <div className="bg-white rounded-[18px] p-2 mb-12 flex items-center justify-between overflow-x-auto hide-scrollbar gap-2 shadow-sm border border-slate-100">
+        <div className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-2 mb-12 flex items-center justify-between overflow-x-auto hide-scrollbar gap-2 shadow-sm border border-slate-100">
           <div className="flex items-center flex-nowrap gap-2 w-full">
             {categories.map((cat) => (
               <button
@@ -157,7 +157,7 @@ export function EduCourses() {
                 animate={{ opacity: 1, scale: 1, rotateX: 0 }}
                 exit={{ opacity: 0, scale: 0.9, rotateX: -10 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transform hover:-translate-y-2 hover:rotate-y-2 transition-all duration-500 flex flex-col group"
+                className="bg-gradient-to-b from-white to-slate-50 rounded-[2rem] overflow-hidden border border-slate-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transform hover:-translate-y-2 hover:rotate-y-2 transition-all duration-500 flex flex-col group"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 {/* Image */}
@@ -231,3 +231,5 @@ export function EduCourses() {
     </section>
   );
 }
+
+

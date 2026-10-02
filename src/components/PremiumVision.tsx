@@ -24,7 +24,7 @@ export function PremiumVision() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-blue-100 shadow-sm text-[var(--primary)] text-[13px] font-bold tracking-widest uppercase mb-8">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-b from-white to-slate-50 border border-blue-100 shadow-sm text-[var(--primary)] text-[13px] font-bold tracking-widest uppercase mb-8">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--primary)]"></span>
@@ -42,7 +42,7 @@ export function PremiumVision() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 mb-12">
-              <div className="flex-1 flex items-center gap-4 bg-white border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
+              <div className="flex-1 flex items-center gap-4 bg-gradient-to-b from-white to-slate-50 border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
                 <div className="w-12 h-12 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                   <Award className="w-6 h-6" />
                 </div>
@@ -52,7 +52,7 @@ export function PremiumVision() {
                 </div>
               </div>
               
-              <div className="flex-1 flex items-center gap-4 bg-white border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
+              <div className="flex-1 flex items-center gap-4 bg-gradient-to-b from-white to-slate-50 border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
                 <div className="w-12 h-12 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
@@ -121,3 +121,4 @@ export function PremiumVision() {
     </section>
   );
 }
+

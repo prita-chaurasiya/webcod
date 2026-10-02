@@ -65,7 +65,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Challenges */}
-          <div className="bg-white p-10 rounded-[24px] shadow-sm border border-slate-100">
+          <div className="bg-gradient-to-b from-white to-slate-50 p-10 rounded-[24px] shadow-sm border border-slate-100">
             <h3 className="text-2xl font-bold text-red-600 mb-8 flex items-center gap-3">
               <Zap className="w-6 h-6" /> Common Challenges
             </h3>
@@ -108,7 +108,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
         
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {data.process.map((step, idx) => (
-            <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="relative bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] transition-colors">
+            <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }} className="relative bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] transition-colors">
               <div className="text-5xl font-bold text-slate-100 absolute top-4 right-6 pointer-events-none">{step.step}</div>
               <h4 className="text-xl font-bold text-[var(--heading)] mb-3 relative z-10 mt-6">{step.title}</h4>
               <p className="text-slate-600 text-sm relative z-10">{step.desc}</p>
@@ -122,7 +122,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
         <EnterpriseSectionHeader badge="Value Add" title="Key Business Benefits" />
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {data.benefits.map((benefit, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-[24px] shadow-sm border border-slate-100 text-center">
+            <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] shadow-sm border border-slate-100 text-center">
               <div className="w-16 h-16 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <BarChart className="w-8 h-8" />
               </div>
@@ -146,3 +146,4 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
     </div>
   );
 }
+

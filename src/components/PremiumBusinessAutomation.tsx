@@ -23,7 +23,7 @@ export function PremiumBusinessAutomation() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full card-premium shadow-sm border border-slate-200">
                 <Workflow className="w-4 h-4 text-[#10b981]" />
                 <span className="text-xs font-bold text-slate-700 uppercase tracking-widest">Process Automation</span>
               </div>
@@ -56,7 +56,7 @@ export function PremiumBusinessAutomation() {
             >
               {/* Background Blob */}
               <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
-              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-white p-2">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-gradient-to-b from-white to-slate-50 p-2">
                 <div className="rounded-[1.5rem] overflow-hidden">
                    <img src="/images/ai-automation-vector.jpg" alt="AI Business Automation Workflow" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -67,7 +67,7 @@ export function PremiumBusinessAutomation() {
       </section>
 
       {/* Stats / ROI Section */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -76,7 +76,7 @@ export function PremiumBusinessAutomation() {
               { title: "Operational Cost Reduction", stat: "35%", icon: <TrendingUp className="w-6 h-6 text-[#f97316]" /> }
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center p-8 rounded-[24px] bg-slate-50 border border-slate-100">
-                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full card-premium shadow-sm flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
                 <h4 className="text-4xl font-bold text-slate-900 mb-2">{item.stat}</h4>
@@ -90,3 +90,5 @@ export function PremiumBusinessAutomation() {
     </div>
   );
 }
+
+

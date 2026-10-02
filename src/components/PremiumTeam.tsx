@@ -83,7 +83,7 @@ export function PremiumTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative bg-white rounded-[18px] p-6 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300"
+              className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-6 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300"
             >
               <div className="relative w-full aspect-square rounded-[18px] overflow-hidden mb-6">
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -126,3 +126,4 @@ export function PremiumTeam() {
     </section>
   );
 }
+

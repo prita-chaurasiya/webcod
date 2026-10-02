@@ -138,7 +138,7 @@ export function PremiumTestimonials() {
                   key={testimonial.id} 
                   className={`shrink-0 px-3 md:px-4 ${cardsPerView === 1 ? 'w-full' : 'w-1/2'}`}
                 >
-                  <div className="bg-white rounded-[18px] p-6 md:p-10 lg:p-12 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-slate-200/50 relative overflow-hidden flex flex-col justify-between h-full min-h-[350px] md:min-h-[420px] border border-slate-100">
+                  <div className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-6 md:p-10 lg:p-12 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-slate-200/50 relative overflow-hidden flex flex-col justify-between h-full min-h-[350px] md:min-h-[420px] border border-slate-100">
                     
                     {/* Faint World Map Watermark */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
@@ -197,3 +197,4 @@ export function PremiumTestimonials() {
     </section>
   );
 }
+

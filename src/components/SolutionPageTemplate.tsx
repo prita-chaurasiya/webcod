@@ -125,7 +125,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
       {/* ── HERO ── */}
       <section className="relative min-h-[80vh] flex items-end pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={data.heroImg} alt={data.heroTitle} className="w-full h-full object-cover" />
+          <img src={data.heroImg} alt={data.heroTitle} className="w-full h-full object-cover animate-ken-burns" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/75 to-slate-900/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
         </div>
@@ -221,7 +221,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </motion.div>
             <motion.div {...fadeRight} className="lg:w-1/2 relative">
               <img src={data.overviewImg} alt={data.overviewHeading} className="w-full h-[450px] object-cover rounded-3xl shadow-2xl" />
-              <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-slate-100">
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-b from-white to-slate-50 p-5 rounded-2xl shadow-xl border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
                     <BarChart3 className="w-6 h-6 text-white" />
@@ -287,7 +287,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 key={idx}
                 {...fadeUp}
                 transition={{ delay: idx * 0.07 }}
-                className="p-8 border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-white"
+                className="p-8 border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-b from-white to-slate-50"
               >
                 <div className="w-12 h-12 bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white rounded-xl flex items-center justify-center mb-5 transition-all">
                   <Zap className="w-6 h-6" />
@@ -317,7 +317,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 key={idx}
                 {...fadeUp}
                 transition={{ delay: idx * 0.07 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-5"
+                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-5"
               >
                 <div className="w-10 h-10 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-5 h-5" />
@@ -378,7 +378,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 key={idx}
                 {...fadeUp}
                 transition={{ delay: idx * 0.07 }}
-                className="flex gap-4 p-7 bg-white rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all"
+                className="flex gap-4 p-7 bg-gradient-to-b from-white to-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all"
               >
                 <Star className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
                 <div>
@@ -392,7 +392,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
       </section>
 
       {/* ── TECH STACK ── */}
-      <section className="py-20 bg-white border-b border-slate-100">
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
           <div className="inline-block mb-5 px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase rounded-full border border-blue-100">
             Technology Stack
@@ -438,7 +438,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 key={idx}
                 {...fadeUp}
                 transition={{ delay: idx * 0.1 }}
-                className="relative z-10 bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center hover:border-blue-500 hover:shadow-xl transition-all"
+                className="relative z-10 bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 text-center hover:border-blue-500 hover:shadow-xl transition-all"
               >
                 <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold mx-auto mb-5 shadow-lg shadow-blue-600/30">
                   {p.step}
@@ -549,7 +549,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </motion.div>
             <motion.div {...fadeRight} className="lg:w-1/2 relative">
               <img src={data.securityImg} alt="Security" className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
-              <div className="absolute -top-6 -right-6 bg-white border border-slate-100 shadow-xl p-5 rounded-2xl">
+              <div className="absolute -top-6 -right-6 bg-gradient-to-b from-white to-slate-50 border border-slate-100 shadow-xl p-5 rounded-2xl">
                 <ShieldCheck className="w-10 h-10 text-green-500 mb-2" />
                 <div className="text-slate-900 font-bold text-sm">Enterprise Security</div>
                 <div className="text-slate-500 text-xs">ISO 27001 Compliant</div>
@@ -570,7 +570,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
               Real Results. Real Clients.
             </h2>
           </div>
-          <div className="bg-white border border-slate-200 rounded-3xl p-10 md:p-14 max-w-5xl mx-auto">
+          <div className="bg-gradient-to-b from-white to-slate-50 border border-slate-200 rounded-3xl p-10 md:p-14 max-w-5xl mx-auto">
             <div className="inline-block mb-6 px-4 py-1.5 bg-blue-600 text-white text-xs font-bold tracking-widest uppercase rounded-full">
               {data.caseStudy.label}
             </div>
@@ -670,7 +670,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 key={idx}
                 {...fadeUp}
                 transition={{ delay: idx * 0.06 }}
-                className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm"
+                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm"
               >
                 <h3 className="text-slate-900 font-bold text-lg mb-3">{faq.q}</h3>
                 <p className="text-slate-600 leading-relaxed">{faq.a}</p>
@@ -681,7 +681,7 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
       </section>
 
       {/* ── RELATED SERVICES ── */}
-      <section className="py-16 bg-white border-t border-slate-200">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <h3 className="text-xl font-bold text-slate-900 mb-8 text-center">Explore Related Solutions</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -727,3 +727,5 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
     </div>
   );
 }
+
+

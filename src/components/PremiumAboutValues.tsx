@@ -83,7 +83,7 @@ export function PremiumAboutValues() {
         >
           {values.map((value) => (
             <motion.div key={value.id} variants={itemVariants} className="h-full">
-              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-slate-100 group relative overflow-hidden">
+              <div className="bg-gradient-to-b from-white to-slate-50 rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-slate-100 group relative overflow-hidden">
                 
                 <div className={`w-16 h-16 rounded-[18px] ${value.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                   <value.icon className={`w-8 h-8 ${value.textColor}`} />
@@ -116,3 +116,4 @@ export function PremiumAboutValues() {
     </section>
   );
 }
+

@@ -24,10 +24,10 @@ export function PremiumNewsletter() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-[18px] bg-white/10 backdrop-blur-md mb-6 border border-white/10">
                 <Mail className="w-8 h-8 text-[var(--primary)]" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-[var(--heading)] mb-4 leading-tight">
+              <div className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">
                 Subscribe to our <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-emerald-300">Newsletter</span>
-              </h2>
-              <p className="text-slate-500 text-lg">
+              </div>
+              <p className="text-slate-300 text-lg">
                 Get the latest insights, tech news, and WebCodian updates delivered directly to your inbox. No spam, just pure value.
               </p>
             </div>
@@ -35,14 +35,14 @@ export function PremiumNewsletter() {
             <form onSubmit={(e) => e.preventDefault()} className="relative">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-blue-500 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-500"></div>
-                <div className="relative flex bg-white border border-gray-700 rounded-full p-2">
+                <div className="relative flex bg-white border border-gray-700 rounded-full p-2 shadow-sm">
                   <input 
                     type="email" 
                     placeholder="Enter your email address..." 
-                    className="flex-1 bg-transparent border-none text-[var(--heading)] px-6 py-4 focus:outline-none placeholder-gray-500"
+                    className="flex-1 bg-transparent border-none text-slate-900 px-6 py-4 focus:outline-none placeholder-gray-500"
                     required
                   />
-                  <button type="submit" className="bg-[var(--primary)] hover:bg-[#259b5f] text-white px-8 rounded-full font-bold transition-colors flex items-center justify-center">
+                  <button type="submit" className="bg-[var(--primary)] hover:bg-[#259b5f] text-white px-8 rounded-full font-bold transition-colors flex items-center justify-center shadow-md">
                     <Send className="w-5 h-5 md:mr-2" />
                     <span className="hidden md:inline">Subscribe</span>
                   </button>
@@ -60,3 +60,4 @@ export function PremiumNewsletter() {
     </section>
   );
 }
+

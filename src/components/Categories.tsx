@@ -39,7 +39,7 @@ export function Categories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="min-w-[65vw] sm:min-w-0 shrink-0 snap-center md:snap-align-none bg-white p-6 rounded text-center border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+              className="min-w-[65vw] sm:min-w-0 shrink-0 snap-center md:snap-align-none bg-gradient-to-b from-white to-slate-50 p-6 rounded text-center border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="w-[60px] h-[60px] mx-auto bg-[#f8f9fa] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#e80566] transition-colors duration-300">
                 <img 
@@ -68,3 +68,4 @@ export function Categories() {
     </section>
   );
 }
+

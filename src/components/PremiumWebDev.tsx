@@ -80,7 +80,7 @@ export function PremiumWebDev() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white shadow-sm border border-gray-200">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-premium shadow-sm border border-gray-200">
                 <Rocket className="w-5 h-5 text-[var(--primary)]" />
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Next-Generation Development</span>
               </div>
@@ -129,7 +129,7 @@ export function PremiumWebDev() {
               transition={{ duration: 1, delay: 0.2 }}
               className="relative perspective-1000 hidden lg:block"
             >
-              <motion.div style={{ y: yBg }} className="relative z-10 w-full rounded-[18px] bg-white border border-gray-200 shadow-lg overflow-hidden transform-gpu">
+              <motion.div style={{ y: yBg }} className="relative z-10 w-full rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-gray-200 shadow-lg overflow-hidden transform-gpu">
                 {/* Mockup Header */}
                 <div className="h-10 bg-gray-50 border-b border-gray-200 flex items-center px-4 gap-2">
                   <div className="w-3 h-3 rounded-full bg-slate-50"></div>
@@ -202,7 +202,7 @@ export function PremiumWebDev() {
                 transition={{ delay: idx * 0.1 }}
                 className="relative"
               >
-                <div className="w-24 h-24 mx-auto bg-white border-4 border-gray-50 rounded-[18px] flex items-center justify-center text-[var(--primary)] shadow-sm hover:shadow-md rotate-45 mb-8 hover:bg-[var(--primary)] hover:text-white transition-colors duration-300">
+                <div className="w-24 h-24 mx-auto bg-gradient-to-b from-white to-slate-50 border-4 border-gray-50 rounded-[18px] flex items-center justify-center text-[var(--primary)] shadow-sm hover:shadow-md rotate-45 mb-8 hover:bg-[var(--primary)] hover:text-white transition-colors duration-300">
                   <div className="-rotate-45">
                     {step.icon}
                   </div>
@@ -240,7 +240,7 @@ export function PremiumWebDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white border border-gray-100 hover:border-[var(--primary)]/50 hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group"
+                className="bg-gradient-to-b from-white to-slate-50 border border-gray-100 hover:border-[var(--primary)]/50 hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 group"
               >
                  {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} alt={tech.name} className="w-12 h-12 object-contain group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300 filter grayscale group-hover:grayscale-0 drop-shadow-sm img-premium" />
@@ -267,7 +267,7 @@ export function PremiumWebDev() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative h-64 rounded-[18px] overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                className="group relative h-64 rounded-[18px] overflow-hidden bg-gradient-to-b from-white to-slate-50 border border-gray-200 shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-[var(--primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
@@ -345,3 +345,5 @@ export function PremiumWebDev() {
     </div>
   );
 }
+
+

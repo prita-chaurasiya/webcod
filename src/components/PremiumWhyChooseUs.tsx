@@ -61,7 +61,7 @@ export function PremiumWhyChooseUs() {
                   <div className="absolute inset-0 bg-blue-600/20 mix-blend-overlay z-10 transition-opacity group-hover:opacity-0 duration-500"></div>
                   <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team Collaboration" className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden group">
+                <div className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
                   <Cpu className="w-10 h-10 text-blue-600 mb-4" />
                   <h4 className="text-xl font-bold text-slate-900 mb-2">Modern Tech Stack</h4>
@@ -96,3 +96,4 @@ export function PremiumWhyChooseUs() {
     </section>
   );
 }
+

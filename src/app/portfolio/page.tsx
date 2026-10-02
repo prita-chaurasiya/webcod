@@ -194,7 +194,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -210,3 +210,4 @@ export default function PortfolioPage() {
     </main>
   );
 }
+

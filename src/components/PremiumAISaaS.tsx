@@ -55,7 +55,7 @@ export function PremiumAISaaS() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full rounded-[32px] bg-white p-2 shadow-lg border border-slate-700 overflow-hidden backdrop-blur-xl">
+              <div className="relative w-full rounded-[32px] bg-gradient-to-b from-white to-slate-50 p-2 shadow-lg border border-slate-700 overflow-hidden backdrop-blur-xl">
                 <div className="bg-[#0f172a] rounded-[24px] overflow-hidden">
                   
                   {/* Top Navbar Mockup */}
@@ -75,9 +75,9 @@ export function PremiumAISaaS() {
                     {/* Sidebar */}
                     <div className="w-16 sm:w-48 border-r border-slate-800 p-4 hidden sm:flex flex-col gap-4">
                       <div className="h-3 w-full bg-slate-700/50 rounded-full"></div>
-                      <div className="h-3 w-3/4 bg-white rounded-full"></div>
-                      <div className="h-3 w-5/6 bg-white rounded-full"></div>
-                      <div className="h-3 w-full bg-white rounded-full mt-4"></div>
+                      <div className="h-3 w-3/4 bg-gradient-to-b from-white to-slate-50 rounded-full"></div>
+                      <div className="h-3 w-5/6 bg-gradient-to-b from-white to-slate-50 rounded-full"></div>
+                      <div className="h-3 w-full bg-gradient-to-b from-white to-slate-50 rounded-full mt-4"></div>
                     </div>
                     
                     {/* Main Content */}
@@ -94,7 +94,7 @@ export function PremiumAISaaS() {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="bg-white/50 p-4 rounded-[18px] border border-slate-700/50">
                           <div className="h-3 w-20 bg-slate-500 rounded-full mb-3"></div>
-                          <div className="h-8 w-24 bg-white rounded-full"></div>
+                          <div className="h-8 w-24 bg-gradient-to-b from-white to-slate-50 rounded-full"></div>
                         </div>
                         <div className="bg-white/50 p-4 rounded-[18px] border border-slate-700/50 relative overflow-hidden">
                           <div className="absolute top-0 right-0 w-16 h-16 bg-[#06b6d4]/10 rounded-bl-full"></div>
@@ -123,7 +123,7 @@ export function PremiumAISaaS() {
       </section>
 
       {/* Tech Stack / Features Section */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Built for Scale</h2>
@@ -137,7 +137,7 @@ export function PremiumAISaaS() {
               { title: "Secure Data Isolation", icon: <Database className="w-6 h-6 text-[#6d28d9]" /> }
             ].map((feat, i) => (
               <div key={i} className="flex items-center gap-4 bg-slate-50 p-6 rounded-[18px] border border-slate-100">
-                <div className="w-12 h-12 rounded-[18px] bg-white shadow-sm flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-[18px] card-premium shadow-sm flex items-center justify-center shrink-0">
                   {feat.icon}
                 </div>
                 <h3 className="font-bold text-slate-900">{feat.title}</h3>
@@ -150,3 +150,6 @@ export function PremiumAISaaS() {
     </div>
   );
 }
+
+
+

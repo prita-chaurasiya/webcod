@@ -117,7 +117,7 @@ export function PremiumCategories() {
                     />
 
                     <div 
-                      className={`w-20 h-20 md:w-24 md:h-24 bg-white rounded-[18px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10 overflow-hidden`}
+                      className={`w-20 h-20 md:w-24 md:h-24 bg-gradient-to-b from-white to-slate-50 rounded-[18px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10 overflow-hidden`}
                       style={{ transform: "translateZ(30px)" }}
                     >
                       <img src={cat.icon} alt={cat.title} className="w-full h-full object-cover transition-transform duration-500 img-premium" />
@@ -150,3 +150,4 @@ export function PremiumCategories() {
     </section>
   );
 }
+

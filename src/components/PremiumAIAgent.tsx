@@ -130,7 +130,7 @@ export function PremiumAIAgent() {
               { title: "Seamless Integration", desc: "Connects with your CRM, ERP, and internal databases securely via custom API bridges.", icon: <Workflow className="w-6 h-6 text-[#1d4ed8]" /> },
               { title: "Cognitive Processing", desc: "Leverages advanced LLMs to understand unstructured text, images, and documents instantly.", icon: <BrainCircuit className="w-6 h-6 text-[#6d28d9]" /> }
             ].map((feat, i) => (
-              <div key={i} className="bg-white p-8 rounded-[24px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              <div key={i} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 rounded-[18px] bg-slate-50 border border-slate-100 flex items-center justify-center mb-6">
                   {feat.icon}
                 </div>
@@ -145,3 +145,4 @@ export function PremiumAIAgent() {
     </div>
   );
 }
+

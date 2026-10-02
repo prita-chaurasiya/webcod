@@ -124,7 +124,7 @@ export function PremiumGraphicDesign() {
                 <motion.div 
                   animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-10 -right-10 z-20 bg-white p-4 rounded-[18px] shadow-xl border border-slate-100"
+                  className="absolute -top-10 -right-10 z-20 bg-gradient-to-b from-white to-slate-50 p-4 rounded-[18px] shadow-xl border border-slate-100"
                   style={{ transform: "translateZ(80px)" }}
                 >
                   <Palette className="w-10 h-10 text-[var(--primary)]" />
@@ -132,7 +132,7 @@ export function PremiumGraphicDesign() {
                 <motion.div 
                   animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute -bottom-10 -left-10 z-20 bg-white p-4 rounded-[18px] shadow-xl border border-slate-100"
+                  className="absolute -bottom-10 -left-10 z-20 bg-gradient-to-b from-white to-slate-50 p-4 rounded-[18px] shadow-xl border border-slate-100"
                   style={{ transform: "translateZ(100px)" }}
                 >
                   <PenTool className="w-10 h-10 text-[var(--primary)]" />
@@ -173,12 +173,12 @@ export function PremiumGraphicDesign() {
             </div>
             <div className="lg:w-1/2">
                <div className="bg-slate-50 p-8 md:p-12 rounded-[2rem] border border-slate-100 h-full">
-                 <span className="inline-block py-1 px-3 rounded-full bg-white shadow-sm border border-slate-100 text-slate-600 font-semibold text-sm mb-4">Services</span>
+                 <span className="inline-block py-1 px-3 rounded-full card-premium shadow-sm border border-slate-100 text-slate-600 font-semibold text-sm mb-4">Services</span>
                  <h2 className="text-3xl font-bold text-slate-900 mb-6">Comprehensive Graphic Design Services</h2>
                  <p className="text-slate-600 mb-8">Offering a range of graphic design solutions tailored to meet your branding needs, ensuring visually compelling and impactful designs.</p>
                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {services.map((svc, idx) => (
-                      <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-[18px] shadow-sm border border-slate-100 hover:border-slate-100 hover:shadow-md transition-all">
+                      <div key={idx} className="flex items-center gap-3 bg-gradient-to-b from-white to-slate-50 p-4 rounded-[18px] shadow-sm border border-slate-100 hover:border-slate-100 hover:shadow-md transition-all">
                         <div className="text-[var(--primary)]">{svc.icon}</div>
                         <span className="font-bold text-slate-800">{svc.title}</span>
                       </div>
@@ -192,9 +192,9 @@ export function PremiumGraphicDesign() {
       </section>
 
       {/* 3. Tech Stack Marquee */}
-      <section className="py-16 bg-white border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-y border-slate-800 overflow-hidden relative perspective-[1000px]">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-20 mb-8 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-700 text-slate-600 font-semibold text-xs mb-4">TECHNOLOGY WE USE</span>
+          <span className="inline-block py-1 px-3 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-700 text-slate-600 font-semibold text-xs mb-4">TECHNOLOGY WE USE</span>
         </div>
         
         <div className="relative w-full flex flex-col gap-6 z-0">
@@ -265,3 +265,5 @@ export function PremiumGraphicDesign() {
     </div>
   );
 }
+
+

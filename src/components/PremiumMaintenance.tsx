@@ -64,7 +64,7 @@ export function PremiumMaintenance() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200 shadow-sm backdrop-blur-md">
                 <Clock className="w-5 h-5 text-[var(--primary)]" />
                 <span className="text-sm font-bold text-slate-700 uppercase tracking-widest">24/7 Monitoring & Support</span>
               </div>
@@ -84,7 +84,7 @@ export function PremiumMaintenance() {
                 <Link href="/contact" className="px-8 py-4 bg-[var(--primary)] hover:bg-[#259b5f] text-white rounded-[18px] font-bold text-lg shadow-[0_10px_20px_rgba(46,184,114,0.3)] hover:shadow-[0_15px_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all flex items-center gap-2">
                   Secure Your App <ArrowRight className="w-5 h-5" />
                 </Link>
-                <div className="flex items-center gap-4 px-6 py-4 rounded-[18px] bg-white border border-slate-200 text-sm font-bold text-slate-700 shadow-sm">
+                <div className="flex items-center gap-4 px-6 py-4 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-sm font-bold text-slate-700 shadow-sm">
                   <div className="w-3 h-3 rounded-full bg-[var(--primary)] animate-ping relative">
                     <div className="absolute inset-0 bg-[var(--primary)] rounded-full animate-none"></div>
                   </div>
@@ -103,7 +103,7 @@ export function PremiumMaintenance() {
             >
               <div className="w-[350px] flex flex-col gap-6 transform-gpu">
                 {[1, 2, 3].map((server) => (
-                  <div key={server} className="relative w-full h-32 bg-white border border-slate-100 rounded-[18px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden group">
+                  <div key={server} className="relative w-full h-32 bg-gradient-to-b from-white to-slate-50 border border-slate-100 rounded-[18px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-5 flex flex-col justify-between overflow-hidden group">
                     {/* Server details */}
                     <div className="flex justify-between items-start z-10 relative">
                       <div className="flex gap-3">
@@ -181,7 +181,7 @@ export function PremiumMaintenance() {
                 className="group bg-slate-50 rounded-[18px] p-8 border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white to-transparent rounded-bl-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-500"></div>
-                <div className="w-20 h-20 rounded-[18px] bg-white border border-slate-100 flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-sm group-hover:shadow-md">
+                <div className="w-20 h-20 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-slate-100 flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-sm group-hover:shadow-md">
                   {srv.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{srv.name}</h3>
@@ -220,7 +220,7 @@ export function PremiumMaintenance() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 + (i * 0.1) }}
-                    className="flex items-center gap-5 text-slate-700 font-bold text-lg bg-white p-5 rounded-[18px] border border-slate-100 hover:border-slate-300 transition-colors shadow-sm hover:shadow-md"
+                    className="flex items-center gap-5 text-slate-700 font-bold text-lg bg-gradient-to-b from-white to-slate-50 p-5 rounded-[18px] border border-slate-100 hover:border-slate-300 transition-colors shadow-sm hover:shadow-md"
                   >
                     <div className="w-10 h-10 rounded-full bg-[var(--primary)]/10 flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-6 h-6 text-[var(--primary)]" /> 
@@ -261,14 +261,14 @@ export function PremiumMaintenance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className={`border rounded-[18px] overflow-hidden transition-all duration-500 ${openFaq === idx ? 'bg-white shadow-[0_20px_40px_rgba(0,0,0,0.06)] border-[var(--primary)]/30 ring-1 ring-[var(--primary)]/20' : 'bg-slate-50 border-slate-200 hover:bg-white hover:border-slate-300'}`}
+                className={`border rounded-[18px] overflow-hidden transition-all duration-500 ${openFaq === idx ? 'card-premium shadow-[0_20px_40px_rgba(0,0,0,0.06)] border-[var(--primary)]/30 ring-1 ring-[var(--primary)]/20' : 'bg-slate-50 border-slate-200 hover:bg-white hover:border-slate-300'}`}
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full px-8 py-7 flex items-center justify-between text-left focus:outline-none"
                 >
                   <span className={`text-lg font-bold pr-4 transition-colors ${openFaq === idx ? 'text-slate-900' : 'text-slate-700'}`}>{faq.q}</span>
-                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === idx ? 'bg-[var(--primary)]/10 shadow-sm' : 'bg-white border border-slate-200'}`}>
+                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === idx ? 'bg-[var(--primary)]/10 shadow-sm' : 'bg-gradient-to-b from-white to-slate-50 border border-slate-200'}`}>
                     <ChevronDown className={`w-6 h-6 transition-transform duration-500 ${openFaq === idx ? 'rotate-180 text-[var(--primary)]' : 'text-slate-500'}`} />
                   </div>
                 </button>
@@ -286,3 +286,5 @@ export function PremiumMaintenance() {
     </div>
   );
 }
+
+

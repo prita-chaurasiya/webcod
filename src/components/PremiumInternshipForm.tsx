@@ -33,7 +33,7 @@ export function PremiumInternshipForm() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-white p-12 rounded-[2.5rem] shadow-lg border border-slate-100 text-center max-w-lg w-full relative overflow-hidden"
+          className="bg-gradient-to-b from-white to-slate-50 p-12 rounded-[2.5rem] shadow-lg border border-slate-100 text-center max-w-lg w-full relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-slate-50/10 rounded-full blur-3xl pointer-events-none"></div>
           <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
@@ -57,7 +57,7 @@ export function PremiumInternshipForm() {
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         
-        <div className="bg-white rounded-[2.5rem] shadow-lg border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
+        <div className="bg-gradient-to-b from-white to-slate-50 rounded-[2.5rem] shadow-lg border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
           
           {/* Left Panel: Visual */}
           <div className="lg:w-2/5 relative btn-primary p-10 lg:p-16 flex flex-col justify-between overflow-hidden">
@@ -109,7 +109,7 @@ export function PremiumInternshipForm() {
               
               {steps.map((s) => (
                 <div key={s.id} className="relative z-10 flex flex-col items-center">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center border-4 transition-all duration-500 ${step >= s.id ? 'bg-[var(--primary)] border-white shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] text-white' : 'bg-white border-slate-100 text-slate-500'}`}>
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center border-4 transition-all duration-500 ${step >= s.id ? 'bg-[var(--primary)] border-white shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] text-white' : 'bg-gradient-to-b from-white to-slate-50 border-slate-100 text-slate-500'}`}>
                     {s.icon}
                   </div>
                   <span className={`absolute -bottom-8 w-32 text-center text-xs font-bold transition-colors duration-300 ${step >= s.id ? 'text-slate-900' : 'text-slate-500'}`}>
@@ -299,3 +299,5 @@ export function PremiumInternshipForm() {
     </section>
   );
 }
+
+

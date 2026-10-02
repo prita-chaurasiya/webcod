@@ -17,7 +17,7 @@ export function PremiumClientRegistration() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative"
+          className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative"
         >
           {/* Top Decorative bar */}
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--primary)] via-teal-400 to-blue-500"></div>
@@ -177,7 +177,7 @@ export function PremiumClientRegistration() {
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   />
                   <div className="flex items-center gap-4 w-full">
-                    <div className="w-12 h-12 bg-white rounded-lg shadow flex items-center justify-center text-slate-500 group-hover:text-[var(--primary)] transition-colors">
+                    <div className="w-12 h-12 bg-gradient-to-b from-white to-slate-50 rounded-lg shadow flex items-center justify-center text-slate-500 group-hover:text-[var(--primary)] transition-colors">
                       <UploadCloud className="w-6 h-6" />
                     </div>
                     <div>
@@ -209,3 +209,4 @@ export function PremiumClientRegistration() {
     </section>
   );
 }
+

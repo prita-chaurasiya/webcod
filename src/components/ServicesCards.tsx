@@ -40,7 +40,7 @@ export function ServicesCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="bg-white p-8 rounded-2xl text-center border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 group flex flex-col items-center h-full"
+              className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl text-center border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 group flex flex-col items-center h-full"
             >
               <div className="w-[70px] h-[70px] mx-auto bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:rotate-3 transition-all duration-300">
                 <img 
@@ -68,3 +68,4 @@ export function ServicesCards() {
     </section>
   );
 }
+

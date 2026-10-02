@@ -178,7 +178,7 @@ export function PremiumSolutionDetail({
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     key={idx} 
-                    className="bg-white p-6 rounded-[20px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] hover:border-blue-100 transition-all duration-300 flex items-start gap-5 group"
+                    className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[20px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] hover:border-blue-100 transition-all duration-300 flex items-start gap-5 group"
                   >
                     <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors duration-300 shadow-sm border border-blue-100/50">
                       {feature.icon || (
@@ -204,3 +204,4 @@ export function PremiumSolutionDetail({
     </div>
   );
 }
+

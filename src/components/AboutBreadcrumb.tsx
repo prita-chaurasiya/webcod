@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight, Home, Sparkles, CheckCircle2 } from "lucide-react";
@@ -20,11 +18,10 @@ export interface AboutBreadcrumbProps {
 export function AboutBreadcrumb({
   title,
   subtitle,
-  badge = "✦ WEBCODIAN INNOVATION & EXCELLENCE",
+  badge = "? WEBCODIAN INNOVATION & EXCELLENCE",
   breadcrumbs,
   highlights
 }: AboutBreadcrumbProps) {
-  // If no breadcrumbs provided, auto-generate from title
   const resolvedBreadcrumbs: BreadcrumbItem[] = breadcrumbs && breadcrumbs.length > 0
     ? breadcrumbs
     : [
@@ -33,81 +30,17 @@ export function AboutBreadcrumb({
       ];
 
   return (
-    <section className="relative pt-32 pb-14 md:pt-36 md:pb-16 border-b border-blue-100 overflow-hidden select-none bg-white">
-      {/* Background Image with White Fade */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed"
-        }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/95 to-white/60" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-50/30 to-white/90" />
-
-      {/* Dynamic Animated Ambient Glows */}
-      <motion.div
-        animate={{
-          x: [0, 30, 0],
-          y: [0, -25, 0],
-          scale: [1, 1.12, 1]
-        }}
-        transition={{
-          duration: 9,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute -top-24 left-1/4 w-[500px] h-[360px] bg-[var(--primary)]/18 rounded-full blur-[110px] pointer-events-none z-0"
-      />
-      <motion.div
-        animate={{
-          x: [0, -40, 0],
-          y: [0, 30, 0],
-          scale: [1, 1.18, 1]
-        }}
-        transition={{
-          duration: 11,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/3 -right-20 w-[450px] h-[380px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none z-0"
-      />
-      <motion.div
-        animate={{
-          opacity: [0.3, 0.6, 0.3]
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute -bottom-10 left-1/3 w-[350px] h-[200px] bg-slate-50/10 rounded-full blur-[90px] pointer-events-none"
-      />
-
-      {/* Cyber Grid Pattern Background */}
-      <div 
-        className="absolute inset-0 z-0 opacity-[0.035] pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
-          backgroundSize: "28px 28px"
-        }}
-      />
-
-      {/* Animated Glowing Laser Scanning Line across top border */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-white/10 overflow-hidden">
-        <motion.div
-          animate={{
-            x: ["-100%", "200%"]
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="w-1/3 h-full bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent shadow-[0_0_12px_var(--primary)]"
+    <section className="relative pt-32 pb-14 md:pt-36 md:pb-16 border-b border-slate-800 overflow-hidden select-none bg-slate-900">
+      
+      {/* Background Image with Ken Burns */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+          alt="Banner Background"
+          className="w-full h-full object-cover animate-ken-burns opacity-60"
         />
+        {/* Dark overlay for premium text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/40" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -120,22 +53,22 @@ export function AboutBreadcrumb({
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 backdrop-blur-md border border-[var(--primary)]/30 text-[var(--primary)] text-xs font-bold tracking-wider uppercase mb-4 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 backdrop-blur-md border border-blue-400/30 text-blue-300 text-xs font-bold tracking-wider uppercase mb-4 shadow-sm"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-50 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-50"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
               </span>
-              <Sparkles className="w-3.5 h-3.5 text-[var(--primary)]" />
+              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
               <span>{badge}</span>
             </motion.div>
 
-            {/* Title with Gradient Polish */}
+            {/* Title with White Text */}
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-[var(--heading)] tracking-tight leading-[1.1] uppercase"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.1] uppercase"
             >
               {title}
             </motion.h1>
@@ -146,7 +79,7 @@ export function AboutBreadcrumb({
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                className="mt-3 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl"
+                className="mt-3 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl"
               >
                 {subtitle}
               </motion.p>
@@ -163,9 +96,9 @@ export function AboutBreadcrumb({
                 {highlights.map((item, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white border border-blue-100 text-xs text-slate-600 font-medium backdrop-blur-sm"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-slate-200 font-medium backdrop-blur-sm"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--primary)]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
                     {item}
                   </span>
                 ))}
@@ -182,7 +115,7 @@ export function AboutBreadcrumb({
           >
             <nav 
               aria-label="Breadcrumb"
-              className="inline-flex flex-wrap items-center gap-1.5 px-4 py-2.5 rounded-[18px] bg-white/80 backdrop-blur-xl border border-blue-100 shadow-[0_10px_30px_rgba(0,0,0,0.05)]"
+              className="inline-flex flex-wrap items-center gap-1.5 px-4 py-2.5 rounded-[18px] bg-slate-900/60 backdrop-blur-xl border border-slate-700 shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
             >
               {resolvedBreadcrumbs.map((crumb, idx) => {
                 const isLast = idx === resolvedBreadcrumbs.length - 1;
@@ -193,20 +126,20 @@ export function AboutBreadcrumb({
                     {crumb.href && !isLast ? (
                       <Link
                         href={crumb.href}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[var(--heading)] transition-all duration-200 py-1 px-2 rounded-lg hover:bg-white/10 group"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-white transition-all duration-200 py-1 px-2 rounded-lg hover:bg-white/10 group"
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-[var(--primary)] group-hover:scale-110 transition-transform" />}
+                        {isFirst && <Home className="w-3.5 h-3.5 text-blue-400 group-hover:scale-110 transition-transform" />}
                         <span>{crumb.label}</span>
                       </Link>
                     ) : (
                       <span
                         className={`inline-flex items-center gap-1.5 text-xs font-bold py-1 px-2.5 rounded-lg ${
                           isLast
-                            ? "bg-[var(--primary)]/20 text-[var(--primary)] border border-[var(--primary)]/30 shadow-[0_0_12px_rgba(46,184,114,0.25)]"
-                            : "text-slate-600"
+                            ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                            : "text-slate-400"
                         }`}
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-[var(--primary)]" />}
+                        {isFirst && <Home className="w-3.5 h-3.5 text-blue-400" />}
                         <span>{crumb.label}</span>
                       </span>
                     )}
@@ -222,9 +155,6 @@ export function AboutBreadcrumb({
 
         </div>
       </div>
-
-      {/* Bottom Glowing Accent Border Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--primary)]/30 to-transparent" />
     </section>
   );
 }

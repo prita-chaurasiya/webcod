@@ -61,7 +61,7 @@ export function EnterpriseAbout() {
               alt="WebCodian Global Office" 
               className="rounded-[24px] shadow-2xl w-full h-[600px] object-cover"
             />
-            <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] max-w-sm border border-slate-100 hidden md:block">
+            <div className="absolute -bottom-8 -left-8 bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] max-w-sm border border-slate-100 hidden md:block">
               <div className="flex gap-4 items-start">
                 <ShieldCheck className="w-10 h-10 text-[var(--primary)] shrink-0" />
                 <div>
@@ -152,7 +152,7 @@ export function EnterpriseAbout() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Leader 1 */}
-          <div className="bg-white p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
             <div className="relative shrink-0">
               {/* Outer decorative circle */}
               <div className="absolute -inset-3 border-2 border-blue-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
@@ -174,7 +174,7 @@ export function EnterpriseAbout() {
           </div>
 
           {/* Leader 2 */}
-          <div className="bg-white p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
+          <div className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
             <div className="relative shrink-0">
               <div className="absolute -inset-3 border-2 border-blue-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
               <div className="absolute top-0 right-0 w-3 h-3 bg-[#0284c7] rounded-full z-10"></div>
@@ -216,7 +216,7 @@ export function EnterpriseAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] hover:shadow-lg transition-all group"
+              className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] hover:shadow-lg transition-all group"
             >
               <div className="w-14 h-14 bg-slate-50 text-slate-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                 {val.icon}
@@ -315,3 +315,4 @@ export function EnterpriseAbout() {
     </div>
   );
 }
+

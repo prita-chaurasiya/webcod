@@ -89,12 +89,12 @@ export function PremiumProcess() {
                 className="flex flex-col items-center text-center relative group shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none"
               >
                 {/* Number Badge */}
-                <div className="w-16 h-16 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center mb-6 shadow-xl relative z-10 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-b from-white to-slate-50 border-4 border-slate-100 flex items-center justify-center mb-6 shadow-xl relative z-10 group-hover:border-slate-100 group-hover:scale-110 transition-all duration-300">
                   <span className="text-xl font-bold text-slate-500 group-hover:text-[var(--primary)] transition-colors">{process.id}</span>
                 </div>
                 
                 {/* Content Card */}
-                <div className="bg-white p-6 rounded-[18px] shadow-sm border border-slate-100 group-hover:shadow-xl group-hover:border-slate-100 transition-all duration-300 h-full w-full">
+                <div className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[18px] shadow-sm border border-slate-100 group-hover:shadow-xl group-hover:border-slate-100 transition-all duration-300 h-full w-full">
                   <div className="text-[var(--primary)] flex justify-center mb-4 group-hover:scale-110 transition-transform">
                     {process.icon}
                   </div>
@@ -109,3 +109,4 @@ export function PremiumProcess() {
     </section>
   );
 }
+

@@ -14,7 +14,7 @@ export function PremiumSupportForm() {
   };
 
   return (
-    <div className="bg-white p-8 md:p-10 rounded-[18px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-white to-slate-50 p-8 md:p-10 rounded-[18px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden">
       {/* Decorative top gradient */}
       <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#ff5722] to-orange-400"></div>
       
@@ -77,3 +77,4 @@ export function PremiumSupportForm() {
     </div>
   );
 }
+

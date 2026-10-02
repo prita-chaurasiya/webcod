@@ -33,7 +33,7 @@ export function FeaturedCourses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group bg-white dark:bg-[#111111] rounded-[18px] border border-zinc-200 dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all flex flex-col h-full"
+              className="group bg-gradient-to-b from-white to-slate-50 dark:bg-[#111111] rounded-[18px] border border-zinc-200 dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all flex flex-col h-full"
             >
               {/* Image Placeholder */}
               <div className="relative h-48 bg-zinc-200 dark:bg-white/5 overflow-hidden">
@@ -74,3 +74,4 @@ export function FeaturedCourses() {
     </section>
   );
 }
+

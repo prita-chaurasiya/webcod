@@ -45,7 +45,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
                 { step: "03", title: "Engineering", desc: "Enterprise-grade scalable deployment." },
                 { step: "04", title: "Optimization", desc: "Continuous model fine-tuning and support." }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl relative overflow-hidden group">
+                <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-10 group-hover:scale-150 transition-transform duration-500"></div>
                   <div className="text-5xl font-bold text-slate-100 mb-6 group-hover:text-blue-600/10 transition-colors">{item.step}</div>
                   <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
@@ -109,7 +109,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
           
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((uc, i) => (
-              <div key={i} className="bg-white rounded-[2rem] overflow-hidden group shadow-xl">
+              <div key={i} className="bg-gradient-to-b from-white to-slate-50 rounded-[2rem] overflow-hidden group shadow-xl">
                 <div className="h-64 overflow-hidden relative border-b border-slate-700">
                   <div className="absolute inset-0 bg-slate-50/20 z-10"></div>
                   <img src={uc.image} alt={uc.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -169,7 +169,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
           
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div key={i} className="bg-gradient-to-b from-white to-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <button 
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full px-8 py-6 flex items-center justify-between font-bold text-lg text-left text-slate-800 hover:text-blue-600 transition-colors"
@@ -220,3 +220,5 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
     </>
   );
 }
+
+

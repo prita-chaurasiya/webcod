@@ -56,7 +56,7 @@ export function PremiumFormLayout({ title, subtitle, fields, submitText }: Premi
             viewport={{ once: true }}
             className="perspective-1000"
           >
-            <div className="bg-white rounded-[18px] p-8 md:p-10 shadow-lg border border-gray-100 relative overflow-hidden">
+            <div className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-10 shadow-lg border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--primary)]/5 rounded-full blur-3xl pointer-events-none"></div>
               
               {isSubmitted ? (
@@ -111,3 +111,4 @@ export function PremiumFormLayout({ title, subtitle, fields, submitText }: Premi
     </section>
   );
 }
+

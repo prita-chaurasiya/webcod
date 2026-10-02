@@ -40,7 +40,7 @@ export function HomeAutoPopup() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-[850px] bg-white shadow-2xl flex flex-col md:flex-row z-10 max-h-[95vh] overflow-y-auto rounded-3xl overflow-hidden"
+          className="relative w-full max-w-[850px] card-premium shadow-2xl flex flex-col md:flex-row z-10 max-h-[95vh] overflow-y-auto rounded-3xl overflow-hidden"
         >
           {/* Close Button */}
           <button 
@@ -173,3 +173,4 @@ export function HomeAutoPopup() {
     </AnimatePresence>
   );
 }
+

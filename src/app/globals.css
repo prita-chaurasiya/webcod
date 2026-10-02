@@ -54,23 +54,60 @@
     line-height: 1.6;
   }
 
-  /* Strict Base Typography */
+  /* Strict Base Typography matching modern SaaS (CrelioHealth style) */
   h1, h2, h3, h4, h5, h6 {
-    color: var(--heading);
-    font-family: var(--font-heading), serif;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    color: #0f172a !important; /* Strict Slate-900 */
+    font-family: var(--font-sans), system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.5em;
   }
   
-  h1 { font-size: 48px; }
-  h2 { font-size: 38px; }
-  h3 { font-size: 30px; }
-  h4 { font-size: 24px; }
-  h5 { font-size: 20px; }
+  /* Mobile Sizes */
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 30px !important; }
+  h3 { font-size: 24px !important; }
+  h4 { font-size: 20px !important; }
+  h5 { font-size: 18px !important; }
   
-  small { font-size: 14px; }
-  .caption { font-size: 13px; }
+  /* Desktop Sizes */
+  @media (min-width: 768px) {
+    h1 { font-size: 48px !important; }
+    h2 { font-size: 36px !important; }
+    h3 { font-size: 28px !important; }
+    h4 { font-size: 22px !important; }
+  }
+  
+  p { 
+    font-size: 16px !important; 
+    line-height: 1.6 !important;
+    color: #475569; /* Slate-600 */
+  }
+
+  /* Specific override to keep light text light on dark backgrounds if any remain */
+  .text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+  .text-slate-100 h1, .text-slate-200 h2,
+  .group:hover h3, .group:hover h4,
+  .text-white p, .text-slate-300 p, .text-slate-400 p {
+    color: inherit !important;
+  }
+  
+  h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white, p.text-white {
+    color: white !important;
+  }
+  p.text-white\/80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+/* Animations */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+.animate-ken-burns {
+  animation: kenBurns 25s ease-out infinite alternate;
 }
 
 /* Premium Section Spacing - Reduced gaps */
@@ -200,4 +237,61 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+/* =========================================================
+   FINAL VISUAL POLISH: UNIVERSAL PREMIUM CARD SYSTEM
+   ========================================================= */
+
+/* Upgrade all tinted cards and pure white cards to ultra-premium SaaS aesthetics */
+.card-premium,
+[class*="bg-gradient-to-b from-white to-slate-50"] {
+  background: linear-gradient(145deg, #f0f6ff 0%, #e2ecf8 100%) !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 22px !important;
+  box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.04) !important;
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Hover Effect: Lift 6px, slight border highlight */
+.card-premium:hover,
+[class*="bg-gradient-to-b from-white to-slate-50"]:hover {
+  transform: translateY(-6px) !important;
+  border-color: #dbeafe !important;
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.08) !important;
+}
+
+/* =========================================================
+   ICON BOXES POLISH
+   ========================================================= */
+/* Target common icon containers */
+.icon-box,
+[class*="w-10 h-10"],
+[class*="w-12 h-12"],
+[class*="w-14 h-14"] {
+  border: 1px solid #e0e7ff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.06) !important;
+  transition: all 350ms ease !important;
+}
+
+[class*="w-10 h-10"]:hover,
+[class*="w-12 h-12"]:hover,
+[class*="w-14 h-14"]:hover {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.12) !important;
+  transform: scale(1.05) !important;
+  background-color: #e0e7ff !important;
+}
+
+/* Image Cards (16:9 ratio and rounded) */
+.card-premium img.object-cover,
+[class*="bg-gradient-to-b from-white to-slate-50"] img.object-cover {
+  border-radius: 14px !important;
+  transition: transform 700ms ease !important;
+}
+.card-premium:hover img.object-cover,
+[class*="bg-gradient-to-b from-white to-slate-50"]:hover img.object-cover {
+  transform: scale(1.03) !important;
+}
+
 

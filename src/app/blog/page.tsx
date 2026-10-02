@@ -41,7 +41,7 @@ export default function BlogPage() {
       />
 
       {/* Featured Article & Category Explorer */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
           <div className="flex flex-col lg:flex-row gap-12">
             
@@ -80,7 +80,7 @@ export default function BlogPage() {
                 
                 <div className="flex flex-wrap gap-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
                   {categories.map(cat => (
-                    <span key={cat} className="px-4 py-2 bg-white border border-slate-200 text-slate-700 text-sm rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors cursor-pointer">
+                    <span key={cat} className="px-4 py-2 bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors cursor-pointer">
                       {cat}
                     </span>
                   ))}
@@ -97,7 +97,7 @@ export default function BlogPage() {
       </div>
 
       {/* Trending Topics & Author Spotlight */}
-      <section className="py-20 bg-white border-y border-slate-200">
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
           <div className="flex flex-col lg:flex-row gap-16">
             
@@ -131,7 +131,7 @@ export default function BlogPage() {
                   { name: "Addy Osmani", role: "Engineering Manager", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" },
                   { name: "Emma Bostian", role: "Senior Software Engineer", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" }
                 ].map((author, idx) => (
-                  <div key={idx} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div key={idx} className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-b from-white to-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <img src={author.img} alt={author.name} className="w-14 h-14 rounded-full object-cover" />
                     <div>
                       <h4 className="font-bold text-slate-900">{author.name}</h4>
@@ -152,3 +152,4 @@ export default function BlogPage() {
     </main>
   );
 }
+

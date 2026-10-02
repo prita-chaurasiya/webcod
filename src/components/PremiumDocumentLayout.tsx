@@ -18,7 +18,7 @@ export function PremiumDocumentLayout({ title, lastUpdated, content }: PremiumDo
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-[18px] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
+          className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-blue-50 rounded-[18px] flex items-center justify-center shrink-0">
@@ -43,3 +43,4 @@ export function PremiumDocumentLayout({ title, lastUpdated, content }: PremiumDo
     </section>
   );
 }
+

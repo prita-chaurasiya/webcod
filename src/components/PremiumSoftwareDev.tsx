@@ -93,7 +93,7 @@ export function PremiumSoftwareDev() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white shadow-sm border border-gray-200 backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-premium shadow-sm border border-gray-200 backdrop-blur-md">
                 <Cpu className="w-5 h-5 text-[var(--primary)]" />
                 <span className="text-xs font-bold text-gray-700 uppercase tracking-widest">Enterprise Engineering</span>
               </div>
@@ -128,7 +128,7 @@ export function PremiumSoftwareDev() {
               className="relative perspective-1000 hidden lg:block transform-gpu mt-12"
             >
               {/* Main Dashboard Panel */}
-              <div className="relative z-10 w-full h-[400px] rounded-[18px] bg-white border border-gray-200 shadow-lg overflow-hidden flex flex-col">
+              <div className="relative z-10 w-full h-[400px] rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-gray-200 shadow-lg overflow-hidden flex flex-col">
                 {/* Header */}
                 <div className="h-12 bg-gray-50 border-b border-gray-100 flex items-center px-6 justify-between">
                   <div className="flex gap-2">
@@ -225,7 +225,7 @@ export function PremiumSoftwareDev() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative bg-white rounded-[18px] p-8 border border-gray-200 hover:border-[var(--primary)]/50 hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300"
+                className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 border border-gray-200 hover:border-[var(--primary)]/50 hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300"
               >
                 {/* Hover Gradient Background */}
                 <div className="absolute inset-0 bg-[var(--primary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -246,7 +246,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 3. Tech Stack Section */}
-      <section className="py-12 md:py-16 bg-white border-y border-gray-100 relative">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 border-y border-gray-100 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[var(--primary)]/5 rounded-[100%] blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
@@ -262,7 +262,7 @@ export function PremiumSoftwareDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-white rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 border border-gray-100 hover:border-[var(--primary)]/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                className="min-w-[45vw] md:min-w-0 shrink-0 snap-center md:snap-align-none bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-6 flex flex-col items-center justify-center gap-4 border border-gray-100 hover:border-[var(--primary)]/30 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
                  {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://webcodian.com/public/web/assets/img/services/${tech.img}`} alt={tech.name} className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 drop-shadow-sm img-premium" />
@@ -289,7 +289,7 @@ export function PremiumSoftwareDev() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className={`${cat.span} min-w-[70vw] md:min-w-0 shrink-0 snap-center md:snap-align-none group relative rounded-[18px] overflow-hidden bg-white border border-gray-200 hover:border-[var(--primary)]/50 shadow-sm hover:shadow-md cursor-pointer`}
+                className={`${cat.span} min-w-[70vw] md:min-w-0 shrink-0 snap-center md:snap-align-none group relative rounded-[18px] overflow-hidden bg-gradient-to-b from-white to-slate-50 border border-gray-200 hover:border-[var(--primary)]/50 shadow-sm hover:shadow-md cursor-pointer`}
               >
                 <div className="absolute inset-0 bg-[var(--primary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 p-6 flex flex-col items-center justify-center text-center gap-3 z-10">
@@ -304,7 +304,7 @@ export function PremiumSoftwareDev() {
       </section>
 
       {/* 5. Custom FAQ */}
-      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 border-t border-gray-100">
         <div className="container mx-auto px-4 lg:px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked <span className="text-[var(--primary)]">Questions</span></h2>
@@ -342,3 +342,6 @@ export function PremiumSoftwareDev() {
     </div>
   );
 }
+
+
+

@@ -84,7 +84,7 @@ export function PremiumMobileAppDev() {
                 <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000&auto=format&fit=crop" alt="Mobile App Development" className="rounded-[32px] shadow-2xl border-8 border-white object-cover h-[500px] w-full" />
                 
                 {/* Floating Badges */}
-                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
+                <div className="absolute -top-6 -right-6 bg-gradient-to-b from-white to-slate-50 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <Apple className="w-6 h-6 text-green-600" />
                   </div>
@@ -94,7 +94,7 @@ export function PremiumMobileAppDev() {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-b from-white to-slate-50 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow" style={{ animationDelay: '1s' }}>
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                     <ShieldCheck className="w-6 h-6 text-blue-600" />
                   </div>
@@ -130,7 +130,7 @@ export function PremiumMobileAppDev() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-10 rounded-[32px] border-2 border-slate-100 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                className="bg-gradient-to-b from-white to-slate-50 p-10 rounded-[32px] border-2 border-slate-100 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
               >
                 <div className={`w-20 h-20 rounded-2xl ${service.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                   {service.icon}
@@ -200,7 +200,7 @@ export function PremiumMobileAppDev() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group">
+              <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group">
                 <div className="text-6xl font-bold text-slate-100 group-hover:text-blue-50 transition-colors mb-4 select-none">
                   {step.num}
                 </div>
@@ -218,3 +218,4 @@ export function PremiumMobileAppDev() {
     </div>
   );
 }
+

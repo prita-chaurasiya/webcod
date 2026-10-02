@@ -91,10 +91,11 @@ function ServiceCard({ service, index, hoveredIndex, setHoveredIndex }: any) {
     >
       <Link href={`/${service.slug}`} className="block h-full outline-none group rounded-[24px]">
         <div 
-          className="relative rounded-[24px] overflow-hidden shadow-lg group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)] transition-all duration-500 h-full flex flex-col justify-end p-6 border border-slate-200"
+          className="relative rounded-[24px] overflow-hidden shadow-[0_20px_40px_rgba(37,99,235,0.04)] group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)] transition-all duration-500 h-full flex flex-col bg-gradient-to-b from-white to-slate-50 border border-slate-200"
         >
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
+          {/* Image Container (Top Half) */}
+          <div className="h-[55%] w-full overflow-hidden relative bg-slate-100">
+            <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
             <img 
               src={service.image} 
               alt={service.title} 
@@ -102,20 +103,16 @@ function ServiceCard({ service, index, hoveredIndex, setHoveredIndex }: any) {
             />
           </div>
           
-          {/* Gradients for Text Visibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] via-[#0B1121]/50 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply z-10"></div>
-          
-          {/* Content */}
-          <div className="relative z-20 flex flex-col h-full justify-end text-left">
-            <h3 className="text-2xl font-bold text-white mb-2 leading-snug drop-shadow-lg group-hover:text-blue-200 transition-colors">
+          {/* Content Container (Bottom Half) */}
+          <div className="flex-1 flex flex-col justify-center p-6 relative z-20 bg-white">
+            <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
               {service.title}
             </h3>
             
             {/* Read More Interaction */}
-            <div className="flex items-center gap-2 text-sm font-bold text-blue-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+            <div className="flex items-center gap-2 text-sm font-bold text-blue-600 transition-all duration-300">
               <span>Explore Solutions</span>
-              <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+              <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
             </div>
           </div>
         </div>
@@ -144,7 +141,7 @@ export function PremiumServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/60 text-slate-500 font-semibold text-xs tracking-widest shadow-sm shadow-slate-200/50 mb-6 uppercase"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200/60 text-slate-500 font-semibold text-xs tracking-widest shadow-sm shadow-slate-200/50 mb-6 uppercase"
           >
             <span className="w-2 h-2 rounded-full bg-blue-500"></span>
             Core Expertise
@@ -194,3 +191,4 @@ function ArrowRightIcon(props: React.ComponentProps<"svg">) {
     </svg>
   )
 }
+

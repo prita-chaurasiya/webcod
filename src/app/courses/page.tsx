@@ -31,7 +31,7 @@ export default function CoursesPage() {
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           
           {/* Filters & Search */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-12 bg-white p-4 rounded-[20px] shadow-sm border border-slate-100">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-12 bg-gradient-to-b from-white to-slate-50 p-4 rounded-[20px] shadow-sm border border-slate-100">
             <div className="relative w-full md:w-96">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input 
@@ -64,7 +64,7 @@ export default function CoursesPage() {
                 viewport={{ once: true }}
                 transition={{ delay: (idx % 3) * 0.1, duration: 0.6 }}
                 whileHover={{ y: -12 }}
-                className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 group flex flex-col h-full"
+                className="bg-gradient-to-b from-white to-slate-50 rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(37,99,235,0.04)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 group flex flex-col h-full"
               >
                 {/* Course Image */}
                 <div className="relative h-[220px] overflow-hidden bg-slate-100">
@@ -113,3 +113,4 @@ export default function CoursesPage() {
     </div>
   );
 }
+

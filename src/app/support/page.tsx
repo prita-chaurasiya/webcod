@@ -75,7 +75,7 @@ export default function SupportPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-8 border border-slate-200 rounded-3xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-slate-50 hover:bg-white cursor-pointer text-center"
               >
-                <div className="w-16 h-16 mx-auto bg-white border border-slate-100 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 mx-auto bg-gradient-to-b from-white to-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                   <cat.icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{cat.title}</h3>
@@ -96,7 +96,7 @@ export default function SupportPage() {
       </div>
 
       {/* Contact Channels */}
-      <section className="py-20 bg-white border-t border-slate-200">
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
           <div className="bg-slate-900 rounded-[40px] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden flex flex-col lg:flex-row gap-12 items-center justify-between">
             <div className="absolute right-0 top-0 w-1/2 h-full opacity-10">
@@ -149,7 +149,7 @@ export default function SupportPage() {
           </div>
           <div className="space-y-6">
             {faq.map((f, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+              <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{f.q}</h3>
                 <p className="text-slate-600 leading-relaxed">{f.a}</p>
               </div>
@@ -161,3 +161,4 @@ export default function SupportPage() {
     </main>
   );
 }
+

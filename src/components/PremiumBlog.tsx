@@ -95,11 +95,24 @@ export function PremiumBlog() {
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         
+        {/* CrelioHealth Style Section Header */}
+        <div className="text-center mb-12">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-blue-50 text-blue-600 text-[11px] font-bold tracking-widest uppercase rounded-full border border-blue-100 shadow-sm">
+            Knowledge Hub
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+            Latest Insights & Resources
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Discover our latest thoughts on technology, enterprise SaaS, and career growth.
+          </p>
+        </div>
+
         {/* Controls: Search and Filter Tabs */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-14">
           
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 bg-white rounded-[18px] border border-slate-200 shadow-sm w-full md:w-auto">
+          <div className="flex flex-wrap items-center gap-2 p-1.5 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-200 shadow-sm w-full md:w-auto">
             {categories.map((cat) => {
               const active = selectedCategory === cat;
               return (
@@ -113,7 +126,7 @@ export function PremiumBlog() {
                   {active && (
                     <motion.div
                       layoutId="activeBlogTab"
-                      className="absolute inset-0 bg-white rounded-[18px] shadow-md"
+                      className="absolute inset-0 bg-gradient-to-b from-white to-slate-50 rounded-[18px] shadow-md"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -134,7 +147,7 @@ export function PremiumBlog() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search articles & guides..."
-              className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-[18px] text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all shadow-sm"
+              className="w-full pl-11 pr-4 py-3 bg-gradient-to-b from-white to-slate-50 border border-slate-200 rounded-[18px] text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all shadow-sm"
             />
           </div>
 
@@ -156,50 +169,50 @@ export function PremiumBlog() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="h-full"
               >
-                <div className="group bg-white rounded-[18px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-400 border border-slate-100 flex flex-col h-full relative">
+                <div className="group bg-[#f3f7fb] rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-400 border border-slate-100 flex flex-col h-full relative">
                   
                   {/* Image with Category badge */}
-                  <div className="relative w-full h-52 overflow-hidden bg-slate-100">
+                  <div className="relative w-full h-56 overflow-hidden bg-slate-100">
                     <img
                       src={blog.image}
                       alt={blog.title}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out img-premium"
                     />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md text-[var(--heading)] text-[11px] font-bold tracking-wide border border-white/10">
-                        <Tag className="w-3 h-3 text-[var(--primary)]" />
+                    <div className="absolute top-5 left-5 z-10">
+                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-blue-600 text-xs font-bold tracking-wide uppercase shadow-sm">
+                        <Tag className="w-3.5 h-3.5 text-blue-600" />
                         {blog.category}
                       </span>
                     </div>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-7 flex flex-col flex-grow">
-                    <div className="flex items-center justify-between text-xs text-slate-500 font-medium mb-3">
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
+                    <div className="flex items-center justify-between text-[13px] text-slate-500 font-medium mb-5">
                       <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-[var(--primary)]" />
+                        <Calendar className="w-4 h-4 text-blue-500" />
                         <span>{blog.date}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-slate-500" />
+                        <Clock className="w-4 h-4 text-slate-400" />
                         <span>{blog.readTime}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-[var(--primary)] transition-colors duration-300">
+                    <h3 className="text-[22px] md:text-2xl font-bold text-slate-900 leading-[1.35] mb-4 group-hover:text-blue-600 transition-colors duration-300">
                       {blog.title}
                     </h3>
 
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2">
+                    <p className="text-slate-500 text-base leading-relaxed mb-8 line-clamp-2">
                       {blog.excerpt}
                     </p>
 
-                    <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-900 group-hover:text-[var(--primary)] transition-colors flex items-center gap-1.5">
+                    <div className="mt-auto pt-5 border-t border-white/60 flex items-center justify-between">
+                      <span className="text-[13px] font-bold text-slate-900 flex items-center gap-1.5">
                         Read Full Article
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" />
                       </span>
-                      <span className="w-2 h-2 rounded-full bg-[var(--primary)]/40 group-hover:bg-[var(--primary)] group-hover:scale-150 transition-all duration-300"></span>
+                      <span className="w-2 h-2 rounded-full bg-blue-300 group-hover:bg-blue-600 group-hover:scale-150 transition-all duration-300"></span>
                     </div>
                   </div>
 
@@ -214,7 +227,7 @@ export function PremiumBlog() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center py-12 bg-white rounded-[18px] border border-slate-100 mt-4"
+            className="text-center py-12 bg-gradient-to-b from-white to-slate-50 rounded-[18px] border border-slate-100 mt-4"
           >
             <Search className="w-12 h-12 text-slate-600 mx-auto mb-4" />
             <h4 className="text-xl font-bold text-slate-800 mb-2">No matching articles found</h4>
@@ -232,3 +245,5 @@ export function PremiumBlog() {
     </section>
   );
 }
+
+

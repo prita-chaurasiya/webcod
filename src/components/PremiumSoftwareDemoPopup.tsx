@@ -40,12 +40,12 @@ export function PremiumSoftwareDemoPopup({ isOpen, onClose }: PremiumSoftwareDem
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl bg-white rounded-[32px] shadow-lg overflow-hidden flex flex-col md:flex-row my-auto z-10"
+            className="relative w-full max-w-4xl bg-gradient-to-b from-white to-slate-50 rounded-[32px] shadow-lg overflow-hidden flex flex-col md:flex-row my-auto z-10"
           >
             {/* Close Button */}
             <button 
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 w-10 h-10 bg-white border border-slate-100 hover:bg-slate-50 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:scale-105"
+              className="absolute top-4 right-4 z-20 w-10 h-10 bg-gradient-to-b from-white to-slate-50 border border-slate-100 hover:bg-slate-50 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:scale-105"
             >
               <X className="w-5 h-5" />
             </button>
@@ -110,7 +110,7 @@ export function PremiumSoftwareDemoPopup({ isOpen, onClose }: PremiumSoftwareDem
             </div>
 
             {/* Right Side: Form */}
-            <div className="md:w-7/12 bg-white p-8 md:p-10 relative">
+            <div className="md:w-7/12 bg-gradient-to-b from-white to-slate-50 p-8 md:p-10 relative">
               {isSubmitted ? (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -216,3 +216,5 @@ export function PremiumSoftwareDemoPopup({ isOpen, onClose }: PremiumSoftwareDem
     </AnimatePresence>
   );
 }
+
+
