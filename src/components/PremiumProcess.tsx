@@ -19,25 +19,51 @@ export function PremiumProcess() {
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-12 lg:mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-[var(--primary)] font-semibold text-sm mb-4 tracking-widest"
-          >
-            <span className="w-2 h-2 rounded-full bg-slate-50 animate-pulse"></span>
-            HOW WE WORK
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-slate-900"
-          >
-            Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-600">Process</span>
-          </motion.h2>
+        <div className="flex flex-col lg:flex-row items-center gap-12 mb-16 lg:mb-20">
+          <div className="lg:w-1/2 text-left">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-[var(--primary)] font-semibold text-sm mb-4 tracking-widest"
+            >
+              <span className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
+              HOW WE WORK
+            </motion.div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6"
+            >
+              Our Proven <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-600">Enterprise Process</span>
+            </motion.h2>
+            <p className="text-lg text-slate-600">
+              We follow a rigorous, enterprise-grade development lifecycle to ensure your software is delivered on time, perfectly secure, and highly scalable.
+            </p>
+          </div>
+          
+          <div className="lg:w-1/2 flex gap-4 md:gap-6 justify-end">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="w-1/2 rounded-[24px] overflow-hidden shadow-xl mt-12 border border-slate-100"
+            >
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team Discussion" className="w-full h-48 md:h-64 object-cover" />
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="w-1/2 rounded-[24px] overflow-hidden shadow-xl border border-slate-100"
+            >
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Code & Architecture" className="w-full h-48 md:h-64 object-cover" />
+            </motion.div>
+          </div>
         </div>
 
         <div className="relative">

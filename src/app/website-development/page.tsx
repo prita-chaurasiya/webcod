@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Premium Website Design & Development",
   heroSubtitle: "We engineer beautiful, high-performance websites that tell your brand story and convert visitors into enterprise clients. Custom-designed, lightning-fast, and optimized for global search engines.",
-  heroImg: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Website Design & Dev",
   category: "Web & Software Solutions",
 
   overviewHeading: "Your Website is Your Most Valuable Real Estate",
   overviewText: "In the digital age, your website is often the first and only impression an enterprise buyer has of your brand. A slow, outdated, or generic template site immediately destroys credibility. WebCodian designs and develops bespoke corporate websites that exude premium authority. We combine stunning, award-winning UI/UX design with bleeding-edge frontend technologies to deliver experiences that are as fast as they are beautiful.",
-  overviewImg: "https://images.unsplash.com/photo-1507238692062-5a04ce4bef02?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom, high-fidelity UI/UX design (No templates)",
     "Lightning-fast Next.js/React frontend development",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Enterprise-grade SSO (SAML) for CMS author access",
     "Immutable deployments ensuring instant rollback capabilities",
   ],
-  securityImg: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Global Consulting Firm — London & Mumbai",

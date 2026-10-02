@@ -10,27 +10,18 @@ import Link from "next/link";
 import { useState } from "react";
 
 const services = [
-  { title: "Web Development", icon: Monitor, slug: "web-development" },
-  { title: "Software Development", icon: Code2, slug: "software-development" },
-  { title: "Digital Marketing", icon: TrendingUp, slug: "digital-marketing" },
-  { title: "App Development", icon: Smartphone, slug: "app-development" },
-  { title: "SEO/SMO", icon: Search, slug: "seo-smo" },
-  { title: "Graphic Design", icon: Palette, slug: "graphic-design" },
-  { title: "Bulk SMS", icon: MessageSquare, slug: "bulk-sms" },
-  { title: "Maintenance", icon: Wrench, slug: "maintenance" },
-  { title: "Bulk Whatsapp SMS", icon: MessageCircle, slug: "bulk-whatsapp-sms" },
-  { title: "Digital Product", icon: Box, slug: "digital-product" },
-  { title: "Bulk Voice Call", icon: PhoneCall, slug: "bulk-voice-call" },
-  { title: "Video Editing", icon: Video, slug: "video-editing" },
-];
-
-const colors = [
-  { bg: "bg-blue-50/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "border-blue-100", highlight: "rgba(147,197,253,0.3)" },
-  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(110,231,183,0.3)" },
-  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(216,180,254,0.3)" },
-  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(253,186,116,0.3)" },
-  { bg: "bg-slate-50/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "border-slate-100", highlight: "rgba(249,168,212,0.3)" },
-  { bg: "bg-cyan-50/50", iconBg: "bg-cyan-100", text: "text-cyan-700", border: "border-cyan-100", highlight: "rgba(103,232,249,0.3)" },
+  { title: "Web Development", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800", slug: "web-development" },
+  { title: "Software Development", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800", slug: "software-development" },
+  { title: "Digital Marketing", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800", slug: "digital-marketing" },
+  { title: "App Development", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800", slug: "app-development" },
+  { title: "SEO/SMO", image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800", slug: "seo-smo" },
+  { title: "Graphic Design", image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800", slug: "graphic-design" },
+  { title: "Bulk SMS", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800", slug: "bulk-sms" },
+  { title: "Maintenance", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800", slug: "maintenance" },
+  { title: "Bulk Whatsapp SMS", image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800", slug: "bulk-whatsapp-sms" },
+  { title: "Digital Product", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800", slug: "digital-product" },
+  { title: "Bulk Voice Call", image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800", slug: "bulk-voice-call" },
+  { title: "Video Editing", image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800", slug: "video-editing" },
 ];
 
 const containerVariants: any = {
@@ -46,29 +37,23 @@ const itemVariants: any = {
   show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 };
 
-function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: any) {
+function ServiceCard({ service, index, hoveredIndex, setHoveredIndex }: any) {
   const isHovered = hoveredIndex === index;
   const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  // Normalized values for tilt (-0.5 to 0.5)
   const tiltX = useMotionValue(0);
   const tiltY = useMotionValue(0);
 
   const springConfig = { damping: 40, stiffness: 400 };
-  const smoothMouseX = useSpring(mouseX, springConfig);
-  const smoothMouseY = useSpring(mouseY, springConfig);
   
   const smoothTiltX = useSpring(tiltX, springConfig);
   const smoothTiltY = useSpring(tiltY, springConfig);
 
-  // Maximum rotation of 2 degrees
-  const rotateX = useTransform(smoothTiltY, [-0.5, 0.5], ["2deg", "-2deg"]);
-  const rotateY = useTransform(smoothTiltX, [-0.5, 0.5], ["-2deg", "2deg"]);
-
-  const background = useMotionTemplate`radial-gradient(350px circle at ${smoothMouseX}px ${smoothMouseY}px, ${color.highlight}, transparent 80%)`;
+  const rotateX = useTransform(smoothTiltY, [-0.5, 0.5], ["5deg", "-5deg"]);
+  const rotateY = useTransform(smoothTiltX, [-0.5, 0.5], ["-5deg", "5deg"]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -95,51 +80,43 @@ function ServiceCard({ service, color, index, hoveredIndex, setHoveredIndex }: a
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={() => setHoveredIndex(index)}
-      // Disable 3D tilt if prefers-reduced-motion is enabled, or on mobile where hover isn't real
       style={{
         rotateX,
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className={`relative transform-gpu md:hover:-translate-y-1.5 transition-all duration-500 h-[320px] md:h-full shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none ${
-        isOtherHovered ? 'opacity-95 blur-[0.5px]' : 'opacity-100'
+      className={`relative transform-gpu md:hover:-translate-y-2 transition-all duration-500 h-[320px] md:h-[400px] shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none ${
+        isOtherHovered ? 'opacity-80 grayscale-[30%]' : 'opacity-100'
       }`}
     >
-      <Link href={`/${service.slug}`} className="block h-full outline-none group rounded-[2rem]">
+      <Link href={`/${service.slug}`} className="block h-full outline-none group rounded-[24px]">
         <div 
-          className={`relative ${color.bg} backdrop-blur-sm rounded-[2rem] p-8 border border-white/60 shadow-[0_2px_10px_rgba(0,0,0,0.02)] group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] group-hover:border-white transition-all duration-500 overflow-hidden h-full flex flex-col items-center text-center`}
+          className="relative rounded-[24px] overflow-hidden shadow-lg group-hover:shadow-[0_20px_40px_rgba(37,99,235,0.2)] transition-all duration-500 h-full flex flex-col justify-end p-6 border border-slate-200"
         >
-          {/* Hover highlight layer (follows mouse on desktop) */}
-          <motion.div 
-            className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
-            style={{ background }}
-          />
-
-          {/* Ambient inner glow */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-50"></div>
-          
-          {/* Icon Badge */}
-          <motion.div 
-            animate={{ y: [0, -4, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
-            className={`w-20 h-20 rounded-[18px] ${color.iconBg} flex items-center justify-center mb-6 shadow-sm border border-white/50 relative z-10 group-hover:-translate-y-1 transition-transform duration-300`}
-          >
-            <service.icon className={`w-10 h-10 ${color.text} transition-colors duration-300 group-hover:scale-105`} strokeWidth={1.5} />
-            {/* Subtle inner highlight for icon badge */}
-            <div className="absolute inset-0 rounded-[18px] bg-gradient-to-tr from-white/0 to-white/60 pointer-events-none"></div>
-          </motion.div>
-          
-          {/* Title */}
-          <div className="relative z-10 mb-4 flex-1 flex items-start justify-center">
-            <h3 className="text-xl font-bold text-slate-800 tracking-tight group-hover:text-slate-950 transition-colors">
-              {service.title}
-            </h3>
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={service.image} 
+              alt={service.title} 
+              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+            />
           </div>
           
-          {/* Read More Interaction */}
-          <div className={`mt-auto flex items-center gap-2 text-sm font-bold opacity-70 group-hover:opacity-100 ${color.text} transition-all relative z-10 group-hover:-translate-y-[1px]`}>
-            <span>Read More</span>
-            <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+          {/* Gradients for Text Visibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] via-[#0B1121]/50 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply z-10"></div>
+          
+          {/* Content */}
+          <div className="relative z-20 flex flex-col h-full justify-end text-left">
+            <h3 className="text-2xl font-bold text-white mb-2 leading-snug drop-shadow-lg group-hover:text-blue-200 transition-colors">
+              {service.title}
+            </h3>
+            
+            {/* Read More Interaction */}
+            <div className="flex items-center gap-2 text-sm font-bold text-blue-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+              <span>Explore Solutions</span>
+              <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" />
+            </div>
           </div>
         </div>
       </Link>
@@ -195,19 +172,15 @@ export function PremiumServices() {
           className="flex md:grid overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 scroll-smooth [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {services.map((service, index) => {
-            const color = colors[index % colors.length];
-            return (
-              <ServiceCard 
-                key={index}
-                service={service}
-                color={color}
-                index={index}
-                hoveredIndex={hoveredIndex}
-                setHoveredIndex={setHoveredIndex}
-              />
-            );
-          })}
+          {services.map((service, index) => (
+            <ServiceCard 
+              key={index}
+              service={service}
+              index={index}
+              hoveredIndex={hoveredIndex}
+              setHoveredIndex={setHoveredIndex}
+            />
+          ))}
         </motion.div>
       </div>
     </section>

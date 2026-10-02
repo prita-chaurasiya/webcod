@@ -117,7 +117,7 @@ export function PremiumInstitute() {
             <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-white p-2">
               <div className="rounded-[1.5rem] overflow-hidden">
-                 <img src="/images/institute-vector.jpg" alt="Educational Technology Dashboard" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Premium Tech Academy" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </motion.div>
@@ -149,108 +149,77 @@ export function PremiumInstitute() {
           ))}
         </div>
 
-        {/* Choose Your Learning Path */}
-        <div className="mb-16 lg:mb-20 relative">
+        {/* Premium Course Catalog (User preferred design) */}
+        <div className="mb-16 lg:mb-20">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Choose Your Learning Path</h3>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-[var(--primary)] to-blue-500 mx-auto rounded-full"></div>
+            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-bold text-xs tracking-[0.2em] mb-4 uppercase">
+              WebCodian Academy
+            </span>
+            <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+              Our Premium Courses
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Master the most in-demand technologies with our industry-led training programs. Start your journey today.
+            </p>
           </div>
-          
-          <div className="flex md:grid overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10 scroll-smooth [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {/* Background connecting line (hidden on mobile) */}
-            <div className="hidden lg:block absolute top-1/2 left-10 right-10 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent -translate-y-1/2 z-0" />
-            
-            {learningPaths.map((path, idx) => (
-              <motion.div 
-                key={path.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: idx * 0.1, type: "spring", bounce: 0.4 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="relative shrink-0 w-[85vw] snap-center md:w-auto md:shrink md:snap-none bg-white rounded-[18px] p-8 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-transparent transition-all duration-500 group overflow-hidden z-10"
-              >
-                {/* Always-on Animated Gradient Border Overlay */}
-                <motion.div 
-                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                  className={`absolute inset-0 bg-gradient-to-r ${path.gradient} bg-[length:200%_200%] opacity-100 rounded-[18px] -z-10`}
-                />
-                
-                {/* Inner slightly tinted white background */}
-                <div className="absolute inset-[2px] bg-gradient-to-br from-white to-slate-50/95 rounded-[22px] -z-10"></div>
-                
-                {/* Always-on Glow Effect that pulses */}
-                <motion.div 
-                  animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.2, 1] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: idx * 0.2 }}
-                  className={`absolute -bottom-10 -right-10 w-40 h-40 ${path.glow} blur-3xl rounded-full pointer-events-none`}
-                />
 
-                <div className="relative z-10 flex flex-col items-start">
-                  <div className={`w-16 h-16 rounded-[18px] ${path.iconBg} flex items-center justify-center mb-6 border shadow-sm group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500`}>
-                    {path.icon}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {courses.map((course, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.6 }}
+                whileHover={{ y: -12 }}
+                className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 transition-all duration-500 group flex flex-col h-full"
+              >
+                {/* Course Image */}
+                <div className="relative h-[220px] overflow-hidden bg-slate-100">
+                  <div className="absolute inset-0 bg-blue-900/10 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                  <img 
+                    src={course.image} 
+                    alt={course.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                  />
+                  {/* Floating Badge */}
+                  <div className="absolute top-4 right-4 z-20">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-blue-600 shadow-sm">
+                      Best Seller
+                    </span>
                   </div>
-                  <h4 className={`text-xl font-bold ${path.titleColor} mb-3`}>{path.title}</h4>
-                  <p className="text-slate-700 font-medium leading-relaxed">{path.courses}</p>
                 </div>
-                
-                {/* Arrow indicator always visible but animates slightly */}
-                <motion.div 
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-8 right-8 transition-all duration-500"
-                >
-                  <ArrowRight className={`w-6 h-6 ${path.titleColor}`} />
-                </motion.div>
+
+                {/* Course Content */}
+                <div className="p-8 flex-grow flex flex-col">
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">{course.title}</h3>
+                  <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{course.desc}</p>
+                  
+                  <div className="mb-8 p-4 bg-slate-50 rounded-[16px] border border-slate-100">
+                    <span className="text-xs font-bold uppercase tracking-[0.1em] text-slate-400 block mb-2">Skills Covered</span>
+                    <span className="text-sm font-bold text-slate-800">{course.skills}</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mt-auto">
+                    <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1">
+                      View Details
+                    </Link>
+                    <Link 
+                      href="/contact" 
+                      className="inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 rounded-full hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.5)] hover:-translate-y-0.5"
+                    >
+                      Enroll Now <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Course Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-[18px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)] border border-slate-100 transition-all duration-300 group"
-            >
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                <img 
-                  src={course.image} 
-                  alt={course.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out img-premium"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{course.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm line-clamp-2">{course.desc}</p>
-                <div className="mb-6">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 block mb-1">Skills Covered</span>
-                  <span className="text-sm font-medium text-slate-700">{course.skills}</span>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                  <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">
-                    View Course
-                  </Link>
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-white bg-blue-600 px-5 py-2.5 rounded-full hover:bg-blue-700 transition-colors shadow-md hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
-                    Enroll Now <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
         {/* CTA */}
         <div className="mt-12 lg:mt-16 text-center">
-          <Link href="/services" className="inline-flex items-center gap-2 px-8 py-4 btn-primary font-bold rounded-[18px] shadow-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <Link href="/courses" className="inline-flex items-center gap-2 px-8 py-4 btn-primary font-bold rounded-[18px] shadow-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
             View All Courses
           </Link>
         </div>

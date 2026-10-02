@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Premium Web Application Development Services",
   heroSubtitle: "Design and build secure, scalable, and high-performance web applications — from sophisticated B2B portals to consumer SaaS platforms — utilizing modern JavaScript frameworks and cloud-native architecture.",
-  heroImg: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Web Application Development",
   category: "Web & Software Solutions",
 
   overviewHeading: "Engineering Web Experiences That Perform Like Native Apps",
   overviewText: "The boundary between websites and desktop software has disappeared. Today's users expect web applications to load instantly, work offline, and provide seamless, app-like interactions directly in their browser. WebCodian engineers complex, data-heavy web applications using React, Next.js, and Node.js that deliver uncompromising performance, ironclad security, and limitless scalability for startups and enterprises alike.",
-  overviewImg: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Single Page Applications (SPAs) and Server-Side Rendered (SSR) apps",
     "Progressive Web Apps (PWAs) with offline-first capabilities",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Protection against Clickjacking and MIME-type sniffing",
     "Client-Side Dependency Vulnerability Auditing",
   ],
-  securityImg: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Healthcare Analytics Provider — Bangalore",

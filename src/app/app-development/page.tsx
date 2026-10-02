@@ -22,7 +22,7 @@ export default function AppDevelopmentPage() {
           <>Why Choose <span className="text-blue-600">Us?</span></>
         }
         whyDescription="We deliver high-end mobile engineering with strict quality assurance. Here is why industry leaders trust our app development services:"
-        whyImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+        whyImage="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
         features={[
           {
             title: "Tailored Solutions",

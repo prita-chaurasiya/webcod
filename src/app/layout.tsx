@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   }
 };
 
+import { FloatingActionButtons } from "@/components/FloatingActionButtons";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,6 +45,7 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
+        <FloatingActionButtons />
         <Footer />
       </body>
     </html>

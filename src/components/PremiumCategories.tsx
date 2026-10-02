@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const categories = [
-  { title: "E-Commerce", icon: "https://webcodian.com/public/web/assets/img/services/shopping.png", slug: "e-commerce" },
-  { title: "School & College", icon: "https://webcodian.com/public/web/assets/img/services/school.png", slug: "school-college" },
-  { title: "Institute", icon: "https://webcodian.com/public/web/assets/img/services/ux.png", slug: "institute" },
-  { title: "Tour & Travel", icon: "https://webcodian.com/public/web/assets/img/services/walking-tour.png", slug: "tour-travel" },
-  { title: "NGO", icon: "https://webcodian.com/public/web/assets/img/services/earth.png", slug: "ngo" },
-  { title: "Consulting", icon: "https://webcodian.com/public/web/assets/img/services/consultant.png", slug: "consulting" },
-  { title: "HealthCare", icon: "https://webcodian.com/public/web/assets/img/services/doctor-consultation.png", slug: "healthcare" },
-  { title: "Security Service", icon: "https://webcodian.com/public/web/assets/img/services/guard.png", slug: "security-service" },
-  { title: "Manufacuring", icon: "https://webcodian.com/public/web/assets/img/services/manu.png", slug: "manufacturing" },
-  { title: "News & Blog", icon: "https://webcodian.com/public/web/assets/img/services/blog.png", slug: "news-blog" },
-  { title: "Hotel & Restaurant", icon: "https://webcodian.com/public/web/assets/img/services/hotel.png", slug: "hotel-restaurant" },
-  { title: "Real Estate", icon: "https://webcodian.com/public/web/assets/img/services/deal.png", slug: "real-estate" },
+  { title: "E-Commerce", icon: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=400", slug: "e-commerce" },
+  { title: "School & College", icon: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400", slug: "school-college" },
+  { title: "Institute", icon: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400", slug: "institute" },
+  { title: "Tour & Travel", icon: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=400", slug: "tour-travel" },
+  { title: "NGO", icon: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=400", slug: "ngo" },
+  { title: "Consulting", icon: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400", slug: "consulting" },
+  { title: "HealthCare", icon: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400", slug: "healthcare" },
+  { title: "Security Service", icon: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=400", slug: "security-service" },
+  { title: "Manufacturing", icon: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&q=80&w=400", slug: "manufacturing" },
+  { title: "News & Blog", icon: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=400", slug: "news-blog" },
+  { title: "Hotel & Restaurant", icon: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400", slug: "hotel-restaurant" },
+  { title: "Real Estate", icon: "https://images.unsplash.com/photo-1560518883-ce09059eeefa?auto=format&fit=crop&q=80&w=400", slug: "real-estate" },
 ];
 
 const colors = [
@@ -117,10 +117,10 @@ export function PremiumCategories() {
                     />
 
                     <div 
-                      className={`w-16 h-16 md:w-20 md:h-20 bg-white rounded-[18px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10`}
+                      className={`w-20 h-20 md:w-24 md:h-24 bg-white rounded-[18px] shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 border border-slate-100 relative z-10 overflow-hidden`}
                       style={{ transform: "translateZ(30px)" }}
                     >
-                      <img src={cat.icon} alt={cat.title} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:-translate-y-1 transition-transform duration-500 img-premium" />
+                      <img src={cat.icon} alt={cat.title} className="w-full h-full object-cover transition-transform duration-500 img-premium" />
                     </div>
                     
                     <div style={{ transform: "translateZ(20px)" }} className="relative z-10">

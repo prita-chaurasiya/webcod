@@ -52,9 +52,13 @@ export function HomeAutoPopup() {
           </button>
 
           {/* Left Column - Image & Branding */}
-          <div className="hidden md:flex w-2/5 bg-gradient-to-br from-blue-600 to-indigo-900 relative p-8 flex-col justify-between overflow-hidden">
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute top-[-20%] left-[-20%] w-[140%] h-[140%] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-[spin_60s_linear_infinite]" />
+          <div className="hidden md:flex w-2/5 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center relative p-8 flex-col justify-between overflow-hidden shadow-[inset_-10px_0_30px_rgba(0,0,0,0.2)]">
+            {/* Premium Dark Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-indigo-950 via-blue-900/70 to-indigo-900/40 z-0 backdrop-blur-[2px]"></div>
+            
+            {/* Animated Light Effect */}
+            <div className="absolute inset-0 opacity-30 z-0">
+              <div className="absolute top-[-20%] left-[-20%] w-[140%] h-[140%] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] animate-[spin_120s_linear_infinite]" />
             </div>
             
             <div className="relative z-10">

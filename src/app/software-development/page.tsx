@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Software Development Solutions",
   heroSubtitle: "We engineer robust, scalable, and secure custom software systems tailored to your unique business workflows, turning complex operational bottlenecks into streamlined digital advantages.",
-  heroImg: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Software Development",
   category: "Web & Software Solutions",
 
   overviewHeading: "Stop Adapting Your Business to Generic Software",
   overviewText: "Off-the-shelf software forces you to change your proven business processes to match the tool. True enterprise software development does the opposite. At WebCodian, we architect custom software solutions from the ground up to map perfectly to your unique workflows. Whether you need to modernize legacy systems, build a massive internal ERP, or launch a complex SaaS platform, our engineering teams deliver scalable, high-performance code.",
-  overviewImg: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Full-lifecycle custom software engineering",
     "Legacy system modernization and cloud migration",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Compliance architecture for GDPR, HIPAA, SOC 2, and PCI-DSS",
     "Dynamic data masking for sensitive PII in non-production environments",
   ],
-  securityImg: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1510511459012-914015da9c68?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National Logistics Provider",
