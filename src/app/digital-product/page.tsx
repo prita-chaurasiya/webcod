@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Digital Product Strategy & Engineering",
   heroSubtitle: "Transform bold ideas into market-dominating software. From rapid MVP development to enterprise-scale digital platforms, we engineer products that solve real problems, delight users, and drive massive revenue.",
-  heroImg: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Digital Product",
   category: "Web & Software Solutions",
 
   overviewHeading: "Building Digital Products That Win Markets",
   overviewText: "Building software is easy; building a successful digital product is incredibly hard. It requires a delicate balance of user-centric design, robust technical architecture, and a ruthless focus on business viability. WebCodian acts as your complete product engineering partner. We don't just write code—we help you validate the market, design the UX, architect the scalable backend, launch the MVP, and iterate based on actual user data.",
-  overviewImg: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "End-to-End Product Strategy and Roadmap Development",
     "Rapid Minimum Viable Product (MVP) Engineering",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Compliance readiness for GDPR, CCPA, and SOC 2",
     "Automated Dependency Scanning to prevent supply chain attacks",
   ],
-  securityImg: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "FinTech Startup — Singapore & India",

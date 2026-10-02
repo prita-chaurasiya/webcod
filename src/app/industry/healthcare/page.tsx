@@ -4,13 +4,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Digital Solutions for the Healthcare Industry",
   heroSubtitle: "Transform patient outcomes and operational efficiency with custom Hospital Management Systems, Telemedicine platforms, and AI-powered diagnostics built to meet the highest clinical and regulatory standards.",
-  heroImg: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Healthcare",
   breadcrumbHref: "/industry/healthcare",
 
   overviewHeading: "Engineering the Future of Digital Healthcare",
   overviewText: "The global healthcare industry is undergoing its most significant technological revolution. From AI-assisted diagnostics to cloud-based Electronic Health Records, the digital transformation of healthcare is not optional—it is imperative. WebCodian partners with hospitals, clinics, health-tech startups, and medical device companies to engineer scalable, HIPAA-compliant digital solutions that genuinely improve patient outcomes, reduce administrative burden, and drive institutional revenue.",
-  overviewImg: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Hospital Management Systems with real-time operational dashboards",
     "Telemedicine platforms supporting video, audio, and chat consultations",
@@ -113,7 +113,7 @@ const data: IndustryPageData = {
     "Regular VAPT (Vulnerability Assessment & Penetration Testing)",
     "Detailed Audit Logs for Every Clinical Action",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "How long does it take to build a custom HMS?", a: "A core HMS with OPD, IPD, pharmacy, and billing modules typically takes 4–6 months. Complex deployments with AI, telemedicine, and multi-facility integrations may require 8–12 months, delivered in agile sprints." },

@@ -205,10 +205,10 @@ export function EnterpriseAbout() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: <Shield />, title: "Integrity First", desc: "Uncompromising ethics and transparency in every partnership." },
-            { icon: <Cpu />, title: "Engineering Excellence", desc: "Writing clean, scalable, and secure code that stands the test of time." },
-            { icon: <Zap />, title: "Agile Innovation", desc: "Adapting swiftly to emerging technologies to keep our clients ahead." },
-            { icon: <Users />, title: "Client Centricity", desc: "Your success is our success. We treat your business as our own." },
+            { icon: <Shield className="w-8 h-8 text-blue-600" />, title: "Integrity First", desc: "Uncompromising ethics and transparency in every partnership.", lightBg: "bg-blue-50/80", hoverBorder: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-blue-100/50" },
+            { icon: <Cpu className="w-8 h-8 text-emerald-600" />, title: "Engineering Excellence", desc: "Writing clean, scalable, and secure code that stands the test of time.", lightBg: "bg-emerald-50/80", hoverBorder: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconBg: "bg-emerald-100/50" },
+            { icon: <Zap className="w-8 h-8 text-orange-600" />, title: "Agile Innovation", desc: "Adapting swiftly to emerging technologies to keep our clients ahead.", lightBg: "bg-orange-50/80", hoverBorder: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconBg: "bg-orange-100/50" },
+            { icon: <Users className="w-8 h-8 text-purple-600" />, title: "Client Centricity", desc: "Your success is our success. We treat your business as our own.", lightBg: "bg-purple-50/80", hoverBorder: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(147,51,234,0.15)]", iconBg: "bg-purple-100/50" },
           ].map((val, idx) => (
             <motion.div
               key={idx}
@@ -216,13 +216,14 @@ export function EnterpriseAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] border border-slate-100 shadow-sm hover:border-[var(--primary)] hover:shadow-lg transition-all group"
+              className={`p-8 rounded-[24px] border border-transparent ${val.lightBg} ${val.hoverBorder} ${val.glow} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm relative overflow-hidden`}
             >
-              <div className="w-14 h-14 bg-slate-50 text-slate-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+              <div className={`absolute top-0 right-0 w-32 h-32 ${val.iconBg} rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+              <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10">
                 {val.icon}
               </div>
-              <h4 className="text-xl font-bold text-[var(--heading)] mb-3">{val.title}</h4>
-              <p className="text-slate-600">{val.desc}</p>
+              <h4 className="text-xl font-bold text-[var(--heading)] mb-3 relative z-10">{val.title}</h4>
+              <p className="text-slate-600 relative z-10">{val.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -240,7 +241,7 @@ export function EnterpriseAbout() {
             <div className="inline-block px-4 py-2 rounded-full bg-white/10 text-white font-bold text-sm tracking-widest uppercase">
               Global Reach
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.1]">
               Delivering Excellence Across Borders.
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed">
@@ -253,8 +254,8 @@ export function EnterpriseAbout() {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">India Headquarters</h4>
-                  <p className="text-slate-600">Varanasi & Noida - Development & Education Hubs</p>
+                  <h4 className="text-lg font-bold text-white">India Headquarters</h4>
+                  <p className="text-slate-400">Varanasi & Noida - Development & Education Hubs</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -262,8 +263,8 @@ export function EnterpriseAbout() {
                   <Globe2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">Global Client Base</h4>
-                  <p className="text-slate-600">Serving enterprises in USA, UK, UAE, and Australia</p>
+                  <h4 className="text-lg font-bold text-white">Global Client Base</h4>
+                  <p className="text-slate-400">Serving enterprises in USA, UK, UAE, and Australia</p>
                 </div>
               </div>
             </div>

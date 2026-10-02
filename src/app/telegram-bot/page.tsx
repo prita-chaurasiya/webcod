@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Telegram Bot Development",
   heroSubtitle: "Automate workflows, engage massive communities, and process transactions directly within Telegram. We build highly secure, AI-powered Telegram bots for enterprise automation, crypto, and customer service.",
-  heroImg: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Telegram Bot",
   category: "Systems & Automation",
 
   overviewHeading: "Unlocking the Power of Telegram for Business Automation",
   overviewText: "With over 800 million active users and the most robust bot API of any messaging platform, Telegram is no longer just a chat app—it is a powerful ecosystem for business automation. WebCodian engineers complex, highly scalable Telegram bots that act as micro-apps. From AI-powered customer support and secure crypto trading bots to internal enterprise alert systems and massive community management tools, we build bots that execute flawless logic at speed.",
-  overviewImg: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom AI-powered customer support and lead generation bots",
     "Web3 and Crypto bots (Trading, Wallet Tracking, Airdrops)",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Environment Variable Security via AWS Secrets Manager",
     "Zero-Trust Architecture for internal ERP/CRM API calls",
   ],
-  securityImg: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Global Web3 Trading Platform",

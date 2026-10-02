@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Premium IT Training & Internship Programs",
   heroSubtitle: "Launch your tech career with real-world enterprise experience. Gain hands-on training in Web Development, AI, Mobile Apps, and Enterprise Software under the guidance of senior architects.",
-  heroImg: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Internship",
   category: "Career & Training",
 
   overviewHeading: "Bridging the Gap Between Academia and Industry",
   overviewText: "Traditional college degrees focus on theory, leaving graduates completely unprepared for modern, fast-paced enterprise software development. The WebCodian Premium IT Internship is an intensive, hands-on immersion program designed to transform enthusiastic students into highly capable, deployable software engineers. You won't just learn syntax; you will write production code, deploy to live cloud environments, and collaborate in agile sprints just like our senior engineering teams.",
-  overviewImg: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Work on live, enterprise-grade client projects",
     "Mentorship from Senior Full-Stack Developers and Tech Leads",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Sanitizing user inputs to prevent injection attacks and database corruption",
     "Understanding HTTPS, SSL/TLS, and basic cryptographic principles",
   ],
-  securityImg: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Rahul S., Former Intern -> Full-Stack Developer",

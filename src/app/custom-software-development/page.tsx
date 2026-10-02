@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Bespoke Custom Software Development",
   heroSubtitle: "Transform your unique operational challenges into a competitive advantage. We engineer 100% custom software systems designed specifically for your business logic, built to scale infinitely.",
-  heroImg: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Custom Software",
   category: "Web & Software Solutions",
 
   overviewHeading: "Software Engineered Exclusively for You",
   overviewText: "When off-the-shelf software falls short, businesses are forced into inefficient workarounds, manual data entry, and fragmented operations. Custom software development is the ultimate solution. WebCodian engineers bespoke platforms that map directly to your unique workflows. From specialized inventory algorithms to complex multi-party portals, we build proprietary digital assets that increase your company's valuation and drastically reduce operational overhead.",
-  overviewImg: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "100% bespoke architecture tailored to your workflows",
     "No recurring per-user vendor licensing fees",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Compliance mapping for HIPAA, GDPR, SOC 2, and PCI-DSS",
     "Automated backup and disaster recovery (DR) protocols",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Specialized Healthcare Provider",

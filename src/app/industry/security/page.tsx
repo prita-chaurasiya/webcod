@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Advanced Technology Solutions for Security & Surveillance",
   heroSubtitle: "Fortify your security operations with custom access control systems, CCTV management platforms, cybersecurity dashboards, and AI-powered threat detection engineered for the modern security enterprise.",
-  heroImg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Security",
   breadcrumbHref: "/industry/security",
 
   overviewHeading: "Intelligent Security Technology for a Complex Threat Landscape",
   overviewText: "The security industry faces an unprecedented convergence of physical and cyber threats. From corporate campuses and government facilities to smart cities and financial institutions, the demand for integrated, intelligent security technology has never been more critical. WebCodian engineers comprehensive security technology solutions — from unified CCTV management and AI-powered video analytics to cybersecurity dashboards and biometric access control — that give security operations centers real-time, actionable intelligence to prevent incidents before they occur.",
-  overviewImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Unified CCTV management with AI-powered video analytics",
     "Biometric & NFC-based physical access control systems",

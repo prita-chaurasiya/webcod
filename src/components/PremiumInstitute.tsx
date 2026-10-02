@@ -127,10 +127,10 @@ export function PremiumInstitute() {
         {/* Achievements Counter - Inspired by Indian Computer */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 lg:mb-20">
           {[
-            { value: "50,000+", label: "Students Trained", icon: <Users className="w-8 h-8 text-[var(--primary)]" /> },
-            { value: "100+", label: "Expert Faculties", icon: <Trophy className="w-8 h-8 text-blue-500" /> },
-            { value: "15+", label: "Years Experience", icon: <BarChart className="w-8 h-8 text-[var(--primary)]" /> },
-            { value: "100%", label: "Placement Assist", icon: <HeartHandshake className="w-8 h-8 text-[var(--primary)]" /> }
+            { value: "50,000+", label: "Students Trained", icon: <Users className="w-8 h-8 text-blue-600" />, lightBg: "bg-blue-50/80", hoverBorder: "group-hover:border-blue-300", glow: "group-hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-blue-100" },
+            { value: "100+", label: "Expert Faculties", icon: <Trophy className="w-8 h-8 text-emerald-600" />, lightBg: "bg-emerald-50/80", hoverBorder: "group-hover:border-emerald-300", glow: "group-hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconBg: "bg-emerald-100" },
+            { value: "15+", label: "Years Experience", icon: <BarChart className="w-8 h-8 text-orange-600" />, lightBg: "bg-orange-50/80", hoverBorder: "group-hover:border-orange-300", glow: "group-hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconBg: "bg-orange-100" },
+            { value: "100%", label: "Placement Assist", icon: <HeartHandshake className="w-8 h-8 text-purple-600" />, lightBg: "bg-purple-50/80", hoverBorder: "group-hover:border-purple-300", glow: "group-hover:shadow-[0_8px_30px_rgba(147,51,234,0.15)]", iconBg: "bg-purple-100" }
           ].map((stat, idx) => (
             <motion.div 
               key={idx}
@@ -138,14 +138,16 @@ export function PremiumInstitute() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="card-premium p-6 md:p-8 text-center relative overflow-hidden group"
+              className={`p-6 md:p-8 text-center relative overflow-hidden group rounded-[24px] ${stat.lightBg} border border-transparent ${stat.hoverBorder} ${stat.glow} hover:-translate-y-2 transition-all duration-500 backdrop-blur-md`}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="flex justify-center mb-4 relative z-10 group-hover:scale-110 transition-transform">
-                {stat.icon}
+              <div className={`absolute top-0 right-0 w-32 h-32 ${stat.iconBg} rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+              <div className="flex justify-center mb-5 relative z-10">
+                <div className={`p-4 rounded-[20px] bg-white shadow-sm border border-slate-100 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 ease-out`}>
+                  {stat.icon}
+                </div>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-[var(--heading)] mb-2 relative z-10">{stat.value}</h3>
-              <p className="text-xs md:text-sm font-semibold text-[var(--foreground)] relative z-10 uppercase tracking-wider">{stat.label}</p>
+              <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 relative z-10">{stat.value}</h3>
+              <p className="text-xs md:text-sm font-bold text-slate-500 relative z-10 uppercase tracking-widest">{stat.label}</p>
             </motion.div>
           ))}
         </div>

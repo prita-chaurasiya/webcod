@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Purpose-Built Technology for NGOs & Non-Profits",
   heroSubtitle: "Amplify your social impact with custom donation management systems, volunteer portals, campaign platforms, and impact reporting tools designed for the unique operational needs of mission-driven organizations.",
-  heroImg: "https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "NGO",
   breadcrumbHref: "/industry/ngo",
 
   overviewHeading: "Maximizing Social Impact Through Digital Empowerment",
   overviewText: "Non-governmental organizations and non-profits operate at the intersection of compassion and efficiency. Every rupee of operational overhead is a rupee not reaching those in need. WebCodian engineers technology solutions specifically designed for mission-driven organizations — from transparent donation management and volunteer coordination to AI-powered campaign analytics and FCRA-compliant financial reporting — that help NGOs do more with less and communicate their impact more powerfully to donors and the public.",
-  overviewImg: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Online donation platforms with recurring giving and tax receipts",
     "Volunteer management portals with scheduling and tracking",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Real-Time Financial Audit Trail for All Transactions",
     "GDPR & India IT Act Compliant Data Handling",
   ],
-  securityImg: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can you build a platform that issues 80G receipts automatically?", a: "Yes. Our donation platforms automatically generate and email compliant 80G tax exemption receipts immediately after every successful donation." },

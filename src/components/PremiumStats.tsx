@@ -65,28 +65,55 @@ export function PremiumStats() {
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-x divide-gray-800/50">
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4 lg:gap-6 pl-4 lg:pl-8 first:border-0 first:pl-0"
-            >
-              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-[18px] bg-gray-800/80 flex items-center justify-center shrink-0 border border-gray-700 shadow-[0_0_15px_rgba(46,184,114,0.15)] group-hover:shadow-[0_0_25px_rgba(46,184,114,0.3)] transition-all">
-                <stat.icon className="w-6 h-6 lg:w-8 lg:h-8 text-[var(--primary)]" />
-              </div>
-              <div>
-                <div className="text-3xl lg:text-4xl font-bold text-[var(--heading)] flex items-baseline">
-                  <Counter from={0} to={stat.value} duration={2.5} />
-                  {stat.suffix && <span className="text-xl lg:text-2xl ml-1">{stat.suffix}</span>}
+          {stats.map((stat, index) => {
+            const lightBg = [
+              "bg-blue-500/10",
+              "bg-emerald-500/10",
+              "bg-purple-500/10",
+              "bg-orange-500/10"
+            ];
+            const hoverBorder = [
+              "group-hover:border-blue-400/50",
+              "group-hover:border-emerald-400/50",
+              "group-hover:border-purple-400/50",
+              "group-hover:border-orange-400/50"
+            ];
+            const iconColor = [
+              "text-blue-400",
+              "text-emerald-400",
+              "text-purple-400",
+              "text-orange-400"
+            ];
+            const glow = [
+              "group-hover:shadow-[0_8px_30px_rgba(59,130,246,0.2)]",
+              "group-hover:shadow-[0_8px_30px_rgba(16,185,129,0.2)]",
+              "group-hover:shadow-[0_8px_30px_rgba(168,85,247,0.2)]",
+              "group-hover:shadow-[0_8px_30px_rgba(249,115,22,0.2)]"
+            ];
+            
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`flex items-start gap-4 lg:gap-6 p-6 rounded-2xl ${lightBg[index]} border border-white/5 ${hoverBorder[index]} ${glow[index]} hover:-translate-y-2 transition-all duration-500 backdrop-blur-md group`}
+              >
+                <div className={`w-12 h-12 lg:w-16 lg:h-16 rounded-[18px] bg-gray-900 flex items-center justify-center shrink-0 border border-gray-700 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500 shadow-md`}>
+                  <stat.icon className={`w-6 h-6 lg:w-8 lg:h-8 ${iconColor[index]}`} />
                 </div>
-                <div className="text-lg font-bold text-gray-200 mt-1">{stat.label}</div>
-                <div className="text-sm text-slate-500 mt-1">{stat.sublabel}</div>
-              </div>
-            </motion.div>
-          ))}
+                <div>
+                  <div className="text-3xl lg:text-4xl font-bold text-white flex items-baseline drop-shadow-sm">
+                    <Counter from={0} to={stat.value} duration={2.5} />
+                    {stat.suffix && <span className="text-xl lg:text-2xl ml-1">{stat.suffix}</span>}
+                  </div>
+                  <div className="text-lg font-bold text-gray-200 mt-1">{stat.label}</div>
+                  <div className="text-sm text-gray-400 mt-1">{stat.sublabel}</div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

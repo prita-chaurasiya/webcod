@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Next-Generation Tech Solutions for Tour & Travel",
   heroSubtitle: "Modernize your travel business with custom booking engines, hotel management systems, AI trip planning, and white-label travel portals engineered for the global hospitality market.",
-  heroImg: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Tour & Travel",
   breadcrumbHref: "/industry/tour-travel",
 
   overviewHeading: "Engineering Memorable Travel Experiences Through Technology",
   overviewText: "The global travel and tourism industry generates over $9 trillion annually, and the competitive advantage increasingly belongs to tech-driven operators. WebCodian engineers end-to-end travel technology solutions — from white-label booking engines and hotel management systems to AI-powered trip planners and travel CRMs — that help tour operators, travel agencies, OTAs, and hotel chains streamline operations, increase direct bookings, and deliver unforgettable customer journeys.",
-  overviewImg: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom flight, hotel, and holiday package booking engines",
     "White-label B2B travel portals for agent networks",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Real-Time Fraud Scoring & Transaction Monitoring",
     "Automated Chargeback & Cancellation Management",
   ],
-  securityImg: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Which GDS and supplier APIs do you integrate with?", a: "We integrate with Amadeus, Sabre, Galileo, Farelogix, TBO Holidays, HotelBeds, Expedia, and all major hotel chain APIs including IHG, Marriott, and Hilton." },

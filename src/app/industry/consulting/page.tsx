@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Enterprise Technology Solutions for Consulting Firms",
   heroSubtitle: "Accelerate your consulting practice with custom CRM platforms, client portals, automated workflow engines, and AI-powered business intelligence tools that transform how you deliver and demonstrate value.",
-  heroImg: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Consulting",
   breadcrumbHref: "/industry/consulting",
 
   overviewHeading: "Technology That Makes Your Consulting Practice Indispensable",
   overviewText: "In the modern consulting industry, your competitive differentiation is no longer just the quality of your advice — it's the quality of your client experience, the speed of your delivery, and the rigor of your evidence. WebCodian engineers purpose-built technology solutions for management consulting, IT consulting, legal, and financial advisory firms — from intelligent CRM systems and client collaboration portals to AI-powered research platforms and automated proposal generators — that allow your consultants to focus on strategy while technology handles the operational complexity.",
-  overviewImg: "https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom CRM with pipeline management and client health scoring",
     "Secure client portal for collaboration, document sharing, and approvals",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Comprehensive Audit Logs for All Data Access Events",
     "GDPR & India IT Act Compliant Data Architecture",
   ],
-  securityImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1561758033-7e924f619b47?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can your CRM integrate with tools we already use like Salesforce, HubSpot, or Microsoft Teams?", a: "Yes. We provide API-based integrations with Salesforce, HubSpot, Microsoft Dynamics, Teams, Slack, and all major enterprise tools to ensure your new platform enhances existing workflows." },

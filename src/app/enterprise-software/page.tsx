@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Software Engineering",
   heroSubtitle: "Mission-critical software architectures designed for massive scale, rigorous compliance, and global deployment. We modernize legacy monoliths and build the robust engines that power enterprise corporations.",
-  heroImg: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Enterprise Software",
   category: "Web & Software Solutions",
 
   overviewHeading: "Software Built for Scale, Security, and Stability",
   overviewText: "In the enterprise tier, software failure is not an inconvenience—it's a multi-million dollar disaster. Enterprise software requires a fundamentally different engineering approach focused on zero-downtime deployments, microservices architecture, strict regulatory compliance, and the ability to process millions of transactions securely. WebCodian partners with large corporations and government entities to engineer the heavy-duty software systems that form the backbone of their global operations.",
-  overviewImg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "High-availability Microservices and Serverless architectures",
     "Legacy Monolith to Microservices migration (Strangler Fig)",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Data Loss Prevention (DLP) protocols and automated PII redaction algorithms",
     "Rigorous compliance mapping for GDPR, CCPA, HIPAA, SOC 2 Type II, and PCI-DSS Level 1",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Global FinTech Payment Processor",

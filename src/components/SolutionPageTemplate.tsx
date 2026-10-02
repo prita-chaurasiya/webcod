@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   CheckCircle2, ArrowRight, Zap, ShieldCheck,
   TrendingUp, Star, ChevronRight, Clock, Users, BarChart3,
-  Globe, Smartphone, Database, Cloud, Code, Settings, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network
+  Globe, Smartphone, Database, Cloud, Code, Settings, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, Sparkles
 } from "lucide-react";
 
 const featureIcons = [Zap, Globe, Smartphone, Database, Cloud, Code, Settings, Users, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, BarChart3, TrendingUp, ShieldCheck];
@@ -253,22 +253,32 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             <p className="text-slate-400 text-lg">Modern businesses face complex digital challenges. Here's what we address.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {data.challenges.map((c, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.08 }}
-                className="flex gap-5 bg-slate-800/50 border border-slate-700 p-7 rounded-2xl hover:border-blue-500/50 hover:bg-slate-800 transition-all"
-              >
-                <div className="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center shrink-0 text-lg font-bold">
-                  {idx + 1}
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-lg mb-2">{c.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{c.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {data.challenges.map((c, idx) => {
+              const colors = [
+                { bg: "bg-blue-500/10", border: "hover:border-blue-400/50", glow: "hover:shadow-[0_8px_30px_rgba(59,130,246,0.2)]", numBg: "bg-blue-500/20", numText: "text-blue-400" },
+                { bg: "bg-emerald-500/10", border: "hover:border-emerald-400/50", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.2)]", numBg: "bg-emerald-500/20", numText: "text-emerald-400" },
+                { bg: "bg-purple-500/10", border: "hover:border-purple-400/50", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.2)]", numBg: "bg-purple-500/20", numText: "text-purple-400" },
+                { bg: "bg-orange-500/10", border: "hover:border-orange-400/50", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.2)]", numBg: "bg-orange-500/20", numText: "text-orange-400" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.08 }}
+                  className={`flex gap-5 ${theme.bg} border border-white/5 p-7 rounded-[24px] ${theme.border} ${theme.glow} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm`}
+                >
+                  <div className={`w-12 h-12 rounded-2xl ${theme.numBg} ${theme.numText} flex items-center justify-center shrink-0 text-xl font-bold group-hover:scale-110 transition-transform duration-500`}>
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">{c.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{c.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -285,20 +295,31 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.whyPoints.map((w, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.07 }}
-                className="p-8 border border-slate-200 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-gradient-to-b from-white to-slate-50"
-              >
-                <div className="w-12 h-12 bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white rounded-xl flex items-center justify-center mb-5 transition-all">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-slate-900 font-bold text-lg mb-3">{w.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{w.desc}</p>
-              </motion.div>
-            ))}
+            {data.whyPoints.map((w, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/80", hoverBg: "hover:bg-blue-100/50", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconText: "text-blue-600", iconRing: "ring-blue-100" },
+                { bg: "bg-emerald-50/80", hoverBg: "hover:bg-emerald-100/50", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconText: "text-emerald-600", iconRing: "ring-emerald-100" },
+                { bg: "bg-purple-50/80", hoverBg: "hover:bg-purple-100/50", border: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]", iconText: "text-purple-600", iconRing: "ring-purple-100" },
+                { bg: "bg-orange-50/80", hoverBg: "hover:bg-orange-100/50", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconText: "text-orange-600", iconRing: "ring-orange-100" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.07 }}
+                  className={`p-8 border border-transparent rounded-[24px] ${theme.bg} ${theme.border} ${theme.glow} ${theme.hoverBg} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm relative overflow-hidden`}
+                >
+                  <div className={`absolute -right-10 -top-10 w-40 h-40 bg-white/40 rounded-full blur-[30px] group-hover:scale-150 transition-transform duration-700`}></div>
+                  <div className={`w-14 h-14 bg-white ring-4 ${theme.iconRing} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 relative z-10`}>
+                    <Zap className={`w-6 h-6 ${theme.iconText}`} />
+                  </div>
+                  <h3 className="text-slate-900 font-bold text-lg mb-3 relative z-10">{w.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed relative z-10">{w.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -315,22 +336,32 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {data.solutions.map((s, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.07 }}
-                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-5"
-              >
-                <div className="w-10 h-10 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-slate-900 font-bold text-lg mb-2">{s.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {data.solutions.map((s, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/80", hoverBg: "hover:bg-blue-100/50", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconText: "text-blue-600", iconBg: "bg-blue-100", iconRing: "ring-blue-50" },
+                { bg: "bg-emerald-50/80", hoverBg: "hover:bg-emerald-100/50", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconText: "text-emerald-600", iconBg: "bg-emerald-100", iconRing: "ring-emerald-50" },
+                { bg: "bg-purple-50/80", hoverBg: "hover:bg-purple-100/50", border: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]", iconText: "text-purple-600", iconBg: "bg-purple-100", iconRing: "ring-purple-50" },
+                { bg: "bg-orange-50/80", hoverBg: "hover:bg-orange-100/50", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconText: "text-orange-600", iconBg: "bg-orange-100", iconRing: "ring-orange-50" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.07 }}
+                  className={`p-8 border border-transparent rounded-[24px] ${theme.bg} ${theme.border} ${theme.glow} ${theme.hoverBg} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm flex gap-6`}
+                >
+                  <div className={`w-12 h-12 rounded-2xl ${theme.iconBg} ring-4 ${theme.iconRing} ${theme.iconText} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500`}>
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-slate-900 font-bold text-lg mb-2 group-hover:text-slate-800">{s.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -352,22 +383,33 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
               const isImage = f.icon.startsWith('http');
               const IconComp = featureIcons[idx % featureIcons.length];
               
+              const colors = [
+                { bg: "bg-blue-50/80", hoverBg: "hover:bg-blue-100/50", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconText: "text-blue-600", iconRing: "ring-blue-100" },
+                { bg: "bg-emerald-50/80", hoverBg: "hover:bg-emerald-100/50", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconText: "text-emerald-600", iconRing: "ring-emerald-100" },
+                { bg: "bg-orange-50/80", hoverBg: "hover:bg-orange-100/50", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconText: "text-orange-600", iconRing: "ring-orange-100" },
+                { bg: "bg-fuchsia-50/80", hoverBg: "hover:bg-fuchsia-100/50", border: "hover:border-fuchsia-300", glow: "hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]", iconText: "text-fuchsia-600", iconRing: "ring-fuchsia-100" },
+                { bg: "bg-cyan-50/80", hoverBg: "hover:bg-cyan-100/50", border: "hover:border-cyan-300", glow: "hover:shadow-[0_8px_30px_rgba(6,182,212,0.15)]", iconText: "text-cyan-600", iconRing: "ring-cyan-100" },
+                { bg: "bg-rose-50/80", hoverBg: "hover:bg-rose-100/50", border: "hover:border-rose-300", glow: "hover:shadow-[0_8px_30px_rgba(225,29,72,0.15)]", iconText: "text-rose-600", iconRing: "ring-rose-100" }
+              ];
+              const theme = colors[idx % colors.length];
+              
               return (
                 <motion.div
                   key={idx}
                   {...fadeUp}
                   transition={{ delay: idx * 0.06 }}
-                  className="group p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all cursor-default"
+                  className={`p-8 rounded-[24px] border border-transparent ${theme.bg} ${theme.border} ${theme.glow} ${theme.hoverBg} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm relative overflow-hidden`}
                 >
-                  <div className="w-14 h-14 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white text-blue-600 transition-colors">
+                  <div className={`absolute top-0 right-0 w-32 h-32 bg-white/50 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                  <div className={`w-14 h-14 bg-white shadow-sm ring-4 ${theme.iconRing} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 relative z-10`}>
                     {isImage ? (
                       <img src={f.icon} alt={f.title} className="w-8 h-8 object-contain" />
                     ) : (
-                      <IconComp className="w-7 h-7" />
+                      <IconComp className={`w-7 h-7 ${theme.iconText}`} />
                     )}
                   </div>
-                  <h3 className="text-slate-900 font-bold text-lg mb-3 group-hover:text-blue-700 transition-colors">{f.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
+                  <h3 className="text-slate-900 font-bold text-lg mb-3 relative z-10">{f.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed relative z-10">{f.desc}</p>
                 </motion.div>
               );
             })}
@@ -387,20 +429,33 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.benefits.map((b, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.07 }}
-                className="flex gap-4 p-7 bg-gradient-to-b from-white to-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all"
-              >
-                <Star className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-slate-900 font-bold mb-2">{b.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {data.benefits.map((b, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/80", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconText: "text-blue-600", iconRing: "ring-blue-100" },
+                { bg: "bg-emerald-50/80", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconText: "text-emerald-600", iconRing: "ring-emerald-100" },
+                { bg: "bg-orange-50/80", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconText: "text-orange-600", iconRing: "ring-orange-100" },
+                { bg: "bg-purple-50/80", border: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]", iconText: "text-purple-600", iconRing: "ring-purple-100" },
+                { bg: "bg-rose-50/80", border: "hover:border-rose-300", glow: "hover:shadow-[0_8px_30px_rgba(225,29,72,0.15)]", iconText: "text-rose-600", iconRing: "ring-rose-100" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.07 }}
+                  className={`flex gap-5 p-8 rounded-[24px] border border-transparent ${theme.bg} ${theme.border} ${theme.glow} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm`}
+                >
+                  <div className={`w-12 h-12 rounded-2xl bg-white shadow-sm ring-4 ${theme.iconRing} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500`}>
+                    <Star className={`w-6 h-6 ${theme.iconText}`} />
+                  </div>
+                  <div>
+                    <h3 className="text-slate-900 font-bold mb-2 text-lg">{b.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -447,20 +502,30 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             <div className="hidden lg:block absolute top-16 left-[12.5%] w-3/4 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 z-0" />
-            {data.process.map((p, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.1 }}
-                className="relative z-10 bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 text-center hover:border-blue-500 hover:shadow-xl transition-all"
-              >
-                <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold mx-auto mb-5 shadow-lg shadow-blue-600/30">
-                  {p.step}
-                </div>
-                <h3 className="text-slate-900 font-bold text-lg mb-3">{p.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{p.desc}</p>
-              </motion.div>
-            ))}
+            {data.process.map((p, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/80", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", numBg: "bg-blue-600", ring: "ring-blue-100" },
+                { bg: "bg-emerald-50/80", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", numBg: "bg-emerald-600", ring: "ring-emerald-100" },
+                { bg: "bg-orange-50/80", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", numBg: "bg-orange-600", ring: "ring-orange-100" },
+                { bg: "bg-purple-50/80", border: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]", numBg: "bg-purple-600", ring: "ring-purple-100" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.1 }}
+                  className={`relative z-10 p-8 rounded-[24px] border border-transparent ${theme.bg} ${theme.border} ${theme.glow} text-center hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm`}
+                >
+                  <div className={`w-14 h-14 rounded-2xl ${theme.numBg} text-white flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md ring-4 ${theme.ring} group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500`}>
+                    {p.step}
+                  </div>
+                  <h3 className="text-slate-900 font-bold text-lg mb-3">{p.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{p.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -529,10 +594,17 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
               </div>
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-              {["Generative AI", "LLM Integration", "Process Automation", "Predictive Analytics", "Computer Vision", "NLP & Chatbots"].map((t, i) => (
-                <div key={i} className="bg-slate-800/60 border border-slate-700 p-5 rounded-xl text-center hover:border-blue-500/50 transition-colors">
-                  <div className="text-2xl mb-2">🤖</div>
-                  <div className="text-white font-semibold text-sm">{t}</div>
+              {[
+                { title: "Generative AI", icon: <Sparkles className="w-8 h-8 mx-auto text-blue-400 mb-2" /> },
+                { title: "LLM Integration", icon: <Network className="w-8 h-8 mx-auto text-purple-400 mb-2" /> },
+                { title: "Process Automation", icon: <Cpu className="w-8 h-8 mx-auto text-emerald-400 mb-2" /> },
+                { title: "Predictive Analytics", icon: <TrendingUp className="w-8 h-8 mx-auto text-orange-400 mb-2" /> },
+                { title: "Computer Vision", icon: <Monitor className="w-8 h-8 mx-auto text-cyan-400 mb-2" /> },
+                { title: "NLP & Chatbots", icon: <Users className="w-8 h-8 mx-auto text-rose-400 mb-2" /> }
+              ].map((t, i) => (
+                <div key={i} className="bg-slate-800/60 border border-slate-700 p-5 rounded-xl text-center hover:border-blue-500/50 hover:bg-slate-800 transition-all group">
+                  <div className="group-hover:scale-110 transition-transform duration-300">{t.icon}</div>
+                  <div className="text-white font-semibold text-sm">{t.title}</div>
                 </div>
               ))}
             </div>
@@ -649,20 +721,35 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             <p className="text-slate-600 text-lg">We don't disappear after deployment. We're your long-term technology partner.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.supportPoints.map((s, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.07 }}
-                className="flex gap-4 p-7 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:border-blue-200 hover:shadow-md transition-all"
-              >
-                <Clock className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-slate-900 font-bold mb-2">{s.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {data.supportPoints.map((s, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/80", hoverBg: "hover:bg-blue-100/50", border: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconText: "text-blue-600", iconRing: "ring-blue-100" },
+                { bg: "bg-emerald-50/80", hoverBg: "hover:bg-emerald-100/50", border: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconText: "text-emerald-600", iconRing: "ring-emerald-100" },
+                { bg: "bg-purple-50/80", hoverBg: "hover:bg-purple-100/50", border: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]", iconText: "text-purple-600", iconRing: "ring-purple-100" },
+                { bg: "bg-orange-50/80", hoverBg: "hover:bg-orange-100/50", border: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconText: "text-orange-600", iconRing: "ring-orange-100" },
+                { bg: "bg-fuchsia-50/80", hoverBg: "hover:bg-fuchsia-100/50", border: "hover:border-fuchsia-300", glow: "hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]", iconText: "text-fuchsia-600", iconRing: "ring-fuchsia-100" },
+                { bg: "bg-cyan-50/80", hoverBg: "hover:bg-cyan-100/50", border: "hover:border-cyan-300", glow: "hover:shadow-[0_8px_30px_rgba(6,182,212,0.15)]", iconText: "text-cyan-600", iconRing: "ring-cyan-100" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.07 }}
+                  className={`flex gap-5 p-8 border border-transparent rounded-[24px] ${theme.bg} ${theme.border} ${theme.glow} ${theme.hoverBg} hover:-translate-y-1 transition-all duration-500 group backdrop-blur-sm relative overflow-hidden`}
+                >
+                  <div className={`absolute top-0 right-0 w-32 h-32 bg-white/40 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                  <div className={`w-12 h-12 bg-white rounded-2xl shadow-sm ring-4 ${theme.iconRing} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500 relative z-10`}>
+                    <Clock className={`w-6 h-6 ${theme.iconText}`} />
+                  </div>
+                  <div className="relative z-10">
+                    <h3 className="text-slate-900 font-bold mb-2 text-lg">{s.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -679,17 +766,32 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             </h2>
           </div>
           <div className="space-y-5">
-            {data.faqs.map((faq, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.06 }}
-                className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm"
-              >
-                <h3 className="text-slate-900 font-bold text-lg mb-3">{faq.q}</h3>
-                <p className="text-slate-600 leading-relaxed">{faq.a}</p>
-              </motion.div>
-            ))}
+            {data.faqs.map((faq, idx) => {
+              const colors = [
+                { bg: "bg-blue-50/60", hoverBg: "hover:bg-blue-50", border: "hover:border-blue-200" },
+                { bg: "bg-emerald-50/60", hoverBg: "hover:bg-emerald-50", border: "hover:border-emerald-200" },
+                { bg: "bg-purple-50/60", hoverBg: "hover:bg-purple-50", border: "hover:border-purple-200" }
+              ];
+              const theme = colors[idx % colors.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.06 }}
+                  className={`p-8 rounded-[24px] border border-transparent ${theme.bg} ${theme.border} ${theme.hoverBg} hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}
+                >
+                  <h3 className="text-slate-900 font-bold text-lg mb-3 flex items-start gap-3">
+                    <span className="text-blue-500 font-black text-xl shrink-0">Q.</span>
+                    {faq.q}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed flex items-start gap-3">
+                    <span className="text-slate-400 font-black text-xl shrink-0 opacity-0">Q.</span>
+                    {faq.a}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

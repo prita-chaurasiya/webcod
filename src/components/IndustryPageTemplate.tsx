@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { 
   CheckCircle2, ArrowRight, Zap, ShieldCheck, 
-  TrendingUp, Clock, Users, Star, ChevronRight
+  TrendingUp, Clock, Users, Star, ChevronRight, Sparkles, Network, Cpu, Monitor, Settings
 } from "lucide-react";
 
 export interface IndustryService {
@@ -396,10 +396,17 @@ export function IndustryPageTemplate({ data }: { data: IndustryPageData }) {
             </div>
             <div className="lg:w-1/2">
               <div className="grid grid-cols-2 gap-4">
-                {["Machine Learning", "Generative AI", "Process Automation", "Predictive Analytics", "Computer Vision", "NLP & Chatbots"].map((tech, i) => (
-                  <div key={i} className="bg-slate-800/60 border border-slate-700 p-5 rounded-xl text-center hover:border-blue-500/50 transition-colors">
-                    <div className="text-2xl mb-2">🤖</div>
-                    <div className="text-white font-semibold text-sm">{tech}</div>
+                {[
+                  { title: "Machine Learning", icon: <Cpu className="w-8 h-8 mx-auto text-emerald-400 mb-2" /> },
+                  { title: "Generative AI", icon: <Sparkles className="w-8 h-8 mx-auto text-blue-400 mb-2" /> },
+                  { title: "Process Automation", icon: <Settings className="w-8 h-8 mx-auto text-orange-400 mb-2" /> },
+                  { title: "Predictive Analytics", icon: <TrendingUp className="w-8 h-8 mx-auto text-purple-400 mb-2" /> },
+                  { title: "Computer Vision", icon: <Monitor className="w-8 h-8 mx-auto text-cyan-400 mb-2" /> },
+                  { title: "NLP & Chatbots", icon: <Users className="w-8 h-8 mx-auto text-rose-400 mb-2" /> }
+                ].map((tech, i) => (
+                  <div key={i} className="bg-slate-800/60 border border-slate-700 p-5 rounded-xl text-center hover:border-blue-500/50 transition-all group">
+                    <div className="group-hover:scale-110 transition-transform duration-300">{tech.icon}</div>
+                    <div className="text-white font-semibold text-sm">{tech.title}</div>
                   </div>
                 ))}
               </div>

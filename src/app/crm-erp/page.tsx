@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise CRM & ERP Development",
   heroSubtitle: "Unify your business operations. We engineer custom Customer Relationship Management (CRM) and Enterprise Resource Planning (ERP) systems tailored to your exact workflows, eliminating data silos and driving operational efficiency.",
-  heroImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "CRM & ERP",
   category: "Systems & Automation",
 
   overviewHeading: "Software That Molds to Your Business, Not the Other Way Around",
   overviewText: "Off-the-shelf CRM and ERP platforms are built for the 'average' business. But enterprise leaders don't operate average businesses—they have unique workflows, specialized supply chains, and complex sales cycles. Forcing your team to adapt to generic software destroys productivity. WebCodian engineers custom, cloud-native CRM and ERP systems that map perfectly to your operational reality, integrating sales, finance, inventory, and HR into a single, cohesive ecosystem.",
-  overviewImg: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom ERP systems (Finance, Inventory, Manufacturing, HR)",
     "Bespoke CRM platforms tailored to complex B2B/B2C sales cycles",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Automated Daily Backups and Multi-Region Disaster Recovery",
     "Compliance with GDPR, HIPAA, SOC 2, and India DPDP Act",
   ],
-  securityImg: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Tier-1 Auto Parts Manufacturer — Pune",

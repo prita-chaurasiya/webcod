@@ -4,13 +4,13 @@ import { PremiumWebDevOverview } from "@/components/PremiumWebDevOverview";
 const data: SolutionPageData = {
   heroTitle: "Enterprise Web Development Solutions That Drive Business Growth",
   heroSubtitle: "We engineer high-performance, SEO-optimized, and scalable web applications — from corporate portals and CMS platforms to progressive web apps and API-integrated digital ecosystems.",
-  heroImg: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Web Development",
   category: "Web & Software Solutions",
 
   overviewHeading: "Beyond Websites — Engineering Digital Engines for Business",
   overviewText: "The modern web is the most powerful distribution channel for any business. A well-engineered website or web application isn't just a digital brochure — it's a revenue engine, a customer acquisition system, and an operational backbone. WebCodian has delivered 500+ web projects for clients across India, the Middle East, UK, and USA — from lightning-fast marketing sites to complex multi-tenant SaaS platforms and enterprise portals managing millions of daily users.",
-  overviewImg: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Corporate websites, microsites, and landing page systems",
     "CMS-driven web platforms (headless, WordPress, custom)",
@@ -95,7 +95,7 @@ const data: SolutionPageData = {
     "Role-Based Access Control (RBAC) for All Admin Functions",
     "Automated Dependency Vulnerability Scanning (Snyk, Dependabot)",
   ],
-  securityImg: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "B2B SaaS Company — Hyderabad, India",

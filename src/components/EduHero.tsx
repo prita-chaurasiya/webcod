@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2000&auto=format&fit=crop",
     badge: "Since 2018 • INDIA • DUBAI • USA",
     title1: "Software",
     title2: "That Ships.",
@@ -15,7 +15,7 @@ const slides = [
     description: "WebCodian is a premium software development and AI automation company. We build custom software, mobile apps and AI agents that remove the work slowing your business down."
   },
   {
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000&auto=format&fit=crop",
     badge: "Enterprise Solutions • ISO Certified",
     title1: "Digital",
     title2: "Transformation.",
@@ -23,7 +23,7 @@ const slides = [
     description: "We help businesses scale with intelligent, custom-built enterprise software. From legacy system modernization to fully-fledged SaaS product development."
   },
   {
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2000&auto=format&fit=crop",
     badge: "Growth Marketing • Data Driven",
     title1: "Marketing",
     title2: "That Converts.",

@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Premium Mobile App Development",
   heroSubtitle: "Engineer native-feeling, high-performance mobile applications for iOS and Android. From consumer-facing startups to complex enterprise mobility solutions, we build apps that dominate the App Store.",
-  heroImg: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Mobile App Dev",
   category: "Mobile & Web Solutions",
 
   overviewHeading: "Putting Your Business in the Pockets of Millions",
   overviewText: "In a mobile-first world, a poorly designed app is worse than having no app at all. Users expect instant load times, intuitive gestures, and flawless offline capabilities. WebCodian engineers premium mobile applications using modern frameworks like React Native and Flutter, allowing you to launch on both iOS and Android simultaneously without compromising on native performance or design.",
-  overviewImg: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Cross-Platform Development (React Native, Flutter)",
     "Native iOS (Swift) and Android (Kotlin) Engineering",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Obfuscation of source code to prevent reverse engineering of the APK/IPA",
     "Biometric-gated application execution (App Lock)",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National Logistics Fleet — Delhi NCR",

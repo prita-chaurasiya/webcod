@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise WhatsApp Business API Solutions",
   heroSubtitle: "Engage customers where they already are. We integrate the official WhatsApp Business API to automate support, send rich media broadcasts, and drive conversational commerce at an enterprise scale.",
-  heroImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Bulk WhatsApp",
   category: "Systems & Automation",
 
   overviewHeading: "The Future of Customer Engagement is Conversational",
   overviewText: "With over 2 billion active users, WhatsApp is the most ubiquitous communication channel on the planet. Traditional SMS is limited to plain text, and emails are increasingly ignored. WhatsApp allows enterprises to send rich media (images, videos, PDFs), interactive buttons, and product catalogs directly to a user's lock screen. WebCodian engineers enterprise integrations utilizing the official WhatsApp Business API, enabling you to automate customer support, send high-converting promotional broadcasts, and process transactions entirely within a chat thread.",
-  overviewImg: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Official WhatsApp Business API integration (Green Tick Verification)",
     "Rich Media Broadcasts (Images, Videos, Documents, Interactive Buttons)",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Compliance with GDPR, CCPA, and India DPDP Act regulations",
     "Secure, scalable cloud infrastructure (AWS/GCP) for data processing",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "Premium D2C Fashion Brand",

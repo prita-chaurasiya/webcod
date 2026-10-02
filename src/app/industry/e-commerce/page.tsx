@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Enterprise E-Commerce & Retail Technology Solutions",
   heroSubtitle: "Scale your online retail business with custom multi-vendor marketplaces, AI-powered personalization engines, seamless payment gateways, and real-time inventory intelligence built for hyper-growth.",
-  heroImg: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "E-Commerce",
   breadcrumbHref: "/industry/e-commerce",
 
   overviewHeading: "Powering the Next Generation of Online Commerce",
   overviewText: "India's e-commerce market is projected to reach $350 billion by 2030, and global e-commerce continues its relentless upward trajectory. WebCodian engineers scalable, conversion-optimized e-commerce platforms — from D2C storefronts and B2B wholesale portals to complex multi-vendor marketplaces — that are built to handle traffic spikes, process millions of transactions, and deliver exceptional shopping experiences that convert browsers into loyal buyers.",
-  overviewImg: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Multi-vendor marketplace platforms with seller dashboards and commissions",
     "AI-powered product recommendations and personalization engines",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Automated Chargeback Management & Dispute Resolution",
     "GDPR & India IT Act Compliant Data Storage",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "How is your custom platform better than Shopify or Magento?", a: "Custom platforms offer 100% ownership, unlimited scalability, no transaction fees, and the ability to build any feature specific to your business model that no SaaS platform will ever support." },

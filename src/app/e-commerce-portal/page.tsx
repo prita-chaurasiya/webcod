@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise E-Commerce Portal Development",
   heroSubtitle: "Build highly scalable, high-converting digital storefronts and B2B portals. We engineer custom multi-vendor marketplaces, headless e-commerce architectures, and complex integration systems for market leaders.",
-  heroImg: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "E-Commerce Portal",
   category: "Mobile & Web Solutions",
 
   overviewHeading: "Architecting Digital Storefronts Built for Massive Scale",
   overviewText: "Off-the-shelf e-commerce templates work fine for startups, but enterprise retail and B2B commerce demand more. They require split-second page loads, complex pricing engines, real-time ERP/WMS synchronization, and architectures capable of surviving massive traffic spikes during seasonal sales. WebCodian engineers custom e-commerce ecosystems—from headless Shopify/Magento setups to fully bespoke B2B multi-vendor marketplaces—designed to maximize conversion and streamline supply chain operations.",
-  overviewImg: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Headless E-Commerce Architecture (Next.js + Shopify/Magento/Commercetools)",
     "B2B and B2C Custom Multi-Vendor Marketplaces",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "End-to-End Encryption (AES-256) for Customer PII",
     "Regular Penetration Testing and Automated Vulnerability Scanning",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National B2B Industrial Supplier — Pune",

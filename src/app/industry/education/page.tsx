@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Digital Transformation for Education & EdTech",
   heroSubtitle: "Empower students, teachers, and institutions with custom LMS platforms, AI-adaptive learning engines, and comprehensive ERP systems that redefine the modern educational experience.",
-  heroImg: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Education",
   breadcrumbHref: "/industry/education",
 
   overviewHeading: "Building the Classroom of the Future",
   overviewText: "From K-12 schools and universities to EdTech startups and corporate training platforms, education technology is fundamentally changing how knowledge is created, delivered, and assessed. WebCodian engineers powerful, scalable digital education ecosystems — from custom Learning Management Systems and AI-adaptive curricula to complete institutional ERPs — that make learning more accessible, measurable, and impactful for millions of learners.",
-  overviewImg: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1561070791260-0006a28492bf?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom LMS with AI-adaptive content delivery and gamification",
     "Student portals with performance analytics, assignments, and scheduling",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Regular Penetration Testing & Security Audits",
     "GDPR-Ready Data Residency & Right to Erasure Support",
   ],
-  securityImg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can your LMS integrate with existing college management systems?", a: "Yes. We specialize in API-based integrations with popular ERPs (Fedena, EduSys, Campuswire) and can build custom connectors for legacy systems." },

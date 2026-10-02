@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Bulk SMS API & Messaging Solutions",
   heroSubtitle: "Deliver critical OTPs, transactional alerts, and high-conversion promotional campaigns instantly. We provide highly reliable, API-driven Bulk SMS infrastructure with guaranteed global delivery rates.",
-  heroImg: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Bulk SMS",
   category: "Systems & Automation",
 
   overviewHeading: "Mission-Critical Messaging at Infinite Scale",
   overviewText: "Despite the rise of modern chat apps, SMS remains the only universally accessible communication channel, boasting a 98% open rate. For enterprise applications—like banking OTPs, delivery alerts, and urgent system notifications—delivery failure is not an option. WebCodian provides a robust, developer-friendly Bulk SMS infrastructure that integrates seamlessly into your software, ensuring your messages are delivered instantly, securely, and compliantly anywhere in the world.",
-  overviewImg: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "High-speed Transactional SMS (OTPs, Alerts, Notifications)",
     "Targeted Promotional SMS campaigns with ROI tracking",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Secure Webhook authentication for delivery receipts",
     "Automated redaction of sensitive data (like OTPs) from system logs",
   ],
-  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "FinTech Lending App — Mumbai",

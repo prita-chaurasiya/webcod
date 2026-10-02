@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Software Maintenance & Support",
   heroSubtitle: "Protect your digital investments. We provide 24/7 proactive monitoring, security patching, performance optimization, and continuous feature development to keep your mission-critical software running flawlessly.",
-  heroImg: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Maintenance",
   category: "Systems & Automation",
 
   overviewHeading: "Software Doesn't Age Like Wine. It Needs Active Management.",
   overviewText: "Launch day is only the beginning of a software product's lifecycle. Without active maintenance, codebases decay, dependencies become vulnerable, and performance degrades under scale. WebCodian provides comprehensive enterprise maintenance and support services for web applications, mobile apps, and custom software. Whether we built it or you are handing over an existing legacy system, we ensure your digital infrastructure remains secure, performant, and aligned with your evolving business goals.",
-  overviewImg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "24/7/365 Uptime Monitoring and Incident Response",
     "Security Patching and Dependency Updates",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Quarterly access audits and IAM permission reviews",
     "Maintaining compliance with GDPR, HIPAA, and SOC 2 standards",
   ],
-  securityImg: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National Logistics Company",

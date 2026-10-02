@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Smart Restaurant & Hospitality Technology Solutions",
   heroSubtitle: "Transform your restaurant operations with custom POS systems, QR ordering platforms, kitchen display systems, table reservation engines, and AI-powered loyalty programs built for the modern F&B enterprise.",
-  heroImg: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1527168027773-0cc890c4f42e?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Restaurant",
   breadcrumbHref: "/industry/restaurant",
 
   overviewHeading: "Engineering Exceptional Dining Experiences Through Technology",
   overviewText: "India's food service industry is projected to reach ₹7.76 lakh crore by 2028, driven by rising disposable incomes, urbanization, and the explosion of food delivery platforms. In this intensely competitive landscape, restaurants that leverage smart technology to improve operational efficiency, reduce food waste, enhance guest experiences, and drive repeat visits will capture disproportionate market share. WebCodian engineers comprehensive restaurant technology ecosystems — from custom POS and QR ordering to kitchen automation, inventory intelligence, and AI-powered loyalty programs — tailored for every F&B format, from standalone restaurants to multi-city chains.",
-  overviewImg: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom POS systems with cloud-based multi-outlet management",
     "QR code-based contactless ordering and payment systems",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Tamper-Evident Audit Logs for All Transactions & Voids",
     "Automated Daily Backup of All Sales & Inventory Data",
   ],
-  securityImg: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Does your POS work offline if the internet is down?", a: "Yes. Our POS is designed with an offline-first architecture that continues to take orders and process transactions locally, syncing automatically to the cloud when connectivity is restored." },

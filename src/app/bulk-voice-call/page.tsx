@@ -3,13 +3,13 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise Bulk Voice Call & IVR Solutions",
   heroSubtitle: "Deliver automated voice broadcasts, critical alerts, and interactive voice responses (IVR) at scale. Reach thousands of customers simultaneously with personalized audio messages and seamless call routing.",
-  heroImg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Bulk Voice Call",
   category: "Systems & Automation",
 
   overviewHeading: "High-Impact Audio Communication at Scale",
   overviewText: "While text-based messaging is powerful, the human voice remains the most urgent and engaging medium for critical communications. Whether you need to broadcast a political campaign message to millions, deliver a time-sensitive OTP, or route customer support queries via an intelligent IVR, WebCodian provides the robust, carrier-grade infrastructure required. We engineer scalable Voice APIs that allow your software to trigger automated calls globally, with crystal-clear audio quality and real-time analytics.",
-  overviewImg: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1560518883-ce09059eeefa?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Automated Voice Broadcasting for marketing and alerts",
     "Voice OTPs for secure, secondary two-factor authentication",
@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Strict time-of-day restrictions enforced at the infrastructure level",
     "Compliance with PCI-DSS for IVR payment collection and HIPAA for healthcare",
   ],
-  securityImg: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National Healthcare Provider — India",

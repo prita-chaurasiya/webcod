@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Industry 4.0 Solutions for Manufacturing & Industrial Enterprises",
   heroSubtitle: "Modernize your factory floor with custom ERP systems, IoT-powered production intelligence, AI quality control, and supply chain digitization engineered for the modern manufacturing enterprise.",
-  heroImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Manufacturing",
   breadcrumbHref: "/industry/manufacturing",
 
   overviewHeading: "Powering the Smart Factory of Tomorrow",
   overviewText: "Indian manufacturing is at a critical inflection point. With the PLI scheme, global supply chain realignment, and the China+1 strategy, Indian manufacturers have a once-in-a-generation opportunity to capture global market share. But this opportunity requires operational excellence that manual processes simply cannot deliver. WebCodian engineers comprehensive Industry 4.0 solutions — from custom ERP and MES systems to IoT sensor networks and AI quality inspection — that help manufacturers achieve the productivity, quality, and traceability standards demanded by global customers.",
-  overviewImg: "https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom ERP systems designed for discrete and process manufacturing",
     "MES (Manufacturing Execution System) with real-time production tracking",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Regular OT Vulnerability Assessments & Penetration Testing",
     "Disaster Recovery Planning for Production-Critical Systems",
   ],
-  securityImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can you integrate with our existing CNC machines and PLCs?", a: "Yes. We integrate with machines from all major manufacturers (Fanuc, Siemens, Mitsubishi, Haas) using OPC-UA, MQTT, and Modbus protocols, as well as legacy machines via edge computing devices." },

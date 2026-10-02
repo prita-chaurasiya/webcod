@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Smart Digital Solutions for Real Estate & PropTech",
   heroSubtitle: "Transform property management, lead generation, and buyer experiences with custom CRM platforms, AI property search engines, virtual tours, and intelligent booking systems built for the modern real estate enterprise.",
-  heroImg: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Real Estate",
   breadcrumbHref: "/industry/real-estate",
 
   overviewHeading: "Redefining Real Estate Through Digital Innovation",
   overviewText: "The real estate industry is experiencing a seismic digital shift. Buyers now begin 97% of property searches online, and agents who leverage digital tools close deals 3x faster than those relying on traditional methods. WebCodian engineers comprehensive PropTech solutions — from AI-powered property portals and CRM systems to virtual reality tours and automated lead management — that help developers, agencies, and property managers generate more qualified leads, close deals faster, and deliver exceptional buyer experiences.",
-  overviewImg: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom property portals with AI-powered search and recommendations",
     "Real Estate CRM with automated lead nurturing and pipeline tracking",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "Immutable Audit Trails for All Transactions",
     "AML (Anti-Money Laundering) Transaction Monitoring",
   ],
-  securityImg: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can you build a portal like MagicBricks or 99acres?", a: "Yes. We build custom property listing portals with advanced AI-powered search, agent/developer dashboards, and monetization features. The advantage over generic portals is complete control over your brand, data, and feature roadmap." },

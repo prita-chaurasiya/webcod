@@ -3,13 +3,13 @@ import { IndustryPageTemplate, IndustryPageData } from "@/components/IndustryPag
 const data: IndustryPageData = {
   heroTitle: "Enterprise CMS & Digital Publishing Technology for News & Media",
   heroSubtitle: "Power your newsroom with custom Content Management Systems, AI editorial workflows, monetization engines, and real-time analytics platforms built for the demands of modern digital publishing.",
-  heroImg: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "News & Blog",
   breadcrumbHref: "/industry/news-blog",
 
   overviewHeading: "Empowering Digital Publishers with Enterprise-Grade Technology",
   overviewText: "The digital media landscape has never been more competitive, more fragmented, or more demanding. News organizations, independent publishers, and media conglomerates all face the same fundamental challenge: delivering high-quality content at speed, at scale, and across every platform, while building sustainable revenue in an era of ad-blocker proliferation and social media disruption. WebCodian engineers custom digital publishing platforms — from headless CMS and AI editorial assistants to programmatic ad integration, subscription management, and real-time content analytics — that give media organizations the technological foundation to compete and win.",
-  overviewImg: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=2000&auto=format&fit=crop",
+  overviewImg: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop",
   overviewBullets: [
     "Custom headless CMS with multi-platform publishing workflows",
     "AI-assisted editorial tools for writing, SEO, and headline optimization",
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     "GDPR-Compliant Subscriber Data Management",
     "Encrypted Admin Access & VPN-Only Backend Access",
   ],
-  securityImg: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2000&auto=format&fit=crop",
 
   faqs: [
     { q: "Can you migrate our existing WordPress or Drupal site to your custom CMS?", a: "Yes. We handle complete content migrations from WordPress, Drupal, Joomla, and most major CMS platforms with full URL preservation for SEO continuity." },
