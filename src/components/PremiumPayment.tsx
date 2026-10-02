@@ -24,7 +24,7 @@ export function PremiumPayment() {
   return (
     <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -91,7 +91,7 @@ export function PremiumPayment() {
               transition={{ delay: 0.1 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <QrCode className="w-5 h-5 text-blue-500" />
+                <QrCode className="w-5 h-5 text-orange-500" />
                 <h3 className="text-xl font-bold text-slate-800 uppercase tracking-wider">QR Payment</h3>
               </div>
 
@@ -121,20 +121,20 @@ export function PremiumPayment() {
             className="perspective-[1000px]"
           >
             <div className="bg-gradient-to-b from-white to-slate-50 rounded-[2.5rem] p-8 md:p-12 shadow-lg border border-slate-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
               {/* Tabs */}
               <div className="flex items-center gap-4 p-2 bg-slate-50 rounded-[18px] mb-10 relative z-10">
                 <button 
                   onClick={() => setActiveTab("razorpay")}
-                  className={`flex-1 py-3 px-6 rounded-[18px] font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeTab === "razorpay" ? "bg-white text-blue-600 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}
+                  className={`flex-1 py-3 px-6 rounded-[18px] font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeTab === "razorpay" ? "bg-white text-orange-500 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}
                 >
                   <CreditCard className="w-4 h-4" />
                   Razorpay
                 </button>
                 <button 
                   onClick={() => setActiveTab("paypal")}
-                  className={`flex-1 py-3 px-6 rounded-[18px] font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeTab === "paypal" ? "bg-white text-blue-900 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}
+                  className={`flex-1 py-3 px-6 rounded-[18px] font-bold text-sm transition-all flex items-center justify-center gap-2 ${activeTab === "paypal" ? "bg-white text-orange-900 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}
                 >
                   {/* Simplistic PayPal icon using text/lock */}
                   <Lock className="w-4 h-4" />
@@ -205,7 +205,7 @@ export function PremiumPayment() {
                     </div>
 
                     <div className="pt-4">
-                      <button type="submit" className={`w-full text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 group ${activeTab === 'razorpay' ? 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.3)]' : 'bg-[#003087] hover:bg-[#001c52] shadow-[0_0_20px_rgba(0,48,135,0.3)]'}`}>
+                      <button type="submit" className={`w-full text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 group ${activeTab === 'razorpay' ? 'bg-orange-500 hover:bg-orange-700 shadow-[0_0_20px_rgba(37,99,235,0.3)]' : 'bg-[#003087] hover:bg-[#001c52] shadow-[0_0_20px_rgba(0,48,135,0.3)]'}`}>
                         <Lock className="w-5 h-5" />
                         Pay Securely with {activeTab === "razorpay" ? "Razorpay" : "PayPal"}
                       </button>

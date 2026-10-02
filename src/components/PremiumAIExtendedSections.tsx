@@ -36,7 +36,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
           
           <div className="relative">
             {/* Connecting Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-blue-100 -translate-y-1/2 z-0"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-orange-100 -translate-y-1/2 z-0"></div>
             
             <div className="grid md:grid-cols-4 gap-8 relative z-10">
               {[
@@ -46,8 +46,8 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
                 { step: "04", title: "Optimization", desc: "Continuous model fine-tuning and support." }
               ].map((item, idx) => (
                 <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-xl relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[100px] -z-10 group-hover:scale-150 transition-transform duration-500"></div>
-                  <div className="text-5xl font-bold text-slate-100 mb-6 group-hover:text-blue-600/10 transition-colors">{item.step}</div>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-[100px] -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                  <div className="text-5xl font-bold text-slate-100 mb-6 group-hover:text-orange-500/10 transition-colors">{item.step}</div>
                   <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
                   <p className="text-slate-600 font-medium">{item.desc}</p>
                 </div>
@@ -66,7 +66,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
           
           <div className="flex flex-wrap justify-center gap-4">
             {["OpenAI", "Claude", "Gemini", "Llama 3", "LangChain", "LangGraph", "CrewAI", "Python", "FastAPI", "Node.js", "React", "Next.js", "Docker", "AWS", "Azure", "Google Cloud", "Vector DBs", "RAG", "MCP", "n8n", "Make", "Zapier"].map((tech) => (
-              <div key={tech} className="bg-white px-6 py-3 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-colors cursor-default">
+              <div key={tech} className="bg-white px-6 py-3 rounded-full border border-slate-200 shadow-sm font-bold text-slate-700 hover:border-orange-500 hover:text-orange-500 transition-colors cursor-default">
                 {tech}
               </div>
             ))}
@@ -91,8 +91,8 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               { icon: Plane, name: "Travel" },
               { icon: Database, name: "Logistics" }
             ].map((ind, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-blue-600 hover:text-white transition-all group border border-slate-100 shadow-sm cursor-default">
-                <ind.icon className="w-10 h-10 text-blue-600 group-hover:text-white mb-4 transition-colors" />
+              <div key={i} className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl hover:bg-orange-500 hover:text-white transition-all group border border-slate-100 shadow-sm cursor-default">
+                <ind.icon className="w-10 h-10 text-orange-500 group-hover:text-white mb-4 transition-colors" />
                 <span className="font-bold text-lg">{ind.name}</span>
               </div>
             ))}
@@ -125,7 +125,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
       </section>
 
       {/* 11 & 12. Why Choose Us & Metrics */}
-      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-blue-600 text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-orange-500 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')] opacity-10 bg-cover mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         
@@ -136,7 +136,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               <div className="space-y-6">
                 {["Elite Engineering Talent", "Strict Data Privacy & ISO Compliance", "Zero-Downtime Deployments", "Dedicated Post-Launch Support"].map((point, i) => (
                   <div key={i} className="flex items-center gap-4">
-                    <CheckCircle2 className="w-8 h-8 text-blue-300 flex-shrink-0" />
+                    <CheckCircle2 className="w-8 h-8 text-orange-300 flex-shrink-0" />
                     <span className="text-xl font-bold">{point}</span>
                   </div>
                 ))}
@@ -152,7 +152,7 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               ].map((stat, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-colors">
                   <div className="text-4xl font-bold mb-2">{stat.val}</div>
-                  <div className="text-blue-700 font-bold uppercase tracking-wider text-sm">{stat.label}</div>
+                  <div className="text-orange-700 font-bold uppercase tracking-wider text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -172,11 +172,11 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
               <div key={i} className="bg-gradient-to-b from-white to-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <button 
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full px-8 py-6 flex items-center justify-between font-bold text-lg text-left text-slate-800 hover:text-blue-600 transition-colors"
+                  className="w-full px-8 py-6 flex items-center justify-between font-bold text-lg text-left text-slate-800 hover:text-orange-500 transition-colors"
                 >
                   {faq.q}
                   <span className="flex-shrink-0 ml-4">
-                    {openFaq === i ? <Minus className="w-5 h-5 text-blue-600" /> : <Plus className="w-5 h-5 text-slate-600" />}
+                    {openFaq === i ? <Minus className="w-5 h-5 text-orange-500" /> : <Plus className="w-5 h-5 text-slate-600" />}
                   </span>
                 </button>
                 <AnimatePresence>
@@ -202,16 +202,16 @@ export function PremiumAIExtendedSections({ useCases, faqs }: PremiumAIExtendedP
         <div className="container mx-auto px-4 max-w-7xl">
           <h3 className="text-2xl font-bold text-[#0f2c59] mb-8 text-center">Explore Other AI Solutions</h3>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/ai-agent-development" className="font-bold text-slate-600 hover:text-blue-600 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <Link href="/ai-agent-development" className="font-bold text-slate-600 hover:text-orange-500 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               AI Agents <ChevronRight className="w-4 h-4" />
             </Link>
-            <Link href="/generative-ai" className="font-bold text-slate-600 hover:text-blue-600 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <Link href="/generative-ai" className="font-bold text-slate-600 hover:text-orange-500 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               Generative AI <ChevronRight className="w-4 h-4" />
             </Link>
-            <Link href="/chatbot-voice-ai" className="font-bold text-slate-600 hover:text-blue-600 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <Link href="/chatbot-voice-ai" className="font-bold text-slate-600 hover:text-orange-500 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               Voice AI <ChevronRight className="w-4 h-4" />
             </Link>
-            <Link href="/ai-saas-product" className="font-bold text-slate-600 hover:text-blue-600 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <Link href="/ai-saas-product" className="font-bold text-slate-600 hover:text-orange-500 flex items-center gap-2 bg-slate-50 px-8 py-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               AI SaaS <ChevronRight className="w-4 h-4" />
             </Link>
           </div>

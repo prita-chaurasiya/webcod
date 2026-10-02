@@ -53,7 +53,7 @@ export function PremiumInternshipForm() {
     <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[100px] pointer-events-none"></div>
       
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         
@@ -72,13 +72,13 @@ export function PremiumInternshipForm() {
             </div>
             
             <div className="relative z-10 mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-blue-300 font-semibold text-sm mb-6 backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-orange-300 font-semibold text-sm mb-6 backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
                 INTERNSHIP PROGRAM
               </div>
               <h2 className="text-4xl font-bold mb-6 leading-tight">
                 Start Your <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400">Learning Journey</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-400">Learning Journey</span>
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
                 Join our premium training programs and build real-world skills working alongside industry professionals on live projects.
@@ -260,7 +260,7 @@ export function PremiumInternshipForm() {
                       <div>
                         <label className="block text-sm font-semibold text-slate-700 mb-2">Upload Resume <span className="text-[var(--primary)]">*</span></label>
                         <div className="relative group cursor-pointer">
-                          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-blue-500 rounded-[18px] blur opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-orange-500 rounded-[18px] blur opacity-10 group-hover:opacity-20 transition-opacity"></div>
                           <div className="relative border-2 border-dashed border-slate-300 rounded-[18px] p-8 text-center bg-slate-50 hover:bg-white transition-colors">
                             <Upload className="w-8 h-8 text-slate-500 mx-auto mb-3" />
                             <span className="text-slate-500 text-sm font-medium">Click to upload your resume (PDF/DOC)</span>

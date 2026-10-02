@@ -55,13 +55,13 @@ export function AboutBreadcrumb({
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 backdrop-blur-md border border-blue-400/30 text-blue-300 text-xs font-bold tracking-wider uppercase mb-4 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/20 backdrop-blur-md border border-orange-400/30 text-orange-300 text-xs font-bold tracking-wider uppercase mb-4 shadow-sm"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-400"></span>
               </span>
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <Sparkles className="w-3.5 h-3.5 text-orange-400" />
               <span>{badge}</span>
             </motion.div>
 
@@ -100,7 +100,7 @@ export function AboutBreadcrumb({
                     key={idx}
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-slate-200 font-medium backdrop-blur-sm"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-400" />
                     {item}
                   </span>
                 ))}
@@ -130,18 +130,18 @@ export function AboutBreadcrumb({
                         href={crumb.href}
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-white transition-all duration-200 py-1 px-2 rounded-lg hover:bg-white/10 group"
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-blue-400 group-hover:scale-110 transition-transform" />}
+                        {isFirst && <Home className="w-3.5 h-3.5 text-orange-400 group-hover:scale-110 transition-transform" />}
                         <span>{crumb.label}</span>
                       </Link>
                     ) : (
                       <span
                         className={`inline-flex items-center gap-1.5 text-xs font-bold py-1 px-2.5 rounded-lg ${
                           isLast
-                            ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                            ? "bg-orange-500/20 text-orange-300 border border-orange-500/30"
                             : "text-slate-400"
                         }`}
                       >
-                        {isFirst && <Home className="w-3.5 h-3.5 text-blue-400" />}
+                        {isFirst && <Home className="w-3.5 h-3.5 text-orange-400" />}
                         <span>{crumb.label}</span>
                       </span>
                     )}

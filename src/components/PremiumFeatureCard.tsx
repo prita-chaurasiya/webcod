@@ -71,7 +71,7 @@ export function PremiumFeatureCard({
         </p>
         <Link 
           href={href} 
-          className="inline-flex items-center gap-2 text-blue-700 font-bold text-lg hover:text-blue-900 transition-colors group w-fit"
+          className="inline-flex items-center gap-2 text-orange-700 font-bold text-lg hover:text-orange-900 transition-colors group w-fit"
         >
           {linkText} 
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

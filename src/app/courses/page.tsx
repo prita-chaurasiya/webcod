@@ -50,7 +50,7 @@ export default function CoursesPage() {
                 placeholder="Search courses (e.g. React, Python)" 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-50 border-transparent focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-50 border-transparent focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-all outline-none"
               />
             </div>
             <div className="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
@@ -59,7 +59,7 @@ export default function CoursesPage() {
                   key={i}
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
-                    activeCategory === cat ? 'bg-blue-600 text-white shadow-md' : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
+                    activeCategory === cat ? 'bg-orange-500 text-white shadow-md' : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
                   }`}
                 >
                   {cat}
@@ -83,7 +83,7 @@ export default function CoursesPage() {
               >
                 {/* Course Image */}
                 <div className="relative h-[220px] overflow-hidden bg-slate-100">
-                  <div className="absolute inset-0 bg-blue-900/10 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-orange-900/10 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                   <img 
                     src={course.image} 
                     alt={course.title}
@@ -91,7 +91,7 @@ export default function CoursesPage() {
                   />
                   {/* Floating Badge */}
                   <div className="absolute top-4 right-4 z-20">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-blue-600 shadow-sm">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-orange-500 shadow-sm">
                       {course.category}
                     </span>
                   </div>
@@ -99,7 +99,7 @@ export default function CoursesPage() {
 
                 {/* Course Content */}
                 <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">{course.title}</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-orange-500 transition-colors">{course.title}</h3>
                   <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{course.desc}</p>
                   
                   <div className="mb-8 p-4 bg-slate-50 rounded-[16px] border border-slate-100">
@@ -108,12 +108,12 @@ export default function CoursesPage() {
                   </div>
                   
                   <div className="flex items-center justify-between mt-auto">
-                    <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1">
+                    <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-orange-500 transition-colors flex items-center gap-1">
                       View Details
                     </Link>
                     <Link 
                       href="/contact" 
-                      className="inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 rounded-full hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.5)] hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-indigo-600 px-6 py-3 rounded-full hover:from-orange-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.5)] hover:-translate-y-0.5"
                     >
                       Enroll Now <ArrowRight className="w-4 h-4" />
                     </Link>

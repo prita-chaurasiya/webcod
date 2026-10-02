@@ -16,7 +16,7 @@ export function PremiumNewsletter() {
         >
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--primary)] opacity-20 rounded-full blur-[100px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500 opacity-20 rounded-full blur-[80px] pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-orange-500 opacity-20 rounded-full blur-[80px] pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             
@@ -34,7 +34,7 @@ export function PremiumNewsletter() {
 
             <form onSubmit={(e) => e.preventDefault()} className="relative">
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-blue-500 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-orange-500 rounded-full blur opacity-25 group-hover:opacity-50 transition-opacity duration-500"></div>
                 <div className="relative flex bg-white border border-gray-700 rounded-full p-2 shadow-sm">
                   <input 
                     type="email" 

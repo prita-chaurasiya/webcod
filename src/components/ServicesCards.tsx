@@ -25,7 +25,7 @@ export function ServicesCards() {
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 justify-center mb-4">
-            <span className="text-[var(--primary)] text-sm font-bold tracking-widest uppercase bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">Our Services</span>
+            <span className="text-[var(--primary)] text-sm font-bold tracking-widest uppercase bg-orange-50 px-4 py-1.5 rounded-full border border-orange-100">Our Services</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
             We provide business-oriented professional solutions.
@@ -40,7 +40,7 @@ export function ServicesCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl text-center border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 group flex flex-col items-center h-full"
+              className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-2xl text-center border border-slate-100 hover:border-orange-200 shadow-sm hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] transition-all duration-300 group flex flex-col items-center h-full"
             >
               <div className="w-[70px] h-[70px] mx-auto bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[var(--primary)] group-hover:rotate-3 transition-all duration-300">
                 <img 

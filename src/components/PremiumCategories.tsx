@@ -19,12 +19,12 @@ const categories = [
 ];
 
 const colors = [
-  { bg: "bg-blue-50/70", glow: "from-blue-200/50", iconBg: "bg-blue-100", text: "text-blue-700", border: "from-blue-400 to-cyan-400" },
+  { bg: "bg-orange-50/70", glow: "from-orange-200/50", iconBg: "bg-orange-100", text: "text-orange-700", border: "from-orange-400 to-cyan-400" },
   { bg: "bg-slate-50/70", glow: "from-emerald-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-emerald-400 to-teal-400" },
   { bg: "bg-slate-50/70", glow: "from-orange-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-orange-400 to-amber-400" },
   { bg: "bg-slate-50/70", glow: "from-purple-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-purple-400 to-fuchsia-400" },
   { bg: "bg-slate-50/70", glow: "from-pink-200/50", iconBg: "bg-slate-50", text: "text-[var(--primary)]", border: "from-pink-400 to-rose-400" },
-  { bg: "bg-indigo-50/70", glow: "from-indigo-200/50", iconBg: "bg-indigo-100", text: "text-indigo-700", border: "from-indigo-400 to-blue-400" },
+  { bg: "bg-indigo-50/70", glow: "from-indigo-200/50", iconBg: "bg-indigo-100", text: "text-indigo-700", border: "from-indigo-400 to-orange-400" },
 ];
 
 const containerVariants: any = {

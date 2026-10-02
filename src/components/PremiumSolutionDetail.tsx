@@ -40,7 +40,7 @@ export function PremiumSolutionDetail({
       {/* 1. Hero Section */}
       <section className="relative pt-10 pb-12 lg:pt-16 lg:pb-16 bg-[#f8fafc] overflow-hidden">
         {/* Subtle background blob */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-blue-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-orange-100/50 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
         
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px] relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
@@ -74,7 +74,7 @@ export function PremiumSolutionDetail({
             >
               <div className="relative w-full max-w-lg mx-auto aspect-[4/3] lg:aspect-[16/11]">
                 {/* Glowing Aura */}
-                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
+                <div className="absolute -inset-3 bg-gradient-to-tr from-orange-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
                 
                 {/* Device / Mockup Chrome */}
                 <div className="relative z-10 w-full h-full bg-white/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
@@ -178,9 +178,9 @@ export function PremiumSolutionDetail({
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     key={idx} 
-                    className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[20px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] hover:border-blue-100 transition-all duration-300 flex items-start gap-5 group"
+                    className="bg-gradient-to-b from-white to-slate-50 p-6 rounded-[20px] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.08)] hover:border-orange-100 transition-all duration-300 flex items-start gap-5 group"
                   >
-                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors duration-300 shadow-sm border border-blue-100/50">
+                    <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center shrink-0 text-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white transition-colors duration-300 shadow-sm border border-orange-100/50">
                       {feature.icon || (
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                       )}

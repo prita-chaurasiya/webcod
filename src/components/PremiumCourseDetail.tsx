@@ -60,7 +60,7 @@ export function PremiumCourseDetail({
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white perspective-[1000px]">
         {/* Abstract Animated Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
+          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-orange-500/20 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
           <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[var(--primary)]/20 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
           <svg className="absolute inset-0 w-full h-full opacity-10 mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -81,14 +81,14 @@ export function PremiumCourseDetail({
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="lg:w-3/5 text-center lg:text-left"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-blue-300 font-semibold text-sm mb-6 tracking-widest backdrop-blur-md uppercase">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-orange-300 font-semibold text-sm mb-6 tracking-widest backdrop-blur-md uppercase">
                 <span className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse"></span>
                 {category}
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--heading)] leading-tight mb-6">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 || i === arr.length - 2 ? 
-                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400"> {word}</span> : 
+                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-400"> {word}</span> : 
                    <span key={i}> {word}</span>
                 )}
               </h1>
@@ -102,7 +102,7 @@ export function PremiumCourseDetail({
                     <span className="font-semibold">{duration}</span>
                  </div>
                  <div className="flex items-center gap-2 text-slate-600">
-                    <BookOpen className="w-5 h-5 text-blue-400" />
+                    <BookOpen className="w-5 h-5 text-orange-400" />
                     <span className="font-semibold">{lectures}</span>
                  </div>
                  <div className="flex items-center gap-2 text-slate-600">
@@ -113,7 +113,7 @@ export function PremiumCourseDetail({
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <button 
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-[var(--primary)] text-white font-bold rounded-[18px] hover:shadow-[0_0_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all duration-300 text-lg group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-[var(--primary)] text-white font-bold rounded-[18px] hover:shadow-[0_0_30px_rgba(46,184,114,0.4)] hover:-translate-y-1 transition-all duration-300 text-lg group"
                 >
                   Enroll Now - {price}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -133,7 +133,7 @@ export function PremiumCourseDetail({
               style={{ transformStyle: "preserve-3d" }}
             >
               <div className="relative w-full max-w-sm mx-auto aspect-[4/5]">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-[var(--primary)] rounded-[3rem] mix-blend-multiply filter blur-3xl opacity-50 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500 to-[var(--primary)] rounded-[3rem] mix-blend-multiply filter blur-3xl opacity-50 animate-pulse" />
                 <motion.div 
                   animate={{ y: [-10, 10, -10], rotateZ: [0, 2, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -207,8 +207,8 @@ export function PremiumCourseDetail({
          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-blue-500/20 rounded-[18px] flex items-center justify-center mb-4 border border-blue-500/30">
-                     <Briefcase className="w-8 h-8 text-blue-400" />
+                  <div className="w-16 h-16 mx-auto bg-orange-500/20 rounded-[18px] flex items-center justify-center mb-4 border border-orange-500/30">
+                     <Briefcase className="w-8 h-8 text-orange-400" />
                   </div>
                   <h4 className="text-[var(--heading)] font-bold text-lg mb-2">100% Placement</h4>
                   <p className="text-slate-500 text-sm">Dedicated placement cell and interview prep.</p>
@@ -250,14 +250,14 @@ export function PremiumCourseDetail({
             {modules.map((module, idx) => (
               <div 
                 key={idx} 
-                className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openModule === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-blue-300'}`}
+                className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openModule === idx ? 'border-orange-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-orange-300'}`}
               >
                 <button 
                   onClick={() => setOpenModule(openModule === idx ? null : idx)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 >
                   <div className="flex items-center gap-4">
-                     <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-colors ${openModule === idx ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'}`}>
+                     <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-colors ${openModule === idx ? 'bg-orange-500 text-white' : 'bg-slate-100 text-slate-500'}`}>
                         {idx + 1}
                      </div>
                      <div>
@@ -269,7 +269,7 @@ export function PremiumCourseDetail({
                         </span>
                      </div>
                   </div>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openModule === idx ? 'rotate-180 text-blue-600' : 'text-slate-500'}`} />
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openModule === idx ? 'rotate-180 text-orange-500' : 'text-slate-500'}`} />
                 </button>
                 <motion.div
                   initial={false}
@@ -281,7 +281,7 @@ export function PremiumCourseDetail({
                      <ul className="space-y-3 mt-4">
                         {module.topics.map((topic, i) => (
                            <li key={i} className="flex items-center gap-3 text-slate-600">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                              <div className="w-1.5 h-1.5 rounded-full bg-orange-400"></div>
                               {topic}
                            </li>
                         ))}

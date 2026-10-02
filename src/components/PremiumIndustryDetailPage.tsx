@@ -24,13 +24,13 @@ export interface IndustryPageData {
 
 export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) {
   return (
-    <main className="min-h-screen bg-slate-50 selection:bg-blue-500/30">
+    <main className="min-h-screen bg-slate-50 selection:bg-orange-500/30">
       
       {/* 1. Industry Hero */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
         {/* Subtle abstract background */}
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
-          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px]"></div>
+          <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-orange-50/50 rounded-full blur-[120px]"></div>
           <div className="absolute top-40 -left-40 w-[600px] h-[600px] bg-indigo-50/50 rounded-full blur-[100px]"></div>
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
         </div>
@@ -43,7 +43,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
                 className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-8"
               >
-                <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+                <Link href="/" className="hover:text-orange-500 transition-colors">Home</Link>
                 <ChevronRight className="w-4 h-4 text-slate-600" />
                 <span className="text-slate-500">Industries</span>
                 <ChevronRight className="w-4 h-4 text-slate-600" />
@@ -72,7 +72,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
-                <Link href="/quote" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-blue-600/20 hover:shadow-xl hover:-translate-y-0.5 group">
+                <Link href="/quote" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-700 text-white px-8 py-4 rounded-[18px] font-bold transition-all shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] shadow-orange-600/20 hover:shadow-xl hover:-translate-y-0.5 group">
                   Discuss Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -86,7 +86,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="relative aspect-[4/3] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-lg border border-white/50"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent mix-blend-overlay z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/40 to-transparent mix-blend-overlay z-10"></div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={data.heroImage} alt={`${data.title} Solutions`} className="w-full h-full object-cover img-premium" />
                 
@@ -95,7 +95,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   animate={{ y: [-10, 10, -10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl p-6 rounded-[18px] shadow-xl border border-white/50 z-20 flex items-center gap-4 hidden md:flex"
                 >
-                  <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <div>
@@ -114,7 +114,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-5">
-              <div className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-6">About {data.title}</div>
+              <div className="text-xs font-bold tracking-widest text-orange-500 uppercase mb-6">About {data.title}</div>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
                 {data.introHeading}
               </h2>
@@ -144,7 +144,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="flex gap-6 group"
               >
-                <div className="text-4xl md:text-5xl font-bold text-slate-200 group-hover:text-blue-500 transition-colors font-mono">
+                <div className="text-4xl md:text-5xl font-bold text-slate-200 group-hover:text-orange-500 transition-colors font-mono">
                   {challenge.id}
                 </div>
                 <div>
@@ -160,7 +160,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
       {/* 4. Digital Solutions */}
       <section className="py-16 md:py-12 btn-primary relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900"></div>
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-900/40 via-slate-900 to-slate-900"></div>
         </div>
         <div className="container mx-auto px-6 max-w-5xl relative z-10">
           <div className="mb-20 text-center">
@@ -178,17 +178,17 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="group relative bg-white/50 hover:bg-white backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-[18px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
+                  className="group relative bg-white/50 hover:bg-white backdrop-blur-md border border-slate-700/50 hover:border-orange-500/50 rounded-[18px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 transition-all cursor-pointer overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="w-16 h-16 rounded-[18px] bg-slate-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400 transition-all text-slate-600">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="w-16 h-16 rounded-[18px] bg-slate-700/50 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:text-orange-400 transition-all text-slate-600">
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-slate-100 group-hover:text-[var(--heading)] transition-colors">{solution.title}</h3>
                     <p className="text-slate-500 group-hover:text-slate-600 transition-colors">{solution.description}</p>
                   </div>
-                  <div className="shrink-0 w-12 h-12 rounded-full border border-slate-600 flex items-center justify-center group-hover:border-blue-400 group-hover:bg-blue-500 group-hover:text-[var(--heading)] transition-all transform md:group-hover:translate-x-2">
+                  <div className="shrink-0 w-12 h-12 rounded-full border border-slate-600 flex items-center justify-center group-hover:border-orange-400 group-hover:bg-orange-500 group-hover:text-[var(--heading)] transition-all transform md:group-hover:translate-x-2">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </motion.div>
@@ -231,7 +231,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
               <div className="space-y-6">
                 {data.whatWeCanBuild.map((item, idx) => (
                   <div key={idx} className="flex gap-6 items-center border-b border-slate-100 pb-6">
-                    <span className="text-lg font-bold text-blue-600 font-mono shrink-0">0{idx + 1}</span>
+                    <span className="text-lg font-bold text-orange-500 font-mono shrink-0">0{idx + 1}</span>
                     <span className="text-xl font-bold text-slate-700">{item}</span>
                   </div>
                 ))}
@@ -268,7 +268,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
           <h2 className="text-2xl font-bold text-slate-900 mb-12">Core Technologies We Use</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {data.technologies.map((tech, idx) => (
-              <span key={idx} className="px-6 py-3 bg-gradient-to-b from-white to-slate-50 rounded-full border border-slate-200 text-slate-700 font-bold shadow-sm hover:border-blue-500 hover:text-blue-600 transition-colors cursor-default">
+              <span key={idx} className="px-6 py-3 bg-gradient-to-b from-white to-slate-50 rounded-full border border-slate-200 text-slate-700 font-bold shadow-sm hover:border-orange-500 hover:text-orange-500 transition-colors cursor-default">
                 {tech}
               </span>
             ))}
@@ -291,7 +291,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   { title: "Launch", desc: "Deployment and ongoing support." }
                 ].map((step, idx) => (
                   <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 group-hover:bg-blue-500 text-slate-500 group-hover:text-[var(--heading)] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors z-10">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 group-hover:bg-orange-500 text-slate-500 group-hover:text-[var(--heading)] shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors z-10">
                       <span className="text-xs font-bold">{idx + 1}</span>
                     </div>
                     <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-[18px] border border-slate-700 bg-white/50 shadow-sm">
@@ -312,7 +312,7 @@ export function PremiumIndustryDetailPage({ data }: { data: IndustryPageData }) 
                   { title: "Launch", desc: "Deployment and ongoing support." }
                 ].map((step, idx) => (
                   <div key={idx} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold text-sm shrink-0">
                       {idx + 1}
                     </div>
                     <div>

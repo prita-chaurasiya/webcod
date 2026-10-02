@@ -18,7 +18,7 @@ export function PremiumOpenTicket() {
       {/* Background Ambient Lights */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-br from-[var(--primary)]/10 to-teal-400/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-tr from-blue-400/10 to-indigo-400/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '10s' }} />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-tr from-orange-400/10 to-indigo-400/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '10s' }} />
       </div>
 
       <div className="container mx-auto px-4 lg:px-6 max-w-5xl relative z-10">
@@ -49,9 +49,9 @@ export function PremiumOpenTicket() {
               title: "Email Support",
               val: "info@webcodian.com",
               href: "mailto:info@webcodian.com",
-              color: "text-blue-600",
-              bg: "bg-blue-50",
-              border: "border-blue-100"
+              color: "text-orange-500",
+              bg: "bg-orange-50",
+              border: "border-orange-100"
             },
             {
               icon: Clock,
@@ -90,7 +90,7 @@ export function PremiumOpenTicket() {
           className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative overflow-hidden"
         >
           {/* Top Decorative bar */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-teal-400 to-[var(--primary)]" />
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-teal-400 to-[var(--primary)]" />
 
           <div className="text-center mb-10">
             <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-[18px] flex items-center justify-center mx-auto mb-4 text-[var(--primary)]">

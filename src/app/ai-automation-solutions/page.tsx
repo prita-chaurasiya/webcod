@@ -22,11 +22,11 @@ export default function Page() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 capitalize tracking-tight drop-shadow-md">
               AI & Automation Solutions
             </h1>
-            <ul className="flex items-center gap-3 text-blue-100 font-bold uppercase text-sm tracking-widest">
+            <ul className="flex items-center gap-3 text-orange-100 font-bold uppercase text-sm tracking-widest">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">HOME</Link>
               </li>
-              <li className="text-blue-300">/</li>
+              <li className="text-orange-300">/</li>
               <li className="text-white">AI & AUTOMATION</li>
             </ul>
           </div>
@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* 2. Hero Section */}
       <section className="py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-100 rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
@@ -44,13 +44,13 @@ export default function Page() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-8 inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+              <div className="mb-8 inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
                 Intelligent Workflows
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Transform Your Enterprise with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Cognitive Automation</span>
+                Transform Your Enterprise with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-indigo-600">Cognitive Automation</span>
               </h2>
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
@@ -74,7 +74,7 @@ export default function Page() {
               className="relative"
             >
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent mix-blend-overlay z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent mix-blend-overlay z-10"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop" 
                   alt="AI Automation Concepts" 
@@ -88,7 +88,7 @@ export default function Page() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-10 -left-10 bg-gradient-to-b from-white to-slate-50 p-6 rounded-[2rem] shadow-xl border border-slate-100 flex items-center gap-5 z-20"
               >
-                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
                   <Bot className="w-8 h-8" />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export default function Page() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             
             <div>
-              <span className="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">How We Work</span>
+              <span className="text-orange-400 font-bold tracking-widest uppercase text-sm mb-4 block">How We Work</span>
               <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                 A Systemic Approach to Digital Evolution
               </h2>
@@ -174,7 +174,7 @@ export default function Page() {
                   { num: "03", title: "Integration & Deployment", desc: "Seamless rollout with zero downtime, connecting legacy systems with modern AI." }
                 ].map((step, i) => (
                   <div key={i} className="flex gap-8 group">
-                    <div className="text-5xl font-bold text-slate-400 group-hover:text-blue-500 transition-colors shrink-0">
+                    <div className="text-5xl font-bold text-slate-400 group-hover:text-orange-500 transition-colors shrink-0">
                       {step.num}
                     </div>
                     <div>
@@ -190,7 +190,7 @@ export default function Page() {
                {/* Decorative structural elements to make it look premium */}
                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] border-l border-slate-700/50 flex flex-col justify-between py-12 pl-12">
                  <div className="w-full h-px bg-slate-700/50 relative">
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.8)]"></div>
+                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-[0_0_20px_rgba(59,130,246,0.8)]"></div>
                  </div>
                  <div className="w-full h-px bg-slate-700/50 relative">
                    <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-400"></div>
@@ -215,7 +215,7 @@ export default function Page() {
           
           <div className="flex flex-wrap justify-center gap-6">
             {["OpenAI & GPT-4", "TensorFlow", "PyTorch", "AWS SageMaker", "Azure AI", "Google Cloud ML", "LangChain", "Pinecone"].map((tech, i) => (
-              <div key={i} className="px-8 py-4 bg-gradient-to-b from-white to-slate-50 rounded-full font-bold text-slate-700 shadow-sm border border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all cursor-default">
+              <div key={i} className="px-8 py-4 bg-gradient-to-b from-white to-slate-50 rounded-full font-bold text-slate-700 shadow-sm border border-slate-200 hover:border-orange-500 hover:text-orange-500 transition-all cursor-default">
                 {tech}
               </div>
             ))}

@@ -40,7 +40,7 @@ export function Premium3DEffects() {
           y: mousePosition.y * -2 
         }} 
         transition={{ type: "spring", stiffness: 50, damping: 30 }}
-        className="absolute top-0 left-0 w-[40vw] h-[40vw] bg-blue-500/5 rounded-full blur-[120px]"
+        className="absolute top-0 left-0 w-[40vw] h-[40vw] bg-orange-500/5 rounded-full blur-[120px]"
       />
       <motion.div 
         animate={{ 
@@ -74,7 +74,7 @@ export function Premium3DEffects() {
               ease: "linear",
               delay: Math.random() * 5,
             }}
-            className="absolute rounded-[18px] bg-blue-500/10 backdrop-blur-[2px] border border-blue-500/20"
+            className="absolute rounded-[18px] bg-orange-500/10 backdrop-blur-[2px] border border-orange-500/20"
             style={{
               width: `${size}px`,
               height: `${size}px`,

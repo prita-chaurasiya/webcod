@@ -20,11 +20,11 @@ const learningPaths = [
     id: "professional", 
     title: "PROFESSIONAL", 
     courses: "ADCA, Tally Prime, Adv. Excel", 
-    icon: <Database className="w-6 h-6 text-blue-500" />,
-    gradient: "from-blue-400 to-cyan-500",
-    glow: "bg-blue-500/15",
-    iconBg: "bg-blue-50 border-blue-200",
-    titleColor: "text-blue-600"
+    icon: <Database className="w-6 h-6 text-orange-500" />,
+    gradient: "from-orange-400 to-cyan-500",
+    glow: "bg-orange-500/15",
+    iconBg: "bg-orange-50 border-orange-200",
+    titleColor: "text-orange-500"
   },
   { 
     id: "developer", 
@@ -92,13 +92,13 @@ export function PremiumInstitute() {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-blue-700 border border-blue-100 shadow-sm mb-6">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-orange-700 border border-orange-100 shadow-sm mb-6">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
               <span className="text-[11px] font-bold tracking-widest uppercase">WebCodian Academy</span>
             </div>
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
               Empower Your Future with <br className="hidden md:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Professional IT Training</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-indigo-600">Professional IT Training</span>
             </h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
               Build practical digital skills with industry-focused computer and technology training. Learn from senior developers and engineers to kickstart your tech career.
@@ -115,7 +115,7 @@ export function PremiumInstitute() {
             className="lg:w-1/2 relative"
           >
             {/* Background Blob */}
-            <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
+            <div className="absolute inset-0 bg-orange-100/50 rounded-full blur-[80px] -z-10"></div>
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-gradient-to-b from-white to-slate-50 p-2">
               <div className="rounded-[1.5rem] overflow-hidden">
                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Premium Tech Academy" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
@@ -127,7 +127,7 @@ export function PremiumInstitute() {
         {/* Achievements Counter - Inspired by Indian Computer */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 lg:mb-20">
           {[
-            { value: "50,000+", label: "Students Trained", icon: <Users className="w-8 h-8 text-blue-600" />, lightBg: "bg-blue-50/80", hoverBorder: "group-hover:border-blue-300", glow: "group-hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-blue-100" },
+            { value: "50,000+", label: "Students Trained", icon: <Users className="w-8 h-8 text-orange-500" />, lightBg: "bg-orange-50/80", hoverBorder: "group-hover:border-orange-300", glow: "group-hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-orange-100" },
             { value: "100+", label: "Expert Faculties", icon: <Trophy className="w-8 h-8 text-emerald-600" />, lightBg: "bg-emerald-50/80", hoverBorder: "group-hover:border-emerald-300", glow: "group-hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconBg: "bg-emerald-100" },
             { value: "15+", label: "Years Experience", icon: <BarChart className="w-8 h-8 text-orange-600" />, lightBg: "bg-orange-50/80", hoverBorder: "group-hover:border-orange-300", glow: "group-hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconBg: "bg-orange-100" },
             { value: "100%", label: "Placement Assist", icon: <HeartHandshake className="w-8 h-8 text-purple-600" />, lightBg: "bg-purple-50/80", hoverBorder: "group-hover:border-purple-300", glow: "group-hover:shadow-[0_8px_30px_rgba(147,51,234,0.15)]", iconBg: "bg-purple-100" }
@@ -155,7 +155,7 @@ export function PremiumInstitute() {
         {/* Premium Course Catalog (User preferred design) */}
         <div className="mb-16 lg:mb-20">
           <div className="text-center mb-16">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-bold text-xs tracking-[0.2em] mb-4 uppercase">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-orange-50 border border-orange-100 text-orange-500 font-bold text-xs tracking-[0.2em] mb-4 uppercase">
               WebCodian Academy
             </span>
             <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
@@ -179,7 +179,7 @@ export function PremiumInstitute() {
               >
                 {/* Course Image */}
                 <div className="relative h-[220px] overflow-hidden bg-slate-100">
-                  <div className="absolute inset-0 bg-blue-900/10 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-orange-900/10 z-10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                   <img 
                     src={course.image} 
                     alt={course.title}
@@ -187,7 +187,7 @@ export function PremiumInstitute() {
                   />
                   {/* Floating Badge */}
                   <div className="absolute top-4 right-4 z-20">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-blue-600 shadow-sm">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-orange-500 shadow-sm">
                       Best Seller
                     </span>
                   </div>
@@ -195,7 +195,7 @@ export function PremiumInstitute() {
 
                 {/* Course Content */}
                 <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">{course.title}</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-orange-500 transition-colors">{course.title}</h3>
                   <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{course.desc}</p>
                   
                   <div className="mb-8 p-4 bg-slate-50 rounded-[16px] border border-slate-100">
@@ -204,12 +204,12 @@ export function PremiumInstitute() {
                   </div>
                   
                   <div className="flex items-center justify-between mt-auto">
-                    <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-1">
+                    <Link href="/contact" className="text-sm font-bold text-slate-500 hover:text-orange-500 transition-colors flex items-center gap-1">
                       View Details
                     </Link>
                     <Link 
                       href="/contact" 
-                      className="inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 rounded-full hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.5)] hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-indigo-600 px-6 py-3 rounded-full hover:from-orange-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.5)] hover:-translate-y-0.5"
                     >
                       Enroll Now <ArrowRight className="w-4 h-4" />
                     </Link>

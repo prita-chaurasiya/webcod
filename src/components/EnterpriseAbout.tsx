@@ -23,7 +23,7 @@ export function EnterpriseAbout() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="inline-block px-4 py-2 rounded-full bg-blue-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase">
+            <div className="inline-block px-4 py-2 rounded-full bg-orange-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase">
               Who We Are
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--heading)] tracking-tight leading-[1.1]">
@@ -155,7 +155,7 @@ export function EnterpriseAbout() {
           <div className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
             <div className="relative shrink-0">
               {/* Outer decorative circle */}
-              <div className="absolute -inset-3 border-2 border-blue-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
+              <div className="absolute -inset-3 border-2 border-orange-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
               {/* Inner decorative dot */}
               <div className="absolute top-0 right-0 w-3 h-3 bg-[#0284c7] rounded-full z-10"></div>
               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Leader" className="w-24 h-24 rounded-full object-cover relative z-0 border-4 border-white shadow-sm" />
@@ -176,7 +176,7 @@ export function EnterpriseAbout() {
           {/* Leader 2 */}
           <div className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[12px] shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center md:items-start hover:shadow-md transition-shadow">
             <div className="relative shrink-0">
-              <div className="absolute -inset-3 border-2 border-blue-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
+              <div className="absolute -inset-3 border-2 border-orange-100 rounded-full border-t-[var(--primary)] border-r-[#0284c7] rotate-45"></div>
               <div className="absolute top-0 right-0 w-3 h-3 bg-[#0284c7] rounded-full z-10"></div>
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Leader" className="w-24 h-24 rounded-full object-cover relative z-0 border-4 border-white shadow-sm" />
             </div>
@@ -205,7 +205,7 @@ export function EnterpriseAbout() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: <Shield className="w-8 h-8 text-blue-600" />, title: "Integrity First", desc: "Uncompromising ethics and transparency in every partnership.", lightBg: "bg-blue-50/80", hoverBorder: "hover:border-blue-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-blue-100/50" },
+            { icon: <Shield className="w-8 h-8 text-orange-500" />, title: "Integrity First", desc: "Uncompromising ethics and transparency in every partnership.", lightBg: "bg-orange-50/80", hoverBorder: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(37,99,235,0.15)]", iconBg: "bg-orange-100/50" },
             { icon: <Cpu className="w-8 h-8 text-emerald-600" />, title: "Engineering Excellence", desc: "Writing clean, scalable, and secure code that stands the test of time.", lightBg: "bg-emerald-50/80", hoverBorder: "hover:border-emerald-300", glow: "hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]", iconBg: "bg-emerald-100/50" },
             { icon: <Zap className="w-8 h-8 text-orange-600" />, title: "Agile Innovation", desc: "Adapting swiftly to emerging technologies to keep our clients ahead.", lightBg: "bg-orange-50/80", hoverBorder: "hover:border-orange-300", glow: "hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]", iconBg: "bg-orange-100/50" },
             { icon: <Users className="w-8 h-8 text-purple-600" />, title: "Client Centricity", desc: "Your success is our success. We treat your business as our own.", lightBg: "bg-purple-50/80", hoverBorder: "hover:border-purple-300", glow: "hover:shadow-[0_8px_30px_rgba(147,51,234,0.15)]", iconBg: "bg-purple-100/50" },

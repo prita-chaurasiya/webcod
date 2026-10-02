@@ -21,8 +21,8 @@ export function PremiumDocumentLayout({ title, lastUpdated, content }: PremiumDo
           className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-blue-50 rounded-[18px] flex items-center justify-center shrink-0">
-               <FileText className="w-6 h-6 text-blue-500" />
+            <div className="w-12 h-12 bg-orange-50 rounded-[18px] flex items-center justify-center shrink-0">
+               <FileText className="w-6 h-6 text-orange-500" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-800">{title}</h2>

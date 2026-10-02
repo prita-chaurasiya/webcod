@@ -84,8 +84,9 @@ export function Navbar() {
         <div className="px-5 lg:px-8 w-full flex items-center justify-between h-full">
           
           {/* Logo */}
-          <Link href="/" className="shrink-0 flex items-center mr-4 group/logo">
-            <img src="/images/logo.png" alt="WebCodian Logo" className="w-auto object-contain h-12 transition-transform duration-300 group-hover/logo:scale-[1.02]" />
+          <Link href="/" className="shrink-0 flex items-center mr-6 group/logo relative">
+            <div className="absolute inset-0 bg-white/20 blur-xl rounded-full scale-150 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500"></div>
+            <img src="/images/logo.png" alt="WebCodian Logo" className="w-auto object-contain h-[70px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-500 group-hover/logo:scale-[1.05] group-hover/logo:drop-shadow-[0_8px_20px_rgba(37,99,235,0.2)] relative z-10" />
           </Link>
 
           {/* Desktop Nav */}
@@ -140,11 +141,11 @@ export function Navbar() {
                               href={item.href} 
                               className="flex items-center gap-4 p-3 rounded-2xl hover:bg-slate-50 transition-all duration-200 group/item border border-transparent hover:border-slate-100"
                             >
-                              <div className="w-10 h-10 rounded-[14px] bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/item:border-blue-200 group-hover/item:bg-blue-50 transition-colors">
-                                <item.icon className="w-4 h-4 text-slate-600 group-hover/item:text-blue-600 transition-colors" />
+                              <div className="w-10 h-10 rounded-[14px] bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/item:border-orange-200 group-hover/item:bg-orange-50 transition-colors">
+                                <item.icon className="w-4 h-4 text-slate-600 group-hover/item:text-orange-500 transition-colors" />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <h4 className="text-sm font-bold text-slate-800 group-hover/item:text-blue-700 transition-colors">{item.label}</h4>
+                                <h4 className="text-sm font-bold text-slate-800 group-hover/item:text-orange-700 transition-colors">{item.label}</h4>
                                 <p className="text-[11px] font-medium text-slate-500 truncate mt-0.5">{item.sub}</p>
                               </div>
                             </Link>
@@ -178,8 +179,8 @@ export function Navbar() {
                         <div className="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center mix-blend-luminosity"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
                         <div className="relative z-10">
-                          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mb-4 border border-blue-500/30">
-                            <Bot className="w-5 h-5 text-blue-400" />
+                          <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center mb-4 border border-orange-500/30">
+                            <Bot className="w-5 h-5 text-orange-400" />
                           </div>
                           <h3 className="text-xl font-bold text-white mb-2">AI Innovation</h3>
                           <p className="text-xs text-slate-300 leading-relaxed mb-6 font-medium">
@@ -200,10 +201,10 @@ export function Navbar() {
                               href={item.href} 
                               className="flex items-center gap-3 p-3 rounded-2xl hover:bg-slate-50 transition-all duration-200 group/item border border-transparent hover:border-slate-100"
                             >
-                              <div className="w-8 h-8 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/item:border-blue-200 group-hover/item:bg-blue-50 transition-colors">
-                                <div className="w-2 h-2 rounded-full bg-slate-300 group-hover/item:bg-blue-500 transition-colors" />
+                              <div className="w-8 h-8 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/item:border-orange-200 group-hover/item:bg-orange-50 transition-colors">
+                                <div className="w-2 h-2 rounded-full bg-slate-300 group-hover/item:bg-orange-500 transition-colors" />
                               </div>
-                              <span className="text-xs font-bold text-slate-700 group-hover/item:text-blue-700 transition-colors leading-tight">
+                              <span className="text-xs font-bold text-slate-700 group-hover/item:text-orange-700 transition-colors leading-tight">
                                 {item.name}
                               </span>
                             </Link>
@@ -247,9 +248,9 @@ export function Navbar() {
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-blue-500 mb-5">AI & Auto</h4>
+                          <h4 className="text-[11px] font-bold uppercase tracking-widest text-orange-500 mb-5">AI & Auto</h4>
                           <div className="flex flex-col gap-3">
-                            {aiAutomationServices.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-blue-600 hover:translate-x-1 transition-all">{item.name}</Link>)}
+                            {aiAutomationServices.map(item => <Link key={item.name} href={item.href} className="text-sm font-bold text-slate-700 hover:text-orange-500 hover:translate-x-1 transition-all">{item.name}</Link>)}
                           </div>
                         </div>
                         <div>
@@ -333,7 +334,7 @@ export function Navbar() {
                     <div className="flex flex-col gap-1">
                       {[
                         { label: "Internship", sub: "Hands-on tech training & PPO", href: "/internship", icon: GraduationCap, color: "text-[var(--primary)] bg-slate-50" },
-                        { label: "Pay Online", sub: "Instant secure fee & invoice payment", href: "/pay-online", icon: CreditCard, color: "text-blue-600 bg-blue-50" },
+                        { label: "Pay Online", sub: "Instant secure fee & invoice payment", href: "/pay-online", icon: CreditCard, color: "text-orange-500 bg-orange-50" },
                         { label: "Projects", sub: "Enterprise deliveries & case studies", href: "/portfolio", icon: Laptop, color: "text-[var(--primary)] bg-slate-50" },
                         { label: "Blog", sub: "Tech guides, tutorials & articles", href: "/blog", icon: BookOpen, color: "text-[var(--primary)] bg-slate-50" },
                         { label: "Career", sub: "Open developer & designer roles", href: "/career", icon: Briefcase, color: "text-[var(--primary)] bg-slate-50" },
@@ -390,7 +391,7 @@ export function Navbar() {
               
               <motion.div initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", damping: 25, stiffness: 200 }} className="fixed top-0 right-0 bottom-0 h-[100dvh] w-[85vw] max-w-sm bg-white z-[100] shadow-lg flex flex-col xl:hidden pointer-events-auto rounded-l-[32px]">
                 <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-white/50 backdrop-blur-md">
-                  <img src="/images/logo.png" alt="WebCodian Logo" className="h-8 w-auto img-premium" />
+                  <img src="/images/logo.png" alt="WebCodian Logo" className="h-[50px] w-auto drop-shadow-sm transition-transform duration-300" />
                   <button onClick={() => setMobileMenuOpen(false)} className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 rounded-full transition-colors">
                     <X className="w-5 h-5" />
                   </button>
@@ -428,9 +429,9 @@ export function Navbar() {
                     <AnimatePresence>
                       {activeDropdown === "mobile-ai" && (
                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-                          <div className="pl-6 pb-2 flex flex-col space-y-1 pt-1 border-l-2 border-blue-200 ml-2 mt-1">
+                          <div className="pl-6 pb-2 flex flex-col space-y-1 pt-1 border-l-2 border-orange-200 ml-2 mt-1">
                             {aiAutomationServices.map((item) => (
-                              <Link key={item.name} href={item.href} className="py-2 text-sm font-semibold text-slate-600 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>{item.name}</Link>
+                              <Link key={item.name} href={item.href} className="py-2 text-sm font-semibold text-slate-600 hover:text-orange-500" onClick={() => setMobileMenuOpen(false)}>{item.name}</Link>
                             ))}
                           </div>
                         </motion.div>

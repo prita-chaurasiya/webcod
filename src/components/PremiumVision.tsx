@@ -9,8 +9,8 @@ export function PremiumVision() {
     <section className="relative py-12 md:py-16 lg:py-16 md:py-12 bg-slate-50 overflow-hidden">
       {/* Animated Light Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/50 to-blue-50/20 rounded-full blur-[100px] opacity-70 animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-indigo-50/60 to-blue-50/30 rounded-full blur-[100px] opacity-70 animate-pulse" style={{ animationDuration: '10s' }} />
+        <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-orange-100/50 to-orange-50/20 rounded-full blur-[100px] opacity-70 animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-indigo-50/60 to-orange-50/30 rounded-full blur-[100px] opacity-70 animate-pulse" style={{ animationDuration: '10s' }} />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
@@ -24,7 +24,7 @@ export function PremiumVision() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-b from-white to-slate-50 border border-blue-100 shadow-sm text-[var(--primary)] text-[13px] font-bold tracking-widest uppercase mb-8">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-b from-white to-slate-50 border border-orange-100 shadow-sm text-[var(--primary)] text-[13px] font-bold tracking-widest uppercase mb-8">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--primary)]"></span>
@@ -34,7 +34,7 @@ export function PremiumVision() {
             
             <h2 className="font-bold text-[var(--heading)] leading-[1.15] mb-6">
               Elevating Digital <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-500">Excellence</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-500">Excellence</span>
             </h2>
             
             <p className="text-lg md:text-xl text-[var(--foreground)] leading-relaxed mb-10 max-w-xl">
@@ -43,7 +43,7 @@ export function PremiumVision() {
 
             <div className="flex flex-col sm:flex-row gap-6 mb-12">
               <div className="flex-1 flex items-center gap-4 bg-gradient-to-b from-white to-slate-50 border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
-                <div className="w-12 h-12 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 bg-orange-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                   <Award className="w-6 h-6" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export function PremiumVision() {
               </div>
               
               <div className="flex-1 flex items-center gap-4 bg-gradient-to-b from-white to-slate-50 border border-slate-100 p-5 rounded-[16px] shadow-sm hover:border-[var(--primary)] hover:shadow-md transition-all group">
-                <div className="w-12 h-12 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 bg-orange-50 text-[var(--primary)] rounded-full flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-colors">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export function PremiumVision() {
                 alt="WebCodian Digital Excellence" 
                 className="w-full h-full object-cover img-premium"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 to-transparent" />
             </div>
 
             {/* Top Right Floating Card */}
@@ -106,7 +106,7 @@ export function PremiumVision() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute -left-6 bottom-16 w-72 bg-white/95 backdrop-blur-xl border border-white/50 rounded-[18px] p-6 shadow-[0_20px_50px_rgba(37,99,235,0.15)] z-30 flex items-center gap-4"
             >
-              <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+              <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center shrink-0">
                 <Star className="w-6 h-6 text-[var(--primary)]" />
               </div>
               <div>

@@ -61,11 +61,11 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
                       href={service.href}
                       className={`flex items-center gap-3 px-5 py-3.5 rounded-full text-[13px] font-bold transition-all duration-300 border ${
                         isActive 
-                          ? "bg-blue-600 text-white border-blue-600 shadow-md scale-105" 
-                          : "bg-white text-slate-700 border-white hover:border-blue-200 hover:shadow-md hover:scale-105"
+                          ? "bg-orange-500 text-white border-orange-500 shadow-md scale-105" 
+                          : "bg-white text-slate-700 border-white hover:border-orange-200 hover:shadow-md hover:scale-105"
                       }`}
                     >
-                      <service.icon className={`w-4 h-4 shrink-0 ${isActive ? "text-[var(--heading)]" : "text-blue-600"}`} />
+                      <service.icon className={`w-4 h-4 shrink-0 ${isActive ? "text-[var(--heading)]" : "text-orange-500"}`} />
                       <span className="leading-tight">{service.name}</span>
                     </Link>
                   );
@@ -80,9 +80,9 @@ export function PremiumDigiatureServiceLayout({ children, activeService }: Layou
                 {industries.map((ind, idx) => (
                   <div 
                     key={idx}
-                    className="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-full text-xs font-bold text-slate-700 shadow-sm border border-white hover:border-blue-200 hover:shadow-md hover:text-blue-600 hover:-translate-y-0.5 transition-all cursor-pointer"
+                    className="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-full text-xs font-bold text-slate-700 shadow-sm border border-white hover:border-orange-200 hover:shadow-md hover:text-orange-500 hover:-translate-y-0.5 transition-all cursor-pointer"
                   >
-                    <ind.icon className="w-3.5 h-3.5 text-blue-600" />
+                    <ind.icon className="w-3.5 h-3.5 text-orange-500" />
                     {ind.name}
                   </div>
                 ))}

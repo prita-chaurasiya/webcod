@@ -46,7 +46,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
             <h3 className="text-xl font-bold text-[var(--heading)] mb-4">Industries Served</h3>
             <div className="flex flex-wrap gap-2">
               {data.industries.map((ind, idx) => (
-                <span key={idx} className="text-sm font-semibold text-[var(--primary)] bg-blue-50 px-3 py-1 rounded-md">
+                <span key={idx} className="text-sm font-semibold text-[var(--primary)] bg-orange-50 px-3 py-1 rounded-md">
                   {ind}
                 </span>
               ))}
@@ -123,7 +123,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {data.benefits.map((benefit, idx) => (
             <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-[24px] shadow-sm border border-slate-100 text-center">
-              <div className="w-16 h-16 bg-blue-50 text-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-orange-50 text-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <BarChart className="w-8 h-8" />
               </div>
               <h4 className="text-xl font-bold text-[var(--heading)] mb-3">{benefit.title}</h4>
@@ -137,7 +137,7 @@ export function EnterpriseServiceLayout({ data }: { data: ServiceData }) {
       <EnterpriseSection padding="large">
         <div className="bg-[var(--primary)] rounded-[32px] p-12 lg:p-20 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Ready to Build Your {data.title}?</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Partner with us to engineer a robust, scalable solution tailored to your enterprise needs.</p>
+          <p className="text-xl text-orange-100 mb-10 max-w-2xl mx-auto">Partner with us to engineer a robust, scalable solution tailored to your enterprise needs.</p>
           <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-[var(--heading)] rounded-[18px] font-bold text-lg shadow-xl hover:-translate-y-1 transition-all">
             Schedule a Consultation <ArrowRight className="w-5 h-5" />
           </Link>

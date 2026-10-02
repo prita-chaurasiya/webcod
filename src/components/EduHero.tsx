@@ -84,8 +84,8 @@ export function EduHero() {
             className="w-full max-w-3xl flex flex-col justify-center items-start py-10"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-blue-300 font-bold text-xs tracking-[0.2em] mb-8 uppercase shadow-[0_0_20px_rgba(37,99,235,0.2)]">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-orange-300 font-bold text-xs tracking-[0.2em] mb-8 uppercase shadow-[0_0_20px_rgba(37,99,235,0.2)]">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
               {slide.badge}
             </div>
 
@@ -93,7 +93,7 @@ export function EduHero() {
             <h1 className="text-5xl md:text-6xl lg:text-[80px] font-extrabold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-2xl">
               {slide.title1} <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 font-light">{slide.title2}</span><br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{slide.title3}</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">{slide.title3}</span>
             </h1>
 
             {/* Supporting Text */}
@@ -105,7 +105,7 @@ export function EduHero() {
             <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
               <Link 
                 href="/contact"
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white px-9 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all duration-300 text-base hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(37,99,235,0.6)]"
+                className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white px-9 py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all duration-300 text-base hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(37,99,235,0.6)]"
               >
                 Consult an Expert
                 <ArrowRight className="w-5 h-5" />
@@ -129,7 +129,7 @@ export function EduHero() {
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`h-2 rounded-full transition-all duration-500 ${
-                currentSlide === idx ? "w-10 bg-blue-500" : "w-2 bg-white/30 hover:bg-white/50"
+                currentSlide === idx ? "w-10 bg-orange-500" : "w-2 bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

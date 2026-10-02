@@ -47,7 +47,7 @@ export default function BlogPage() {
             
             {/* Featured Article */}
             <div className="lg:w-2/3">
-              <div className="flex items-center gap-2 text-blue-600 font-bold mb-6">
+              <div className="flex items-center gap-2 text-orange-500 font-bold mb-6">
                 <Star className="w-5 h-5" /> Editor's Pick
               </div>
               <div className="group cursor-pointer">
@@ -56,10 +56,10 @@ export default function BlogPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">Artificial Intelligence</span>
+                      <span className="px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full">Artificial Intelligence</span>
                       <span className="text-slate-300 text-sm flex items-center gap-1"><Clock className="w-4 h-4"/> 10 Min Read</span>
                     </div>
-                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">The Future of Generative AI in Enterprise SaaS Architectures</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors">The Future of Generative AI in Enterprise SaaS Architectures</h2>
                     <p className="text-slate-300 text-lg hidden md:block">How large language models are completely reshaping the way we build multi-tenant B2B software systems in 2026.</p>
                   </div>
                 </div>
@@ -70,17 +70,17 @@ export default function BlogPage() {
             <div className="lg:w-1/3">
               <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 h-full">
                 <div className="relative mb-8">
-                  <input type="text" placeholder="Search resources..." className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" />
+                  <input type="text" placeholder="Search resources..." className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500" />
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
                 </div>
 
                 <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
-                  <Terminal className="w-5 h-5 text-blue-600" /> Explore Categories
+                  <Terminal className="w-5 h-5 text-orange-500" /> Explore Categories
                 </h3>
                 
                 <div className="flex flex-wrap gap-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
                   {categories.map(cat => (
-                    <span key={cat} className="px-4 py-2 bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg hover:border-blue-500 hover:text-blue-600 transition-colors cursor-pointer">
+                    <span key={cat} className="px-4 py-2 bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">
                       {cat}
                     </span>
                   ))}
@@ -110,8 +110,8 @@ export default function BlogPage() {
                 {trendingTopics.map((topic, idx) => (
                   <div key={idx} className="group flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors cursor-pointer">
                     <div className="flex items-center gap-4">
-                      <span className="text-3xl font-bold text-slate-200 group-hover:text-blue-100 transition-colors">0{idx+1}</span>
-                      <h4 className="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">{topic.title}</h4>
+                      <span className="text-3xl font-bold text-slate-200 group-hover:text-orange-100 transition-colors">0{idx+1}</span>
+                      <h4 className="font-bold text-slate-800 group-hover:text-orange-500 transition-colors">{topic.title}</h4>
                     </div>
                     <span className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">{topic.reads} Reads</span>
                   </div>

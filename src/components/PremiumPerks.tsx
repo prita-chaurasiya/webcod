@@ -8,9 +8,9 @@ const perks = [
     icon: Clock,
     title: "Flexible Hours",
     description: "We value output over hours. Work when you are most productive and maintain a healthy work-life balance.",
-    color: "text-blue-500",
-    bg: "bg-blue-50",
-    border: "group-hover:border-blue-500/50"
+    color: "text-orange-500",
+    bg: "bg-orange-50",
+    border: "group-hover:border-orange-500/50"
   },
   {
     icon: Laptop,

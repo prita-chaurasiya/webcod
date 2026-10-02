@@ -88,7 +88,7 @@ export function PremiumServiceDetail({
       <section className="relative pt-12 pb-10 lg:pt-20 lg:pb-12 overflow-hidden bg-white perspective-[1000px]">
         {/* Abstract Animated Background */}
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
+          <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_alternate]" />
           <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-[var(--primary)]/10 rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse]" />
           <svg className="absolute inset-0 w-full h-full opacity-[0.03] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -109,14 +109,14 @@ export function PremiumServiceDetail({
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="lg:w-1/2 text-center lg:text-left"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-300 font-bold text-xs mb-5 tracking-widest backdrop-blur-md uppercase shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-orange-300 font-bold text-xs mb-5 tracking-widest backdrop-blur-md uppercase shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-pulse"></span>
                 {badgeText}
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-[var(--heading)] leading-[1.1] mb-5 tracking-tight">
                 {title.split(' ').map((word, i, arr) => 
                    i === arr.length - 1 ? 
-                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400"> {word}</span> : 
+                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-400"> {word}</span> : 
                    <span key={i}> {word}</span>
                 )}
               </h1>
@@ -125,7 +125,7 @@ export function PremiumServiceDetail({
               </p>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-[var(--primary)] text-[var(--heading)] font-bold rounded-[18px] hover:shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:-translate-y-0.5 transition-all duration-300 text-base group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-orange-500 to-[var(--primary)] text-[var(--heading)] font-bold rounded-[18px] hover:shadow-[0_10px_30px_rgba(46,184,114,0.3)] hover:-translate-y-0.5 transition-all duration-300 text-base group"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -141,7 +141,7 @@ export function PremiumServiceDetail({
             >
               <div className="relative w-full max-w-lg mx-auto aspect-[4/3] lg:aspect-[16/11]">
                 {/* Glowing Aura */}
-                <div className="absolute -inset-3 bg-gradient-to-tr from-blue-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
+                <div className="absolute -inset-3 bg-gradient-to-tr from-orange-500/30 via-[var(--primary)]/30 to-purple-500/20 rounded-[2.5rem] filter blur-2xl opacity-70 animate-pulse pointer-events-none" />
                 
                 {/* Device / Mockup Chrome */}
                 <div className="relative z-10 w-full h-full bg-white/90 backdrop-blur-2xl border border-white/20 rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col group">
@@ -211,7 +211,7 @@ export function PremiumServiceDetail({
       {/* 2. Overview & Features */}
       <section className="py-16 lg:py-12 md:py-16 relative overflow-hidden bg-white perspective-[1000px]">
         {/* Subtle Background Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-orange-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-t from-emerald-50/50 to-transparent rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -233,7 +233,7 @@ export function PremiumServiceDetail({
             >
               <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
                 <span className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-50 border border-slate-200 text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] mb-6 shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                   Service Overview
                 </span>
               </motion.div>
@@ -265,16 +265,16 @@ export function PremiumServiceDetail({
                       transition: { type: "spring", stiffness: 300, damping: 20 }
                     }}
                     key={idx} 
-                    className="flex flex-col items-start p-8 bg-gradient-to-b from-white to-slate-50 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-blue-100 transition-all duration-300 group relative overflow-hidden"
+                    className="flex flex-col items-start p-8 bg-gradient-to-b from-white to-slate-50 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-orange-100 transition-all duration-300 group relative overflow-hidden"
                   >
                     {/* Hover Glow */}
-                    <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-orange-100/50 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className="bg-slate-50 text-blue-600 p-4 rounded-[18px] shrink-0 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-6 border border-slate-100 shadow-sm relative z-10">
+                    <div className="bg-slate-50 text-orange-500 p-4 rounded-[18px] shrink-0 group-hover:bg-orange-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 mb-6 border border-slate-100 shadow-sm relative z-10">
                       {feature.icon || <CheckCircle2 className="w-6 h-6" />}
                     </div>
                     <div className="relative z-10">
-                      <h4 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h4>
+                      <h4 className="font-bold text-slate-900 text-lg mb-3 group-hover:text-orange-500 transition-colors">{feature.title}</h4>
                       <p className="text-slate-500 text-sm leading-relaxed font-medium group-hover:text-slate-600 transition-colors">{feature.description}</p>
                     </div>
                   </motion.div>
@@ -291,15 +291,15 @@ export function PremiumServiceDetail({
             >
                {featuresImage ? (
                   <div className="relative p-2 rounded-[3rem] bg-gradient-to-br from-slate-100 to-white shadow-lg group transform transition-transform duration-700 hover:rotate-y-[-5deg]">
-                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-[var(--primary)]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
+                     <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-[var(--primary)]/10 blur-2xl opacity-50 -z-10 group-hover:opacity-100 transition-opacity duration-700" />
                      <div className="rounded-[2.5rem] overflow-hidden relative border-4 border-white shadow-inner bg-slate-50">
-                       <div className="absolute inset-0 bg-blue-50/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                       <div className="absolute inset-0 bg-orange-50/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                        <img src={featuresImage} alt="Features" className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000 ease-out img-premium" />
                      </div>
                   </div>
                ) : (
                   <div className="relative p-[1px] rounded-[3rem] bg-gradient-to-br from-slate-200 via-slate-50 to-slate-200 shadow-lg overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-[var(--primary)]/10 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-orange-100/50 to-[var(--primary)]/10 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                     
                     <div className="bg-white/80 backdrop-blur-xl p-10 md:p-14 rounded-[3rem] h-full flex flex-col justify-center relative overflow-hidden">
                       {/* Decorative Shapes */}
@@ -309,7 +309,7 @@ export function PremiumServiceDetail({
                         className="absolute -top-32 -right-32 w-64 h-64 border-[40px] border-[var(--primary)]/5 rounded-full pointer-events-none" 
                       />
                       
-                      <h3 className="text-4xl font-bold text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[var(--primary)]">Us?</span></h3>
+                      <h3 className="text-4xl font-bold text-slate-900 mb-10 relative z-10 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[var(--primary)]">Us?</span></h3>
                       
                       <ul className="space-y-8 relative z-10">
                         {["Tailored Solutions", "Experienced Team", "Quality Assurance", "Ongoing Support"].map((item, i) => (
@@ -322,7 +322,7 @@ export function PremiumServiceDetail({
                               <CheckCircle2 className="w-6 h-6" />
                               <div className="absolute inset-0 rounded-[18px] bg-[var(--primary)] blur-md opacity-0 group-hover/item:opacity-30 transition-opacity duration-300" />
                             </div>
-                            <span className="group-hover/item:text-blue-600 transition-colors">{item}</span>
+                            <span className="group-hover/item:text-orange-500 transition-colors">{item}</span>
                           </motion.li>
                         ))}
                       </ul>
@@ -355,12 +355,12 @@ export function PremiumServiceDetail({
                 {[...technologies, ...technologies, ...technologies].map((tech, idx) => (
                   <div
                     key={idx}
-                    className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
+                    className="w-48 h-48 bg-white hover:bg-orange-50/50 border border-slate-100 hover:border-orange-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
                   >
                     {typeof tech.icon === 'string' && tech.icon.startsWith('http') ? (
                       <img src={tech.icon} alt={tech.name} className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300 img-premium" />
                     ) : (
-                      <div className="text-5xl group-hover:scale-110 transition-transform text-slate-700 group-hover:text-blue-600">{tech.icon}</div>
+                      <div className="text-5xl group-hover:scale-110 transition-transform text-slate-700 group-hover:text-orange-500">{tech.icon}</div>
                     )}
                     <div className="font-bold text-lg text-slate-800">{tech.name}</div>
                   </div>
@@ -384,16 +384,16 @@ export function PremiumServiceDetail({
               {faqs.map((faq, idx) => (
                 <div 
                   key={idx} 
-                  className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-blue-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-blue-200'}`}
+                  className={`border rounded-[18px] overflow-hidden transition-all duration-300 ${openFaq === idx ? 'border-orange-500 shadow-md bg-white' : 'border-slate-200 bg-white hover:border-orange-200'}`}
                 >
                   <button 
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full flex items-center justify-between p-5 lg:p-6 text-left focus:outline-none"
                   >
-                    <span className={`font-bold text-base lg:text-lg ${openFaq === idx ? 'text-blue-600' : 'text-slate-800'}`}>
+                    <span className={`font-bold text-base lg:text-lg ${openFaq === idx ? 'text-orange-500' : 'text-slate-800'}`}>
                       {faq.q}
                     </span>
-                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-blue-600' : 'text-slate-500'}`} />
+                    <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-orange-500' : 'text-slate-500'}`} />
                   </button>
                   <motion.div
                     initial={false}

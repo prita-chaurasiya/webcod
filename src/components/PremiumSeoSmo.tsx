@@ -13,31 +13,31 @@ import Link from "next/link";
 
 const services = [
   { title: "Social Media Audit", icon: <Share2 className="w-6 h-6 text-[var(--primary)]" /> },
-  { title: "Community Engagement", icon: <Users className="w-6 h-6 text-blue-500" /> },
+  { title: "Community Engagement", icon: <Users className="w-6 h-6 text-orange-500" /> },
   { title: "Social Media Advertising", icon: <Target className="w-6 h-6 text-indigo-500" /> },
   { title: "On-Page Optimization", icon: <Layout className="w-6 h-6 text-[var(--primary)]" /> },
-  { title: "Off-Page Optimization", icon: <Globe className="w-6 h-6 text-blue-500" /> },
+  { title: "Off-Page Optimization", icon: <Globe className="w-6 h-6 text-orange-500" /> },
   { title: "Keyword Research", icon: <Search className="w-6 h-6 text-indigo-500" /> }
 ];
 
 const technologies = [
   { title: "Google Analytics", icon: <BarChart3 className="w-10 h-10 text-[var(--primary)]" /> },
-  { title: "Keyword Tools", icon: <Search className="w-10 h-10 text-blue-500" /> },
+  { title: "Keyword Tools", icon: <Search className="w-10 h-10 text-orange-500" /> },
   { title: "Schema Markup", icon: <Code className="w-10 h-10 text-indigo-500" /> },
   { title: "Social Platforms", icon: <MessageCircle className="w-10 h-10 text-[var(--primary)]" /> }
 ];
 
 const categories = [
-  { title: "E-Commerce", icon: <ShoppingBag className="w-8 h-8 text-blue-500" /> },
+  { title: "E-Commerce", icon: <ShoppingBag className="w-8 h-8 text-orange-500" /> },
   { title: "School & College", icon: <GraduationCap className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Institute", icon: <Building2 className="w-8 h-8 text-indigo-500" /> },
-  { title: "Tour & Travel", icon: <Globe className="w-8 h-8 text-blue-500" /> },
+  { title: "Tour & Travel", icon: <Globe className="w-8 h-8 text-orange-500" /> },
   { title: "NGO", icon: <HeartHandshake className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Consulting", icon: <Users className="w-8 h-8 text-indigo-500" /> },
-  { title: "HealthCare", icon: <PlusCircle className="w-8 h-8 text-blue-500" /> },
+  { title: "HealthCare", icon: <PlusCircle className="w-8 h-8 text-orange-500" /> },
   { title: "Security Service", icon: <ShieldCheck className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Manufacturing", icon: <Factory className="w-8 h-8 text-indigo-500" /> },
-  { title: "News & Blog", icon: <Newspaper className="w-8 h-8 text-blue-500" /> },
+  { title: "News & Blog", icon: <Newspaper className="w-8 h-8 text-orange-500" /> },
   { title: "Landing Page", icon: <Layout className="w-8 h-8 text-[var(--primary)]" /> },
   { title: "Crowd Funding", icon: <Target className="w-8 h-8 text-indigo-500" /> }
 ];
@@ -82,7 +82,7 @@ export function PremiumSeoSmo() {
       {/* Background Orbs */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-50/20 rounded-full blur-[100px] mix-blend-multiply" />
-        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-blue-300/20 rounded-full blur-[120px] mix-blend-multiply" />
+        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-orange-300/20 rounded-full blur-[120px] mix-blend-multiply" />
         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-300/20 rounded-full blur-[150px] mix-blend-multiply" />
       </div>
 
@@ -97,11 +97,11 @@ export function PremiumSeoSmo() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md mb-6 shadow-sm">
             <LineChart className="w-4 h-4 text-[var(--primary)]" />
-            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Digital Growth Specialists</span>
+            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-orange-500 bg-clip-text text-transparent">Digital Growth Specialists</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
             Dominate the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-orange-600 to-indigo-600">
               Digital Landscape
             </span>
           </h1>
@@ -111,7 +111,7 @@ export function PremiumSeoSmo() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-[var(--heading)] font-semibold rounded-full shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-orange-500 text-[var(--heading)] font-semibold rounded-full shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all duration-300"
             >
               Start Growing Today
               <ArrowUpRight className="w-5 h-5" />
@@ -129,7 +129,7 @@ export function PremiumSeoSmo() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
               Enhancing Visibility:<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-orange-500">
                 SEO and SMO Solutions
               </span>
             </h2>
@@ -148,7 +148,7 @@ export function PremiumSeoSmo() {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <div className="p-3 bg-blue-100 rounded-[18px] text-blue-600">
+                <div className="p-3 bg-orange-100 rounded-[18px] text-orange-500">
                   <Globe className="w-6 h-6" />
                 </div>
                 <div>
@@ -166,7 +166,7 @@ export function PremiumSeoSmo() {
             transition={{ duration: 0.8, type: "spring" }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-blue-400 rounded-[18px] blur-2xl opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400 to-orange-400 rounded-[18px] blur-2xl opacity-30" />
             <div className="relative bg-white/60 backdrop-blur-xl border border-white rounded-[18px] p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-4">
                 {services.map((svc, idx) => (
@@ -184,7 +184,7 @@ export function PremiumSeoSmo() {
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Technology We Use</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-orange-500 mx-auto rounded-full" />
           </div>
 
           <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-4 gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">

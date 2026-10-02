@@ -43,7 +43,7 @@ export function HeroSection() {
     <section className="relative overflow-hidden min-h-[90vh] flex items-center pt-[120px] pb-[80px] bg-slate-50">
       {/* Deep Tech Background Visuals */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen opacity-50 animate-pulse"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-500/10 rounded-full blur-[120px] mix-blend-screen opacity-50 animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-50/10 rounded-full blur-[100px] mix-blend-screen opacity-40"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] mix-blend-overlay"></div>
         

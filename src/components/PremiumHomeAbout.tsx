@@ -21,11 +21,11 @@ export function PremiumHomeAbout() {
               viewport={{ once: true }}
               className="mb-8"
             >
-              <div className="inline-block px-4 py-2 rounded-full bg-blue-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase mb-6">
+              <div className="inline-block px-4 py-2 rounded-full bg-orange-50 text-[var(--primary)] font-bold text-sm tracking-widest uppercase mb-6">
                 Global Technology Partner
               </div>
               <h2 className="text-3xl lg:text-5xl font-bold text-[var(--heading)] mb-6 leading-[1.1] tracking-tight">
-                Architecting the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400">Enterprise Digital Transformation</span>
+                Architecting the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-400">Enterprise Digital Transformation</span>
               </h2>
               
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
@@ -46,7 +46,7 @@ export function PremiumHomeAbout() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-6 pt-6 mt-6 border-t border-slate-100"
             >
-              <div className="w-16 h-16 rounded-[18px] bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100 shadow-sm">
+              <div className="w-16 h-16 rounded-[18px] bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100 shadow-sm">
                 <Code2 className="w-8 h-8 text-[var(--primary)]" />
               </div>
               <div>
@@ -54,7 +54,7 @@ export function PremiumHomeAbout() {
                 <p className="text-slate-500 leading-relaxed mb-4">
                   Leveraging agile methodologies, DevOps pipelines, and deep domain expertise to deliver secure, high-performance software that accelerates your time-to-market and reduces total cost of ownership.
                 </p>
-                <Link href="/about" className="inline-flex items-center gap-2 text-[var(--primary)] font-bold hover:text-blue-700 transition-colors group">
+                <Link href="/about" className="inline-flex items-center gap-2 text-[var(--primary)] font-bold hover:text-orange-700 transition-colors group">
                   Discover Our Global Reach <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

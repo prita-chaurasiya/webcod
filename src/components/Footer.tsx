@@ -10,10 +10,10 @@ export function Footer() {
   return (
     <footer className="relative bg-slate-50 text-slate-600 pt-20 pb-8 overflow-hidden mt-auto border-t border-slate-200">
       {/* Premium Light Background Effects */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-orange-200 to-transparent" />
       
-      <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-50 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-orange-50 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange-50 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -22,8 +22,8 @@ export function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-6 relative group">
-              <div className="relative bg-white/50 backdrop-blur-md border border-slate-200/50 p-4 rounded-[18px] shadow-sm transition-all group-hover:border-blue-200 group-hover:bg-blue-50/50">
-                <img src="/images/logo.png" alt="WebCodian Logo" className="h-9 w-auto object-contain img-premium opacity-90" />
+              <div className="relative bg-white/50 backdrop-blur-md border border-slate-200/50 p-4 rounded-[18px] shadow-sm transition-all group-hover:border-orange-300 group-hover:shadow-lg group-hover:-translate-y-1 group-hover:bg-orange-50/80">
+                <img src="/images/logo.png" alt="WebCodian Logo" className="h-[60px] w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-[280px]">
@@ -52,7 +52,7 @@ export function Footer() {
           {/* Explore Col */}
           <div className="lg:col-span-2">
             <h3 className="text-base font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-blue-500/50"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-orange-500/50"></span>
               Explore
             </h3>
             <ul className="space-y-3.5">
@@ -77,7 +77,7 @@ export function Footer() {
           {/* Services Col */}
           <div className="lg:col-span-3">
             <h3 className="text-base font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-blue-500/50"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-orange-500/50"></span>
               Services
             </h3>
             <ul className="space-y-3.5">
@@ -95,7 +95,7 @@ export function Footer() {
           {/* Important Links Col */}
           <div className="lg:col-span-3">
             <h3 className="text-base font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-blue-500/50"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-sm shadow-orange-500/50"></span>
               Important Links
             </h3>
             <ul className="space-y-3.5">

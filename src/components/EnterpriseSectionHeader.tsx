@@ -28,7 +28,7 @@ export function EnterpriseSectionHeader({
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase ${lightText ? 'bg-white/10 text-white' : 'bg-blue-50 text-[var(--primary)]'}`}
+          className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase ${lightText ? 'bg-white/10 text-white' : 'bg-orange-50 text-[var(--primary)]'}`}
         >
           {badge}
         </motion.div>

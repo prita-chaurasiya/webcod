@@ -39,7 +39,7 @@ export default function SupportPage() {
       />
 
       {/* Support Search / Knowledge Base */}
-      <section className="py-16 bg-blue-600 text-white relative overflow-hidden">
+      <section className="py-16 bg-orange-500 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">How can we help you today?</h2>
@@ -47,17 +47,17 @@ export default function SupportPage() {
             <input 
               type="text" 
               placeholder="Search for articles, guides, or error codes..." 
-              className="w-full pl-6 pr-16 py-5 rounded-2xl bg-white text-slate-900 focus:outline-none focus:ring-4 focus:ring-blue-400/50 shadow-2xl text-lg" 
+              className="w-full pl-6 pr-16 py-5 rounded-2xl bg-white text-slate-900 focus:outline-none focus:ring-4 focus:ring-orange-400/50 shadow-2xl text-lg" 
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors">
+            <button className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center hover:bg-orange-700 transition-colors">
               <Search className="w-6 h-6" />
             </button>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm font-medium text-blue-200">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm font-medium text-orange-200">
             <span>Popular:</span>
-            <span className="px-3 py-1 bg-blue-500/30 rounded-full cursor-pointer hover:bg-white hover:text-blue-600 transition-colors">Reset Password</span>
-            <span className="px-3 py-1 bg-blue-500/30 rounded-full cursor-pointer hover:bg-white hover:text-blue-600 transition-colors">Server Down</span>
-            <span className="px-3 py-1 bg-blue-500/30 rounded-full cursor-pointer hover:bg-white hover:text-blue-600 transition-colors">Certificate Verify</span>
+            <span className="px-3 py-1 bg-orange-500/30 rounded-full cursor-pointer hover:bg-white hover:text-orange-500 transition-colors">Reset Password</span>
+            <span className="px-3 py-1 bg-orange-500/30 rounded-full cursor-pointer hover:bg-white hover:text-orange-500 transition-colors">Server Down</span>
+            <span className="px-3 py-1 bg-orange-500/30 rounded-full cursor-pointer hover:bg-white hover:text-orange-500 transition-colors">Certificate Verify</span>
           </div>
         </div>
       </section>
@@ -73,10 +73,10 @@ export default function SupportPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 border border-slate-200 rounded-3xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-slate-50 hover:bg-white cursor-pointer text-center"
+                className="p-8 border border-slate-200 rounded-3xl hover:border-orange-500 hover:shadow-xl hover:-translate-y-1 transition-all group bg-slate-50 hover:bg-white cursor-pointer text-center"
               >
                 <div className="w-16 h-16 mx-auto bg-gradient-to-b from-white to-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                  <cat.icon className="w-8 h-8 text-blue-600" />
+                  <cat.icon className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{cat.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{cat.desc}</p>
@@ -109,8 +109,8 @@ export default function SupportPage() {
                 If you are an enterprise client facing a critical Sev-1 outage, bypass the ticket system and reach our emergency escalation hotline immediately.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+918000000000" className="inline-flex items-center justify-center gap-2 bg-white text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors">
-                  <PhoneCall className="w-5 h-5 text-blue-600" /> Call Hotline
+                <a href="tel:+918000000000" className="inline-flex items-center justify-center gap-2 bg-white text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-orange-50 transition-colors">
+                  <PhoneCall className="w-5 h-5 text-orange-500" /> Call Hotline
                 </a>
                 <a href="mailto:support@webcodian.com" className="inline-flex items-center justify-center gap-2 bg-slate-800 text-white border border-slate-700 font-bold px-8 py-4 rounded-xl hover:bg-slate-700 transition-colors">
                   <MessageSquare className="w-5 h-5" /> Email Support
@@ -120,7 +120,7 @@ export default function SupportPage() {
             
             <div className="relative z-10 lg:w-1/3 bg-slate-800/50 p-8 rounded-3xl border border-slate-700 backdrop-blur-sm w-full">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-blue-400" /> Quick Resources
+                <FileText className="w-5 h-5 text-orange-400" /> Quick Resources
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors cursor-pointer">

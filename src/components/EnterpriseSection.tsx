@@ -18,7 +18,7 @@ export function EnterpriseSection({
     white: 'bg-white',
     slate: 'bg-slate-50 border-y border-slate-100',
     navy: 'bg-slate-900',
-    blue: 'bg-blue-600',
+    blue: 'bg-orange-500',
     dark: 'bg-slate-800',
   };
 

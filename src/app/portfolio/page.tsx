@@ -71,7 +71,7 @@ export default function PortfolioPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl hover:bg-slate-800 transition-colors"
               >
-                <div className="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-orange-500/20 text-orange-400 rounded-2xl flex items-center justify-center mb-6">
                   <domain.icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{domain.title}</h3>
@@ -111,7 +111,7 @@ export default function PortfolioPage() {
                   viewport={{ once: true }}
                   className="lg:w-1/2"
                 >
-                  <div className="mb-6 inline-block px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-bold border border-blue-100">
+                  <div className="mb-6 inline-block px-4 py-1.5 bg-orange-50 text-orange-700 rounded-full text-sm font-bold border border-orange-100">
                     {study.industry}
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900 mb-8">{study.client}</h3>
@@ -122,7 +122,7 @@ export default function PortfolioPage() {
                       <p className="text-slate-600 leading-relaxed">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><Settings className="w-5 h-5 text-blue-500"/> Our Solution</h4>
+                      <h4 className="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><Settings className="w-5 h-5 text-orange-500"/> Our Solution</h4>
                       <p className="text-slate-600 leading-relaxed">{study.solution}</p>
                     </div>
                     <div className="p-6 bg-slate-50 border border-slate-200 rounded-2xl mt-8">
@@ -143,7 +143,7 @@ export default function PortfolioPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Engineering Stack Used in Our Projects</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {["React", "Next.js", "Node.js", "Python", "Django", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes", "GraphQL", "Flutter", "React Native", "TensorFlow"].map(tech => (
-              <span key={tech} className="px-6 py-3 bg-white text-slate-800 rounded-xl font-bold shadow-sm border border-slate-200 flex items-center gap-2 cursor-default hover:border-blue-500 hover:text-blue-600 transition-colors">
+              <span key={tech} className="px-6 py-3 bg-white text-slate-800 rounded-xl font-bold shadow-sm border border-slate-200 flex items-center gap-2 cursor-default hover:border-orange-500 hover:text-orange-500 transition-colors">
                 <Code2 className="w-4 h-4" /> {tech}
               </span>
             ))}
@@ -160,7 +160,7 @@ export default function PortfolioPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-10 bg-slate-50 rounded-3xl border border-slate-200 relative">
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-blue-100" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-orange-100" />
               <p className="text-slate-700 text-lg italic leading-relaxed mb-8 relative z-10">
                 "WebCodian didn't just write code; they partnered with us to rethink our entire software architecture. Their ability to deliver a massive ERP overhaul ahead of schedule was nothing short of remarkable."
               </p>
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
               </div>
             </div>
             <div className="p-10 bg-slate-50 rounded-3xl border border-slate-200 relative">
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-blue-100" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-orange-100" />
               <p className="text-slate-700 text-lg italic leading-relaxed mb-8 relative z-10">
                 "The mobile app they built for us completely transformed our customer engagement metrics. Flawless UI, incredibly fast API response times, and exceptional post-launch support."
               </p>
@@ -196,7 +196,7 @@ export default function PortfolioPage() {
       {/* CTA */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-50 border-t border-slate-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-50/50 rounded-full blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Ready to Build Your Next Big Project?</h2>
           <p className="text-slate-500 text-xl mb-10 max-w-2xl mx-auto font-medium">

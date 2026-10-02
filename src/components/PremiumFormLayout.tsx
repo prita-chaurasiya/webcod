@@ -44,7 +44,7 @@ export function PremiumFormLayout({ title, subtitle, fields, submitText }: Premi
               {subtitle}
             </p>
             <div className="flex items-center gap-4 text-gray-600 font-medium">
-               <ShieldCheck className="w-8 h-8 text-blue-500" />
+               <ShieldCheck className="w-8 h-8 text-orange-500" />
                Your data is 256-bit encrypted and secure.
             </div>
           </motion.div>

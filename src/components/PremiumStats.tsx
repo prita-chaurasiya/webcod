@@ -67,19 +67,19 @@ export function PremiumStats() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-x divide-gray-800/50">
           {stats.map((stat, index) => {
             const lightBg = [
-              "bg-blue-500/10",
+              "bg-orange-500/10",
               "bg-emerald-500/10",
               "bg-purple-500/10",
               "bg-orange-500/10"
             ];
             const hoverBorder = [
-              "group-hover:border-blue-400/50",
+              "group-hover:border-orange-400/50",
               "group-hover:border-emerald-400/50",
               "group-hover:border-purple-400/50",
               "group-hover:border-orange-400/50"
             ];
             const iconColor = [
-              "text-blue-400",
+              "text-orange-400",
               "text-emerald-400",
               "text-purple-400",
               "text-orange-400"

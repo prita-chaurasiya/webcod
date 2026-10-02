@@ -103,7 +103,7 @@ export function PremiumTechStack() {
             {[...technologiesRow1, ...technologiesRow1, ...technologiesRow1].map((tech, idx) => (
               <div
                 key={idx}
-                className="w-48 h-48 bg-white hover:bg-blue-50/50 border border-slate-100 hover:border-blue-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="w-48 h-48 bg-white hover:bg-orange-50/50 border border-slate-100 hover:border-orange-100 rounded-[18px] p-6 flex flex-col items-center justify-center gap-6 shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <img src={tech.img} alt={tech.name} className="w-20 h-20 object-contain img-premium" />
                 <div className="font-bold text-lg text-slate-800">{tech.name}</div>

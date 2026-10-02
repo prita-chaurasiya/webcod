@@ -154,9 +154,9 @@ export function PremiumSoftwareDev() {
                          <div className="w-8 h-8 rounded-full bg-slate-50"></div>
                          <div className="w-1/2 h-2 bg-[var(--primary)] rounded-full"></div>
                       </div>
-                      <div className="flex-1 h-24 bg-blue-50 border border-blue-100 rounded-[18px] p-4 flex flex-col justify-between">
-                         <div className="w-8 h-8 rounded-full bg-blue-100"></div>
-                         <div className="w-1/2 h-2 bg-blue-400 rounded-full"></div>
+                      <div className="flex-1 h-24 bg-orange-50 border border-orange-100 rounded-[18px] p-4 flex flex-col justify-between">
+                         <div className="w-8 h-8 rounded-full bg-orange-100"></div>
+                         <div className="w-1/2 h-2 bg-orange-400 rounded-full"></div>
                       </div>
                       <div className="flex-1 h-24 bg-slate-50 border border-slate-100 rounded-[18px] p-4 flex flex-col justify-between">
                          <div className="w-8 h-8 rounded-full bg-slate-50"></div>

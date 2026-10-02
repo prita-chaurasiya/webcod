@@ -19,7 +19,7 @@ const courses = [
     price: "Premium",
     originalPrice: null,
     rating: 4.9,
-    badgeColor: "bg-blue-100 text-blue-700"
+    badgeColor: "bg-orange-100 text-orange-700"
   },
   {
     id: 2,
@@ -89,7 +89,7 @@ const courses = [
     price: "Premium",
     originalPrice: null,
     rating: 4.8,
-    badgeColor: "bg-blue-100 text-blue-700"
+    badgeColor: "bg-orange-100 text-orange-700"
   }
 ];
 
@@ -111,7 +111,7 @@ export function EduCourses() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-              Explore Our <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-500">Premium Courses</span>
+              Explore Our <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-500">Premium Courses</span>
             </h2>
           </div>
           
@@ -190,8 +190,8 @@ export function EduCourses() {
                   {/* Meta */}
                   <div className="flex items-center gap-6 text-sm text-slate-500 font-medium mb-8">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-                        <Clock className="w-4 h-4 text-blue-500" />
+                      <div className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center">
+                        <Clock className="w-4 h-4 text-orange-500" />
                       </div>
                       <span>{course.duration}</span>
                     </div>

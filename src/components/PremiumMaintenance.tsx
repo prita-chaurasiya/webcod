@@ -6,7 +6,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 
 const services = [
-  { name: "Website Updates", desc: "Keep your platform current with the latest features and framework versions.", icon: <Activity className="w-8 h-8 text-blue-500" /> },
+  { name: "Website Updates", desc: "Keep your platform current with the latest features and framework versions.", icon: <Activity className="w-8 h-8 text-orange-500" /> },
   { name: "Content Management", desc: "Regular updates to your text, images, and media to keep your audience engaged.", icon: <Wrench className="w-8 h-8 text-[var(--primary)]" /> },
   { name: "Security Enhancements", desc: "Continuous monitoring, firewall updates, and vulnerability patching.", icon: <Shield className="w-8 h-8 text-[var(--primary)]" /> },
   { name: "Performance Optimization", desc: "Database tuning, caching strategies, and asset minification for speed.", icon: <Server className="w-8 h-8 text-[var(--primary)]" /> },
@@ -49,7 +49,7 @@ export function PremiumMaintenance() {
       {/* 1. Cinematic Light Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-24 overflow-hidden border-b border-slate-200/60">
         {/* Animated Background Gradients */}
-        <div className="absolute top-[0%] right-[0%] w-[800px] h-[800px] bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '8s' }}></div>
+        <div className="absolute top-[0%] right-[0%] w-[800px] h-[800px] bg-gradient-to-br from-orange-400/20 to-purple-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '8s' }}></div>
         <div className="absolute bottom-[0%] left-[0%] w-[600px] h-[600px] bg-gradient-to-tr from-[var(--primary)]/20 to-emerald-400/20 rounded-full blur-[150px] mix-blend-multiply pointer-events-none animate-pulse" style={{ animationDuration: '12s' }}></div>
         
         {/* Grid Pattern */}
@@ -116,7 +116,7 @@ export function PremiumMaintenance() {
                           transition={{ duration: 0.8, repeat: Infinity, delay: server * 0.2 }} 
                           className="w-3 h-3 rounded-full bg-[var(--primary)] shadow-[0_0_15px_rgba(46,184,114,0.5)]"
                         ></motion.div>
-                        <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+                        <div className="w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
                       </div>
                     </div>
                     {/* Air vents */}
@@ -128,7 +128,7 @@ export function PremiumMaintenance() {
                     {/* Ambient Glow */}
                     <motion.div 
                       style={{ opacity: serverGlow }} 
-                      className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/5 to-blue-500/5 mix-blend-multiply pointer-events-none"
+                      className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/5 to-orange-500/5 mix-blend-multiply pointer-events-none"
                     ></motion.div>
                   </div>
                 ))}
@@ -166,7 +166,7 @@ export function PremiumMaintenance() {
             >
               <Zap className="w-4 h-4 text-[var(--primary)]" /> What We Do
             </motion.div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Protection</span></h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Protection</span></h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We don't just fix things when they break. We proactively monitor, optimize, and secure your platform.</p>
           </div>
 
@@ -178,7 +178,7 @@ export function PremiumMaintenance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group bg-slate-50 rounded-[18px] p-8 border border-slate-100 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
+                className="group bg-slate-50 rounded-[18px] p-8 border border-slate-100 hover:border-orange-200 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white to-transparent rounded-bl-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-500"></div>
                 <div className="w-20 h-20 rounded-[18px] bg-gradient-to-b from-white to-slate-50 border border-slate-100 flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-sm group-hover:shadow-md">
@@ -237,7 +237,7 @@ export function PremiumMaintenance() {
               transition={{ duration: 1, type: "spring" }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-[var(--primary)]/20 rounded-[18px] blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-[var(--primary)]/20 rounded-[18px] blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
                {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://webcodian.com/public/web/assets/img/project-start1.png" alt="Maintenance" className="relative z-10 w-full h-auto object-contain filter drop-shadow-xl img-premium" />
             </motion.div>

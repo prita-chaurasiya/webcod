@@ -10,9 +10,9 @@ const values = [
     description: "We're dedicated developers and designers, delivering top-notch solutions empowering businesses of all sizes to thrive digitally and succeed.",
     icon: History,
     points: ["Activate Listening", "Brilliant minds", "Better. Best. Wow!", "Branding it better!"],
-    color: "from-blue-500 to-blue-600",
-    bg: "bg-blue-50",
-    textColor: "text-blue-600"
+    color: "from-orange-500 to-orange-500",
+    bg: "bg-orange-50",
+    textColor: "text-orange-500"
   },
   {
     id: 2,

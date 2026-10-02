@@ -17,7 +17,7 @@ export function PremiumWebsiteValidity() {
     <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden min-h-[70vh] flex items-center justify-center">
       {/* Premium Background Effects */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-orange-400/20 to-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }} />
         <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-to-tl from-[var(--primary)]/20 to-teal-400/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
       </div>
 
@@ -29,10 +29,10 @@ export function PremiumWebsiteValidity() {
           className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 relative overflow-hidden"
         >
           {/* Top Decorative bar */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-[var(--primary)]"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-purple-500 to-[var(--primary)]"></div>
 
           <div className="text-center mb-10">
-            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner">
+            <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-6 text-orange-500 shadow-inner">
               <ShieldCheck className="w-8 h-8" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -55,7 +55,7 @@ export function PremiumWebsiteValidity() {
                   value={clientId}
                   onChange={(e) => setClientId(e.target.value)}
                   placeholder="Enter Client ID (e.g. WC-1234)" 
-                  className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all font-medium text-slate-700"
+                  className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-[18px] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all font-medium text-slate-700"
                   required
                 />
               </div>

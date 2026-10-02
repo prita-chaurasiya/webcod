@@ -29,7 +29,7 @@ const faqs = [
 ];
 
 const tools = [
-  { name: "AP Pro", icon: <Video className="w-8 h-8 text-blue-500" /> },
+  { name: "AP Pro", icon: <Video className="w-8 h-8 text-orange-500" /> },
   { name: "Final Cut Pro", icon: <Film className="w-8 h-8 text-[var(--primary)]" /> },
   { name: "W M Maker", icon: <Scissors className="w-8 h-8 text-[var(--primary)]" /> },
   { name: "Canva Pro", icon: <Sparkles className="w-8 h-8 text-indigo-500" /> },
@@ -60,7 +60,7 @@ export function PremiumVideoEditing() {
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-slate-50/30 rounded-full blur-[128px] mix-blend-multiply animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/30 rounded-full blur-[128px] mix-blend-multiply animate-pulse delay-1000" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-400/30 rounded-full blur-[128px] mix-blend-multiply animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -74,11 +74,11 @@ export function PremiumVideoEditing() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md mb-6 shadow-xl">
             <Sparkles className="w-4 h-4 text-[var(--primary)]" />
-            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Premium Service</span>
+            <span className="text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">Premium Service</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-slate-900 drop-shadow-sm">
             Transform Your Vision<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-blue-600 drop-shadow-sm">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-orange-500 drop-shadow-sm">
               Into Masterpieces
             </span>
           </h1>
@@ -88,7 +88,7 @@ export function PremiumVideoEditing() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-[var(--heading)] font-semibold rounded-full shadow-[0_0_40px_rgba(147,51,234,0.3)] hover:shadow-[0_0_60px_rgba(147,51,234,0.5)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-orange-500 text-[var(--heading)] font-semibold rounded-full shadow-[0_0_40px_rgba(147,51,234,0.3)] hover:shadow-[0_0_60px_rgba(147,51,234,0.5)] transition-all duration-300"
             >
               Get A Free Quotation
               <PlayCircle className="w-5 h-5" />
@@ -117,7 +117,7 @@ export function PremiumVideoEditing() {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Why Choose Us</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 relative z-10" style={{ perspective: "1000px" }}>
@@ -140,8 +140,8 @@ export function PremiumVideoEditing() {
               whileHover={{ rotateY: -5, rotateX: 5, scale: 1.02, zIndex: 20 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <div className="p-10 rounded-[18px] bg-gradient-to-bl from-white to-slate-50 border border-slate-200 h-full shadow-xl transform-gpu transition-all duration-300 group hover:border-blue-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]">
-                <div className="w-16 h-16 rounded-[18px] bg-gradient-to-br from-blue-100 to-blue-200 border border-blue-200 flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="p-10 rounded-[18px] bg-gradient-to-bl from-white to-slate-50 border border-slate-200 h-full shadow-xl transform-gpu transition-all duration-300 group hover:border-orange-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]">
+                <div className="w-16 h-16 rounded-[18px] bg-gradient-to-br from-orange-100 to-orange-200 border border-orange-200 flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                   <Wand2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-slate-900">Customization</h3>
@@ -170,7 +170,7 @@ export function PremiumVideoEditing() {
             {tools.map((tool, idx) => (
               <motion.div key={idx} variants={itemVariants} whileHover={{ y: -10, scale: 1.05 }}>
                 <div className="relative group cursor-pointer h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-[18px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-orange-400/20 rounded-[18px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative p-8 bg-white/80 backdrop-blur-md border border-slate-200 rounded-[18px] flex flex-col items-center justify-center gap-4 h-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] group-hover:border-slate-100 transition-all duration-300">
                     <div className="p-5 bg-slate-50 rounded-[18px] shadow-sm border border-slate-100 group-hover:rotate-12 transition-transform duration-300 group-hover:shadow-md">
                       {tool.icon}

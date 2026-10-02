@@ -9,7 +9,7 @@ export function PremiumClientRegistration() {
       {/* Background Ambient Lights */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[0%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-[var(--primary)]/10 to-teal-400/10 rounded-full blur-[100px] mix-blend-multiply animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-[0%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-blue-400/10 to-indigo-400/10 rounded-full blur-[120px] mix-blend-multiply animate-pulse" style={{ animationDuration: '10s' }} />
+        <div className="absolute bottom-[0%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-orange-400/10 to-indigo-400/10 rounded-full blur-[120px] mix-blend-multiply animate-pulse" style={{ animationDuration: '10s' }} />
       </div>
 
       <div className="container mx-auto px-4 lg:px-6 max-w-5xl relative z-10">
@@ -20,7 +20,7 @@ export function PremiumClientRegistration() {
           className="bg-gradient-to-b from-white to-slate-50 rounded-[18px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 relative"
         >
           {/* Top Decorative bar */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--primary)] via-teal-400 to-blue-500"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--primary)] via-teal-400 to-orange-500"></div>
 
           <div className="text-center mb-12">
             <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[var(--primary)]">

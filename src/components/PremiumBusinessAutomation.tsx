@@ -55,7 +55,7 @@ export function PremiumBusinessAutomation() {
               className="relative"
             >
               {/* Background Blob */}
-              <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[80px] -z-10"></div>
+              <div className="absolute inset-0 bg-orange-100/50 rounded-full blur-[80px] -z-10"></div>
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 bg-gradient-to-b from-white to-slate-50 p-2">
                 <div className="rounded-[1.5rem] overflow-hidden">
                    <img src="/images/ai-automation-vector.jpg" alt="AI Business Automation Workflow" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />

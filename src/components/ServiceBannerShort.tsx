@@ -45,7 +45,7 @@ export function ServiceBannerShort({ title, breadcrumbs, bgImage }: ServiceBanne
         }}
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/95 to-white/60" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-50/30 to-white/90" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-orange-50/30 to-white/90" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10 mt-10">
         <motion.h1 
@@ -61,7 +61,7 @@ export function ServiceBannerShort({ title, breadcrumbs, bgImage }: ServiceBanne
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-blue-100 text-[13px] font-semibold text-[var(--heading)]/80"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-orange-100 text-[13px] font-semibold text-[var(--heading)]/80"
         >
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;

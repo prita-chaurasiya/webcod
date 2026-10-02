@@ -32,7 +32,7 @@ export function FloatingActionButtons() {
       <div className="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col z-50">
         <a 
           href="tel:+1234567890" 
-          className="w-12 h-12 flex items-center justify-center bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+          className="w-12 h-12 flex items-center justify-center bg-orange-500 text-white hover:bg-orange-700 transition-colors"
           aria-label="Call Us"
         >
           <Phone className="w-5 h-5" />
@@ -66,7 +66,7 @@ export function FloatingActionButtons() {
       >
         <button 
           onClick={scrollToTop}
-          className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg hover:bg-blue-600 hover:-translate-y-1 transition-all"
+          className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg hover:bg-orange-500 hover:-translate-y-1 transition-all"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />

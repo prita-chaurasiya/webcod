@@ -24,9 +24,9 @@ const mobileServices = [
   {
     title: "Cross-Platform Apps",
     desc: "Reduce time-to-market and development costs with powerful cross-platform solutions built on React Native and Flutter, offering native-like performance.",
-    icon: <MonitorSmartphone className="w-8 h-8 text-blue-600" />,
-    color: "bg-blue-50",
-    hover: "hover:border-blue-600"
+    icon: <MonitorSmartphone className="w-8 h-8 text-orange-500" />,
+    color: "bg-orange-50",
+    hover: "hover:border-orange-500"
   },
   {
     title: "Mobile App Consulting",
@@ -52,25 +52,25 @@ export function PremiumMobileAppDev() {
       
       {/* 1. Custom Hero */}
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-slate-50">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100 rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-100 rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-100 rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
 
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             
             <div className="w-full lg:w-1/2">
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-6">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-6">
                 <Smartphone className="w-4 h-4" /> Top-Rated Mobile App Agency
               </motion.div>
               <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight">
-                Transform Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Powerful Mobile Apps</span>
+                Transform Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-indigo-600">Powerful Mobile Apps</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-slate-600 mb-8 leading-relaxed font-medium">
                 We design and develop custom iOS and Android mobile applications that deliver exceptional user experiences, drive engagement, and generate massive ROI for enterprises worldwide.
               </motion.p>
               
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap items-center gap-4">
-                <Link href="/contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
+                <Link href="/contact" className="px-8 py-4 bg-orange-500 hover:bg-orange-700 text-white rounded-full font-bold text-lg shadow-[0_10px_20px_rgba(37,99,235,0.2)] hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
                   Talk to our Experts <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link href="/portfolio" className="px-8 py-4 bg-white text-slate-800 border-2 border-slate-200 hover:border-slate-300 rounded-full font-bold text-lg hover:-translate-y-1 transition-all">
@@ -95,8 +95,8 @@ export function PremiumMobileAppDev() {
                 </div>
 
                 <div className="absolute -bottom-6 -left-6 bg-gradient-to-b from-white to-slate-50 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow" style={{ animationDelay: '1s' }}>
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <ShieldCheck className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <ShieldCheck className="w-6 h-6 text-orange-500" />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-600 uppercase">Security</p>
@@ -115,7 +115,7 @@ export function PremiumMobileAppDev() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              Comprehensive <span className="text-blue-600">Mobile App</span> Services
+              Comprehensive <span className="text-orange-500">Mobile App</span> Services
             </h2>
             <p className="text-lg text-slate-600 font-medium">
               From native masterpieces to robust cross-platform solutions, we have the technical prowess to bring any mobile vision to life.
@@ -138,7 +138,7 @@ export function PremiumMobileAppDev() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
                 <p className="text-slate-600 leading-relaxed text-lg">{service.desc}</p>
                 
-                <div className="mt-8 flex items-center gap-2 font-bold text-slate-800 group-hover:text-blue-600 transition-colors cursor-pointer">
+                <div className="mt-8 flex items-center gap-2 font-bold text-slate-800 group-hover:text-orange-500 transition-colors cursor-pointer">
                   Learn more <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </div>
               </motion.div>
@@ -171,7 +171,7 @@ export function PremiumMobileAppDev() {
                   { title: "Secure Architecture", desc: "We implement advanced encryption and OAuth protocols to protect user data." }
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-1">
+                    <div className="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 mt-1">
                       <Zap className="w-6 h-6" />
                     </div>
                     <div>
@@ -191,7 +191,7 @@ export function PremiumMobileAppDev() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-              Our Proven <span className="text-blue-600">Development Process</span>
+              Our Proven <span className="text-orange-500">Development Process</span>
             </h2>
             <p className="text-lg text-slate-600 font-medium">
               A transparent, agile, and result-oriented approach to bringing your mobile app vision to life.
@@ -201,7 +201,7 @@ export function PremiumMobileAppDev() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processSteps.map((step, idx) => (
               <div key={idx} className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group">
-                <div className="text-6xl font-bold text-slate-100 group-hover:text-blue-50 transition-colors mb-4 select-none">
+                <div className="text-6xl font-bold text-slate-100 group-hover:text-orange-50 transition-colors mb-4 select-none">
                   {step.num}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>

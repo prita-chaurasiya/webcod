@@ -139,12 +139,12 @@ export function PremiumWebDev() {
                 {/* Code Body */}
                 <div className="p-6 font-mono text-sm bg-white text-slate-600">
                   <p className="text-[var(--primary)]">import <span className="text-[var(--heading)]">&#123;</span> Webcodian <span className="text-[var(--heading)]">&#125;</span> from <span className="text-[var(--primary)]">'@agency/core'</span>;</p>
-                  <p className="mt-4 text-blue-400">const <span className="text-[var(--heading)]">Project</span> = <span className="text-[var(--primary)]">()</span> =&#62; <span className="text-[var(--heading)]">&#123;</span></p>
+                  <p className="mt-4 text-orange-400">const <span className="text-[var(--heading)]">Project</span> = <span className="text-[var(--primary)]">()</span> =&#62; <span className="text-[var(--heading)]">&#123;</span></p>
                   <p className="pl-4 text-slate-500">return (</p>
                   <p className="pl-8 text-cyan-400">&#60;<span className="text-[var(--primary)]">Webcodian</span></p>
-                  <p className="pl-12 text-blue-300">performance=<span className="text-[var(--primary)]">"unmatched"</span></p>
-                  <p className="pl-12 text-blue-300">design=<span className="text-[var(--primary)]">"pixel-perfect"</span></p>
-                  <p className="pl-12 text-blue-300">scalability=&#123;<span className="text-[var(--primary)]">true</span>&#125;</p>
+                  <p className="pl-12 text-orange-300">performance=<span className="text-[var(--primary)]">"unmatched"</span></p>
+                  <p className="pl-12 text-orange-300">design=<span className="text-[var(--primary)]">"pixel-perfect"</span></p>
+                  <p className="pl-12 text-orange-300">scalability=&#123;<span className="text-[var(--primary)]">true</span>&#125;</p>
                   <p className="pl-8 text-cyan-400">/&#62;</p>
                   <p className="pl-4 text-slate-500">);</p>
                   <p className="text-[var(--heading)]">&#125;;</p>

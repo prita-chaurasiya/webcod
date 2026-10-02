@@ -27,7 +27,7 @@ export function AcademyIntro() {
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--heading)] font-space-grotesk leading-tight">
               Build Skills That <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Build Careers.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Build Careers.</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export function AcademyIntro() {
                   <p className="text-sm text-muted-foreground">100% lab-based practical sessions</p>
                 </div>
                 <div className="bg-[#111111] p-6 rounded-[18px] border border-white/5 shadow-xl">
-                  <Code className="w-10 h-10 text-blue-400 mb-4" />
+                  <Code className="w-10 h-10 text-orange-400 mb-4" />
                   <h3 className="text-[var(--heading)] font-bold text-lg mb-2">Live Projects</h3>
                   <p className="text-sm text-muted-foreground">Work on real industry projects</p>
                 </div>

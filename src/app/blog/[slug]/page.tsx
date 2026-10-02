@@ -81,7 +81,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
 
             {/* Added Image for Visual Appeal */}
             <div className="my-12 overflow-hidden rounded-[20px] shadow-xl relative group">
-              <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+              <div className="absolute inset-0 bg-orange-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <img 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
                 alt="Strategic Planning" 

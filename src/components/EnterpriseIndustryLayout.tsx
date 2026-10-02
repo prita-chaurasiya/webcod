@@ -32,7 +32,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
             <h3 className="text-xl font-bold text-[var(--heading)] mb-4">Driving Technologies</h3>
             <div className="flex flex-wrap gap-3">
               {data.technologies.map((tech, idx) => (
-                <span key={idx} className="px-4 py-2 bg-blue-50 text-[var(--primary)] font-bold text-sm rounded-full">
+                <span key={idx} className="px-4 py-2 bg-orange-50 text-[var(--primary)] font-bold text-sm rounded-full">
                   {tech}
                 </span>
               ))}
@@ -106,7 +106,7 @@ export function EnterpriseIndustryLayout({ data }: { data: IndustryData }) {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-6">Innovate Your {data.title} Business Today</h2>
           <p className="text-xl text-slate-300 mb-10 leading-relaxed">Join the market leaders who have already partnered with us to undergo complete digital transformation.</p>
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-blue-500 text-white rounded-[18px] font-bold text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 transition-all">
+          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--primary)] hover:bg-orange-500 text-white rounded-[18px] font-bold text-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 transition-all">
             Discuss Your Requirements <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

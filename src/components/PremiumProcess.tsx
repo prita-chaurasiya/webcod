@@ -38,7 +38,7 @@ export function PremiumProcess() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6"
             >
               Our Proven <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-600">Enterprise Process</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-orange-500">Enterprise Process</span>
             </motion.h2>
             <p className="text-lg text-slate-600">
               We follow a rigorous, enterprise-grade development lifecycle to ensure your software is delivered on time, perfectly secure, and highly scalable.
@@ -74,7 +74,7 @@ export function PremiumProcess() {
                whileInView={{ width: "100%" }}
                viewport={{ once: true }}
                transition={{ duration: 1.5, ease: "easeInOut" }}
-               className="h-full bg-gradient-to-r from-emerald-500 via-blue-500 to-indigo-500"
+               className="h-full bg-gradient-to-r from-emerald-500 via-orange-500 to-indigo-500"
              />
           </div>
 

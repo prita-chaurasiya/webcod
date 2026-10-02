@@ -28,7 +28,7 @@ export default function Page() {
       />
       <section className="py-20 lg:py-28 relative overflow-hidden">
         {/* Ambient Lights */}
-        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-orange-400/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-indigo-400/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -41,7 +41,7 @@ export default function Page() {
               >
                 {/* Image Container (Top Half) */}
                 <div className="h-[55%] w-full overflow-hidden relative bg-slate-100">
-                  <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
+                  <div className="absolute inset-0 bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
                   <img 
                     src={service.image} 
                     alt={service.title} 
@@ -51,12 +51,12 @@ export default function Page() {
                 
                 {/* Content Container (Bottom Half) */}
                 <div className="flex-1 flex flex-col justify-center p-6 relative z-20 bg-white">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-orange-500 transition-colors">
                     {service.title}
                   </h3>
                   
                   {/* Read More Interaction */}
-                  <div className="flex items-center gap-2 text-sm font-bold text-blue-600 transition-all duration-300">
+                  <div className="flex items-center gap-2 text-sm font-bold text-orange-500 transition-all duration-300">
                     <Link href={`/${service.slug}`} className="flex items-center gap-2">
                       Explore Solutions
                       <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />

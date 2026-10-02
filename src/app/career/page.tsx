@@ -36,7 +36,7 @@ export default function CareerPage() {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-bold border border-blue-100">
+              <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-bold border border-orange-100">
                 <Heart className="w-4 h-4" /> Life at WebCodian
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
@@ -53,11 +53,11 @@ export default function CareerPage() {
               
               <div className="flex gap-4">
                 <div className="flex-1 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
+                  <div className="text-3xl font-bold text-orange-500 mb-2">98%</div>
                   <div className="text-slate-700 font-medium">Employee Retention Rate</div>
                 </div>
                 <div className="flex-1 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">4.9/5</div>
+                  <div className="text-3xl font-bold text-orange-500 mb-2">4.9/5</div>
                   <div className="text-slate-700 font-medium">Glassdoor Rating</div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function CareerPage() {
               { step: "4", title: "Offer Extended", desc: "Welcome to WebCodian! We move fast and make highly competitive offers." }
             ].map((phase, idx) => (
               <div key={idx} className="relative z-10 text-center">
-                <div className="w-24 h-24 mx-auto bg-slate-900 border-4 border-slate-700 text-blue-400 rounded-full flex items-center justify-center text-3xl font-bold mb-6 shadow-xl">
+                <div className="w-24 h-24 mx-auto bg-slate-900 border-4 border-slate-700 text-orange-400 rounded-full flex items-center justify-center text-3xl font-bold mb-6 shadow-xl">
                   {phase.step}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{phase.title}</h3>
@@ -118,11 +118,11 @@ export default function CareerPage() {
       </div>
 
       {/* Internship CTA */}
-      <section className="py-20 bg-blue-50 border-y border-blue-100">
+      <section className="py-20 bg-orange-50 border-y border-orange-100">
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
           <div className="bg-gradient-to-b from-white to-slate-50 rounded-[40px] p-10 md:p-16 shadow-xl border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-2/3">
-              <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center mb-6">
                 <Rocket className="w-8 h-8" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Looking for an Internship?</h2>
@@ -131,7 +131,7 @@ export default function CareerPage() {
               </p>
             </div>
             <div>
-              <Link href="/internship" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30 whitespace-nowrap">
+              <Link href="/internship" className="inline-flex items-center gap-2 bg-orange-500 text-white font-bold px-8 py-4 rounded-xl hover:bg-orange-700 transition-colors shadow-lg shadow-orange-600/30 whitespace-nowrap">
                 Explore Internship <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

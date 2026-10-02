@@ -73,7 +73,7 @@ export function PremiumJobs() {
                     </h3>
                     <div className="flex flex-wrap gap-4 text-sm font-medium text-gray-500">
                       <span className="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-full"><GraduationCap className="w-4 h-4 text-[#f59e0b]"/> {job.qualifications}</span>
-                      <span className="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-full"><Briefcase className="w-4 h-4 text-blue-500"/> {job.experience}</span>
+                      <span className="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-full"><Briefcase className="w-4 h-4 text-orange-500"/> {job.experience}</span>
                       <span className="flex items-center gap-1 bg-gray-50 px-3 py-1 rounded-full"><CalendarDays className="w-4 h-4 text-[var(--primary)]"/> {job.date}</span>
                     </div>
                   </div>

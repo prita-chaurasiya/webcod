@@ -12,7 +12,7 @@ export function PremiumAboutDigiatureStyle() {
     <div className="w-full bg-slate-50 text-slate-900 overflow-hidden relative">
       
       {/* Global Ambient Glows for Luxury 3D feel */}
-      <div className="absolute top-0 right-0 w-[60vw] h-[60vw] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[60vw] h-[60vw] bg-orange-400/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-indigo-400/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* SECTION 1: Light About Section */}
@@ -26,11 +26,11 @@ export function PremiumAboutDigiatureStyle() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center mb-20"
           >
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-blue-600 font-bold text-xs tracking-[0.2em] mb-8 uppercase shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-orange-500 font-bold text-xs tracking-[0.2em] mb-8 uppercase shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
               Innovation & Excellence
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 mb-8 tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-900 via-orange-700 to-indigo-600 mb-8 tracking-tight leading-tight">
               Engineering Digital Excellence
             </h2>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-light">
@@ -48,11 +48,11 @@ export function PremiumAboutDigiatureStyle() {
             style={{ transformStyle: "preserve-3d" }}
             className="max-w-3xl mx-auto bg-gradient-to-b from-white to-slate-50 rounded-[24px] p-8 md:p-10 shadow-[0_20px_50px_rgba(37,99,235,0.04)] hover:shadow-[0_40px_80px_rgba(37,99,235,0.12)] border border-slate-100 flex flex-col md:flex-row items-center gap-8 mb-32 relative overflow-hidden group transition-all duration-500"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <div className="flex-1 flex gap-5 items-start relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100 shadow-sm">
-                <ShieldCheck className="w-7 h-7 text-blue-600" />
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center shrink-0 border border-orange-100 shadow-sm">
+                <ShieldCheck className="w-7 h-7 text-orange-500" />
               </div>
               <p className="text-slate-600 font-medium leading-relaxed">
                 <strong className="text-slate-900">WEBCODIAN</strong> is a certified educational institute and leading software development agency dedicated to empowering the next generation of tech leaders.
@@ -67,7 +67,7 @@ export function PremiumAboutDigiatureStyle() {
 
           {/* Specializations Grid */}
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12 pl-6 border-l-4 border-blue-500 drop-shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12 pl-6 border-l-4 border-orange-500 drop-shadow-sm">
               Our Specializations
             </h3>
             
@@ -91,8 +91,8 @@ export function PremiumAboutDigiatureStyle() {
                   whileHover={{ y: -8, scale: 1.05 }}
                   className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[20px] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col items-center gap-4 text-center overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="w-16 h-16 rounded-[16px] bg-slate-50 border border-slate-100 text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-400 transition-all duration-300 shadow-sm relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="w-16 h-16 rounded-[16px] bg-slate-50 border border-slate-100 text-slate-500 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-400 transition-all duration-300 shadow-sm relative z-10">
                     {spec.icon}
                   </div>
                   <h4 className="font-bold text-slate-900 text-base relative z-10">{spec.title}</h4>
@@ -105,7 +105,7 @@ export function PremiumAboutDigiatureStyle() {
 
       {/* SECTION 2: Future Ready Split Section */}
       <section className="py-20 lg:py-28 relative z-10 border-t border-slate-200 bg-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-transparent to-transparent pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
             
@@ -116,7 +116,7 @@ export function PremiumAboutDigiatureStyle() {
               transition={{ duration: 0.8 }}
               className="flex-1"
             >
-              <span className="text-blue-600 font-bold text-xs tracking-[0.2em] uppercase mb-6 block drop-shadow-sm">Next-Gen Ecosystems</span>
+              <span className="text-orange-500 font-bold text-xs tracking-[0.2em] uppercase mb-6 block drop-shadow-sm">Next-Gen Ecosystems</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-8 leading-tight drop-shadow-sm">
                 Building Future-Ready Digital Solutions
               </h2>
@@ -125,7 +125,7 @@ export function PremiumAboutDigiatureStyle() {
               </p>
 
               <div className="relative bg-slate-50 rounded-[24px] p-10 shadow-[0_15px_30px_rgba(0,0,0,0.03)] border border-slate-100 overflow-hidden">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-indigo-600"></div>
+                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-orange-500 to-indigo-600"></div>
                 <p className="text-xl font-medium text-slate-700 italic leading-relaxed">
                   "Our team combines educational innovation, technical expertise, and industry knowledge to deliver high-performance training and digital solutions tailored to modern needs."
                 </p>
@@ -150,7 +150,7 @@ export function PremiumAboutDigiatureStyle() {
                     whileHover={{ x: 10, backgroundColor: "#f8fafc" }}
                     className="flex gap-6 p-6 rounded-[20px] transition-all duration-300 border border-transparent hover:border-slate-100 hover:shadow-sm"
                   >
-                    <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0 shadow-sm">
+                    <div className="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 text-orange-500 flex items-center justify-center shrink-0 shadow-sm">
                       {item.icon}
                     </div>
                     <div>
@@ -195,16 +195,16 @@ export function PremiumAboutDigiatureStyle() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -10, rotateY: 5, rotateX: 5 }}
-                className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[24px] p-8 border border-slate-100 hover:border-blue-200 transition-all duration-500 overflow-hidden shadow-[0_15px_40px_rgba(37,99,235,0.04)] hover:shadow-[0_30px_60px_rgba(37,99,235,0.12)]"
+                className="group relative bg-gradient-to-b from-white to-slate-50 rounded-[24px] p-8 border border-slate-100 hover:border-orange-200 transition-all duration-500 overflow-hidden shadow-[0_15px_40px_rgba(37,99,235,0.04)] hover:shadow-[0_30px_60px_rgba(37,99,235,0.12)]"
                 style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 
                 <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
-                  <div className="w-16 h-16 rounded-[18px] bg-slate-50 border border-slate-100 text-slate-500 flex items-center justify-center mb-8 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition-all duration-500 shadow-sm group-hover:shadow-[0_0_15px_rgba(37,99,235,0.1)]">
+                  <div className="w-16 h-16 rounded-[18px] bg-slate-50 border border-slate-100 text-slate-500 flex items-center justify-center mb-8 group-hover:bg-orange-50 group-hover:text-orange-500 group-hover:border-orange-200 transition-all duration-500 shadow-sm group-hover:shadow-[0_0_15px_rgba(37,99,235,0.1)]">
                     {service.icon}
                   </div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h4 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-500 transition-colors duration-300">
                     {service.title}
                   </h4>
                   <p className="text-slate-600 font-light leading-relaxed">

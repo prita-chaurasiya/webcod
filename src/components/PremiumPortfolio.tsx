@@ -10,7 +10,7 @@ const projects = [
     category: "NGO",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     span: "md:col-span-2 md:row-span-2",
-    color: "from-blue-500/80 to-cyan-400/80"
+    color: "from-orange-500/80 to-cyan-400/80"
   },
   {
     title: "Satyarthyfoundation",
@@ -67,7 +67,7 @@ export function PremiumPortfolio() {
     <section className="py-12 md:py-16 bg-white relative overflow-hidden">
       {/* Premium Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-[100px] mix-blend-multiply animate-[pulse_8s_ease-in-out_infinite_alternate]" />
+        <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-gradient-to-br from-orange-100 to-purple-100 rounded-full blur-[100px] mix-blend-multiply animate-[pulse_8s_ease-in-out_infinite_alternate]" />
         <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-tl from-[var(--primary)]/10 to-emerald-100 rounded-full blur-[120px] mix-blend-multiply animate-[pulse_12s_ease-in-out_infinite_alternate-reverse]" />
       </div>
 

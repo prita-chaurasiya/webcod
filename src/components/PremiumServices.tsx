@@ -95,7 +95,7 @@ function ServiceCard({ service, index, hoveredIndex, setHoveredIndex }: any) {
         >
           {/* Image Container (Top Half) */}
           <div className="h-[55%] w-full overflow-hidden relative bg-slate-100">
-            <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-500 z-10 mix-blend-multiply"></div>
             <img 
               src={service.image} 
               alt={service.title} 
@@ -105,12 +105,12 @@ function ServiceCard({ service, index, hoveredIndex, setHoveredIndex }: any) {
           
           {/* Content Container (Bottom Half) */}
           <div className="flex-1 flex flex-col justify-center p-6 relative z-20 bg-white">
-            <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
+            <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-orange-500 transition-colors">
               {service.title}
             </h3>
             
             {/* Read More Interaction */}
-            <div className="flex items-center gap-2 text-sm font-bold text-blue-600 transition-all duration-300">
+            <div className="flex items-center gap-2 text-sm font-bold text-orange-500 transition-all duration-300">
               <span>Explore Solutions</span>
               <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
             </div>
@@ -128,7 +128,7 @@ export function PremiumServices() {
     <section className="py-16 lg:py-12 bg-[#FAFAFC] relative overflow-hidden perspective-[1000px]">
       {/* Premium Ambient Backgrounds */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-[120px]"></div>
+        <div className="absolute -top-40 -left-20 w-[800px] h-[800px] bg-orange-400/5 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[var(--primary)]/5 rounded-full blur-[100px]"></div>
       </div>
 
@@ -143,7 +143,7 @@ export function PremiumServices() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-b from-white to-slate-50 border border-slate-200/60 text-slate-500 font-semibold text-xs tracking-widest shadow-sm shadow-slate-200/50 mb-6 uppercase"
           >
-            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span className="w-2 h-2 rounded-full bg-orange-500"></span>
             Core Expertise
           </motion.div>
           <motion.h2 
@@ -154,7 +154,7 @@ export function PremiumServices() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.1]"
           >
             Business-Oriented <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-500 to-cyan-500">
               Digital Solutions
             </span>
           </motion.h2>

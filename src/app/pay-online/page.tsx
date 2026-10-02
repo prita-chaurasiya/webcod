@@ -28,7 +28,7 @@ export default function PayOnlinePage() {
         <div className="container mx-auto px-4 lg:px-8 max-w-[1400px]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400">
+              <div className="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center text-orange-400">
                 <ShieldCheck className="w-8 h-8" />
               </div>
               <div>
@@ -76,7 +76,7 @@ export default function PayOnlinePage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-gradient-to-b from-white to-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm"
               >
-                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-orange-50 text-orange-500 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{cat.title}</h3>
@@ -95,7 +95,7 @@ export default function PayOnlinePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Supported Payment Methods</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
                     <Smartphone className="w-6 h-6" />
                   </div>
                   <div>
@@ -104,7 +104,7 @@ export default function PayOnlinePage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
                     <Landmark className="w-6 h-6" />
                   </div>
                   <div>
@@ -113,7 +113,7 @@ export default function PayOnlinePage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
+                  <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
                     <CreditCard className="w-6 h-6" />
                   </div>
                   <div>
@@ -156,7 +156,7 @@ export default function PayOnlinePage() {
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center justify-center gap-3">
-              <HelpCircle className="text-blue-600" /> Billing FAQ & Refund Policy
+              <HelpCircle className="text-orange-500" /> Billing FAQ & Refund Policy
             </h2>
           </div>
           <div className="space-y-6">
