@@ -24,7 +24,7 @@ export default function GeneratedPage() {
           <>Why Modern Businesses Need <span className="text-[var(--primary)]">PPT Design</span></>
         }
         whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
-        whyImage="https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80&w=800"
+        whyImage="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
         features={[
           {
             title: "Pitch Deck Design",

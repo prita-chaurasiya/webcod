@@ -10,7 +10,7 @@ const courses = [
   { title: "Full Stack Development", desc: "Master frontend and backend technologies. Become a complete web developer.", skills: "React, Node.js, MongoDB", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80", category: "Development" },
   { title: "Digital Marketing", desc: "Comprehensive marketing strategies to drive exponential business growth.", skills: "SEO, SEM, Social Media", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80", category: "Marketing" },
   { title: "AI & Generative AI", desc: "Learn to build modern AI solutions and leverage ChatGPT/LLMs.", skills: "Python, Prompt Engineering", image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80", category: "AI" },
-  { title: "Graphic Design", desc: "Create stunning visual content using industry standard tools.", skills: "Photoshop, Illustrator, Figma", image: "https://images.unsplash.com/photo-1561070791260-0006a28492bf?auto=format&fit=crop&w=800&q=80", category: "Design" },
+  { title: "Graphic Design", desc: "Create stunning visual content using industry standard tools.", skills: "Photoshop, Illustrator, Figma", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80", category: "Design" },
   { title: "React JS Mastery", desc: "Advanced frontend development focusing purely on the React ecosystem.", skills: "React, Redux, Next.js", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", category: "Development" },
   { title: "Data Science with Python", desc: "Analyze data, build machine learning models, and derive insights.", skills: "Python, Pandas, Scikit-Learn", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", category: "Data" },
   { title: "Cyber Security", desc: "Protect systems and networks from digital attacks and threats.", skills: "Networking, Kali Linux, CEH", image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80", category: "Security" },
@@ -113,4 +113,5 @@ export default function CoursesPage() {
     </div>
   );
 }
+
 

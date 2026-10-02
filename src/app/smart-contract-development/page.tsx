@@ -24,7 +24,7 @@ export default function GeneratedPage() {
           <>Why Modern Businesses Need <span className="text-[var(--primary)]">Smart Contract Development</span></>
         }
         whyDescription="Today's businesses require more than standard solutions. Organizations need intelligent, bespoke architecture that can scale globally:"
-        whyImage="https://images.unsplash.com/photo-1639762681485-074b7f4ec672?auto=format&fit=crop&q=80&w=800"
+        whyImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
         features={[
           {
             title: "Solidity & Rust Engineering",

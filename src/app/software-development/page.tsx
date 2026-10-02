@@ -94,7 +94,7 @@ const data: SolutionPageData = {
     "Compliance architecture for GDPR, HIPAA, SOC 2, and PCI-DSS",
     "Dynamic data masking for sensitive PII in non-production environments",
   ],
-  securityImg: "https://images.unsplash.com/photo-1510511459012-914015da9c68?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "National Logistics Provider",
@@ -142,3 +142,4 @@ const data: SolutionPageData = {
 export default function Page() {
   return <SolutionPageTemplate data={data} />;
 }
+

@@ -251,7 +251,7 @@ const pageData = {
     "Mandatory Human-in-the-Loop for Write Operations",
     "Continuous Vulnerability Scanning of Agent Dependencies"
   ],
-  "securityImg": "https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?q=80&w=2000&auto=format&fit=crop",
+  "securityImg": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop",
   "caseStudy": {
     "client": "B2B SaaS Enterprise",
     "label": "AI Agents · Sales Development",
@@ -350,3 +350,4 @@ const pageData = {
 export default function Page() {
   return <SolutionPageTemplate data={pageData} />;
 }
+

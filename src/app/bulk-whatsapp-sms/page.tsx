@@ -3,7 +3,7 @@ import { SolutionPageTemplate, SolutionPageData } from "@/components/SolutionPag
 const data: SolutionPageData = {
   heroTitle: "Enterprise WhatsApp Business API Solutions",
   heroSubtitle: "Engage customers where they already are. We integrate the official WhatsApp Business API to automate support, send rich media broadcasts, and drive conversational commerce at an enterprise scale.",
-  heroImg: "https://images.unsplash.com/photo-1614680376593-902f74a5cecb?q=80&w=2000&auto=format&fit=crop",
+  heroImg: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
   breadcrumbLabel: "Bulk WhatsApp",
   category: "Systems & Automation",
 
@@ -142,3 +142,4 @@ const data: SolutionPageData = {
 export default function Page() {
   return <SolutionPageTemplate data={data} />;
 }
+

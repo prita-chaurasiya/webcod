@@ -95,7 +95,7 @@ const data: SolutionPageData = {
     "Role-Based Access Control (RBAC) for All Admin Functions",
     "Automated Dependency Vulnerability Scanning (Snyk, Dependabot)",
   ],
-  securityImg: "https://images.unsplash.com/photo-1614064641913-6b71a2eaa477?q=80&w=2000&auto=format&fit=crop",
+  securityImg: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2000&auto=format&fit=crop",
 
   caseStudy: {
     client: "B2B SaaS Company — Hyderabad, India",
@@ -148,3 +148,4 @@ export default function WebDevelopmentPage() {
     </main>
   );
 }
+

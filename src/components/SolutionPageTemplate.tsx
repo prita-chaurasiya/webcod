@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   CheckCircle2, ArrowRight, Zap, ShieldCheck,
-  TrendingUp, Star, ChevronRight, Clock, Users, BarChart3
+  TrendingUp, Star, ChevronRight, Clock, Users, BarChart3,
+  Globe, Smartphone, Database, Cloud, Code, Settings, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network
 } from "lucide-react";
+
+const featureIcons = [Zap, Globe, Smartphone, Database, Cloud, Code, Settings, Users, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, BarChart3, TrendingUp, ShieldCheck];
 
 export interface SolutionService {
   icon: string;
@@ -345,18 +348,29 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
             <p className="text-slate-600 text-lg">Enterprise-grade capabilities built into every engagement.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.features.map((f, idx) => (
-              <motion.div
-                key={idx}
-                {...fadeUp}
-                transition={{ delay: idx * 0.06 }}
-                className="group p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all cursor-default"
-              >
-                <div className="text-4xl mb-5">{f.icon}</div>
-                <h3 className="text-slate-900 font-bold text-lg mb-3 group-hover:text-blue-700 transition-colors">{f.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
-              </motion.div>
-            ))}
+            {data.features.map((f, idx) => {
+              const isImage = f.icon.startsWith('http');
+              const IconComp = featureIcons[idx % featureIcons.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  {...fadeUp}
+                  transition={{ delay: idx * 0.06 }}
+                  className="group p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all cursor-default"
+                >
+                  <div className="w-14 h-14 bg-white border border-slate-100 shadow-sm rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white text-blue-600 transition-colors">
+                    {isImage ? (
+                      <img src={f.icon} alt={f.title} className="w-8 h-8 object-contain" />
+                    ) : (
+                      <IconComp className="w-7 h-7" />
+                    )}
+                  </div>
+                  <h3 className="text-slate-900 font-bold text-lg mb-3 group-hover:text-blue-700 transition-colors">{f.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{f.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

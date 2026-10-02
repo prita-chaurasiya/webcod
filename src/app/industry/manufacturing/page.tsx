@@ -83,7 +83,7 @@ const data: IndustryPageData = {
 
   useCases: [
     { title: "Auto Component Manufacturer MES", img: "https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=800&auto=format&fit=crop", desc: "MES with full genealogy traceability for a Tier 1 auto component maker, meeting IATF 16949 requirements for 12 OEM customers." },
-    { title: "Pharma Production ERP", img: "https://images.unsplash.com/photo-1606206887553-5c8b99c9bca5?q=80&w=800&auto=format&fit=crop", desc: "21 CFR Part 11 compliant ERP for a pharmaceutical manufacturer, covering batch production, quality, and regulatory reporting." },
+    { title: "Pharma Production ERP", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop", desc: "21 CFR Part 11 compliant ERP for a pharmaceutical manufacturer, covering batch production, quality, and regulatory reporting." },
     { title: "Textile Mill IoT Platform", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop", desc: "IoT platform connecting 500 looms in a textile mill, providing real-time OEE, energy consumption, and production output dashboards." },
   ],
 
@@ -135,3 +135,4 @@ const data: IndustryPageData = {
 export default function Page() {
   return <IndustryPageTemplate data={data} />;
 }
+

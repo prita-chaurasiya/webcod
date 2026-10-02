@@ -249,7 +249,7 @@ const pageData = {
     "VPC Isolation for Cloud Automations",
     "Compliance with GDPR, HIPAA, and SOC2"
   ],
-  "securityImg": "https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?q=80&w=2000&auto=format&fit=crop",
+  "securityImg": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop",
   "caseStudy": {
     "client": "National Logistics Provider",
     "label": "Business Automation · Invoice Processing",
@@ -348,3 +348,4 @@ const pageData = {
 export default function Page() {
   return <SolutionPageTemplate data={pageData} />;
 }
+
