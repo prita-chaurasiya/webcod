@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   CheckCircle2, ArrowRight, Zap, ShieldCheck,
   TrendingUp, Star, ChevronRight, Clock, Users, BarChart3,
-  Globe, Smartphone, Database, Cloud, Code, Settings, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, Sparkles
+  Globe, Smartphone, Database, Cloud, Code, Settings, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, Sparkles, GitBranch
 } from "lucide-react";
 
 const featureIcons = [Zap, Globe, Smartphone, Database, Cloud, Code, Settings, Users, Monitor, Lock, Cpu, Server, Layers, Layout, Box, Puzzle, Network, BarChart3, TrendingUp, ShieldCheck];
@@ -683,6 +683,65 @@ export function SolutionPageTemplate({ data }: { data: SolutionPageData }) {
                 <p className="text-slate-300 text-sm leading-relaxed">{data.caseStudy.result}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GLOBAL DELIVERY & ENGAGEMENT MODELS ── */}
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block mb-5 px-4 py-1.5 bg-orange-100 text-orange-700 text-xs font-bold tracking-widest uppercase rounded-full border border-orange-200">
+              Enterprise Engagement
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Flexible Global Delivery Models
+            </h2>
+            <p className="text-slate-600 text-lg">
+              We align our operational framework with your business goals, ensuring seamless collaboration and accelerated time-to-market.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { title: "Dedicated Development Team", desc: "Scale your IT capacity instantly with our managed offshore or nearshore teams acting as an extension of your company.", icon: <Users className="w-8 h-8 text-orange-500" /> },
+              { title: "Fixed Price / Turnkey", desc: "End-to-end project execution with clearly defined scopes, timelines, and predictable budgets for complete peace of mind.", icon: <Settings className="w-8 h-8 text-blue-500" /> },
+              { title: "Hybrid Agile Delivery", desc: "Flexible iterative development sprints optimized for evolving enterprise requirements and rapid prototyping.", icon: <Zap className="w-8 h-8 text-emerald-500" /> }
+            ].map((model, idx) => (
+              <motion.div
+                key={idx}
+                {...fadeUp}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-white border border-slate-200 p-8 rounded-[24px] hover:shadow-xl hover:border-orange-200 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {model.icon}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{model.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{model.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUALITY STANDARDS & ECOSYSTEM ── */}
+      <section className="py-20 bg-white border-t border-slate-100 overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-10">
+            Enterprise-Grade Security & Technology Ecosystem
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 opacity-60">
+            {[
+              { label: "ISO Standards Compliant", icon: <ShieldCheck className="w-6 h-6 mr-2" /> },
+              { label: "Cloud Native Architecture", icon: <Cloud className="w-6 h-6 mr-2" /> },
+              { label: "GDPR & Data Privacy", icon: <Lock className="w-6 h-6 mr-2" /> },
+              { label: "Enterprise CI/CD", icon: <GitBranch className="w-6 h-6 mr-2" /> },
+              { label: "24/7 Global Support", icon: <Globe className="w-6 h-6 mr-2" /> }
+            ].map((badge, idx) => (
+              <div key={idx} className="flex items-center text-slate-600 font-semibold text-sm md:text-base whitespace-nowrap">
+                {badge.icon} {badge.label}
+              </div>
+            ))}
           </div>
         </div>
       </section>

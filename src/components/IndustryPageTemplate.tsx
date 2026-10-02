@@ -344,18 +344,28 @@ export function IndustryPageTemplate({ data }: { data: IndustryPageData }) {
             <p className="text-slate-600 text-lg">Purpose-built digital solutions engineered for your industry's unique demands.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.services.map((s, idx) => (
+            {data.services.map((s, idx) => {
+              const icons = [
+                <Monitor className="w-10 h-10 text-orange-500" />,
+                <Cpu className="w-10 h-10 text-emerald-500" />,
+                <Network className="w-10 h-10 text-blue-500" />,
+                <Sparkles className="w-10 h-10 text-purple-500" />,
+                <Settings className="w-10 h-10 text-rose-500" />,
+                <Zap className="w-10 h-10 text-cyan-500" />
+              ];
+              const Icon = icons[idx % icons.length];
+              return (
               <motion.div
                 key={idx}
                 {...fadeInUp}
                 transition={{ delay: idx * 0.07 }}
                 className="group p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:bg-white hover:border-orange-500 hover:shadow-xl hover:-translate-y-1 transition-all cursor-default"
               >
-                <div className="text-4xl mb-5">{s.icon}</div>
+                <div className="mb-5">{Icon}</div>
                 <h3 className="text-slate-900 font-bold text-lg mb-3 group-hover:text-orange-700 transition-colors">{s.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
               </motion.div>
-            ))}
+            )})}
           </div>
         </div>
       </section>
@@ -630,6 +640,44 @@ export function IndustryPageTemplate({ data }: { data: IndustryPageData }) {
                 <div className="text-slate-500 text-xs">Zero-Trust Architecture</div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GLOBAL DELIVERY & ROI FRAMEWORK ── */}
+      <section className="py-24 bg-slate-900 text-white border-t border-slate-800">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block mb-5 px-4 py-1.5 bg-orange-500/20 text-orange-400 text-xs font-bold tracking-widest uppercase rounded-full border border-orange-500/30">
+              Value Delivery
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Global Delivery & Tangible ROI
+            </h2>
+            <p className="text-slate-400 text-lg">
+              We focus on delivering measurable business outcomes through our proven global delivery model, ensuring rapid time-to-value for enterprise initiatives.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Rapid Prototyping", desc: "Accelerate time-to-market with MVP development within weeks, not months.", icon: <Zap className="w-6 h-6 text-orange-400" /> },
+              { title: "Cost Optimization", desc: "Reduce total cost of ownership by up to 40% leveraging our global talent pools.", icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> },
+              { title: "24/7 Global Delivery", desc: "Round-the-clock development and support through our international delivery centers.", icon: <Globe className="w-6 h-6 text-blue-400" /> },
+              { title: "Scalable Innovation", desc: "Future-proof architectures designed to scale seamlessly as your business grows.", icon: <Layers className="w-6 h-6 text-purple-400" /> }
+            ].map((roi, idx) => (
+              <motion.div
+                key={idx}
+                {...fadeUp}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl hover:bg-slate-800 hover:border-orange-500/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center mb-5">
+                  {roi.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{roi.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{roi.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
