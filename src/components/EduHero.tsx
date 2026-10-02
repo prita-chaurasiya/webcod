@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000",
     badge: "Since 2018 • INDIA • DUBAI • USA",
     title1: "Software",
     title2: "That Ships.",
@@ -15,7 +15,7 @@ const slides = [
     description: "WebCodian is a premium software development and AI automation company. We build custom software, mobile apps and AI agents that remove the work slowing your business down."
   },
   {
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=2000",
     badge: "Enterprise Solutions • ISO Certified",
     title1: "Digital",
     title2: "Transformation.",
@@ -23,7 +23,7 @@ const slides = [
     description: "We help businesses scale with intelligent, custom-built enterprise software. From legacy system modernization to fully-fledged SaaS product development."
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2000",
     badge: "Growth Marketing • Data Driven",
     title1: "Marketing",
     title2: "That Converts.",
@@ -45,7 +45,7 @@ export function EduHero() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative w-full min-h-[100vh] bg-slate-900 overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full min-h-[100vh] bg-black overflow-hidden flex flex-col justify-center">
       
       {/* Background Slider with Ken Burns */}
       <AnimatePresence mode="wait">
@@ -65,9 +65,9 @@ export function EduHero() {
             transition={{ duration: 20, ease: "linear" }}
             className="absolute inset-0 w-full h-full object-cover origin-center opacity-50"
           />
-          {/* Luxury dark gradient overlay to ensure text pops */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1121] via-[#0B1121]/80 to-transparent z-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] via-transparent to-transparent z-10"></div>
+          {/* Luxury dark gradient overlay to ensure text pops without being too blue */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
         </motion.div>
       </AnimatePresence>
 
